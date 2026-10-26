@@ -1,0 +1,2 @@
+{"base": {"n": 96, "same_parsed_answer_vllm_vs_hf": 0.875, "same_first_80_chars": 0.854, "vllm_accuracy": 0.688, "hf_accuracy": 0.667}}
+{"lora": {"n": 96, "same_parsed_answer_vllm_vs_hf": 0.906, "same_first_80_chars": 0.823, "vllm_lora_text_identical_to_vllm_base": 0.042}}

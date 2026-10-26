@@ -1,0 +1,12 @@
+{
+ "url": "http://127.0.0.1:8102",
+ "adapter": "/home/ubuntu/workspace/virtual-student/artifacts/olmo3sft_grpo_lr_sweep/r-outcome-grpo-s000-93c5f2fe/checkpoints/update_040/student/model",
+ "n": 1600,
+ "identical_text": 1.0,
+ "same_parsed_answer": 1.0,
+ "correctness_flips": 0.0,
+ "accuracy_a": 0.741875,
+ "accuracy_b": 0.741875,
+ "pass_a_seconds": 159.9,
+ "pass_a_tokens_per_s": 1127
+}

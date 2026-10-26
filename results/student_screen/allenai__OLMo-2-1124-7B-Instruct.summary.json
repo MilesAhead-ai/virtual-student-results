@@ -1,0 +1,55 @@
+{
+ "model": "allenai/OLMo-2-1124-7B-Instruct",
+ "revision": "470b1fba1ae01581f270116362ee4aa1b97f4c84",
+ "seconds": 61,
+ "items": 906,
+ "seconds_per_item_batched": 0.068,
+ "splits": {
+  "d": {
+   "n": 200,
+   "accuracy": 0.32,
+   "accuracy_lenient": 0.345,
+   "strict_parse": 0.435,
+   "lenient_parse": 0.475,
+   "truncated": 0.0,
+   "median_tokens": 4,
+   "theta_on_panel_scale": -1.23,
+   "theta_sd": 0.16,
+   "spearman_difficulty_vs_correct": -0.176
+  },
+  "w": {
+   "n": 706,
+   "accuracy": 0.418,
+   "accuracy_lenient": 0.477,
+   "strict_parse": 0.677,
+   "lenient_parse": 0.755,
+   "truncated": 0.0,
+   "median_tokens": 4,
+   "theta_on_panel_scale": -0.56,
+   "theta_sd": 0.08,
+   "spearman_difficulty_vs_correct": -0.274
+  }
+ },
+ "all": {
+  "n": 906,
+  "accuracy": 0.396,
+  "accuracy_lenient": 0.448,
+  "strict_parse": 0.624,
+  "lenient_parse": 0.693,
+  "truncated": 0.0,
+  "median_tokens": 4,
+  "theta_on_panel_scale": -0.72,
+  "theta_sd": 0.07,
+  "spearman_difficulty_vs_correct": -0.243
+ },
+ "panel_mean_theta": {
+  "deepseek-r1:8b": 2.12,
+  "gemma2:2b": 0.41,
+  "llama3.1:8b": 0.89,
+  "llama3.2:3b": 0.29,
+  "phi3:3.8b": 0.28,
+  "qwen2:7b": 0.91,
+  "qwen3:14b": 2.35,
+  "qwen3:8b": 2.18
+ }
+}

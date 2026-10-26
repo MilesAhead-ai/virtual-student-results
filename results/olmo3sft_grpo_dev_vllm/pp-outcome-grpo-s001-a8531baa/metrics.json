@@ -1,0 +1,236 @@
+{
+ "aulc": 0.7615000000000001,
+ "aulc_per_skill": {
+  "craft_structure.cross_text_connections": 0.9025,
+  "craft_structure.text_structure": 0.8825,
+  "craft_structure.words_in_context": 0.8325,
+  "expression_of_ideas.rhetorical_synthesis": 0.95,
+  "expression_of_ideas.transitions": 0.5025,
+  "information_ideas.central_ideas": 0.985,
+  "information_ideas.command_of_evidence_textual": 0.86,
+  "information_ideas.inferences": 0.8225,
+  "standard_english.boundaries": 0.3275,
+  "standard_english.form_structure_sense": 0.55
+ },
+ "counters": {
+  "accepted_targets": 0,
+  "consecutive_no_gradient": 0,
+  "feedback_failed": 0,
+  "leaks": 0,
+  "no_gradient_updates": 0,
+  "pool_low": 0,
+  "regenerations": 0
+ },
+ "final_accuracy": 0.79,
+ "initial_accuracy": 0.73,
+ "primary_set": "d",
+ "splits": {
+  "d": {
+   "0": {
+    "accuracy": 0.73,
+    "n": 200,
+    "per_skill": {
+     "craft_structure.cross_text_connections": 0.85,
+     "craft_structure.text_structure": 0.85,
+     "craft_structure.words_in_context": 0.85,
+     "expression_of_ideas.rhetorical_synthesis": 0.8,
+     "expression_of_ideas.transitions": 0.45,
+     "information_ideas.central_ideas": 1.0,
+     "information_ideas.command_of_evidence_textual": 0.9,
+     "information_ideas.inferences": 0.75,
+     "standard_english.boundaries": 0.3,
+     "standard_english.form_structure_sense": 0.55
+    },
+    "presentations": 0,
+    "unparseable_rate": 0.035
+   },
+   "10": {
+    "accuracy": 0.745,
+    "n": 200,
+    "per_skill": {
+     "craft_structure.cross_text_connections": 0.9,
+     "craft_structure.text_structure": 0.9,
+     "craft_structure.words_in_context": 0.8,
+     "expression_of_ideas.rhetorical_synthesis": 0.9,
+     "expression_of_ideas.transitions": 0.4,
+     "information_ideas.central_ideas": 1.0,
+     "information_ideas.command_of_evidence_textual": 0.85,
+     "information_ideas.inferences": 0.8,
+     "standard_english.boundaries": 0.35,
+     "standard_english.form_structure_sense": 0.55
+    },
+    "presentations": 320,
+    "unparseable_rate": 0.035
+   },
+   "20": {
+    "accuracy": 0.73,
+    "n": 200,
+    "per_skill": {
+     "craft_structure.cross_text_connections": 0.8,
+     "craft_structure.text_structure": 0.85,
+     "craft_structure.words_in_context": 0.8,
+     "expression_of_ideas.rhetorical_synthesis": 0.85,
+     "expression_of_ideas.transitions": 0.4,
+     "information_ideas.central_ideas": 1.0,
+     "information_ideas.command_of_evidence_textual": 0.85,
+     "information_ideas.inferences": 0.85,
+     "standard_english.boundaries": 0.35,
+     "standard_english.form_structure_sense": 0.55
+    },
+    "presentations": 640,
+    "unparseable_rate": 0.03
+   },
+   "30": {
+    "accuracy": 0.76,
+    "n": 200,
+    "per_skill": {
+     "craft_structure.cross_text_connections": 0.95,
+     "craft_structure.text_structure": 0.9,
+     "craft_structure.words_in_context": 0.8,
+     "expression_of_ideas.rhetorical_synthesis": 0.95,
+     "expression_of_ideas.transitions": 0.5,
+     "information_ideas.central_ideas": 1.0,
+     "information_ideas.command_of_evidence_textual": 0.85,
+     "information_ideas.inferences": 0.85,
+     "standard_english.boundaries": 0.25,
+     "standard_english.form_structure_sense": 0.55
+    },
+    "presentations": 960,
+    "unparseable_rate": 0.01
+   },
+   "40": {
+    "accuracy": 0.8,
+    "n": 200,
+    "per_skill": {
+     "craft_structure.cross_text_connections": 0.95,
+     "craft_structure.text_structure": 0.9,
+     "craft_structure.words_in_context": 0.8,
+     "expression_of_ideas.rhetorical_synthesis": 1.0,
+     "expression_of_ideas.transitions": 0.55,
+     "information_ideas.central_ideas": 1.0,
+     "information_ideas.command_of_evidence_textual": 0.95,
+     "information_ideas.inferences": 0.8,
+     "standard_english.boundaries": 0.5,
+     "standard_english.form_structure_sense": 0.55
+    },
+    "presentations": 1280,
+    "unparseable_rate": 0.0
+   },
+   "50": {
+    "accuracy": 0.77,
+    "n": 200,
+    "per_skill": {
+     "craft_structure.cross_text_connections": 0.9,
+     "craft_structure.text_structure": 0.85,
+     "craft_structure.words_in_context": 0.85,
+     "expression_of_ideas.rhetorical_synthesis": 1.0,
+     "expression_of_ideas.transitions": 0.5,
+     "information_ideas.central_ideas": 0.95,
+     "information_ideas.command_of_evidence_textual": 0.85,
+     "information_ideas.inferences": 0.85,
+     "standard_english.boundaries": 0.4,
+     "standard_english.form_structure_sense": 0.55
+    },
+    "presentations": 1600,
+    "unparseable_rate": 0.0
+   },
+   "60": {
+    "accuracy": 0.76,
+    "n": 200,
+    "per_skill": {
+     "craft_structure.cross_text_connections": 0.9,
+     "craft_structure.text_structure": 0.85,
+     "craft_structure.words_in_context": 0.85,
+     "expression_of_ideas.rhetorical_synthesis": 1.0,
+     "expression_of_ideas.transitions": 0.6,
+     "information_ideas.central_ideas": 0.95,
+     "information_ideas.command_of_evidence_textual": 0.85,
+     "information_ideas.inferences": 0.8,
+     "standard_english.boundaries": 0.35,
+     "standard_english.form_structure_sense": 0.45
+    },
+    "presentations": 1920,
+    "unparseable_rate": 0.0
+   },
+   "70": {
+    "accuracy": 0.75,
+    "n": 200,
+    "per_skill": {
+     "craft_structure.cross_text_connections": 0.9,
+     "craft_structure.text_structure": 0.9,
+     "craft_structure.words_in_context": 0.9,
+     "expression_of_ideas.rhetorical_synthesis": 0.95,
+     "expression_of_ideas.transitions": 0.5,
+     "information_ideas.central_ideas": 0.95,
+     "information_ideas.command_of_evidence_textual": 0.8,
+     "information_ideas.inferences": 0.85,
+     "standard_english.boundaries": 0.25,
+     "standard_english.form_structure_sense": 0.5
+    },
+    "presentations": 2240,
+    "unparseable_rate": 0.005
+   },
+   "80": {
+    "accuracy": 0.765,
+    "n": 200,
+    "per_skill": {
+     "craft_structure.cross_text_connections": 0.9,
+     "craft_structure.text_structure": 0.9,
+     "craft_structure.words_in_context": 0.85,
+     "expression_of_ideas.rhetorical_synthesis": 0.95,
+     "expression_of_ideas.transitions": 0.55,
+     "information_ideas.central_ideas": 1.0,
+     "information_ideas.command_of_evidence_textual": 0.85,
+     "information_ideas.inferences": 0.8,
+     "standard_english.boundaries": 0.25,
+     "standard_english.form_structure_sense": 0.6
+    },
+    "presentations": 2560,
+    "unparseable_rate": 0.005
+   },
+   "90": {
+    "accuracy": 0.775,
+    "n": 200,
+    "per_skill": {
+     "craft_structure.cross_text_connections": 0.95,
+     "craft_structure.text_structure": 0.9,
+     "craft_structure.words_in_context": 0.8,
+     "expression_of_ideas.rhetorical_synthesis": 1.0,
+     "expression_of_ideas.transitions": 0.5,
+     "information_ideas.central_ideas": 1.0,
+     "information_ideas.command_of_evidence_textual": 0.85,
+     "information_ideas.inferences": 0.8,
+     "standard_english.boundaries": 0.3,
+     "standard_english.form_structure_sense": 0.65
+    },
+    "presentations": 2880,
+    "unparseable_rate": 0.0
+   },
+   "100": {
+    "accuracy": 0.79,
+    "n": 200,
+    "per_skill": {
+     "craft_structure.cross_text_connections": 0.9,
+     "craft_structure.text_structure": 0.9,
+     "craft_structure.words_in_context": 0.9,
+     "expression_of_ideas.rhetorical_synthesis": 1.0,
+     "expression_of_ideas.transitions": 0.6,
+     "information_ideas.central_ideas": 1.0,
+     "information_ideas.command_of_evidence_textual": 0.9,
+     "information_ideas.inferences": 0.9,
+     "standard_english.boundaries": 0.25,
+     "standard_english.form_structure_sense": 0.55
+    },
+    "presentations": 3200,
+    "unparseable_rate": 0.0
+   }
+  }
+ },
+ "table_rows": {
+  "eval_results": 2200,
+  "feedback_events": 0,
+  "selection_events": 3200,
+  "tracker_states": 1000,
+  "training_updates": 100
+ }
+}

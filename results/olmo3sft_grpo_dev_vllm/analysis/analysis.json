@@ -1,0 +1,79 @@
+{
+ "experiment_dir": "artifacts/olmo3sft_grpo_dev_vllm",
+ "families": {
+  "S": {
+   "pp": {
+    "arm": "pp",
+    "ci_bca": null,
+    "ci_percentile": [
+     -0.0022500000000000853,
+     0.0035000000000000586
+    ],
+    "equivalent_within_margin": true,
+    "estimate": 0.0006249999999999867,
+    "exceeds_minimum_effect": false,
+    "incomplete_runs": [],
+    "kind": "policy",
+    "n_pairs": 2,
+    "p_holm": 0.5014,
+    "p_value": 0.5014,
+    "reference": "r",
+    "seeds": [
+     0,
+     1
+    ],
+    "targeting_ratio": {
+     "arm": "pp",
+     "n_triples": 0,
+     "omitted_reason": "fewer than two complete seed triples",
+     "ratio": null
+    },
+    "two_way": {
+     "ci_percentile": [
+      -0.015250000000000001,
+      0.017753124999999984
+     ],
+     "estimate": 0.000624999999999999,
+     "n_families": 200,
+     "n_seeds": 2,
+     "p_value": 0.952
+    },
+    "unpaired_runs": []
+   }
+  }
+ },
+ "runs": [
+  {
+   "aulc": 0.7555,
+   "condition": "outcome",
+   "policy": "pp",
+   "run": "pp-outcome-grpo-s000-d6c44c2b",
+   "seed": 0,
+   "status": "complete"
+  },
+  {
+   "aulc": 0.7615000000000001,
+   "condition": "outcome",
+   "policy": "pp",
+   "run": "pp-outcome-grpo-s001-a8531baa",
+   "seed": 1,
+   "status": "complete"
+  },
+  {
+   "aulc": 0.75775,
+   "condition": "outcome",
+   "policy": "r",
+   "run": "r-outcome-grpo-s000-92c2d71e",
+   "seed": 0,
+   "status": "complete"
+  },
+  {
+   "aulc": 0.758,
+   "condition": "outcome",
+   "policy": "r",
+   "run": "r-outcome-grpo-s001-fae6d103",
+   "seed": 1,
+   "status": "complete"
+  }
+ ]
+}

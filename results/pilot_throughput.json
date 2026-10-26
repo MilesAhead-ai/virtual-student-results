@@ -1,0 +1,74 @@
+[
+ {
+  "model": "gemma2:2b",
+  "concurrency": 1,
+  "tag": "",
+  "items": 16,
+  "wall_s": 226.1,
+  "s_per_item": 14.13,
+  "agree_with_c1": 1.0
+ },
+ {
+  "model": "gemma2:2b",
+  "concurrency": 4,
+  "tag": "",
+  "items": 16,
+  "wall_s": 93.6,
+  "s_per_item": 5.85,
+  "agree_with_c1": 0.812
+ },
+ {
+  "model": "gemma2:2b",
+  "concurrency": 8,
+  "tag": "",
+  "items": 16,
+  "wall_s": 100.8,
+  "s_per_item": 6.3,
+  "agree_with_c1": 0.875
+ },
+ {
+  "model": "gemma2:2b",
+  "concurrency": 1,
+  "tag": "_repeat",
+  "items": 16,
+  "wall_s": 224.2,
+  "s_per_item": 14.02,
+  "agree_with_c1": 0.875
+ },
+ {
+  "model": "qwen3:14b",
+  "concurrency": 1,
+  "tag": "",
+  "items": 16,
+  "wall_s": 1557.4,
+  "s_per_item": 97.34,
+  "agree_with_c1": 1.0
+ },
+ {
+  "model": "qwen3:14b",
+  "concurrency": 4,
+  "tag": "",
+  "items": 16,
+  "wall_s": 550.5,
+  "s_per_item": 34.41,
+  "agree_with_c1": 0.875
+ },
+ {
+  "model": "qwen3:14b",
+  "concurrency": 8,
+  "tag": "",
+  "items": 16,
+  "wall_s": 1086.6,
+  "s_per_item": 67.91,
+  "agree_with_c1": 0.5
+ },
+ {
+  "model": "qwen3:14b",
+  "concurrency": 1,
+  "tag": "_repeat",
+  "items": 16,
+  "wall_s": 1440.0,
+  "s_per_item": 90.0,
+  "agree_with_c1": 0.938
+ }
+]

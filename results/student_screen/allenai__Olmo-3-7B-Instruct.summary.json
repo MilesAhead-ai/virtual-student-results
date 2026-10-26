@@ -1,0 +1,55 @@
+{
+ "model": "allenai/Olmo-3-7B-Instruct",
+ "revision": "6e5971d9eba42665f5bd5a0fcf047f299ce1dccc",
+ "seconds": 612,
+ "items": 906,
+ "seconds_per_item_batched": 0.675,
+ "splits": {
+  "d": {
+   "n": 200,
+   "accuracy": 0.765,
+   "accuracy_lenient": 0.765,
+   "strict_parse": 0.99,
+   "lenient_parse": 0.99,
+   "truncated": 0.01,
+   "median_tokens": 99,
+   "theta_on_panel_scale": 0.93,
+   "theta_sd": 0.18,
+   "spearman_difficulty_vs_correct": -0.431
+  },
+  "w": {
+   "n": 706,
+   "accuracy": 0.711,
+   "accuracy_lenient": 0.714,
+   "strict_parse": 0.982,
+   "lenient_parse": 0.99,
+   "truncated": 0.018,
+   "median_tokens": 104,
+   "theta_on_panel_scale": 0.91,
+   "theta_sd": 0.09,
+   "spearman_difficulty_vs_correct": -0.436
+  }
+ },
+ "all": {
+  "n": 906,
+  "accuracy": 0.723,
+  "accuracy_lenient": 0.725,
+  "strict_parse": 0.983,
+  "lenient_parse": 0.99,
+  "truncated": 0.017,
+  "median_tokens": 102,
+  "theta_on_panel_scale": 0.92,
+  "theta_sd": 0.08,
+  "spearman_difficulty_vs_correct": -0.438
+ },
+ "panel_mean_theta": {
+  "deepseek-r1:8b": 2.12,
+  "gemma2:2b": 0.41,
+  "llama3.1:8b": 0.89,
+  "llama3.2:3b": 0.29,
+  "phi3:3.8b": 0.28,
+  "qwen2:7b": 0.91,
+  "qwen3:14b": 2.35,
+  "qwen3:8b": 2.18
+ }
+}

@@ -1,0 +1,140 @@
+{
+ "checks": [
+  {
+   "check": "config.unresolved_used_fields",
+   "detail": [],
+   "status": "ok"
+  },
+  {
+   "check": "config.null_used_fields",
+   "detail": [],
+   "status": "ok"
+  },
+  {
+   "check": "config.mode",
+   "detail": "development",
+   "status": "ok"
+  },
+  {
+   "check": "evaluation.schedule",
+   "detail": {
+    "dense_checkpoints": 9
+   },
+   "status": "ok"
+  },
+  {
+   "check": "evaluation.split_access",
+   "detail": [
+    "d"
+   ],
+   "status": "ok"
+  },
+  {
+   "check": "data.split_lock",
+   "detail": "3b17766dd4471eda133bf5e3af7cfe1eaf4db6423a1076ab38fd3bead2ead381",
+   "status": "ok"
+  },
+  {
+   "check": "data.table_hashes",
+   "detail": {
+    "item_difficulties.parquet": "31dfd873be6a96de4068a315fae7f8d7f3b6a517ab37d76db79a88d3a08f4319",
+    "items.parquet": "d3651289439595637f6a7915544784e6fb61e0f2b8729d0a2127e79da42ae08f",
+    "panel_abilities.parquet": "0cceaf7904364a4a6ae48dccb5854a669d27f09efa1305384982503c92e8dcf3",
+    "panel_responses.parquet": "9f1fccb515e3d4e87d55420cdf21faac1c02b9da6b479e640ace715f28d755b9",
+    "sibling_map.parquet": "5a9c43acebf80efc743abf6004df21bdf2282ec88818cbf1293e2744e1b1cf96"
+   },
+   "status": "ok"
+  },
+  {
+   "check": "prompts.present",
+   "detail": {
+    "adaptation_judge": "f3eb77add5aef5ea231050e5843309aac6245982fe1ccc1a6c0d1b70de751087",
+    "classifier_judge": "acf011db16969543d25a35c9e17c8643c8fda1a2f2566a44d50ed14787500331",
+    "elicit_reasoning": "33599607a0179831dff80a9daeaebcc8e1972a6b6406494e89f66114751fe3d9",
+    "f0_feedback": "82fd7563291b4ca8ca757f857f9e70b1ef90dde12e5b067bd43542d763eaf78a",
+    "f1_feedback": "fe1078e5e8b4e2f5980b14cdf0c6c76c1a3e31715c4ae2638bbf3f1de85efdc9",
+    "f2_generic_explanation": "e8cbc466649d0f2be466c080d7c47092aa6429ec375caf697368b773f31596aa",
+    "f3_script_writer": "2267a396800d3b98bd0a864b35d62d31fbfb757c4c9b9eb41bf34021722a2bd8",
+    "f4_adaptive_tutor": "deda27844a245c9d97e7e29e33f17e4122890d426a29c40dd3c1f51c933a2fd7",
+    "f5_adaptive_tutor": "e252ed394f158015995b6cb1af1a236c8d642912dc938d56f510da55dda3095f",
+    "leakage_judge": "d489f99ccc3ec786c2fadfda60f085500d9ec581038c7df436950c33626f724d",
+    "resolve_standalone": "8758e9a9a7dad0534f14f53a6ea36f61527556be11069c765f9b87edb10b59c9",
+    "sibling_question": "ab0a23af395b66315ac439b4d521aea83cf1abbc1afa31930bb6242ccc1178c8",
+    "standalone_judge": "fc1d98b38a59533b97fb3026407555718073033181405e0eef8a963d6ff2b1ce",
+    "student_answer": "e4268cee7362c168306cb8c7217bac5da758c3df0cfd38bbb32dc48569250ead",
+    "tutor_base": "1fd6e192e5ceaa8c74c847f7d3abad62b8eff1ee3ddd68bab66cd87ce8a0e866"
+   },
+   "status": "ok"
+  },
+  {
+   "check": "taxonomy.covers_skills",
+   "detail": [],
+   "status": "ok"
+  },
+  {
+   "check": "taxonomy.frozen",
+   "detail": "development_placeholder",
+   "status": "warn"
+  },
+  {
+   "check": "data.license_decisions",
+   "detail": {
+    "undecided_tags": []
+   },
+   "status": "ok"
+  },
+  {
+   "check": "panel.pool_difficulties",
+   "detail": {
+    "missing": 0,
+    "pool": 6386
+   },
+   "status": "ok"
+  },
+  {
+   "check": "data.key_balance",
+   "detail": {},
+   "status": "ok"
+  },
+  {
+   "check": "selection.pool_support",
+   "detail": {
+    "craft_structure.cross_text_connections": 643,
+    "craft_structure.text_structure": 644,
+    "craft_structure.words_in_context": 644,
+    "expression_of_ideas.rhetorical_synthesis": 637,
+    "expression_of_ideas.transitions": 634,
+    "information_ideas.central_ideas": 635,
+    "information_ideas.command_of_evidence_textual": 636,
+    "information_ideas.inferences": 645,
+    "standard_english.boundaries": 624,
+    "standard_english.form_structure_sense": 644
+   },
+   "status": "ok"
+  },
+  {
+   "check": "selection.slate_size",
+   "detail": {
+    "skills_below": {},
+    "slate": 64
+   },
+   "status": "ok"
+  },
+  {
+   "check": "resources.disk_free_gb",
+   "detail": 1247.5,
+   "status": "ok"
+  },
+  {
+   "check": "resources.gpu_memory",
+   "detail": "not estimated: depends on the model; verify with the GPU smoke test",
+   "status": "warn"
+  },
+  {
+   "check": "output.run_id_unused",
+   "detail": "artifacts/olmo3sft_grpo_short40/pp-outcome-grpo-s002-618fea5d",
+   "status": "ok"
+  }
+ ],
+ "passed": true
+}

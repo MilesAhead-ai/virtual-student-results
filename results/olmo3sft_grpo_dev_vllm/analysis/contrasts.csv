@@ -1,0 +1,2 @@
+family,contrast,reference,n_pairs,estimate,ci_low,ci_high,p,p_holm,targeting_ratio
+S,pp,r,2,0.0006249999999999867,-0.0022500000000000853,0.0035000000000000586,0.5014,0.5014,

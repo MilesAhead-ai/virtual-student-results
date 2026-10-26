@@ -1,0 +1,12 @@
+{
+ "url": "http://127.0.0.1:8102",
+ "adapter": null,
+ "n": 1600,
+ "identical_text": 1.0,
+ "same_parsed_answer": 1.0,
+ "correctness_flips": 0.0,
+ "accuracy_a": 0.67625,
+ "accuracy_b": 0.67625,
+ "pass_a_seconds": 133.3,
+ "pass_a_tokens_per_s": 1354
+}

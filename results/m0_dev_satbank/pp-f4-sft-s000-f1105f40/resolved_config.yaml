@@ -1,0 +1,276 @@
+schema_version: 1
+experiment:
+  experiment_id: m0_dev_satbank
+  stage: m0
+  mode: development
+  root_seed: 0
+  output_root: artifacts
+  data_root: data/processed/m0
+  lock_file: data/locks/m0/splits_v1.json
+  cache_root: artifacts/cache
+  prompts_dir: prompts
+  taxonomy_file: taxonomies/sat_rw_misconceptions.yaml
+  sibling_map_file: data/processed/m0/sibling_map.parquet
+  f3_library_file: data/processed/m0/f3_library.jsonl
+  calibration_id: m0-dev-v1
+student:
+  model_id: dummy-student
+  revision: dummy-v1
+  tokenizer_id: dummy-student
+  tokenizer_revision: dummy-v1
+  chat_template_hash: dummy
+  chat_template_file: null
+  dtype: bfloat16
+  quantization: none
+  max_context_tokens: 4096
+  device: auto
+  generation_backend: dummy
+  training_backend: dummy
+  dummy:
+    initial_ability: 0.0
+    sft_rate: 0.08
+    grpo_rate: 0.05
+    resolve_skill:
+      f0: 0.25
+      f1: 0.9
+      f2: 0.85
+      f3: 0.55
+      f4: 0.75
+      f5: 0.8
+    conversation_reference_rate: 0.15
+    seconds_per_call: 0.0
+training:
+  method: sft
+  adapter: lora
+  logical_batch_items: 32
+  micro_batch_size: 1
+  gradient_accumulation_steps: 32
+  updates: 4
+  learning_rate: REQUIRED
+  weight_decay: REQUIRED
+  warmup_steps: REQUIRED
+  lr_schedule: REQUIRED
+  max_grad_norm: REQUIRED
+  max_target_tokens: REQUIRED
+  gradient_checkpointing: true
+  max_consecutive_no_gradient_updates: 3
+  lora:
+    rank: REQUIRED
+    alpha: REQUIRED
+    dropout: REQUIRED
+    target_modules: REQUIRED
+grpo:
+  group_size: 8
+  temperature: 1.0
+  max_completion_tokens: 512
+  kl_coefficient: REQUIRED
+  normalize_advantage_std: false
+  normalize_by_length: false
+  reward_correct: 1.0
+  reward_wrong: 0.0
+  reward_unparseable: -0.1
+tracker:
+  theta_initial: 0.0
+  variance_initial: 2.0
+  process_variance: 0.05
+  probability_clip: 1.0e-06
+  variance_floor: 1.0e-08
+  include_item_uncertainty: false
+  noise_after_noop_update: false
+schedule:
+  type: rotating_round_robin
+  skills:
+  - craft_structure.words_in_context
+  - craft_structure.text_structure
+  - craft_structure.cross_text_connections
+  - information_ideas.central_ideas
+  - information_ideas.command_of_evidence_textual
+  - information_ideas.inferences
+  - expression_of_ideas.rhetorical_synthesis
+  - expression_of_ideas.transitions
+  - standard_english.boundaries
+  - standard_english.form_structure_sense
+selection:
+  policy: pp
+  target_success_probability: 0.5
+  target_band_half_width: 0.15
+  candidate_slate_size: 8
+  ppu_quadrature_nodes: 64
+  tie_tolerance: 1.0e-12
+  label_initial: 3
+  pt:
+    estimator: fixed_rollouts
+    rollouts_per_candidate: 8
+    temperature: 1.0
+    sequential_increment: null
+    sequential_half_width: null
+    maximum_rollouts: null
+    max_completion_tokens: 512
+    tracker_difficulty_rule: panelprobe
+feedback:
+  condition: f4
+  maximum_tutor_turns: 6
+  no_reveal_turns: 2
+  resolve_retries: 3
+  feedback_regeneration_retries: 3
+  correct_example_weight: 0.3
+  wrong_example_weight: 1.0
+  guess_filter_samples: 8
+  guess_filter_minimum_correct: 5
+  guess_filter_temperature: 1.0
+  resolve_temperature: 1.0
+  dialogue_temperature: 0.0
+  f2_token_target: 150
+  max_completion_tokens: 512
+  profile_history_per_skill: 10
+  profile_max_tokens: 300
+  f3_script_version: v1
+  sibling_map_version: m0-dev-v1
+  sibling_difficulty_tolerance: 0.75
+  sibling_check_context: in_dialogue
+tutor:
+  provider: dummy
+  model_id: dummy-tutor
+  model_revision: dummy-v1
+  temperature: 0.0
+  effort: null
+  maximum_output_tokens: 1024
+  api_key_env: null
+  region: null
+  request_timeout_seconds: 120.0
+  maximum_transport_retries: 5
+  maximum_protocol_retries: 3
+  dummy: null
+judges:
+  classifier:
+    provider: dummy
+    model_id: dummy-tutor
+    model_revision: dummy-v1
+    temperature: 0.0
+    effort: null
+    maximum_output_tokens: 1024
+    api_key_env: null
+    region: null
+    request_timeout_seconds: 120.0
+    maximum_transport_retries: 5
+    maximum_protocol_retries: 3
+    dummy: null
+  standalone:
+    provider: dummy
+    model_id: dummy-tutor
+    model_revision: dummy-v1
+    temperature: 0.0
+    effort: null
+    maximum_output_tokens: 1024
+    api_key_env: null
+    region: null
+    request_timeout_seconds: 120.0
+    maximum_transport_retries: 5
+    maximum_protocol_retries: 3
+    dummy: null
+  leakage:
+    provider: dummy
+    model_id: dummy-tutor
+    model_revision: dummy-v1
+    temperature: 0.0
+    effort: null
+    maximum_output_tokens: 1024
+    api_key_env: null
+    region: null
+    request_timeout_seconds: 120.0
+    maximum_transport_retries: 5
+    maximum_protocol_retries: 3
+    dummy: null
+  adaptation:
+    provider: dummy
+    model_id: dummy-tutor
+    model_revision: dummy-v1
+    temperature: 0.0
+    effort: null
+    maximum_output_tokens: 1024
+    api_key_env: null
+    region: null
+    request_timeout_seconds: 120.0
+    maximum_transport_retries: 5
+    maximum_protocol_retries: 3
+    dummy: null
+evaluation:
+  every_updates: 1
+  dense_sets:
+  - d
+  sparse_sets: []
+  sparse_updates: []
+  primary_set: d
+  temperature: 0.0
+  max_completion_tokens: 512
+statistics:
+  bootstrap_replicates: 10000
+  confidence_level: 0.95
+  multiple_comparison_method: holm
+  minimum_effect_aulc: REQUIRED
+  equivalence_margin_aulc: REQUIRED
+  reference_policy: r
+  ceiling_policy: pt
+  reference_condition: REQUIRED
+  contrast_families: REQUIRED
+checkpointing:
+  save_every_updates: 1
+  retain_every_updates: 10
+  exact_resume: true
+panel:
+  calibration_splits:
+  - w
+  probe_splits:
+  - d
+  - p
+  - s
+  theta_prior_mean: 0.0
+  theta_prior_variance: 2.0
+  difficulty_prior_mean: 0.0
+  difficulty_prior_variance: 2.0
+  max_iterations: 50
+  tolerance: 1.0e-06
+  members: null
+data:
+  source: sat_platform
+  source_root: ../sat-reading-platform
+  split_assignment: hash_development
+  split_file: null
+  split_fractions:
+    w: 0.4
+    d: 0.15
+    p: 0.35
+    s: 0.1
+  licenses:
+    college_board_practice_test_unverified: development_use_only
+    internal_generated: development_use_only
+  e3_license_decision: REQUIRED
+  dedup:
+    exact: true
+    normalized_text: true
+    embedding_model: REQUIRED
+    embedding_revision: REQUIRED
+    embedding_threshold: REQUIRED
+budget:
+  compute_gpu_hours: 0.0
+  paid_api_usd: 0.0
+development_only:
+- student
+- training.updates
+- training.max_consecutive_no_gradient_updates
+- tracker.process_variance
+- selection.candidate_slate_size
+- selection.pt
+- feedback.sibling_map_version
+- feedback.sibling_difficulty_tolerance
+- feedback.sibling_check_context
+- feedback.resolve_temperature
+- feedback.dialogue_temperature
+- feedback.f2_token_target
+- tutor
+- judges
+- evaluation
+- panel
+- data.split_assignment
+- data.licenses
+- budget

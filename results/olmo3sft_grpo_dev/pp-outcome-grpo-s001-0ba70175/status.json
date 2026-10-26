@@ -1,0 +1,5 @@
+{
+ "at": "2026-10-09T20:39:02.802954+00:00",
+ "detail": "stopped at ~update 4; superseded by artifacts/olmo3sft_grpo_dev_vllm (vLLM generation)",
+ "status": "failed_terminal"
+}
