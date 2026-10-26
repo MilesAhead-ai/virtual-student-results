@@ -14,8 +14,10 @@ Use it to keep later runs consistent with earlier ones.
 **After every experiment:** copy the small run files to `results/<experiment>/`
 (as in earlier experiments), then run `uv run python scripts/build_registry.py`
 while `artifacts/` is still present. Add a row to the index below (and to
-FINDINGS.md), commit all of it together, and push to
-`MilesAhead-ai/virtual-student` (private).
+FINDINGS.md), commit all of it together, push to
+`MilesAhead-ai/virtual-student` (private), and run
+`scripts/publish_results.sh` to update the public mirror
+[`MilesAhead-ai/virtual-student-results`](https://github.com/MilesAhead-ai/virtual-student-results).
 
 ## 1. Fixed setup (unchanged unless stated)
 
