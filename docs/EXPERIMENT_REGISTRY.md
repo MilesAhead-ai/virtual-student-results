@@ -88,6 +88,10 @@ reference config to copy is
 | `evaluation.primary_set` / `statistics.primary_metric` | s / final_accuracy | E7 |
 | data | pool-v1-final (`b4e060d6`, lock `6147da9a`) | final pool |
 
+**Confirmatory study:** `PREREGISTRATION_DRAFT.md` (draft, not frozen) and
+`configs/confirmatory/DRAFT_r_s100.yaml`. Confirmatory settings = §3 plus
+`tracker.theta_initial: 1.0`, E1 as primary set and fresh seeds 100+ (E9).
+
 ## 4. Comparability rules
 
 1. Compare final accuracy only within one data version (§1).
