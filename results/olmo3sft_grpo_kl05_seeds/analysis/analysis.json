@@ -5,27 +5,31 @@
    "pp": {
     "arm": "pp",
     "ci_bca": [
-     0.010624999999999996,
-     0.02645833333333329
+     0.009375000000000007,
+     0.027142857142857118
     ],
     "ci_percentile": [
-     0.010624999999999996,
-     0.02937499999999993
+     0.010444196428571447,
+     0.02767857142857141
     ],
     "equivalent_within_margin": false,
-    "estimate": 0.02020833333333331,
+    "estimate": 0.01919642857142856,
     "exceeds_minimum_effect": false,
     "incomplete_runs": [],
     "kind": "policy",
     "metric": "final_accuracy",
-    "n_pairs": 3,
+    "n_pairs": 7,
     "p_holm": 0.0,
     "p_value": 0.0,
     "reference": "r",
     "seeds": [
      0,
      1,
-     2
+     2,
+     3,
+     4,
+     5,
+     6
     ],
     "targeting_ratio": {
      "arm": "pp",
@@ -68,7 +72,12 @@
      1,
      2
     ],
-    "unpaired_runs": []
+    "unpaired_runs": [
+     "r-outcome-grpo-s003-903ae2bd",
+     "r-outcome-grpo-s004-3b3f4856",
+     "r-outcome-grpo-s005-68a04d45",
+     "r-outcome-grpo-s006-9db5f845"
+    ]
    }
   }
  },
@@ -99,6 +108,42 @@
    "policy": "pp",
    "run": "pp-outcome-grpo-s002-833f9d80",
    "seed": 2,
+   "status": "complete"
+  },
+  {
+   "aulc": 0.7090625,
+   "condition": "outcome",
+   "final_accuracy": 0.73375,
+   "policy": "pp",
+   "run": "pp-outcome-grpo-s003-5e38b191",
+   "seed": 3,
+   "status": "complete"
+  },
+  {
+   "aulc": 0.71546875,
+   "condition": "outcome",
+   "final_accuracy": 0.755,
+   "policy": "pp",
+   "run": "pp-outcome-grpo-s004-f7c06cf5",
+   "seed": 4,
+   "status": "complete"
+  },
+  {
+   "aulc": 0.711796875,
+   "condition": "outcome",
+   "final_accuracy": 0.74625,
+   "policy": "pp",
+   "run": "pp-outcome-grpo-s005-0da61dd0",
+   "seed": 5,
+   "status": "complete"
+  },
+  {
+   "aulc": 0.7112499999999999,
+   "condition": "outcome",
+   "final_accuracy": 0.72375,
+   "policy": "pp",
+   "run": "pp-outcome-grpo-s006-160dd0bf",
+   "seed": 6,
    "status": "complete"
   },
   {
@@ -153,6 +198,42 @@
    "policy": "r",
    "run": "r-outcome-grpo-s002-c495cda2",
    "seed": 2,
+   "status": "complete"
+  },
+  {
+   "aulc": 0.7009765625,
+   "condition": "outcome",
+   "final_accuracy": 0.716875,
+   "policy": "r",
+   "run": "r-outcome-grpo-s003-903ae2bd",
+   "seed": 3,
+   "status": "complete"
+  },
+  {
+   "aulc": 0.6986718749999999,
+   "condition": "outcome",
+   "final_accuracy": 0.7175,
+   "policy": "r",
+   "run": "r-outcome-grpo-s004-3b3f4856",
+   "seed": 4,
+   "status": "complete"
+  },
+  {
+   "aulc": 0.7024609375,
+   "condition": "outcome",
+   "final_accuracy": 0.725625,
+   "policy": "r",
+   "run": "r-outcome-grpo-s005-68a04d45",
+   "seed": 5,
+   "status": "complete"
+  },
+  {
+   "aulc": 0.706640625,
+   "condition": "outcome",
+   "final_accuracy": 0.725,
+   "policy": "r",
+   "run": "r-outcome-grpo-s006-9db5f845",
+   "seed": 6,
    "status": "complete"
   }
  ]

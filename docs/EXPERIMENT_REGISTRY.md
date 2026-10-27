@@ -66,7 +66,7 @@ numbers stand but a later experiment answers the question better;
 | F7 | `olmo3sft_grpo_lr_sweep` | 10-16 | Does a higher lr learn? | R, PP × lr {5e-5, 1e-4, 2e-4} × 1 | lr varies | pool-v1-final | **not invariant** (noise sd ≈ 0.006) | valid in direction; single noisy trajectories | real learning at ≥ 1e-4, but reasoning is dropped / letters collapse | DEV_RUN5_LR_SWEEP.md | `bf622ed` |
 | F8 | `determinism` (no training) | 10-19 | Deterministic eval? Direct-answer baseline? | — | — | pool-v1-final | both | valid | batch-invariant: 0 flips; direct answer 0.687 on S | FINDINGS.md | `a0ad1ee`, `52dd4c2` |
 | F9 | `olmo3sft_grpo_stability` | 10-19 | KL or cosine to stabilise? | R × {1e-4, 2e-4} × {KL 0, KL 0.05, cosine} × 1 | lr, KL, schedule vary | pool-v1-final | **invariant** | valid (1 seed) | 2e-4 cosine best (0.754, ~150-char answers); KL 0.05 keeps reasoning, about half the gain | DEV_RUN6_STABILITY.md | `e7e741c` |
-| F10 | `olmo3sft_grpo_kl05_seeds` | 10-20 | R vs PP vs PT with real learning | R, PP, PT × 3 | **lr 2e-4, KL 0.05, slate 16, 40 upd (E8)** | pool-v1-final | **invariant** | **valid; current reference** | PT − R +0.0206 [+0.012, +0.029]; PP − R +0.0202 [−0.003, +0.044]; ratio 0.98 | DEV_RUN7_KL05_SEEDS.md | `344209c` |
+| F10 | `olmo3sft_grpo_kl05_seeds` | 10-20, ext. 10-27 | R vs PP vs PT with real learning | R, PP × 7; PT × 3 | **lr 2e-4, KL 0.05, slate 16, 40 upd (E8)** | pool-v1-final | **invariant** | **valid; current reference** | PP − R +0.0192 [+0.008, +0.031] (7 seeds, p 0.007); PT − R +0.0206 [+0.012, +0.029] (3 seeds); ratio 0.98 | DEV_RUN7_KL05_SEEDS.md | `344209c`, `936fefb` |
 
 ## 3. Current reference settings
 
@@ -110,7 +110,7 @@ S for pool-v1-final).
 
 <!-- BEGIN GENERATED: scripts/build_registry.py -->
 
-Generated from `results/*/*/` (53 runs). Full per-run data: `results/registry/runs.csv`.
+Generated from `results/*/*/` (61 runs). Full per-run data: `results/registry/runs.csv`.
 Columns marked * need the full artifacts and are cached in the CSV.
 
 ### `m0_dev_satbank`
@@ -152,12 +152,20 @@ Shared: student=Olmo-3-7B-Instruct-SFT@e1452fc, generation=vllm, batch_invariant
 | `pp-outcome-grpo-s000-28c3455b` | complete | pp | 0 | 0.6763 | 0.7400 | 0.7099 | +0.047 | 2.8%→0.3% | 628 | 0.29 | 0.68 | 223 |
 | `pp-outcome-grpo-s001-da85649c` | complete | pp | 1 | 0.6763 | 0.7525 | 0.7179 | +0.058 | 2.8%→0.1% | 495 | 0.28 | 0.66 | 238 |
 | `pp-outcome-grpo-s002-833f9d80` | complete | pp | 2 | 0.6763 | 0.7450 | 0.7114 | +0.053 | 2.8%→0.4% | 466 | 0.28 | 0.61 | 200 |
+| `pp-outcome-grpo-s003-5e38b191` | complete | pp | 3 | 0.6763 | 0.7338 | 0.7091 | +0.040 | 2.8%→0.2% | 315 | 0.27 | 0.68 | 247 |
+| `pp-outcome-grpo-s004-f7c06cf5` | complete | pp | 4 | 0.6763 | 0.7550 | 0.7155 | +0.060 | 2.8%→0.0% | 172 | 0.26 | 0.52 | 224 |
+| `pp-outcome-grpo-s005-0da61dd0` | complete | pp | 5 | 0.6763 | 0.7462 | 0.7118 | +0.053 | 2.8%→0.3% | 580 | 0.27 | 0.65 | 227 |
+| `pp-outcome-grpo-s006-160dd0bf` | complete | pp | 6 | 0.6763 | 0.7238 | 0.7112 | +0.031 | 2.8%→0.4% | 335 | 0.27 | 0.67 | 221 |
 | `pt-outcome-grpo-s000-7e9e5d1f` | complete | pt | 0 | 0.6763 | 0.7469 | 0.7141 | +0.055 | 2.8%→0.5% | 478 | 0.29 | 0.74 | 543 |
 | `pt-outcome-grpo-s001-2743a788` | complete | pt | 1 | 0.6763 | 0.7431 | 0.7189 | +0.048 | 2.8%→0.1% | 175 | 0.27 | 0.71 | 577 |
 | `pt-outcome-grpo-s002-6dce279a` | complete | pt | 2 | 0.6763 | 0.7488 | 0.7149 | +0.054 | 2.8%→0.1% | 450 | 0.28 | 0.68 | 567 |
 | `r-outcome-grpo-s000-354a61dc` | complete | r | 0 | 0.6763 | 0.7294 | 0.7018 | +0.035 | 2.8%→0.1% | 546 | 0.27 | 0.47 | 53 |
 | `r-outcome-grpo-s001-07388563` | complete | r | 1 | 0.6763 | 0.7231 | 0.7044 | +0.029 | 2.8%→0.1% | 446 | 0.26 | 0.51 | 205 |
 | `r-outcome-grpo-s002-c495cda2` | complete | r | 2 | 0.6763 | 0.7244 | 0.7075 | +0.031 | 2.8%→0.3% | 516 | 0.26 | 0.45 | 191 |
+| `r-outcome-grpo-s003-903ae2bd` | complete | r | 3 | 0.6763 | 0.7169 | 0.7010 | +0.022 | 2.8%→0.1% | 510 | 0.26 | 0.53 | 214 |
+| `r-outcome-grpo-s004-3b3f4856` | complete | r | 4 | 0.6763 | 0.7175 | 0.6987 | +0.025 | 2.8%→0.4% | 599 | 0.28 | 0.50 | 189 |
+| `r-outcome-grpo-s005-68a04d45` | complete | r | 5 | 0.6763 | 0.7256 | 0.7025 | +0.032 | 2.8%→0.2% | 335 | 0.27 | 0.50 | 190 |
+| `r-outcome-grpo-s006-9db5f845` | complete | r | 6 | 0.6763 | 0.7250 | 0.7066 | +0.030 | 2.8%→0.1% | 283 | 0.26 | 0.45 | 199 |
 
 ### `olmo3sft_grpo_lr_sweep`
 
