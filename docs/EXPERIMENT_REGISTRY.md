@@ -67,6 +67,8 @@ numbers stand but a later experiment answers the question better;
 | F8 | `determinism` (no training) | 10-19 | Deterministic eval? Direct-answer baseline? | — | — | pool-v1-final | both | valid | batch-invariant: 0 flips; direct answer 0.687 on S | FINDINGS.md | `a0ad1ee`, `52dd4c2` |
 | F9 | `olmo3sft_grpo_stability` | 10-19 | KL or cosine to stabilise? | R × {1e-4, 2e-4} × {KL 0, KL 0.05, cosine} × 1 | lr, KL, schedule vary | pool-v1-final | **invariant** | valid (1 seed) | 2e-4 cosine best (0.754, ~150-char answers); KL 0.05 keeps reasoning, about half the gain | DEV_RUN6_STABILITY.md | `e7e741c` |
 | F10 | `olmo3sft_grpo_kl05_seeds` | 10-20, ext. 10-27 | R vs PP vs PT with real learning | R, PP × 7; PT × 3 | **lr 2e-4, KL 0.05, slate 16, 40 upd (E8)** | pool-v1-final | **invariant** | **valid; current reference** | PP − R +0.0192 [+0.008, +0.031] (7 seeds, p 0.007); PT − R +0.0206 [+0.012, +0.029] (3 seeds); ratio 0.98 | DEV_RUN7_KL05_SEEDS.md | `344209c`, `936fefb` |
+| F11 | `olmo3sft_grpo_kl_strength` | 10-27 | Does a stronger KL keep the reasoning, and at what cost? | R × KL {0.1, 0.2} × seeds 3–6 | KL varies (pairs with F10 R s3–6) | pool-v1-final | invariant | valid (4 seeds) | KL 0.1: 0/4 shortened, final −0.011, ~60% of skill gain; KL 0.2: −0.016 | DEV_RUN8_PRECONFIRMATORY.md | `82e41b3` |
+| F12 | `olmo3sft_grpo_tracker_theta0` (+ offline replay `tracker_diagnosis`) | 10-27 | Does a calibrated tracker start improve PP? | PP × θ₀ 1.0 × seeds 0–3 | `tracker.theta_initial: 1.0` | pool-v1-final | invariant | valid (4 seeds) | early calibration fixed; final S and PP − R unchanged (+0.019); late targeting is pool-limited | DEV_RUN8_PRECONFIRMATORY.md | `964c5b6`, `9698441` |
 
 ## 3. Current reference settings
 
@@ -110,7 +112,7 @@ S for pool-v1-final).
 
 <!-- BEGIN GENERATED: scripts/build_registry.py -->
 
-Generated from `results/*/*/` (61 runs). Full per-run data: `results/registry/runs.csv`.
+Generated from `results/*/*/` (73 runs). Full per-run data: `results/registry/runs.csv`.
 Columns marked * need the full artifacts and are cached in the CSV.
 
 ### `m0_dev_satbank`
@@ -166,6 +168,21 @@ Shared: student=Olmo-3-7B-Instruct-SFT@e1452fc, generation=vllm, batch_invariant
 | `r-outcome-grpo-s004-3b3f4856` | complete | r | 4 | 0.6763 | 0.7175 | 0.6987 | +0.025 | 2.8%→0.4% | 599 | 0.28 | 0.50 | 189 |
 | `r-outcome-grpo-s005-68a04d45` | complete | r | 5 | 0.6763 | 0.7256 | 0.7025 | +0.032 | 2.8%→0.2% | 335 | 0.27 | 0.50 | 190 |
 | `r-outcome-grpo-s006-9db5f845` | complete | r | 6 | 0.6763 | 0.7250 | 0.7066 | +0.030 | 2.8%→0.1% | 283 | 0.26 | 0.45 | 199 |
+
+### `olmo3sft_grpo_kl_strength`
+
+Shared: student=Olmo-3-7B-Instruct-SFT@e1452fc, generation=vllm, batch_invariant=True, method=grpo, lr=2e-04, schedule=constant_with_warmup, warmup=5, updates=40, group_size=8, rollout_temp=1, max_completion_tokens=512, lora=r16/a32.0, batch_items=32, slate=16, primary_set=s, primary_metric=final_accuracy, items_sha=b4e060d6, split_lock=6147da9a.
+
+| run_id | status | policy | seed | kl | initial | final | AULC | Δparsed* | unparse u0→end* | len end* | max letter* | grad groups* | min* |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `r-outcome-grpo-s003-e51f464f` | complete | r | 3 | 0.1 | 0.6763 | 0.7175 | 0.7004 | +0.023 | 2.8%→0.2% | 533 | 0.28 | 0.57 | 223 |
+| `r-outcome-grpo-s004-0dc7e321` | complete | r | 4 | 0.1 | 0.6763 | 0.7069 | 0.7012 | +0.014 | 2.8%→0.3% | 442 | 0.28 | 0.52 | 210 |
+| `r-outcome-grpo-s005-6e7e918a` | complete | r | 5 | 0.1 | 0.6763 | 0.7106 | 0.7015 | +0.017 | 2.8%→0.2% | 441 | 0.29 | 0.56 | 199 |
+| `r-outcome-grpo-s006-c1edfd88` | complete | r | 6 | 0.1 | 0.6763 | 0.7063 | 0.6980 | +0.014 | 2.8%→0.4% | 522 | 0.26 | 0.55 | 207 |
+| `r-outcome-grpo-s003-5c71c4fa` | complete | r | 3 | 0.2 | 0.6763 | 0.7106 | 0.6981 | +0.021 | 2.8%→0.8% | 559 | 0.29 | 0.60 | 229 |
+| `r-outcome-grpo-s004-a39ea510` | complete | r | 4 | 0.2 | 0.6763 | 0.7013 | 0.6952 | +0.012 | 2.8%→0.8% | 520 | 0.27 | 0.62 | 211 |
+| `r-outcome-grpo-s005-1575d4ef` | complete | r | 5 | 0.2 | 0.6763 | 0.6994 | 0.6961 | +0.009 | 2.8%→0.7% | 517 | 0.27 | 0.60 | 216 |
+| `r-outcome-grpo-s006-7bf684e9` | complete | r | 6 | 0.2 | 0.6763 | 0.7081 | 0.6950 | +0.014 | 2.8%→0.2% | 540 | 0.26 | 0.61 | 219 |
 
 ### `olmo3sft_grpo_lr_sweep`
 
@@ -250,5 +267,16 @@ Shared: student=Olmo-3-7B-Instruct-SFT@e1452fc, generation=vllm, batch_invariant
 | run_id | status | policy | seed | initial | final | AULC | Δparsed* | unparse u0→end* | len end* | max letter* | grad groups* | min* |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | `pp-outcome-grpo-s000-3d40d6e4` | complete | pp | 0 | 0.7350 | 0.7600 | 0.7388 | +0.022 | 3.0%→2.5% | 499 | 0.26 | 0.75 | 6 |
+
+### `olmo3sft_grpo_tracker_theta0`
+
+Shared: student=Olmo-3-7B-Instruct-SFT@e1452fc, generation=vllm, batch_invariant=True, method=grpo, lr=2e-04, schedule=constant_with_warmup, warmup=5, updates=40, kl=0.05, group_size=8, rollout_temp=1, max_completion_tokens=512, lora=r16/a32.0, batch_items=32, slate=16, primary_set=s, primary_metric=final_accuracy, items_sha=b4e060d6, split_lock=6147da9a.
+
+| run_id | status | policy | seed | initial | final | AULC | Δparsed* | unparse u0→end* | len end* | max letter* | grad groups* | min* |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `pp-outcome-grpo-s000-f3a128bd` | complete | pp | 0 | 0.6763 | 0.7519 | 0.7103 | +0.057 | 2.8%→0.0% | 281 | 0.27 | 0.63 | 222 |
+| `pp-outcome-grpo-s001-dacd63a8` | complete | pp | 1 | 0.6763 | 0.7381 | 0.7088 | +0.046 | 2.8%→0.5% | 424 | 0.26 | 0.69 | 217 |
+| `pp-outcome-grpo-s002-5d539ba2` | complete | pp | 2 | 0.6763 | 0.7344 | 0.7121 | +0.039 | 2.8%→0.0% | 431 | 0.29 | 0.66 | 199 |
+| `pp-outcome-grpo-s003-121d99ad` | complete | pp | 3 | 0.6763 | 0.7456 | 0.7102 | +0.054 | 2.8%→0.5% | 300 | 0.29 | 0.71 | 217 |
 
 <!-- END GENERATED -->

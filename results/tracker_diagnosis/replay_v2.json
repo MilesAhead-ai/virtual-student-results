@@ -1,0 +1,292 @@
+{
+ "shrinkage": {
+  "craft_structure.cross_text_connections": {
+   "mu": -0.035,
+   "tau2": 0.059,
+   "mean_sampling_var": 0.691
+  },
+  "craft_structure.text_structure": {
+   "mu": 0.017,
+   "tau2": 0.188,
+   "mean_sampling_var": 0.658
+  },
+  "craft_structure.words_in_context": {
+   "mu": 0.12,
+   "tau2": 0.479,
+   "mean_sampling_var": 0.722
+  },
+  "expression_of_ideas.rhetorical_synthesis": {
+   "mu": -0.109,
+   "tau2": 0.05,
+   "mean_sampling_var": 0.769
+  },
+  "expression_of_ideas.transitions": {
+   "mu": 0.306,
+   "tau2": 0.582,
+   "mean_sampling_var": 0.534
+  },
+  "information_ideas.central_ideas": {
+   "mu": -0.14,
+   "tau2": 0.05,
+   "mean_sampling_var": 0.798
+  },
+  "information_ideas.command_of_evidence_textual": {
+   "mu": -0.122,
+   "tau2": 0.439,
+   "mean_sampling_var": 0.603
+  },
+  "information_ideas.inferences": {
+   "mu": 0.005,
+   "tau2": 0.276,
+   "mean_sampling_var": 0.646
+  },
+  "standard_english.boundaries": {
+   "mu": 0.106,
+   "tau2": 0.062,
+   "mean_sampling_var": 0.506
+  },
+  "standard_english.form_structure_sense": {
+   "mu": 0.029,
+   "tau2": 0.116,
+   "mean_sampling_var": 0.531
+  }
+ },
+ "r": {
+  "current (θ0 0, v0 2, q 0.05)": {
+   "n": 8960,
+   "loglik_per_obs": -0.4465,
+   "gap": 0.0206,
+   "gap_first20": 0.0548,
+   "gap_60plus": 0.0128,
+   "gap_in_band": 0.0096,
+   "n_in_band": 1900
+  },
+  "θ0 0.5": {
+   "n": 8960,
+   "loglik_per_obs": -0.4453,
+   "gap": 0.0166,
+   "gap_first20": 0.0345,
+   "gap_60plus": 0.0125,
+   "gap_in_band": 0.0031,
+   "n_in_band": 1869
+  },
+  "θ0 1.0": {
+   "n": 8960,
+   "loglik_per_obs": -0.4449,
+   "gap": 0.0126,
+   "gap_first20": 0.0143,
+   "gap_60plus": 0.0123,
+   "gap_in_band": -0.0077,
+   "n_in_band": 1844
+  },
+  "θ0 1.5": {
+   "n": 8960,
+   "loglik_per_obs": -0.4454,
+   "gap": 0.0088,
+   "gap_first20": -0.0052,
+   "gap_60plus": 0.012,
+   "gap_in_band": -0.0124,
+   "n_in_band": 1818
+  },
+  "q 0.01": {
+   "n": 8960,
+   "loglik_per_obs": -0.4432,
+   "gap": 0.0267,
+   "gap_first20": 0.0565,
+   "gap_60plus": 0.0194,
+   "gap_in_band": 0.0156,
+   "n_in_band": 1959
+  },
+  "q 0.02": {
+   "n": 8960,
+   "loglik_per_obs": -0.444,
+   "gap": 0.0243,
+   "gap_first20": 0.0561,
+   "gap_60plus": 0.0163,
+   "gap_in_band": 0.0135,
+   "n_in_band": 1934
+  },
+  "q 0.1": {
+   "n": 8960,
+   "loglik_per_obs": -0.4503,
+   "gap": 0.0181,
+   "gap_first20": 0.053,
+   "gap_60plus": 0.0113,
+   "gap_in_band": 0.0098,
+   "n_in_band": 1873
+  },
+  "item uncertainty": {
+   "n": 8960,
+   "loglik_per_obs": -0.4481,
+   "gap": 0.0248,
+   "gap_first20": 0.0644,
+   "gap_60plus": 0.0145,
+   "gap_in_band": 0.0051,
+   "n_in_band": 1982
+  },
+  "θ0 1.0 + item uncertainty": {
+   "n": 8960,
+   "loglik_per_obs": -0.4459,
+   "gap": 0.015,
+   "gap_first20": 0.02,
+   "gap_60plus": 0.0134,
+   "gap_in_band": -0.0144,
+   "n_in_band": 1901
+  },
+  "θ0 1.0 + shrunk b": {
+   "n": 8960,
+   "loglik_per_obs": -0.476,
+   "gap": 0.0126,
+   "gap_first20": 0.0122,
+   "gap_60plus": 0.0123,
+   "gap_in_band": -0.0128,
+   "n_in_band": 1988
+  },
+  "θ0 1.0 + shrunk b + item uncertainty": {
+   "n": 8960,
+   "loglik_per_obs": -0.4774,
+   "gap": 0.013,
+   "gap_first20": 0.0141,
+   "gap_60plus": 0.0126,
+   "gap_in_band": -0.018,
+   "n_in_band": 2014
+  },
+  "guess c 0.25 [non-spec]": {
+   "n": 8960,
+   "loglik_per_obs": -0.4444,
+   "gap": 0.0102,
+   "gap_first20": 0.0213,
+   "gap_60plus": 0.0078,
+   "gap_in_band": 0.0034,
+   "n_in_band": 2298
+  },
+  "θ0 1.0 + guess c 0.25 [non-spec]": {
+   "n": 8960,
+   "loglik_per_obs": -0.4444,
+   "gap": 0.0008,
+   "gap_first20": -0.0214,
+   "gap_60plus": 0.0067,
+   "gap_in_band": -0.012,
+   "n_in_band": 2242
+  }
+ },
+ "pp": {
+  "current (θ0 0, v0 2, q 0.05)": {
+   "n": 8960,
+   "loglik_per_obs": -0.6408,
+   "gap": 0.0238,
+   "gap_first20": 0.0602,
+   "gap_60plus": 0.0147,
+   "gap_in_band": 0.0361,
+   "n_in_band": 6196
+  },
+  "θ0 0.5": {
+   "n": 8960,
+   "loglik_per_obs": -0.6398,
+   "gap": 0.0198,
+   "gap_first20": 0.0383,
+   "gap_60plus": 0.0146,
+   "gap_in_band": 0.0306,
+   "n_in_band": 6149
+  },
+  "θ0 1.0": {
+   "n": 8960,
+   "loglik_per_obs": -0.6397,
+   "gap": 0.0158,
+   "gap_first20": 0.0161,
+   "gap_60plus": 0.0145,
+   "gap_in_band": 0.0263,
+   "n_in_band": 6042
+  },
+  "θ0 1.5": {
+   "n": 8960,
+   "loglik_per_obs": -0.6404,
+   "gap": 0.0119,
+   "gap_first20": -0.0052,
+   "gap_60plus": 0.0144,
+   "gap_in_band": 0.0233,
+   "n_in_band": 5948
+  },
+  "q 0.01": {
+   "n": 8960,
+   "loglik_per_obs": -0.6381,
+   "gap": 0.0356,
+   "gap_first20": 0.0624,
+   "gap_60plus": 0.0298,
+   "gap_in_band": 0.043,
+   "n_in_band": 6284
+  },
+  "q 0.02": {
+   "n": 8960,
+   "loglik_per_obs": -0.6383,
+   "gap": 0.0305,
+   "gap_first20": 0.0618,
+   "gap_60plus": 0.0225,
+   "gap_in_band": 0.0384,
+   "n_in_band": 6240
+  },
+  "q 0.1": {
+   "n": 8960,
+   "loglik_per_obs": -0.6456,
+   "gap": 0.0197,
+   "gap_first20": 0.0579,
+   "gap_60plus": 0.0111,
+   "gap_in_band": 0.0353,
+   "n_in_band": 6088
+  },
+  "item uncertainty": {
+   "n": 8960,
+   "loglik_per_obs": -0.6398,
+   "gap": 0.0254,
+   "gap_first20": 0.0618,
+   "gap_60plus": 0.0164,
+   "gap_in_band": 0.0326,
+   "n_in_band": 6303
+  },
+  "θ0 1.0 + item uncertainty": {
+   "n": 8960,
+   "loglik_per_obs": -0.6384,
+   "gap": 0.0154,
+   "gap_first20": 0.0116,
+   "gap_60plus": 0.016,
+   "gap_in_band": 0.0203,
+   "n_in_band": 6146
+  },
+  "θ0 1.0 + shrunk b": {
+   "n": 8960,
+   "loglik_per_obs": -0.6544,
+   "gap": 0.0065,
+   "gap_first20": -0.0147,
+   "gap_60plus": 0.0136,
+   "gap_in_band": 0.0182,
+   "n_in_band": 5797
+  },
+  "θ0 1.0 + shrunk b + item uncertainty": {
+   "n": 8960,
+   "loglik_per_obs": -0.6533,
+   "gap": 0.005,
+   "gap_first20": -0.0201,
+   "gap_60plus": 0.0141,
+   "gap_in_band": 0.0151,
+   "n_in_band": 5770
+  },
+  "guess c 0.25 [non-spec]": {
+   "n": 8960,
+   "loglik_per_obs": -0.638,
+   "gap": 0.0193,
+   "gap_first20": 0.0314,
+   "gap_60plus": 0.0167,
+   "gap_in_band": 0.0239,
+   "n_in_band": 6529
+  },
+  "θ0 1.0 + guess c 0.25 [non-spec]": {
+   "n": 8960,
+   "loglik_per_obs": -0.6384,
+   "gap": 0.009,
+   "gap_first20": -0.0189,
+   "gap_60plus": 0.016,
+   "gap_in_band": 0.0156,
+   "n_in_band": 6268
+  }
+ }
+}

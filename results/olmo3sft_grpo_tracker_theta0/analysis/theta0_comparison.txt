@@ -1,0 +1,14 @@
+== selection-event calibration (all updates)
+PP θ0=0: 0-4: 0.522→0.605  5-19: 0.528→0.578  20-59: 0.559→0.583  60+: 0.607→0.617
+   actual success overall 0.601 (by updates 1-10/11-20/21-30/31-40: [0.576, 0.592, 0.609, 0.623]); predicted in band 0.69
+PP θ0=1: 0-4: 0.532→0.540  5-19: 0.539→0.548  20-59: 0.553→0.565  60+: 0.602→0.620
+   actual success overall 0.591 (by updates 1-10/11-20/21-30/31-40: [0.55, 0.568, 0.605, 0.637]); predicted in band 0.69
+
+== training signal and outcome
+R        final [0.7294, 0.7231, 0.7244, 0.7169] mean 0.7234  Δparsed +0.0293  len [546, 446, 516, 510]  grad groups (all updates) 0.56
+PP θ0=0  final [0.74, 0.7525, 0.745, 0.7338] mean 0.7428  Δparsed +0.0494  len [628, 495, 466, 315]  grad groups (all updates) 0.74
+PP θ0=1  final [0.7519, 0.7381, 0.7344, 0.7456] mean 0.7425  Δparsed +0.0490  len [281, 424, 431, 300]  grad groups (all updates) 0.75
+
+PP θ0=1 − R: per seed [0.0225, 0.015, 0.01, 0.0287] mean +0.0191 t-CI(df3) [+0.0059, +0.0322] p2=0.019
+PP θ0=0 − R: per seed [0.0106, 0.0294, 0.0206, 0.0169] mean +0.0194 t-CI(df3) [+0.0069, +0.0318] p2=0.016
+PP θ0=1 − PP θ0=0: per seed [0.0119, -0.0144, -0.0106, 0.0119] mean -0.0003 t-CI(df3) [-0.0228, +0.0222] p2=0.968
