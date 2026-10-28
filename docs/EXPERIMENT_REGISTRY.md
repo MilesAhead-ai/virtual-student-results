@@ -88,9 +88,12 @@ reference config to copy is
 | `evaluation.primary_set` / `statistics.primary_metric` | s / final_accuracy | E7 |
 | data | pool-v1-final (`b4e060d6`, lock `6147da9a`) | final pool |
 
-**Confirmatory study:** `PREREGISTRATION_DRAFT.md` (draft, not frozen) and
-`configs/confirmatory/DRAFT_r_s100.yaml`. Confirmatory settings = §3 plus
-`tracker.theta_initial: 1.0`, E1 as primary set and fresh seeds 100+ (E9).
+**Confirmatory study (frozen 2026-10-28):** `PREREGISTRATION_CONFIRMATORY_V1.md`,
+`configs/confirmatory/v1/` (40 configs + `FROZEN.json` + `topic_twins.json`),
+tag `confirmatory-v1-frozen`. Settings = §3 plus `tracker.theta_initial: 1.0`,
+E1 as primary set, fresh seeds 100+ (E9, E10). Experiment dir
+`artifacts/olmo3sft_grpo_confirmatory_v1/`; E1 results are not read until all
+40 runs are complete.
 
 ## 4. Comparability rules
 
