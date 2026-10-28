@@ -1,0 +1,193 @@
+budget:
+  compute_gpu_hours: 0
+  paid_api_usd: 0
+data:
+  bank_split: w
+  dedup:
+    embedding_model: BAAI/bge-small-en-v1.5
+    embedding_revision: 5c38ec7c405ec4b44b94cc5a9bb96e735b38267a
+    embedding_threshold: 0.88
+  drop_key_flagged: true
+  e3_license_decision: 'not_applicable: pool-v1-final has no E3 split; College Board
+    items in W are used only for panel calibration'
+  licenses:
+    college_board_practice_test_unverified: development_use_only
+    internal_generated: development_use_only
+  panel_runs:
+  - bank_eval_dirs:
+    - data/raw/pool_v1/gpu_W/eval
+    pool_eval_dirs:
+    - data/raw/pool_v1/P1/eval
+    - data/raw/pool_v1/P2/eval_r1
+  - bank_eval_dirs:
+    - data/raw/pool_v1/repeat_r2/eval
+    pool_eval_dirs:
+    - data/raw/pool_v1/P2/eval_r2
+  - bank_eval_dirs:
+    - data/raw/pool_v1/repeat_r3/eval
+    pool_eval_dirs:
+    - data/raw/pool_v1/P2/eval_r3
+  pool_question_files:
+  - data/raw/pool_v1/P1/balanced/P1_boundaries.jsonl
+  - data/raw/pool_v1/P1/balanced/P1_central_ideas.jsonl
+  - data/raw/pool_v1/P1/balanced/P1_command_of_evidence_textual.jsonl
+  - data/raw/pool_v1/P1/balanced/P1_cross_text_connections.jsonl
+  - data/raw/pool_v1/P1/balanced/P1_form_structure_sense.jsonl
+  - data/raw/pool_v1/P1/balanced/P1_inferences.jsonl
+  - data/raw/pool_v1/P1/balanced/P1_rhetorical_synthesis.jsonl
+  - data/raw/pool_v1/P1/balanced/P1_text_structure.jsonl
+  - data/raw/pool_v1/P1/balanced/P1_transitions.jsonl
+  - data/raw/pool_v1/P1/balanced/P1_words_in_context.jsonl
+  - data/raw/pool_v1/P2/balanced/P2_boundaries.jsonl
+  - data/raw/pool_v1/P2/balanced/P2_central_ideas.jsonl
+  - data/raw/pool_v1/P2/balanced/P2_command_of_evidence_textual.jsonl
+  - data/raw/pool_v1/P2/balanced/P2_cross_text_connections.jsonl
+  - data/raw/pool_v1/P2/balanced/P2_form_structure_sense.jsonl
+  - data/raw/pool_v1/P2/balanced/P2_inferences.jsonl
+  - data/raw/pool_v1/P2/balanced/P2_rhetorical_synthesis.jsonl
+  - data/raw/pool_v1/P2/balanced/P2_text_structure.jsonl
+  - data/raw/pool_v1/P2/balanced/P2_transitions.jsonl
+  - data/raw/pool_v1/P2/balanced/P2_words_in_context.jsonl
+  source: sat_platform
+  source_root: ../sat-reading-platform
+  split_assignment: file
+  split_file: data/splits/pool_v1_dev.json
+  split_fractions:
+    p: 1.0
+  split_quotas:
+    d: 20
+    e1: 60
+    p_plus: 64
+    s: 160
+  split_remainder: p
+development_only: []
+evaluation:
+  dense_sets:
+  - e1
+  - s
+  every_updates: 5
+  primary_set: e1
+  sparse_sets: []
+  sparse_updates: []
+experiment:
+  cache_root: artifacts/cache
+  calibration_id: pool-v1-gpu3
+  data_root: data/processed/pool_v1
+  experiment_id: olmo3sft_grpo_confirmatory_v1
+  f3_library_file: data/processed/pool_v1/f3_library.jsonl
+  lock_file: data/locks/pool_v1/splits_v1.json
+  mode: confirmatory
+  output_root: artifacts
+  root_seed: 115
+  sibling_map_file: data/processed/pool_v1/sibling_map.parquet
+  stage: m0
+feedback:
+  condition: outcome
+  dialogue_temperature: 0.0
+  f2_token_target: 150
+  resolve_temperature: 1.0
+  sibling_check_context: in_dialogue
+  sibling_difficulty_tolerance: 0.75
+  sibling_map_version: pool-v1-dev
+grpo:
+  group_size: 8
+  kl_coefficient: 0.05
+  max_completion_tokens: 512
+  temperature: 1.0
+judges:
+  adaptation: &id001
+    maximum_output_tokens: 1024
+    model_id: dummy-tutor
+    model_revision: dummy-v1
+    provider: dummy
+  classifier: *id001
+  leakage: *id001
+  standalone: *id001
+panel:
+  calibration_splits:
+  - w
+  difficulty_prior_mean: 0.0
+  difficulty_prior_variance: 2.0
+  probe_splits:
+  - d
+  - p
+  - p_plus
+  - s
+  - e1
+  repeat_weighting: mean
+  theta_prior_mean: 0.0
+  theta_prior_variance: 2.0
+schedule:
+  skills:
+  - craft_structure.words_in_context
+  - craft_structure.text_structure
+  - craft_structure.cross_text_connections
+  - information_ideas.central_ideas
+  - information_ideas.command_of_evidence_textual
+  - information_ideas.inferences
+  - expression_of_ideas.rhetorical_synthesis
+  - expression_of_ideas.transitions
+  - standard_english.boundaries
+  - standard_english.form_structure_sense
+  type: rotating_round_robin
+schema_version: 1
+selection:
+  candidate_slate_size: 16
+  policy: pp
+  pt:
+    estimator: fixed_rollouts
+    rollouts_per_candidate: 4
+    temperature: 1.0
+    max_completion_tokens: 512
+    tracker_difficulty_rule: panelprobe
+statistics:
+  contrast_families:
+    S:
+    - pp
+    - pt
+  equivalence_margin_aulc: 0.01
+  minimum_effect_aulc: 0.02
+  reference_condition: outcome
+  primary_metric: final_accuracy
+student:
+  chat_template_hash: edbb35ef1219ad2273f716feed08f535a868e167be5b5518adc37ab2bcb8afe6
+  dtype: bfloat16
+  generation_backend: vllm
+  vllm_batch_invariant: true
+  generation_batch_size: 32
+  max_context_tokens: 4096
+  model_id: allenai/Olmo-3-7B-Instruct-SFT
+  revision: e1452fc572d51966ff4aaeb25118b891eb93e549
+  training_backend: torch_peft
+  vllm_url: http://127.0.0.1:8101
+tracker:
+  process_variance: 0.05
+  theta_initial: 1.0
+training:
+  adapter: lora
+  gradient_accumulation_steps: 32
+  gradient_checkpointing: true
+  learning_rate: 0.0002
+  logical_batch_items: 32
+  lora:
+    alpha: 32
+    dropout: 0.05
+    rank: 16
+    target_modules:
+    - q_proj
+    - k_proj
+    - v_proj
+    - o_proj
+    - gate_proj
+    - up_proj
+    - down_proj
+  lr_schedule: constant_with_warmup
+  max_consecutive_no_gradient_updates: 5
+  max_grad_norm: 1.0
+  max_target_tokens: 512
+  method: grpo
+  micro_batch_size: 1
+  updates: 40
+  warmup_steps: 5
+  weight_decay: 0.0
+tutor: *id001

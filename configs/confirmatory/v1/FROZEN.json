@@ -1,0 +1,288 @@
+{
+ "frozen_at": "2026-10-28",
+ "code_commit": "bded020a4998f5846d80c435b399f60c12e14b7c",
+ "split_lock_sha256": "6147da9a7420ffa333da22e49fe296f12d7f54ddd9ed41acdb9239c3f9018206",
+ "topic_twins_sha256": "297f2dd04cf85a493842409d0c36f015fcf210c23863b1750bfd3002476999e6",
+ "configs": {
+  "pp_s100.yaml": {
+   "file_sha256": "4c31ff9ac3c55f582304a90462323fa4305189b6ed770f746d47fe90153cf0b6",
+   "config_hash": "914f52ece1af503ddbfe18ffc0ce5dfee6aa87806396648b74e77b570507b554",
+   "scientific_hash": "c1b7675e88b5018f509e49805655b64313e6f7b91644638aac7a300240044ca1",
+   "policy": "pp",
+   "root_seed": 100
+  },
+  "pp_s101.yaml": {
+   "file_sha256": "851695988c45281becb0918f2c0ff21832af6751ff4ecdba9d2648b003fdc03d",
+   "config_hash": "693f97d7fe64c9397c746ba2fb6ee51e1aef6619be21a3abd465d3c04f5b6e12",
+   "scientific_hash": "02d8bc60557be12a35e01ca542aad17dae072d7b39b73580491756a4e28cb645",
+   "policy": "pp",
+   "root_seed": 101
+  },
+  "pp_s102.yaml": {
+   "file_sha256": "ac2eadd6243d85d57e9f0992ecc96384d385c26c4ce058ca71158f5a93553c20",
+   "config_hash": "f02d019a2af30dade2363e5772a8387ae86cf91b46dfaea3220c70feecea1a7a",
+   "scientific_hash": "41da1354b6b24411de9ee7a088d87816d0f756cbd86bfc59cd52fd381fdd18b4",
+   "policy": "pp",
+   "root_seed": 102
+  },
+  "pp_s103.yaml": {
+   "file_sha256": "c48bfa8c675b872c77be81c7380e1c1adce148cea3e47f72370a9d6a2e4ac042",
+   "config_hash": "7167fc2090d2c8973f96d4033c6e0caf9488a930e4e7cfab537948321a999d78",
+   "scientific_hash": "3702ac88eab56afc14e32b626ffa1c0b0ef0a294fdf641b9939f98fe1925efeb",
+   "policy": "pp",
+   "root_seed": 103
+  },
+  "pp_s104.yaml": {
+   "file_sha256": "d2714917b2c7a6be39fa1bff0d2959bc00be0e4f55d60006a32f1c18655df4ba",
+   "config_hash": "0d24c112dd8721c9d7b8f55c7fe8ab25440e4d628a00b4045983d2c6759a3063",
+   "scientific_hash": "010783043c0d98fd9ebe4228693b0f909dec2f1480d48130581dbc6e20efe658",
+   "policy": "pp",
+   "root_seed": 104
+  },
+  "pp_s105.yaml": {
+   "file_sha256": "ee408a4218675ccf0e8df7884f4a14b05b8d1e1aeb389ee6da227ecbd3bcf6f4",
+   "config_hash": "4f475b218c266e44d8ff5208ddcd59e68002c776d0479caa313d18971174a557",
+   "scientific_hash": "11ce62e5b11c20b6b29cbbbe09cbf43fdb9b5712450ea1212109e7d4becba570",
+   "policy": "pp",
+   "root_seed": 105
+  },
+  "pp_s106.yaml": {
+   "file_sha256": "06f812606a2cc96d564e8ee977d91a05bea9612e67531bdba4e02fd17ddf1027",
+   "config_hash": "c26ddbc0f757e877eb80510a1d7db055f2fbb351db8a02f22abcb3cd54efadcd",
+   "scientific_hash": "219fbd525ca082b29e624a040c4dc8c8900c7c986b26a68bb0598b79a547d2e9",
+   "policy": "pp",
+   "root_seed": 106
+  },
+  "pp_s107.yaml": {
+   "file_sha256": "ffea37ab336d7c49e5f4b75bc92879ea9ea5494c605983da62eb1e3ef09267e8",
+   "config_hash": "e51e3be64c90924c9f0ade9366a7ca1d1ec40499935e94157977a989c9546f8c",
+   "scientific_hash": "ed22ccbf684437af1e219e3a7ff0a35099b889f79fd7e992e071c1289afdec70",
+   "policy": "pp",
+   "root_seed": 107
+  },
+  "pp_s108.yaml": {
+   "file_sha256": "a41fcb3998848f540fe42d749224d366f7fc4725970d30e86abba967b822386f",
+   "config_hash": "d0e7bdc04586739e2476ee5499d515d0a4a693c4161d7ec42c3b4080bd277cf6",
+   "scientific_hash": "efa738e84eaf9c8cb7c74914a55ae610211b55d8154491d80b356a6d99857536",
+   "policy": "pp",
+   "root_seed": 108
+  },
+  "pp_s109.yaml": {
+   "file_sha256": "df2c4def888c7cdd6463d38c16ee9c8ea29bdb6a6861db8e02396906ae6352d7",
+   "config_hash": "39e1ca54a678fdb765bf7114b16de1226ae7f149507bc5b635d51b68cee6cc4f",
+   "scientific_hash": "fa2d54aadaa4375f5a26b972cfcc40c11a0c2f01f8e3b7b7d2a304159675832e",
+   "policy": "pp",
+   "root_seed": 109
+  },
+  "pp_s110.yaml": {
+   "file_sha256": "27e4a192db254b4f14f5413868b0f247dbdadd46b19d2be6f677b6dddf362590",
+   "config_hash": "d7fd4f5055d1f782b688f88ef4f4ac142e921fd6f29553cc0cb48fc08aa033e2",
+   "scientific_hash": "44898b43a445041c69e5b941ffb9cadb857eb8c2582a0de7f1d15f64c3d705d0",
+   "policy": "pp",
+   "root_seed": 110
+  },
+  "pp_s111.yaml": {
+   "file_sha256": "639ea730099425bbd0626efa76a1a4aa87343b784a32095604a6eeb2fe6d4aea",
+   "config_hash": "7249019e1ad88ef925c3684bea0ce4012db3c0831e72eda0741b343229e6f619",
+   "scientific_hash": "a2cba09b9d5819671d144e49ff124bc04399706b06ae8ccee215b4d452e37574",
+   "policy": "pp",
+   "root_seed": 111
+  },
+  "pp_s112.yaml": {
+   "file_sha256": "d4ca62a34ad17dd60ae93c83b5f53b5e3254264ae67157158c3088d3da8fbe61",
+   "config_hash": "064269b3f76938d6b78c9eaa0df16755e151a746cb06b4b8e0a09c8607ed29a9",
+   "scientific_hash": "aefbe70261c9c93a4c847626e1b1eb83f5a6aedf1c4a6efa267e04c077537e7b",
+   "policy": "pp",
+   "root_seed": 112
+  },
+  "pp_s113.yaml": {
+   "file_sha256": "5a22d8d699cf6527993b87cf41d3e7dd92f5ca4f5677b3b9f9c74a1a72a1598d",
+   "config_hash": "10a330f1763caf679c46e909fe123a528f54bc2e8017ddd281f43f2a39e347d6",
+   "scientific_hash": "9d26a57726776249a59cc379aebf7e4f1ce644a1e2b7751d59a7f2fb25cc5cea",
+   "policy": "pp",
+   "root_seed": 113
+  },
+  "pp_s114.yaml": {
+   "file_sha256": "ae34d752efb952b4f24650ab16d1254a671bf7f97efba69e203903050c2ebdc4",
+   "config_hash": "f1fb2f809ea7145ee54caa8b545e5b58484225691698d8593f9338da7a407ac7",
+   "scientific_hash": "d6a60f0bff5ce29ef3bd7eca2eae49d9a93794a2fc9f93d8ec9e6e27a0a3a20d",
+   "policy": "pp",
+   "root_seed": 114
+  },
+  "pp_s115.yaml": {
+   "file_sha256": "73ed36f2ed1c28c1c1dda6ba517b7c717c4ed05f545875dae04b38e0880f04c8",
+   "config_hash": "3a5dda0d8ed127df1cc8a4a83d0f5f0dc84caa273845bcc8d9e6fa2232a5ba89",
+   "scientific_hash": "426975d05d35861fd52e1922f2f63f7743201cda82dbd562f123e28277e45332",
+   "policy": "pp",
+   "root_seed": 115
+  },
+  "pt_s100.yaml": {
+   "file_sha256": "358135be8a9893ed4da0c5a4375ad5198501852aa0caf2c4e8e2d1d133728bd3",
+   "config_hash": "8eba2ad39799a7a45a6ec2abd9f416d9d290a30e863b88478edabd090c03df44",
+   "scientific_hash": "199421d19263f70fcfc456c6eb1aaf3a220e169fcb5c08f23852b5f44ec9bf9c",
+   "policy": "pt",
+   "root_seed": 100
+  },
+  "pt_s101.yaml": {
+   "file_sha256": "69ad555bfdbf948a68c91eb5ac82a75f8382bf067d99b181c6717f3af6cc8f05",
+   "config_hash": "9028f1761374e1919b38ed1eaf166e78a36d7308a641ac34248fad7ee13228f9",
+   "scientific_hash": "ac44d1d9af7ed9827912ee91aef9844787b8143e560c014abededb72978407ee",
+   "policy": "pt",
+   "root_seed": 101
+  },
+  "pt_s102.yaml": {
+   "file_sha256": "a3bbbd399670e64a556f600ca7655353b3bbd7702bb8a4236c366a75792a8ff2",
+   "config_hash": "4eab46758e0d7df1a501973d0c7c18de639e179b5ac5bb98201badfd7a9c5e10",
+   "scientific_hash": "a1d1486f7809604fc308375dde6250bcb817327b144ea6238076fc20326cd85f",
+   "policy": "pt",
+   "root_seed": 102
+  },
+  "pt_s103.yaml": {
+   "file_sha256": "857abaf3c31c0db6d6527902908c213aa2f39b46875828eb90c84e12530404f8",
+   "config_hash": "ae7e10de432c5e26897e313c206533a4eca9ad73be418309cc881383ad342006",
+   "scientific_hash": "cef1ca8dfcbc2a742f7cbdc5def84ca9240bb9438acaf962f1b392e1083ede2c",
+   "policy": "pt",
+   "root_seed": 103
+  },
+  "pt_s104.yaml": {
+   "file_sha256": "c3b2841a1a35a56c4db58122bee9d16492183162ac7dae07a595e86cc617d9dd",
+   "config_hash": "c621eeb0fdc7a58a2ae4158ab2e524ba8cee980bcac34904fa3cb7dff8b3ddfd",
+   "scientific_hash": "efde5497da718d1a59c60fdda4f56f476f06f193484d0b0944bd3a82adc2b7ff",
+   "policy": "pt",
+   "root_seed": 104
+  },
+  "pt_s105.yaml": {
+   "file_sha256": "46e746ce2cf6310a44a197fe3519a59cc4257d21338b73c6a4415998fe5724fe",
+   "config_hash": "ea21ee368b55c378f59ec391dc2a57d26212875cc54022ca139de04ca5496152",
+   "scientific_hash": "0db29609349182dc39c580a1e6ffb3a02f4a6b452c6879ba4535b98373a9318c",
+   "policy": "pt",
+   "root_seed": 105
+  },
+  "pt_s106.yaml": {
+   "file_sha256": "8c12e3eef99ebcca4807bc259b3a6d570238965fa984e2fb7497b34dc7c0fbed",
+   "config_hash": "2ff52055f74d2258ab0b5bf06a669648f5718b25337680b616e6877f807b622b",
+   "scientific_hash": "e42d1c3d9b5367e859700b6054429a9d96ce6587b61bb264430d8f2875b7ca45",
+   "policy": "pt",
+   "root_seed": 106
+  },
+  "pt_s107.yaml": {
+   "file_sha256": "acc178872f69612db517315fe1a8d8700ae36ea958ad48c9c3b47a74382fe937",
+   "config_hash": "8fc9c5b1e06da336dec7beabb2c549e4315540a491984ba47360d16b006790d2",
+   "scientific_hash": "e68ff554ee4408aae8976eca4363068a4d7c400e3ea0bc0520f4dc266dc5a7cc",
+   "policy": "pt",
+   "root_seed": 107
+  },
+  "r_s100.yaml": {
+   "file_sha256": "db55a6c1af871b2ac9e40d6809c354f183d2f4290f99355199c346e07d7e6d52",
+   "config_hash": "9ae6c17730f0994983e3902b52ca6db08dd3613b49168764a130622ac3e33d7b",
+   "scientific_hash": "a108ef9052395055089d617a85239977d692051c6c64a2cd491434993b90545e",
+   "policy": "r",
+   "root_seed": 100
+  },
+  "r_s101.yaml": {
+   "file_sha256": "4e7d5e2fd4293a55182923bbe16f9ef0c03603eba1a16575f42151d4bc294e86",
+   "config_hash": "e3a57c7887ff0dd2b58c72f85b5f8da36586f42cd4adc08f17132f2dea7285f1",
+   "scientific_hash": "5c793f289d8143f96f2072671d11185285f782edd44488d1a5d307e26eff69b9",
+   "policy": "r",
+   "root_seed": 101
+  },
+  "r_s102.yaml": {
+   "file_sha256": "3b558a198a982d4271031247d0d0948be49ea96047ff2ddde3b1b99b804eb707",
+   "config_hash": "3338e5c9645673cd27de98440fd77a4fb9d44b26bcde7585e2c2766e3bbb0177",
+   "scientific_hash": "53ad90117296d1692f656d32c3f7f7bef2b5b8e5580cb6e81db84a3799210b00",
+   "policy": "r",
+   "root_seed": 102
+  },
+  "r_s103.yaml": {
+   "file_sha256": "87ac3c5e4556fccf87c8fadb0add3453d4117717726b1a5dbf4e7d95f4d9ad2c",
+   "config_hash": "fcd5025c32cef7eb65d32b89e411f3a99fdc2abc77f0d42a07e4c06d88055131",
+   "scientific_hash": "7b338eea357caa52a4a34d86fa6d045ecf8f6ec0fb6927bb5abb91468d946cbc",
+   "policy": "r",
+   "root_seed": 103
+  },
+  "r_s104.yaml": {
+   "file_sha256": "11b6efb9c4d7a16c1d0ec461ad8453e681cf05e7a37548b9627d7d562641db8d",
+   "config_hash": "e3c53b709e43181414dcb7df610a0a0b068516b211aecc9c06f43c517549acfc",
+   "scientific_hash": "3d6fdc07fd1f394ed4113e34805cdcc54a133734a33995075fedb3467e28b967",
+   "policy": "r",
+   "root_seed": 104
+  },
+  "r_s105.yaml": {
+   "file_sha256": "396f05c343d16b99779c59a63b0c3b367da18335731d56f1d4cf77ab569cc26f",
+   "config_hash": "aab52dc48ebd3b44746258e0b72afb0384fbb506cf27371ce563378ebad57be9",
+   "scientific_hash": "dd738def93f937b574b3eb17f3390b63c4e8a5a27b08d8de72e26ac8837990ba",
+   "policy": "r",
+   "root_seed": 105
+  },
+  "r_s106.yaml": {
+   "file_sha256": "d8ef661206ee098f0603c4415fe1f21daa4dbce7a12431c105498348cf22197f",
+   "config_hash": "b358aedb857b933c7e079af53917450ccd8cf0a63e9b8dea41158249a80a3f96",
+   "scientific_hash": "2601bfc70cc598eef801bef071efc4ee23ba2a5fda6038b992615c3900a2a6d7",
+   "policy": "r",
+   "root_seed": 106
+  },
+  "r_s107.yaml": {
+   "file_sha256": "3cc9d9804104e90eb408421c33f8bfc6490fc1fc4d3096d6147a5a52dc09a20b",
+   "config_hash": "93e577949a32751ab66ec52a539d223b8de6ff57375482f44e681c28b45fc60d",
+   "scientific_hash": "288bb0174811febac5d279e409a812b577358aa81acbfb51b082fea51c61ba95",
+   "policy": "r",
+   "root_seed": 107
+  },
+  "r_s108.yaml": {
+   "file_sha256": "029b351b97754f8c83bb1d257ff68d45e9160508a7644f64fd35417f9ca309c1",
+   "config_hash": "800b73a2f046a47842236646816a814afaaa4c516da02f1c8330bd4efe97b7e5",
+   "scientific_hash": "85bbcc58876eb4310609760a484a9d85992a8b1baf986eff3dd019c7f246095c",
+   "policy": "r",
+   "root_seed": 108
+  },
+  "r_s109.yaml": {
+   "file_sha256": "4ac9d421339d85754868aa6af0639ac83414e98ef1868ada100a219fb58e7f13",
+   "config_hash": "580355d3a8dc0af02aec4513d831af07260676d8daa9bd0f276aa029df4b01d8",
+   "scientific_hash": "0c86ad194df33d497cf57b002b26657a0e546428a378d4eaf8c0f26591963ea7",
+   "policy": "r",
+   "root_seed": 109
+  },
+  "r_s110.yaml": {
+   "file_sha256": "563aebaf9086d68df78b29d3ebeb4b0de1033eb10a3a8893fa399095c5043c82",
+   "config_hash": "ea869a75af66f244b39e4b72d6883bfa0ce9924c53b7f167f821380ce111b5fd",
+   "scientific_hash": "be0e00e66369d0d8b5db81cb0b441dfa9ff15dc0600c0f6e2d458c59867beb73",
+   "policy": "r",
+   "root_seed": 110
+  },
+  "r_s111.yaml": {
+   "file_sha256": "021023082116dd00f3c77063adb9a6a3c7d92152a28c7f6d3b9395aec1ae4429",
+   "config_hash": "fbc372e2486f1fed3a4be0a8ebdb532d477b072a2c9cd060050f3f0a35ee4226",
+   "scientific_hash": "9907e82d920478f0cc420fdc4491f99ad6f443e67434fe7c0c1b2b3e7d729362",
+   "policy": "r",
+   "root_seed": 111
+  },
+  "r_s112.yaml": {
+   "file_sha256": "427e45032b88034818cab4066a6528ac048c96e4d3e3d7e0b3ef4af24e521f13",
+   "config_hash": "4a3561179ce325d21d6eef2029ab2a0d0df8207459e627eeeb9b5f457bbf860c",
+   "scientific_hash": "08fb8adb5a1a4b53aa540e6b4daf9c4514e6d9dda69aa02ec56e4bf1f278555a",
+   "policy": "r",
+   "root_seed": 112
+  },
+  "r_s113.yaml": {
+   "file_sha256": "103f8bc0ebea919cf25484880fb6fbf5fe27b99abfef0b170ef8c3c9bb379e4b",
+   "config_hash": "9d6686cd7df0330b8ea8eaf974830124eb8069cbf197faf06b6652d6f130c7e0",
+   "scientific_hash": "f1f88f3bc076a8e6cb7df63d35962f37a926c95039916ec9535d6ca16e740a66",
+   "policy": "r",
+   "root_seed": 113
+  },
+  "r_s114.yaml": {
+   "file_sha256": "a319406c23e7caa995529937d9ff049ca9388702f733b810d64ec3500256c5df",
+   "config_hash": "bdde74bf737a50ebc4e033a6eaed7dddb80dc8009f093dcd8fa52c463c03e422",
+   "scientific_hash": "b91bdc696fef3518ca0d11f8b0d459a565739b54f0ed9a92f98638efea5f53e2",
+   "policy": "r",
+   "root_seed": 114
+  },
+  "r_s115.yaml": {
+   "file_sha256": "6848da490e2ff4c2a780204b121ef8838c45bab338d0e3567748c12e19d2497c",
+   "config_hash": "bb9f057eb0dbfbfffea1f26ab67ed6fd912ee211c4af14d8872404502b6822fe",
+   "scientific_hash": "78deeb3666ccff4ec7fcaf23425146ccc133beacbdefee178c50e18a27d59d7e",
+   "policy": "r",
+   "root_seed": 115
+  }
+ }
+}

@@ -4,7 +4,7 @@ Does choosing training items by **PanelProbe** difficulty make an LLM student
 learn faster? PanelProbe calibrates each item's difficulty with an 8-model
 panel. This repository is the public record of the experiments: settings,
 data versions, validity, results and reports. It is a read-only mirror of
-`docs/` and `results/` from the (private) source repository; the code is not
+`docs/`, `results/` and `configs/confirmatory/` from the (private) source repository; the code is not
 included.
 
 ## Start here
@@ -17,6 +17,8 @@ included.
 | `docs/DEV_RUN*.md`, `docs/STUDENT_SCREEN.md` | Full report for each experiment |
 | [`results/registry/runs.csv`](results/registry/runs.csv) | One row per run: all parameters and metrics |
 | `results/<experiment>/` | Per-run config, metrics, manifest and analysis |
+| [`docs/PREREGISTRATION_CONFIRMATORY_V1.md`](docs/PREREGISTRATION_CONFIRMATORY_V1.md) | The confirmatory study, frozen before any held-out data was seen |
+| [`configs/confirmatory/v1/`](configs/confirmatory/v1/) | Its 40 frozen run configs, `FROZEN.json` (hashes) and `topic_twins.json` |
 
 ## Current state
 
