@@ -69,6 +69,7 @@ numbers stand but a later experiment answers the question better;
 | F10 | `olmo3sft_grpo_kl05_seeds` | 10-20, ext. 10-27 | R vs PP vs PT with real learning | R, PP × 7; PT × 3 | **lr 2e-4, KL 0.05, slate 16, 40 upd (E8)** | pool-v1-final | **invariant** | **valid; current reference** | PP − R +0.0192 [+0.008, +0.031] (7 seeds, p 0.007); PT − R +0.0206 [+0.012, +0.029] (3 seeds); ratio 0.98 | DEV_RUN7_KL05_SEEDS.md | `344209c`, `936fefb` |
 | F11 | `olmo3sft_grpo_kl_strength` | 10-27 | Does a stronger KL keep the reasoning, and at what cost? | R × KL {0.1, 0.2} × seeds 3–6 | KL varies (pairs with F10 R s3–6) | pool-v1-final | invariant | valid (4 seeds) | KL 0.1: 0/4 shortened, final −0.011, ~60% of skill gain; KL 0.2: −0.016 | DEV_RUN8_PRECONFIRMATORY.md | `82e41b3` |
 | F12 | `olmo3sft_grpo_tracker_theta0` (+ offline replay `tracker_diagnosis`) | 10-27 | Does a calibrated tracker start improve PP? | PP × θ₀ 1.0 × seeds 0–3 | `tracker.theta_initial: 1.0` | pool-v1-final | invariant | valid (4 seeds) | early calibration fixed; final S and PP − R unchanged (+0.019); late targeting is pool-limited | DEV_RUN8_PRECONFIRMATORY.md | `964c5b6`, `9698441` |
+| **C1** | `olmo3sft_grpo_confirmatory_v1` | 10-28 → 10-29 | **Confirmatory: does PP beat R on held-out E1?** | R, PP × 16 (seeds 100–115); PT × 8 (100–107) | §3 + θ₀ 1.0, E1 primary (E9, E10) | pool-v1-final | invariant | **valid; confirmatory** | **H1 PP − R +0.0191 [+0.0085, +0.0296], p 0.0016; H2 PT − R +0.0319 [+0.020, +0.044]**; twin-free PP − R +0.027 | CONFIRMATORY_V1_RESULTS.md | `fd6aee0` (frozen), `45dd4fd` |
 
 ## 3. Current reference settings
 
@@ -92,8 +93,8 @@ reference config to copy is
 `configs/confirmatory/v1/` (40 configs + `FROZEN.json` + `topic_twins.json`),
 tag `confirmatory-v1-frozen`. Settings = §3 plus `tracker.theta_initial: 1.0`,
 E1 as primary set, fresh seeds 100+ (E9, E10). Experiment dir
-`artifacts/olmo3sft_grpo_confirmatory_v1/`; E1 results are not read until all
-40 runs are complete.
+`artifacts/olmo3sft_grpo_confirmatory_v1/`; completed 2026-10-29, results in
+`CONFIRMATORY_V1_RESULTS.md` (C1).
 
 ## 4. Comparability rules
 
@@ -119,7 +120,7 @@ S for pool-v1-final).
 
 <!-- BEGIN GENERATED: scripts/build_registry.py -->
 
-Generated from `results/*/*/` (73 runs). Full per-run data: `results/registry/runs.csv`.
+Generated from `results/*/*/` (113 runs). Full per-run data: `results/registry/runs.csv`.
 Columns marked * need the full artifacts and are cached in the CSV.
 
 ### `m0_dev_satbank`
@@ -129,6 +130,53 @@ Shared: student=dummy-student@dummy-v, generation=dummy, batch_invariant=False, 
 | run_id | status | policy | seed | initial | final | AULC | Δparsed* | unparse u0→end* | len end* | max letter* | grad groups* | min* |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | `pp-f4-sft-s000-f1105f40` | complete | pp | 0 | 0.6392 | 0.7526 | 0.7152 | +0.113 | 0.0%→0.0% | 49 | 0.29 | — | 0 |
+
+### `olmo3sft_grpo_confirmatory_v1`
+
+Shared: student=Olmo-3-7B-Instruct-SFT@e1452fc, generation=vllm, batch_invariant=True, method=grpo, lr=2e-04, schedule=constant_with_warmup, warmup=5, updates=40, kl=0.05, group_size=8, rollout_temp=1, max_completion_tokens=512, lora=r16/a32.0, batch_items=32, slate=16, primary_set=e1, primary_metric=final_accuracy, items_sha=b4e060d6, split_lock=6147da9a.
+
+| run_id | status | policy | seed | initial | final | AULC | Δparsed* | unparse u0→end* | len end* | max letter* | grad groups* | min* |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `pp-outcome-grpo-s100-c1b7675e` | complete | pp | 100 | 0.6917 | 0.7533 | 0.7236 | +0.049 | 2.0%→0.2% | 406 | 0.27 | 0.66 | 234 |
+| `pp-outcome-grpo-s101-02d8bc60` | complete | pp | 101 | 0.6917 | 0.7533 | 0.7186 | +0.049 | 2.0%→0.2% | 511 | 0.27 | 0.58 | 233 |
+| `pp-outcome-grpo-s102-41da1354` | complete | pp | 102 | 0.6917 | 0.7633 | 0.7030 | +0.060 | 2.0%→0.3% | 505 | 0.26 | 0.71 | 242 |
+| `pp-outcome-grpo-s103-3702ac88` | complete | pp | 103 | 0.6917 | 0.7267 | 0.7180 | +0.025 | 2.0%→0.5% | 367 | 0.27 | 0.69 | 231 |
+| `pp-outcome-grpo-s104-01078304` | complete | pp | 104 | 0.6917 | 0.7467 | 0.7209 | +0.042 | 2.0%→0.2% | 477 | 0.26 | 0.68 | 264 |
+| `pp-outcome-grpo-s105-11ce62e5` | complete | pp | 105 | 0.6917 | 0.7583 | 0.7225 | +0.054 | 2.0%→0.2% | 512 | 0.26 | 0.64 | 228 |
+| `pp-outcome-grpo-s106-219fbd52` | complete | pp | 106 | 0.6917 | 0.7183 | 0.7112 | +0.016 | 2.0%→0.5% | 524 | 0.27 | 0.69 | 239 |
+| `pp-outcome-grpo-s107-ed22ccbf` | complete | pp | 107 | 0.6917 | 0.7567 | 0.7201 | +0.053 | 2.0%→0.3% | 502 | 0.28 | 0.65 | 256 |
+| `pp-outcome-grpo-s108-efa738e8` | complete | pp | 108 | 0.6917 | 0.7533 | 0.7255 | +0.049 | 2.0%→0.2% | 443 | 0.26 | 0.61 | 228 |
+| `pp-outcome-grpo-s109-fa2d54aa` | complete | pp | 109 | 0.6917 | 0.7617 | 0.7252 | +0.061 | 2.0%→0.7% | 566 | 0.27 | 0.65 | 242 |
+| `pp-outcome-grpo-s110-44898b43` | complete | pp | 110 | 0.6917 | 0.7467 | 0.7284 | +0.041 | 2.0%→0.0% | 417 | 0.27 | 0.65 | 255 |
+| `pp-outcome-grpo-s111-a2cba09b` | complete | pp | 111 | 0.6917 | 0.7700 | 0.7282 | +0.064 | 2.0%→0.0% | 385 | 0.27 | 0.65 | 245 |
+| `pp-outcome-grpo-s112-aefbe702` | complete | pp | 112 | 0.6917 | 0.7567 | 0.7161 | +0.052 | 2.0%→0.2% | 468 | 0.27 | 0.67 | 238 |
+| `pp-outcome-grpo-s113-9d26a577` | complete | pp | 113 | 0.6917 | 0.7417 | 0.7194 | +0.037 | 2.0%→0.2% | 419 | 0.27 | 0.64 | 239 |
+| `pp-outcome-grpo-s114-d6a60f0b` | complete | pp | 114 | 0.6917 | 0.7550 | 0.7263 | +0.052 | 2.0%→0.3% | 559 | 0.26 | 0.68 | 224 |
+| `pp-outcome-grpo-s115-426975d0` | complete | pp | 115 | 0.6917 | 0.7433 | 0.7209 | +0.039 | 2.0%→0.2% | 570 | 0.27 | 0.66 | 227 |
+| `pt-outcome-grpo-s100-199421d1` | complete | pt | 100 | 0.6917 | 0.7367 | 0.7230 | +0.031 | 2.0%→0.0% | 491 | 0.27 | 0.76 | 667 |
+| `pt-outcome-grpo-s101-ac44d1d9` | complete | pt | 101 | 0.6917 | 0.7550 | 0.7242 | +0.049 | 2.0%→0.0% | 293 | 0.27 | 0.72 | 633 |
+| `pt-outcome-grpo-s102-a1d1486f` | complete | pt | 102 | 0.6917 | 0.7583 | 0.7148 | +0.053 | 2.0%→0.0% | 544 | 0.28 | 0.75 | 620 |
+| `pt-outcome-grpo-s103-cef1ca8d` | complete | pt | 103 | 0.6917 | 0.7750 | 0.7221 | +0.071 | 2.0%→0.2% | 339 | 0.27 | 0.74 | 647 |
+| `pt-outcome-grpo-s104-efde5497` | complete | pt | 104 | 0.6917 | 0.7567 | 0.7226 | +0.051 | 2.0%→0.0% | 387 | 0.28 | 0.77 | 643 |
+| `pt-outcome-grpo-s105-0db29609` | complete | pt | 105 | 0.6917 | 0.7500 | 0.7151 | +0.044 | 2.0%→0.0% | 266 | 0.28 | 0.75 | 624 |
+| `pt-outcome-grpo-s106-e42d1c3d` | complete | pt | 106 | 0.6917 | 0.7600 | 0.7234 | +0.054 | 2.0%→0.0% | 473 | 0.27 | 0.73 | 601 |
+| `pt-outcome-grpo-s107-e68ff554` | complete | pt | 107 | 0.6917 | 0.7700 | 0.7278 | +0.064 | 2.0%→0.0% | 511 | 0.27 | 0.72 | 641 |
+| `r-outcome-grpo-s100-a108ef90` | complete | r | 100 | 0.6917 | 0.7167 | 0.7064 | +0.016 | 2.0%→0.7% | 649 | 0.28 | 0.54 | 220 |
+| `r-outcome-grpo-s101-5c793f28` | complete | r | 101 | 0.6917 | 0.7433 | 0.7118 | +0.039 | 2.0%→0.2% | 534 | 0.27 | 0.55 | 224 |
+| `r-outcome-grpo-s102-53ad9011` | complete | r | 102 | 0.6917 | 0.7033 | 0.7020 | -0.000 | 2.0%→0.3% | 555 | 0.26 | 0.54 | 221 |
+| `r-outcome-grpo-s103-7b338eea` | complete | r | 103 | 0.6917 | 0.7350 | 0.7081 | +0.029 | 2.0%→0.0% | 545 | 0.26 | 0.48 | 221 |
+| `r-outcome-grpo-s104-3d6fdc07` | complete | r | 104 | 0.6917 | 0.7150 | 0.7131 | +0.012 | 2.0%→0.3% | 608 | 0.26 | 0.48 | 217 |
+| `r-outcome-grpo-s105-dd738def` | complete | r | 105 | 0.6917 | 0.7250 | 0.7094 | +0.019 | 2.0%→0.0% | 327 | 0.29 | 0.49 | 187 |
+| `r-outcome-grpo-s106-2601bfc7` | complete | r | 106 | 0.6917 | 0.7233 | 0.7109 | +0.020 | 2.0%→0.3% | 441 | 0.28 | 0.51 | 204 |
+| `r-outcome-grpo-s107-288bb017` | complete | r | 107 | 0.6917 | 0.7450 | 0.7071 | +0.040 | 2.0%→0.2% | 458 | 0.27 | 0.47 | 199 |
+| `r-outcome-grpo-s108-85bbcc58` | complete | r | 108 | 0.6917 | 0.7317 | 0.7073 | +0.028 | 2.0%→0.3% | 497 | 0.26 | 0.48 | 214 |
+| `r-outcome-grpo-s109-0c86ad19` | complete | r | 109 | 0.6917 | 0.7133 | 0.7030 | +0.009 | 2.0%→0.2% | 559 | 0.27 | 0.53 | 239 |
+| `r-outcome-grpo-s110-be0e00e6` | complete | r | 110 | 0.6917 | 0.7417 | 0.7131 | +0.037 | 2.0%→0.2% | 539 | 0.26 | 0.47 | 217 |
+| `r-outcome-grpo-s111-9907e82d` | complete | r | 111 | 0.6917 | 0.7350 | 0.7144 | +0.032 | 2.0%→0.3% | 420 | 0.27 | 0.50 | 195 |
+| `r-outcome-grpo-s112-08fb8adb` | complete | r | 112 | 0.6917 | 0.7450 | 0.7085 | +0.040 | 2.0%→0.2% | 418 | 0.27 | 0.50 | 221 |
+| `r-outcome-grpo-s113-f1f88f3b` | complete | r | 113 | 0.6917 | 0.7383 | 0.7015 | +0.034 | 2.0%→0.2% | 517 | 0.27 | 0.53 | 219 |
+| `r-outcome-grpo-s114-b91bdc69` | complete | r | 114 | 0.6917 | 0.7433 | 0.7114 | +0.040 | 2.0%→0.3% | 509 | 0.29 | 0.48 | 192 |
+| `r-outcome-grpo-s115-78deeb36` | complete | r | 115 | 0.6917 | 0.7450 | 0.7171 | +0.043 | 2.0%→0.5% | 593 | 0.28 | 0.44 | 213 |
 
 ### `olmo3sft_grpo_dev`
 

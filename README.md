@@ -13,7 +13,7 @@ included.
 |---|---|
 | [`docs/EXPERIMENT_REGISTRY.md`](docs/EXPERIMENT_REGISTRY.md) | **Every experiment**: settings, data version, evaluation mode, validity, headline numbers, current reference settings, comparability rules, and generated per-run tables |
 | [`docs/FINDINGS.md`](docs/FINDINGS.md) | What each result means, newest first |
-| [`docs/OPEN_DECISIONS.md`](docs/OPEN_DECISIONS.md) | Decisions that fixed the settings (E1–E8) and open questions |
+| [`docs/OPEN_DECISIONS.md`](docs/OPEN_DECISIONS.md) | Decisions that fixed the settings (E1–E10) and open questions |
 | `docs/DEV_RUN*.md`, `docs/STUDENT_SCREEN.md` | Full report for each experiment |
 | [`results/registry/runs.csv`](results/registry/runs.csv) | One row per run: all parameters and metrics |
 | `results/<experiment>/` | Per-run config, metrics, manifest and analysis |

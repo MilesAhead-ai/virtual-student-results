@@ -1,0 +1,82 @@
+2026-10-28T15:46:04+00:00 START 40 configs on GPUs [3, 4, 5, 6, 7] x2
+2026-10-28T15:46:04+00:00 LAUNCH pt_s100.yaml gpu=3 pid=473235 attempt=0
+2026-10-28T15:46:25+00:00 LAUNCH r_s100.yaml gpu=4 pid=473488 attempt=0
+2026-10-28T15:46:45+00:00 LAUNCH pp_s100.yaml gpu=5 pid=473781 attempt=0
+2026-10-28T15:47:05+00:00 LAUNCH pt_s101.yaml gpu=6 pid=474169 attempt=0
+2026-10-28T15:47:26+00:00 LAUNCH r_s101.yaml gpu=7 pid=474574 attempt=0
+2026-10-28T15:47:46+00:00 LAUNCH pp_s101.yaml gpu=3 pid=474920 attempt=0
+2026-10-28T15:48:08+00:00 LAUNCH pt_s102.yaml gpu=4 pid=475321 attempt=0
+2026-10-28T15:48:32+00:00 LAUNCH r_s102.yaml gpu=5 pid=475715 attempt=0
+2026-10-28T15:48:55+00:00 LAUNCH pp_s102.yaml gpu=6 pid=476062 attempt=0
+2026-10-28T15:49:22+00:00 LAUNCH pt_s103.yaml gpu=7 pid=476512 attempt=0
+2026-10-28T19:27:42+00:00 DONE r_s100.yaml (1 done, 30 pending, 9 running)
+2026-10-28T19:27:43+00:00 LAUNCH r_s103.yaml gpu=4 pid=491543 attempt=0
+2026-10-28T19:31:03+00:00 DONE r_s102.yaml (2 done, 29 pending, 9 running)
+2026-10-28T19:31:03+00:00 LAUNCH pp_s103.yaml gpu=5 pid=492126 attempt=0
+2026-10-28T19:33:23+00:00 DONE r_s101.yaml (3 done, 28 pending, 9 running)
+2026-10-28T19:33:24+00:00 LAUNCH pt_s104.yaml gpu=7 pid=492627 attempt=0
+2026-10-28T19:42:44+00:00 DONE pp_s100.yaml (4 done, 27 pending, 9 running)
+2026-10-28T19:42:44+00:00 DONE pp_s101.yaml (5 done, 27 pending, 8 running)
+2026-10-28T19:42:44+00:00 LAUNCH r_s104.yaml gpu=3 pid=493580 attempt=0
+2026-10-28T19:43:05+00:00 LAUNCH pp_s104.yaml gpu=5 pid=493815 attempt=0
+2026-10-28T19:52:25+00:00 DONE pp_s102.yaml (6 done, 25 pending, 9 running)
+2026-10-28T19:52:26+00:00 LAUNCH pt_s105.yaml gpu=6 pid=494923 attempt=0
+2026-10-28T23:10:46+00:00 DONE r_s103.yaml (7 done, 24 pending, 9 running)
+2026-10-28T23:10:46+00:00 LAUNCH r_s105.yaml gpu=4 pid=508649 attempt=0
+2026-10-28T23:21:06+00:00 DONE r_s104.yaml (8 done, 23 pending, 9 running)
+2026-10-28T23:21:07+00:00 LAUNCH pp_s105.yaml gpu=3 pid=509654 attempt=0
+2026-10-28T23:22:27+00:00 DONE pp_s103.yaml (9 done, 22 pending, 9 running)
+2026-10-28T23:22:27+00:00 LAUNCH pt_s106.yaml gpu=5 pid=510117 attempt=0
+2026-10-29T00:08:47+00:00 DONE pp_s104.yaml (10 done, 21 pending, 9 running)
+2026-10-29T00:08:48+00:00 LAUNCH r_s106.yaml gpu=5 pid=513601 attempt=0
+2026-10-29T02:09:08+00:00 DONE pt_s102.yaml (11 done, 20 pending, 9 running)
+2026-10-29T02:09:08+00:00 LAUNCH pp_s106.yaml gpu=4 pid=521789 attempt=0
+2026-10-29T02:19:28+00:00 DONE r_s105.yaml (12 done, 19 pending, 9 running)
+2026-10-29T02:19:29+00:00 LAUNCH pt_s107.yaml gpu=4 pid=522804 attempt=0
+2026-10-29T02:20:49+00:00 DONE pt_s101.yaml (13 done, 18 pending, 9 running)
+2026-10-29T02:20:50+00:00 LAUNCH r_s107.yaml gpu=6 pid=523269 attempt=0
+2026-10-29T02:38:10+00:00 DONE pt_s103.yaml (14 done, 17 pending, 9 running)
+2026-10-29T02:38:10+00:00 LAUNCH pp_s107.yaml gpu=7 pid=524697 attempt=0
+2026-10-29T02:54:30+00:00 DONE pt_s100.yaml (15 done, 16 pending, 9 running)
+2026-10-29T02:54:31+00:00 LAUNCH r_s108.yaml gpu=3 pid=526060 attempt=0
+2026-10-29T03:09:51+00:00 DONE pp_s105.yaml (16 done, 15 pending, 9 running)
+2026-10-29T03:09:51+00:00 LAUNCH pp_s108.yaml gpu=3 pid=527654 attempt=0
+2026-10-29T03:34:11+00:00 DONE r_s106.yaml (17 done, 14 pending, 9 running)
+2026-10-29T03:34:13+00:00 LAUNCH r_s109.yaml gpu=5 pid=529531 attempt=0
+2026-10-29T05:41:33+00:00 DONE r_s107.yaml (18 done, 13 pending, 9 running)
+2026-10-29T05:41:33+00:00 LAUNCH pp_s109.yaml gpu=6 pid=538211 attempt=0
+2026-10-29T06:08:53+00:00 DONE pp_s106.yaml (19 done, 12 pending, 9 running)
+2026-10-29T06:08:54+00:00 LAUNCH r_s110.yaml gpu=4 pid=540837 attempt=0
+2026-10-29T06:18:14+00:00 DONE pt_s104.yaml (20 done, 11 pending, 9 running)
+2026-10-29T06:18:14+00:00 DONE pt_s105.yaml (21 done, 11 pending, 8 running)
+2026-10-29T06:18:14+00:00 LAUNCH pp_s110.yaml gpu=6 pid=542132 attempt=0
+2026-10-29T06:18:35+00:00 LAUNCH r_s111.yaml gpu=7 pid=542359 attempt=0
+2026-10-29T06:29:55+00:00 DONE r_s108.yaml (22 done, 9 pending, 9 running)
+2026-10-29T06:29:58+00:00 LAUNCH pp_s111.yaml gpu=3 pid=543724 attempt=0
+2026-10-29T06:55:18+00:00 DONE pp_s107.yaml (23 done, 8 pending, 9 running)
+2026-10-29T06:55:18+00:00 LAUNCH r_s112.yaml gpu=7 pid=545622 attempt=0
+2026-10-29T06:59:38+00:00 DONE pp_s108.yaml (24 done, 7 pending, 9 running)
+2026-10-29T06:59:41+00:00 LAUNCH pp_s112.yaml gpu=3 pid=546253 attempt=0
+2026-10-29T07:35:01+00:00 DONE r_s109.yaml (25 done, 6 pending, 9 running)
+2026-10-29T07:35:02+00:00 LAUNCH r_s113.yaml gpu=5 pid=549133 attempt=0
+2026-10-29T09:24:22+00:00 DONE pt_s106.yaml (26 done, 5 pending, 9 running)
+2026-10-29T09:24:22+00:00 LAUNCH pp_s113.yaml gpu=5 pid=556828 attempt=0
+2026-10-29T09:34:42+00:00 DONE r_s111.yaml (27 done, 4 pending, 9 running)
+2026-10-29T09:34:43+00:00 LAUNCH r_s114.yaml gpu=7 pid=557840 attempt=0
+2026-10-29T09:45:03+00:00 DONE pp_s109.yaml (28 done, 3 pending, 9 running)
+2026-10-29T09:45:03+00:00 LAUNCH pp_s114.yaml gpu=6 pid=558850 attempt=0
+2026-10-29T09:47:23+00:00 DONE r_s110.yaml (29 done, 2 pending, 9 running)
+2026-10-29T09:47:24+00:00 LAUNCH r_s115.yaml gpu=4 pid=559353 attempt=0
+2026-10-29T10:34:44+00:00 DONE pp_s110.yaml (30 done, 1 pending, 9 running)
+2026-10-29T10:34:44+00:00 LAUNCH pp_s115.yaml gpu=6 pid=562956 attempt=0
+2026-10-29T10:37:04+00:00 DONE pp_s111.yaml (31 done, 0 pending, 9 running)
+2026-10-29T10:38:04+00:00 DONE r_s112.yaml (32 done, 0 pending, 8 running)
+2026-10-29T10:59:04+00:00 DONE pp_s112.yaml (33 done, 0 pending, 7 running)
+2026-10-29T11:15:04+00:00 DONE r_s113.yaml (34 done, 0 pending, 6 running)
+2026-10-29T12:48:04+00:00 DONE r_s114.yaml (35 done, 0 pending, 5 running)
+2026-10-29T13:02:04+00:00 DONE pt_s107.yaml (36 done, 0 pending, 4 running)
+2026-10-29T13:22:04+00:00 DONE r_s115.yaml (37 done, 0 pending, 3 running)
+2026-10-29T13:24:04+00:00 DONE pp_s113.yaml (38 done, 0 pending, 2 running)
+2026-10-29T13:30:04+00:00 DONE pp_s114.yaml (39 done, 0 pending, 1 running)
+2026-10-29T14:23:04+00:00 DONE pp_s115.yaml (40 done, 0 pending, 0 running)
+2026-10-29T14:24:04+00:00 END done=40 gave_up=0 []

@@ -1,0 +1,132 @@
+{
+ "checkpoint_hashes": {
+  "update_000": "7b1eb2fafaa730a811ffee61437a2188c69fcf59e1171e793a65a0c5e5a717e1",
+  "update_010": "c121c804d9ef28877a2bedf574e5b720af5ae0890810dfe24fef0dfba3855d1c",
+  "update_020": "f1b9633cf822ee1f2c4242b8c4db119921ae355ab3bbc308f58be7c19457283a",
+  "update_030": "fe9741287ceb0e1ce10ec4dc974d4019a226f87cd5efc081ea599e3324896a2b",
+  "update_040": "587da22d37eba0b47c20e0d3347571120aad5c74e159686a58847344189fe51f"
+ },
+ "counters": {
+  "accepted_targets": 0,
+  "consecutive_no_gradient": 0,
+  "external": {},
+  "feedback_failed": 0,
+  "leaks": 0,
+  "no_gradient_updates": 0,
+  "pool_low": 0,
+  "regenerations": 0,
+  "student_backend_calls": 29093,
+  "student_cache": {
+   "hits": 2227,
+   "misses": 29093
+  }
+ },
+ "data_sha256": {
+  "item_difficulties.parquet": "4bb9d50d21dd1d13084779696d5a61eb6aa4c9de9418b147cf4ed5a9178877e7",
+  "items.parquet": "b4e060d6a8ff9672433abc610b8330d87073ad004d7ce497edd2ea1598309fe6",
+  "panel_abilities.parquet": "0cceaf7904364a4a6ae48dccb5854a669d27f09efa1305384982503c92e8dcf3",
+  "panel_responses.parquet": "bff5eb8d9adde4012bdf87295f759201aa46202f3f22a320aa61054641ee8f8b",
+  "sibling_map.parquet": "0ed8a76b123762d7fa4a7ff5b111cd156e5f531bf570beb5a3025a25c077246f"
+ },
+ "ended_at": "2026-10-29T10:33:52.866392+00:00",
+ "environment": {
+  "cuda_available": true,
+  "env": {
+   "CUBLAS_WORKSPACE_CONFIG": null,
+   "CUDA_VISIBLE_DEVICES": "6",
+   "HF_HUB_OFFLINE": null,
+   "OMP_NUM_THREADS": null,
+   "PYTHONHASHSEED": null,
+   "TOKENIZERS_PARALLELISM": null
+  },
+  "gpus": [
+   "NVIDIA A100-SXM4-40GB, 580.126.09, 40960 MiB, 36467 MiB",
+   "NVIDIA A100-SXM4-40GB, 580.126.09, 40960 MiB, 36467 MiB",
+   "NVIDIA A100-SXM4-40GB, 580.126.09, 40960 MiB, 36467 MiB",
+   "NVIDIA A100-SXM4-40GB, 580.126.09, 40960 MiB, 33845 MiB",
+   "NVIDIA A100-SXM4-40GB, 580.126.09, 40960 MiB, 33643 MiB",
+   "NVIDIA A100-SXM4-40GB, 580.126.09, 40960 MiB, 33867 MiB",
+   "NVIDIA A100-SXM4-40GB, 580.126.09, 40960 MiB, 31391 MiB",
+   "NVIDIA A100-SXM4-40GB, 580.126.09, 40960 MiB, 31431 MiB"
+  ],
+  "packages": {
+   "accelerate": "1.15.0",
+   "anthropic": null,
+   "datasets": "5.0.1",
+   "numpy": "2.5.3",
+   "pandas": "3.0.6",
+   "peft": "0.21.2",
+   "pyarrow": "25.0.1",
+   "pydantic": "2.13.5",
+   "scipy": "1.18.1",
+   "statsmodels": "0.15.0",
+   "torch": "2.14.1",
+   "transformers": "5.18.0",
+   "trl": "1.14.1",
+   "virtual-student": "0.1.0",
+   "vllm": null
+  },
+  "platform": "Linux-6.14.0-1018-aws-x86_64-with-glibc2.39",
+  "python": "3.12.13 (main, Mar 10 2026, 18:17:25) [Clang 21.1.4 ]",
+  "torch_cuda": "13.0"
+ },
+ "experiment_id": "olmo3sft_grpo_confirmatory_v1",
+ "external_models": {},
+ "parent_run_id": null,
+ "physical_batching": {
+  "gradient_accumulation_steps": 32,
+  "micro_batch_size": 1
+ },
+ "profile_token_count_method": "ceil(chars/4)",
+ "prompt_sha256": {
+  "adaptation_judge": "f3eb77add5aef5ea231050e5843309aac6245982fe1ccc1a6c0d1b70de751087",
+  "classifier_judge": "acf011db16969543d25a35c9e17c8643c8fda1a2f2566a44d50ed14787500331",
+  "elicit_reasoning": "33599607a0179831dff80a9daeaebcc8e1972a6b6406494e89f66114751fe3d9",
+  "f0_feedback": "82fd7563291b4ca8ca757f857f9e70b1ef90dde12e5b067bd43542d763eaf78a",
+  "f1_feedback": "fe1078e5e8b4e2f5980b14cdf0c6c76c1a3e31715c4ae2638bbf3f1de85efdc9",
+  "f2_generic_explanation": "e8cbc466649d0f2be466c080d7c47092aa6429ec375caf697368b773f31596aa",
+  "f3_script_writer": "2267a396800d3b98bd0a864b35d62d31fbfb757c4c9b9eb41bf34021722a2bd8",
+  "f4_adaptive_tutor": "deda27844a245c9d97e7e29e33f17e4122890d426a29c40dd3c1f51c933a2fd7",
+  "f5_adaptive_tutor": "e252ed394f158015995b6cb1af1a236c8d642912dc938d56f510da55dda3095f",
+  "leakage_judge": "d489f99ccc3ec786c2fadfda60f085500d9ec581038c7df436950c33626f724d",
+  "resolve_standalone": "8758e9a9a7dad0534f14f53a6ea36f61527556be11069c765f9b87edb10b59c9",
+  "sibling_question": "ab0a23af395b66315ac439b4d521aea83cf1abbc1afa31930bb6242ccc1178c8",
+  "standalone_judge": "fc1d98b38a59533b97fb3026407555718073033181405e0eef8a963d6ff2b1ce",
+  "student_answer": "e4268cee7362c168306cb8c7217bac5da758c3df0cfd38bbb32dc48569250ead",
+  "tutor_base": "1fd6e192e5ceaa8c74c847f7d3abad62b8eff1ee3ddd68bab66cd87ce8a0e866"
+ },
+ "resolved_config_sha256": "d7fd4f5055d1f782b688f88ef4f4ac142e921fd6f29553cc0cb48fc08aa033e2",
+ "resumed": false,
+ "root_seed": 110,
+ "run_id": "pp-outcome-grpo-s110-44898b43",
+ "scientific_config_sha256": "44898b43a445041c69e5b941ffb9cadb857eb8c2582a0de7f1d15f64c3d705d0",
+ "seed_algorithm_version": "sha256-colon-v1",
+ "source": {
+  "commit": "607ee1b73a87cb26216dac50fcd3b346d4bf1516",
+  "dirty_worktree": false,
+  "lockfile_sha256": "f25c50c29c3f57b4aa649d31f7d96f3f5691ecfc93708b788f54aa9c602e154c",
+  "source_tree_sha256": "d75ba19a0358584b32a2610b0ef330d861838087184fd52b9329a6a6544bc1cc"
+ },
+ "split_lock_sha256": "6147da9a7420ffa333da22e49fe296f12d7f54ddd9ed41acdb9239c3f9018206",
+ "started_at": "2026-10-29T06:19:04.107260+00:00",
+ "status": "complete",
+ "student": {
+  "backend": {
+   "backend": "transformers",
+   "chat_template_sha256": "edbb35ef1219ad2273f716feed08f535a868e167be5b5518adc37ab2bcb8afe6",
+   "device": "cuda",
+   "dtype": "bfloat16",
+   "total_params": 7337988096,
+   "trainable_params": 39976960
+  },
+  "model_id": "allenai/Olmo-3-7B-Instruct-SFT",
+  "revision": "e1452fc572d51966ff4aaeb25118b891eb93e549",
+  "tokenizer_id": "allenai/Olmo-3-7B-Instruct-SFT",
+  "tokenizer_revision": "e1452fc572d51966ff4aaeb25118b891eb93e549"
+ },
+ "taxonomy": {
+  "sha256": "33aff649134ef587d2c6ef98993a4805a11a425fc2f52c7b239ba42211dbcb99",
+  "status": "development_placeholder",
+  "version": "placeholder-v1"
+ }
+}
