@@ -22,8 +22,12 @@ included.
 
 ## Current state
 
-See the top rows of `docs/FINDINGS.md` and §2–§3 of the registry. Results so
-far are development comparisons, not the confirmatory study.
+**Confirmatory v1 is complete (2026-10-29): both pre-registered hypotheses are
+supported** ([`docs/CONFIRMATORY_V1_RESULTS.md`](docs/CONFIRMATORY_V1_RESULTS.md)).
+On 600 held-out items with 16 fresh seeds, PanelProbe selection beats random
+selection by +1.9 points of final accuracy (95% CI +0.9 to +3.0). An oracle
+that measures the student directly reaches +3.2. See the top rows of
+`docs/FINDINGS.md` for everything else.
 
 ## Notes
 
