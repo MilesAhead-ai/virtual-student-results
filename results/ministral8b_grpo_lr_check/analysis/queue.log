@@ -1,0 +1,14 @@
+2026-10-30T17:26:40+00:00 START 6 configs on GPUs [3, 4, 5, 6, 7] x2
+2026-10-30T17:26:40+00:00 LAUNCH r_lr2e-04_s0.yaml gpu=3 pid=136648 attempt=0
+2026-10-30T17:27:01+00:00 LAUNCH r_lr1e-04_s0.yaml gpu=4 pid=136977 attempt=0
+2026-10-30T17:27:21+00:00 LAUNCH r_lr4e-04_s0.yaml gpu=5 pid=137344 attempt=0
+2026-10-30T17:27:41+00:00 LAUNCH r_lr2e-04_s1.yaml gpu=6 pid=137776 attempt=0
+2026-10-30T17:28:02+00:00 LAUNCH r_lr1e-04_s1.yaml gpu=7 pid=138171 attempt=0
+2026-10-30T17:28:23+00:00 LAUNCH r_lr4e-04_s1.yaml gpu=3 pid=138608 attempt=0
+2026-10-30T19:42:43+00:00 DONE r_lr1e-04_s0.yaml (1 done, 0 pending, 5 running)
+2026-10-30T19:56:43+00:00 DONE r_lr1e-04_s1.yaml (2 done, 0 pending, 4 running)
+2026-10-30T19:58:43+00:00 DONE r_lr4e-04_s0.yaml (3 done, 0 pending, 3 running)
+2026-10-30T19:59:43+00:00 DONE r_lr2e-04_s0.yaml (4 done, 0 pending, 2 running)
+2026-10-30T20:04:43+00:00 DONE r_lr2e-04_s1.yaml (5 done, 0 pending, 1 running)
+2026-10-30T20:05:43+00:00 DONE r_lr4e-04_s1.yaml (6 done, 0 pending, 0 running)
+2026-10-30T20:06:43+00:00 END done=6 gave_up=0 []

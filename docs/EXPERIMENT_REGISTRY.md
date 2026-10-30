@@ -70,6 +70,7 @@ numbers stand but a later experiment answers the question better;
 | F11 | `olmo3sft_grpo_kl_strength` | 10-27 | Does a stronger KL keep the reasoning, and at what cost? | R × KL {0.1, 0.2} × seeds 3–6 | KL varies (pairs with F10 R s3–6) | pool-v1-final | invariant | valid (4 seeds) | KL 0.1: 0/4 shortened, final −0.011, ~60% of skill gain; KL 0.2: −0.016 | DEV_RUN8_PRECONFIRMATORY.md | `82e41b3` |
 | F12 | `olmo3sft_grpo_tracker_theta0` (+ offline replay `tracker_diagnosis`) | 10-27 | Does a calibrated tracker start improve PP? | PP × θ₀ 1.0 × seeds 0–3 | `tracker.theta_initial: 1.0` | pool-v1-final | invariant | valid (4 seeds) | early calibration fixed; final S and PP − R unchanged (+0.019); late targeting is pool-limited | DEV_RUN8_PRECONFIRMATORY.md | `964c5b6`, `9698441` |
 | **C1** | `olmo3sft_grpo_confirmatory_v1` | 10-28 → 10-29 | **Confirmatory: does PP beat R on held-out E1?** | R, PP × 16 (seeds 100–115); PT × 8 (100–107) | §3 + θ₀ 1.0, E1 primary (E9, E10) | pool-v1-final | invariant | **valid; confirmatory** | **H1 PP − R +0.0191 [+0.0085, +0.0296], p 0.0016; H2 PT − R +0.0319 [+0.020, +0.044]**; twin-free PP − R +0.027 | CONFIRMATORY_V1_RESULTS.md | `fd6aee0` (frozen), `45dd4fd` |
+| F13 | `ministral8b_grpo_lr_check` | 10-30 | Which lr for the second student (Ministral-8B)? | R × lr {1e-4, 2e-4, 4e-4} × 2 | student Ministral-8B (`2f494a1`), `vllm_prompt_format: token_ids`, lr varies | pool-v1-final | invariant | valid (2 seeds) | lr 1e-4 stable: S 0.640 → 0.790, parsed-only +0.054; 2e-4 oscillates; 4e-4 collapses | FINDINGS #13 | this commit |
 
 ## 3. Current reference settings
 
@@ -120,7 +121,7 @@ S for pool-v1-final).
 
 <!-- BEGIN GENERATED: scripts/build_registry.py -->
 
-Generated from `results/*/*/` (113 runs). Full per-run data: `results/registry/runs.csv`.
+Generated from `results/*/*/` (119 runs). Full per-run data: `results/registry/runs.csv`.
 Columns marked * need the full artifacts and are cached in the CSV.
 
 ### `m0_dev_satbank`
@@ -130,6 +131,19 @@ Shared: student=dummy-student@dummy-v, generation=dummy, batch_invariant=False, 
 | run_id | status | policy | seed | initial | final | AULC | Δparsed* | unparse u0→end* | len end* | max letter* | grad groups* | min* |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | `pp-f4-sft-s000-f1105f40` | complete | pp | 0 | 0.6392 | 0.7526 | 0.7152 | +0.113 | 0.0%→0.0% | 49 | 0.29 | — | 0 |
+
+### `ministral8b_grpo_lr_check`
+
+Shared: student=Ministral-8B-Instruct-2410@2f494a1, generation=vllm, batch_invariant=True, method=grpo, schedule=constant_with_warmup, warmup=5, updates=40, kl=0.05, group_size=8, rollout_temp=1, max_completion_tokens=512, lora=r16/a32.0, batch_items=32, slate=16, primary_set=s, primary_metric=final_accuracy, items_sha=b4e060d6, split_lock=6147da9a.
+
+| run_id | status | policy | seed | lr | initial | final | AULC | Δparsed* | unparse u0→end* | len end* | max letter* | grad groups* | min* |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `r-outcome-grpo-s000-ba9dc522` | complete | r | 0 | 1e-04 | 0.6400 | 0.7894 | 0.7479 | +0.053 | 13.1%→0.0% | 163 | 0.30 | 0.32 | 134 |
+| `r-outcome-grpo-s001-80c8a41a` | complete | r | 1 | 1e-04 | 0.6400 | 0.7913 | 0.7473 | +0.055 | 13.1%→0.1% | 308 | 0.29 | 0.42 | 147 |
+| `r-outcome-grpo-s000-3aec08ed` | complete | r | 0 | 2e-04 | 0.6400 | 0.7219 | 0.7271 | +0.140 | 13.1%→17.7% | 224 | 0.27 | 0.57 | 152 |
+| `r-outcome-grpo-s001-5fed1a34` | complete | r | 1 | 2e-04 | 0.6400 | 0.7037 | 0.7534 | +0.041 | 13.1%→9.5% | 440 | 0.30 | 0.47 | 155 |
+| `r-outcome-grpo-s000-767309fa` | complete | r | 0 | 4e-04 | 0.6400 | 0.6937 | 0.6799 | -0.037 | 13.1%→0.8% | 666 | 0.30 | 0.53 | 150 |
+| `r-outcome-grpo-s001-6e80af22` | complete | r | 1 | 4e-04 | 0.6400 | 0.6825 | 0.6977 | -0.054 | 13.1%→0.0% | 9 | 0.31 | 0.55 | 156 |
 
 ### `olmo3sft_grpo_confirmatory_v1`
 
