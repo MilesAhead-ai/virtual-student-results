@@ -1,0 +1,67 @@
+{
+ "model": "mistralai/Ministral-8B-Instruct-2410",
+ "revision": "2f494a194c5b980dfb9772cb92d26cbb671fce5a",
+ "seconds": 776,
+ "items": 2506,
+ "seconds_per_item_batched": 0.31,
+ "splits": {
+  "d": {
+   "n": 200,
+   "accuracy": 0.64,
+   "accuracy_lenient": 0.725,
+   "strict_parse": 0.825,
+   "lenient_parse": 0.97,
+   "truncated": 0.0,
+   "median_tokens": 70,
+   "theta_on_panel_scale": 0.65,
+   "theta_sd": 0.16,
+   "spearman_difficulty_vs_correct": -0.329
+  },
+  "s": {
+   "n": 1600,
+   "accuracy": 0.632,
+   "accuracy_lenient": 0.677,
+   "strict_parse": 0.871,
+   "lenient_parse": 0.979,
+   "truncated": 0.001,
+   "median_tokens": 67,
+   "theta_on_panel_scale": 0.65,
+   "theta_sd": 0.06,
+   "spearman_difficulty_vs_correct": -0.351
+  },
+  "w": {
+   "n": 706,
+   "accuracy": 0.626,
+   "accuracy_lenient": 0.681,
+   "strict_parse": 0.871,
+   "lenient_parse": 0.986,
+   "truncated": 0.0,
+   "median_tokens": 55,
+   "theta_on_panel_scale": 0.45,
+   "theta_sd": 0.09,
+   "spearman_difficulty_vs_correct": -0.336
+  }
+ },
+ "all": {
+  "n": 2506,
+  "accuracy": 0.631,
+  "accuracy_lenient": 0.682,
+  "strict_parse": 0.868,
+  "lenient_parse": 0.98,
+  "truncated": 0.001,
+  "median_tokens": 64,
+  "theta_on_panel_scale": 0.6,
+  "theta_sd": 0.05,
+  "spearman_difficulty_vs_correct": -0.343
+ },
+ "panel_mean_theta": {
+  "deepseek-r1:8b": 2.12,
+  "gemma2:2b": 0.41,
+  "llama3.1:8b": 0.89,
+  "llama3.2:3b": 0.29,
+  "phi3:3.8b": 0.28,
+  "qwen2:7b": 0.91,
+  "qwen3:14b": 2.35,
+  "qwen3:8b": 2.18
+ }
+}
