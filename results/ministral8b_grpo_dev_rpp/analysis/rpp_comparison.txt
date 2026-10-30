@@ -1,0 +1,22 @@
+R s0 replay identical to lr-check run at u40: False
+R s1 replay identical to lr-check run at u40: False
+
+seed  R final  PP final  PP−R   | parsed R   PP   PP−R  | unparse R/PP | len R/PP | PP actual success sel | gradgrp last10 R/PP
+0     0.7894  0.7881  -0.0013 | 0.789 0.788 -0.001 | 0.000/0.000 | 164/325 | PP 0.693 (R 0.770) | 0.32/0.76
+1     0.7913  0.7731  -0.0181 | 0.792 0.777 -0.015 | 0.001/0.004 | 308/387 | PP 0.599 (R 0.758) | 0.42/0.85
+2     0.7675  0.7619  -0.0056 | 0.778 0.762 -0.016 | 0.013/0.000 | 193/9 | PP 0.552 (R 0.687) | 0.73/0.70
+3     0.7875  0.7794  -0.0081 | 0.788 0.780 -0.008 | 0.001/0.001 | 378/76 | PP 0.664 (R 0.750) | 0.37/0.59
+strict PP−R: mean -0.0083 sd 0.0072 t-CI(df3) [-0.0197, +0.0031] p2=0.103 positive 0/4
+parsed-only PP−R: mean -0.0100 sd 0.0069 t-CI(df3) [-0.0210, +0.0010] p2=0.063 positive 0/4
+item bootstrap (seeds fixed) strict PP−R: [-0.0177, +0.0012]
+
+mean S curve (strict):
+  u 0: R 0.6400  PP 0.6400
+  u 5: R 0.7175  PP 0.7172
+  u10: R 0.7231  PP 0.7500
+  u15: R 0.7502  PP 0.7473
+  u20: R 0.7555  PP 0.7681
+  u25: R 0.7609  PP 0.7764
+  u30: R 0.7758  PP 0.5787
+  u35: R 0.6622  PP 0.5169
+  u40: R 0.7839  PP 0.7756

@@ -1,0 +1,18 @@
+2026-10-30T20:08:56+00:00 START 8 configs on GPUs [3, 4, 5, 6, 7] x2
+2026-10-30T20:08:56+00:00 LAUNCH r_s0.yaml gpu=3 pid=164759 attempt=0
+2026-10-30T20:09:16+00:00 LAUNCH pp_s0.yaml gpu=4 pid=165119 attempt=0
+2026-10-30T20:09:37+00:00 LAUNCH r_s1.yaml gpu=5 pid=165498 attempt=0
+2026-10-30T20:09:57+00:00 LAUNCH pp_s1.yaml gpu=6 pid=165905 attempt=0
+2026-10-30T20:10:17+00:00 LAUNCH r_s2.yaml gpu=7 pid=166324 attempt=0
+2026-10-30T20:10:38+00:00 LAUNCH pp_s2.yaml gpu=3 pid=166738 attempt=0
+2026-10-30T20:10:58+00:00 LAUNCH r_s3.yaml gpu=4 pid=167130 attempt=0
+2026-10-30T20:11:19+00:00 LAUNCH pp_s3.yaml gpu=5 pid=167558 attempt=0
+2026-10-30T20:55:39+00:00 DONE r_s0.yaml (1 done, 0 pending, 7 running)
+2026-10-30T21:00:39+00:00 DONE r_s1.yaml (2 done, 0 pending, 6 running)
+2026-10-30T22:25:39+00:00 DONE r_s3.yaml (3 done, 0 pending, 5 running)
+2026-10-30T22:37:39+00:00 DONE pp_s0.yaml (4 done, 0 pending, 4 running)
+2026-10-30T23:11:39+00:00 DONE r_s2.yaml (5 done, 0 pending, 3 running)
+2026-10-30T23:14:39+00:00 DONE pp_s1.yaml (6 done, 0 pending, 2 running)
+2026-10-30T23:14:39+00:00 DONE pp_s3.yaml (7 done, 0 pending, 1 running)
+2026-10-30T23:15:39+00:00 DONE pp_s2.yaml (8 done, 0 pending, 0 running)
+2026-10-30T23:16:39+00:00 END done=8 gave_up=0 []

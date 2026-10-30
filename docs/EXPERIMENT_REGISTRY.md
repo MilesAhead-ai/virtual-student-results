@@ -71,6 +71,7 @@ numbers stand but a later experiment answers the question better;
 | F12 | `olmo3sft_grpo_tracker_theta0` (+ offline replay `tracker_diagnosis`) | 10-27 | Does a calibrated tracker start improve PP? | PP × θ₀ 1.0 × seeds 0–3 | `tracker.theta_initial: 1.0` | pool-v1-final | invariant | valid (4 seeds) | early calibration fixed; final S and PP − R unchanged (+0.019); late targeting is pool-limited | DEV_RUN8_PRECONFIRMATORY.md | `964c5b6`, `9698441` |
 | **C1** | `olmo3sft_grpo_confirmatory_v1` | 10-28 → 10-29 | **Confirmatory: does PP beat R on held-out E1?** | R, PP × 16 (seeds 100–115); PT × 8 (100–107) | §3 + θ₀ 1.0, E1 primary (E9, E10) | pool-v1-final | invariant | **valid; confirmatory** | **H1 PP − R +0.0191 [+0.0085, +0.0296], p 0.0016; H2 PT − R +0.0319 [+0.020, +0.044]**; twin-free PP − R +0.027 | CONFIRMATORY_V1_RESULTS.md | `fd6aee0` (frozen), `45dd4fd` |
 | F13 | `ministral8b_grpo_lr_check` | 10-30 | Which lr for the second student (Ministral-8B)? | R × lr {1e-4, 2e-4, 4e-4} × 2 | student Ministral-8B (`2f494a1`), `vllm_prompt_format: token_ids`, lr varies | pool-v1-final | invariant | valid (2 seeds) | lr 1e-4 stable: S 0.640 → 0.790, parsed-only +0.054; 2e-4 oscillates; 4e-4 collapses | FINDINGS #13 | this commit |
+| F14 | `ministral8b_grpo_dev_rpp` | 10-30 | Does PP beat R on the second student? | R, PP × 4 | Ministral-8B, lr 1e-4, θ₀ 1.0, token-id prompts | pool-v1-final | invariant | valid (4 seeds); strict metric distorted by a format attractor | PP − R −0.008 [−0.020, +0.003]; PP ahead early (u10–25), both plateau ~0.78 by u40 | FINDINGS #14 | this commit |
 
 ## 3. Current reference settings
 
@@ -121,7 +122,7 @@ S for pool-v1-final).
 
 <!-- BEGIN GENERATED: scripts/build_registry.py -->
 
-Generated from `results/*/*/` (119 runs). Full per-run data: `results/registry/runs.csv`.
+Generated from `results/*/*/` (127 runs). Full per-run data: `results/registry/runs.csv`.
 Columns marked * need the full artifacts and are cached in the CSV.
 
 ### `m0_dev_satbank`
@@ -131,6 +132,21 @@ Shared: student=dummy-student@dummy-v, generation=dummy, batch_invariant=False, 
 | run_id | status | policy | seed | initial | final | AULC | Δparsed* | unparse u0→end* | len end* | max letter* | grad groups* | min* |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | `pp-f4-sft-s000-f1105f40` | complete | pp | 0 | 0.6392 | 0.7526 | 0.7152 | +0.113 | 0.0%→0.0% | 49 | 0.29 | — | 0 |
+
+### `ministral8b_grpo_dev_rpp`
+
+Shared: student=Ministral-8B-Instruct-2410@2f494a1, generation=vllm, batch_invariant=True, method=grpo, lr=1e-04, schedule=constant_with_warmup, warmup=5, updates=40, kl=0.05, group_size=8, rollout_temp=1, max_completion_tokens=512, lora=r16/a32.0, batch_items=32, slate=16, primary_set=s, primary_metric=final_accuracy, items_sha=b4e060d6, split_lock=6147da9a.
+
+| run_id | status | policy | seed | initial | final | AULC | Δparsed* | unparse u0→end* | len end* | max letter* | grad groups* | min* |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `pp-outcome-grpo-s000-0e8b9323` | complete | pp | 0 | 0.6400 | 0.7881 | 0.7653 | +0.051 | 13.1%→0.0% | 324 | 0.26 | 0.76 | 147 |
+| `pp-outcome-grpo-s001-f7b7c229` | complete | pp | 1 | 0.6400 | 0.7731 | 0.6451 | +0.040 | 13.1%→0.4% | 387 | 0.28 | 0.85 | 184 |
+| `pp-outcome-grpo-s002-b987568f` | complete | pp | 2 | 0.6400 | 0.7619 | 0.6160 | +0.025 | 13.1%→0.0% | 9 | 0.30 | 0.70 | 184 |
+| `pp-outcome-grpo-s003-433d463c` | complete | pp | 3 | 0.6400 | 0.7794 | 0.7549 | +0.044 | 13.1%→0.1% | 75 | 0.31 | 0.59 | 182 |
+| `r-outcome-grpo-s000-182fb137` | complete | r | 0 | 0.6400 | 0.7894 | 0.7479 | +0.053 | 13.1%→0.0% | 163 | 0.30 | 0.32 | 45 |
+| `r-outcome-grpo-s001-d2450e9d` | complete | r | 1 | 0.6400 | 0.7913 | 0.7473 | +0.055 | 13.1%→0.1% | 308 | 0.29 | 0.42 | 50 |
+| `r-outcome-grpo-s002-eb827d64` | complete | r | 2 | 0.6400 | 0.7675 | 0.6864 | +0.041 | 13.1%→1.3% | 193 | 0.28 | 0.73 | 180 |
+| `r-outcome-grpo-s003-1d2143b2` | complete | r | 3 | 0.6400 | 0.7875 | 0.7470 | +0.051 | 13.1%→0.1% | 378 | 0.29 | 0.37 | 134 |
 
 ### `ministral8b_grpo_lr_check`
 
