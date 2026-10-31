@@ -1,0 +1,33 @@
+u0 identical across all 16 runs: True
+
+PP−R in S accuracy by checkpoint (8 seeds):
+  u 5: R 0.7156 PP 0.7176  Δ +0.0020 sd 0.0132 CI [-0.0091,+0.0130] p 0.687 pos 5/8
+  u10: R 0.7388 PP 0.7320  Δ -0.0068 sd 0.0202 CI [-0.0237,+0.0101] p 0.374 pos 3/8
+  u15: R 0.7458 PP 0.7548  Δ +0.0091 sd 0.0221 CI [-0.0094,+0.0275] p 0.284 pos 7/8
+  u20: R 0.7531 PP 0.7615  Δ +0.0084 sd 0.0150 CI [-0.0041,+0.0209] p 0.158 pos 6/8
+  u25: R 0.7633 PP 0.7383  Δ -0.0250 sd 0.0873 CI [-0.0980,+0.0480] p 0.445 pos 5/8
+  u30: R 0.7717 PP 0.7776  Δ +0.0059 sd 0.0194 CI [-0.0103,+0.0221] p 0.421 pos 6/8
+  u35: R 0.7762 PP 0.7769  Δ +0.0006 sd 0.0155 CI [-0.0123,+0.0136] p 0.912 pos 4/8
+  u40: R 0.7818 PP 0.7791  Δ -0.0027 sd 0.0119 CI [-0.0126,+0.0073] p 0.548 pos 4/8
+
+AULC (mean over u0..u40): PP−R -0.0010 sd 0.0104 CI [-0.0096,+0.0077] p 0.8022 pos 4/8
+first checkpoint reaching R's u40 mean (0.7818): R u40, PP uNone
+
+format collapses (checkpoints u5+ with unparseable > 20%):
+  r: 0 []
+  pp: 1 [(3, 25)]
+  r: len u40 [355, 270, 417, 389, 348, 196, 439, 228] | grad groups last10 0.41 | acc-if-parsed u40 0.7826
+  pp: len u40 [298, 288, 102, 340, 460, 473, 337, 252] | grad groups last10 0.57 | acc-if-parsed u40 0.7797
+u20: dev mean PP−R +0.0084; E1-sized per-seed sd ≈ 0.0179
+u40: dev mean PP−R -0.0027; E1-sized per-seed sd ≈ 0.0170
+AULC: dev mean PP−R -0.0010; E1-sized per-seed sd ≈ 0.0110
+
+selection behaviour (all updates):  predicted success / actual greedy success / mean panel b of chosen items
+  Ministral R : 0.732 / 0.758 / b +0.026  (n=10240)
+  Ministral PP: 0.621 / 0.654 / b +0.907  (n=10240)
+  OLMo C1 R   : 0.699 / 0.710 / b +0.031  (n=20480)
+  OLMo C1 PP  : 0.584 / 0.597 / b +0.825  (n=20480)
+  Ministral u0: Spearman(panel b, correct) on S = -0.339
+  Ministral u40: Spearman(panel b, correct) on S = -0.281
+  OLMo u0: Spearman(panel b, correct) on S = -0.351
+  OLMo u40: Spearman(panel b, correct) on S = -0.331

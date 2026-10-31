@@ -1,0 +1,328 @@
+schema_version: 1
+experiment:
+  experiment_id: ministral8b_grpo_dev_rpp8
+  stage: m0
+  mode: development
+  root_seed: 3
+  output_root: artifacts
+  data_root: data/processed/pool_v1
+  lock_file: data/locks/pool_v1/splits_v1.json
+  cache_root: artifacts/cache
+  prompts_dir: prompts
+  taxonomy_file: taxonomies/sat_rw_misconceptions.yaml
+  sibling_map_file: data/processed/pool_v1/sibling_map.parquet
+  f3_library_file: data/processed/pool_v1/f3_library.jsonl
+  calibration_id: pool-v1-gpu3
+student:
+  model_id: mistralai/Ministral-8B-Instruct-2410
+  revision: 2f494a194c5b980dfb9772cb92d26cbb671fce5a
+  tokenizer_id: mistralai/Ministral-8B-Instruct-2410
+  tokenizer_revision: 2f494a194c5b980dfb9772cb92d26cbb671fce5a
+  chat_template_hash: e4676cb56dffea7782fd3e2b577cfaf1e123537e6ef49b3ec7caa6c095c62272
+  chat_template_file: null
+  dtype: bfloat16
+  quantization: none
+  max_context_tokens: 4096
+  device: auto
+  generation_batch_size: 32
+  vllm_url: http://127.0.0.1:8100
+  generation_backend: vllm
+  vllm_batch_invariant: true
+  vllm_prompt_format: token_ids
+  training_backend: torch_peft
+  dummy: null
+training:
+  method: grpo
+  adapter: lora
+  logical_batch_items: 32
+  micro_batch_size: 1
+  gradient_accumulation_steps: 32
+  updates: 40
+  learning_rate: 0.0001
+  weight_decay: 0.0
+  warmup_steps: 5
+  lr_schedule: constant_with_warmup
+  max_grad_norm: 1.0
+  max_target_tokens: 512
+  gradient_checkpointing: true
+  max_consecutive_no_gradient_updates: 5
+  lora:
+    rank: 16
+    alpha: 32.0
+    dropout: 0.05
+    target_modules:
+    - q_proj
+    - k_proj
+    - v_proj
+    - o_proj
+    - gate_proj
+    - up_proj
+    - down_proj
+grpo:
+  group_size: 8
+  temperature: 1.0
+  max_completion_tokens: 512
+  kl_coefficient: 0.05
+  normalize_advantage_std: false
+  normalize_by_length: false
+  reward_correct: 1.0
+  reward_wrong: 0.0
+  reward_unparseable: -0.1
+tracker:
+  theta_initial: 1.0
+  variance_initial: 2.0
+  process_variance: 0.05
+  probability_clip: 1.0e-06
+  variance_floor: 1.0e-08
+  include_item_uncertainty: false
+  noise_after_noop_update: false
+schedule:
+  type: rotating_round_robin
+  skills:
+  - craft_structure.words_in_context
+  - craft_structure.text_structure
+  - craft_structure.cross_text_connections
+  - information_ideas.central_ideas
+  - information_ideas.command_of_evidence_textual
+  - information_ideas.inferences
+  - expression_of_ideas.rhetorical_synthesis
+  - expression_of_ideas.transitions
+  - standard_english.boundaries
+  - standard_english.form_structure_sense
+selection:
+  policy: r
+  target_success_probability: 0.5
+  target_band_half_width: 0.15
+  candidate_slate_size: 16
+  ppu_quadrature_nodes: 64
+  tie_tolerance: 1.0e-12
+  label_initial: 3
+  pt:
+    estimator: fixed_rollouts
+    rollouts_per_candidate: 4
+    temperature: 1.0
+    sequential_increment: null
+    sequential_half_width: null
+    maximum_rollouts: null
+    max_completion_tokens: 512
+    tracker_difficulty_rule: panelprobe
+feedback:
+  condition: outcome
+  maximum_tutor_turns: 6
+  no_reveal_turns: 2
+  resolve_retries: 3
+  feedback_regeneration_retries: 3
+  correct_example_weight: 0.3
+  wrong_example_weight: 1.0
+  guess_filter_samples: 8
+  guess_filter_minimum_correct: 5
+  guess_filter_temperature: 1.0
+  resolve_temperature: 1.0
+  dialogue_temperature: 0.0
+  f2_token_target: 150
+  max_completion_tokens: 512
+  profile_history_per_skill: 10
+  profile_max_tokens: 300
+  f3_script_version: v1
+  sibling_map_version: pool-v1-dev
+  sibling_difficulty_tolerance: 0.75
+  sibling_check_context: in_dialogue
+tutor:
+  provider: dummy
+  model_id: dummy-tutor
+  model_revision: dummy-v1
+  temperature: 0.0
+  effort: null
+  maximum_output_tokens: 1024
+  api_key_env: null
+  region: null
+  request_timeout_seconds: 120.0
+  maximum_transport_retries: 5
+  maximum_protocol_retries: 3
+  dummy: null
+judges:
+  classifier:
+    provider: dummy
+    model_id: dummy-tutor
+    model_revision: dummy-v1
+    temperature: 0.0
+    effort: null
+    maximum_output_tokens: 1024
+    api_key_env: null
+    region: null
+    request_timeout_seconds: 120.0
+    maximum_transport_retries: 5
+    maximum_protocol_retries: 3
+    dummy: null
+  standalone:
+    provider: dummy
+    model_id: dummy-tutor
+    model_revision: dummy-v1
+    temperature: 0.0
+    effort: null
+    maximum_output_tokens: 1024
+    api_key_env: null
+    region: null
+    request_timeout_seconds: 120.0
+    maximum_transport_retries: 5
+    maximum_protocol_retries: 3
+    dummy: null
+  leakage:
+    provider: dummy
+    model_id: dummy-tutor
+    model_revision: dummy-v1
+    temperature: 0.0
+    effort: null
+    maximum_output_tokens: 1024
+    api_key_env: null
+    region: null
+    request_timeout_seconds: 120.0
+    maximum_transport_retries: 5
+    maximum_protocol_retries: 3
+    dummy: null
+  adaptation:
+    provider: dummy
+    model_id: dummy-tutor
+    model_revision: dummy-v1
+    temperature: 0.0
+    effort: null
+    maximum_output_tokens: 1024
+    api_key_env: null
+    region: null
+    request_timeout_seconds: 120.0
+    maximum_transport_retries: 5
+    maximum_protocol_retries: 3
+    dummy: null
+evaluation:
+  every_updates: 5
+  dense_sets:
+  - s
+  - d
+  sparse_sets: []
+  sparse_updates: []
+  primary_set: s
+  temperature: 0.0
+  max_completion_tokens: 512
+  answer_parser: answer-line-v2
+statistics:
+  bootstrap_replicates: 10000
+  confidence_level: 0.95
+  multiple_comparison_method: holm
+  minimum_effect_aulc: 0.02
+  equivalence_margin_aulc: 0.01
+  primary_metric: final_accuracy
+  reference_policy: r
+  ceiling_policy: pt
+  reference_condition: outcome
+  contrast_families:
+    S:
+    - pp
+    - pt
+checkpointing:
+  save_every_updates: 1
+  retain_every_updates: 10
+  exact_resume: true
+panel:
+  calibration_splits:
+  - w
+  probe_splits:
+  - d
+  - p
+  - p_plus
+  - s
+  - e1
+  theta_prior_mean: 0.0
+  theta_prior_variance: 2.0
+  difficulty_prior_mean: 0.0
+  difficulty_prior_variance: 2.0
+  max_iterations: 50
+  tolerance: 1.0e-06
+  members: null
+  repeat_weighting: mean
+data:
+  source: sat_platform
+  source_root: ../sat-reading-platform
+  pool_question_files:
+  - data/raw/pool_v1/P1/balanced/P1_boundaries.jsonl
+  - data/raw/pool_v1/P1/balanced/P1_central_ideas.jsonl
+  - data/raw/pool_v1/P1/balanced/P1_command_of_evidence_textual.jsonl
+  - data/raw/pool_v1/P1/balanced/P1_cross_text_connections.jsonl
+  - data/raw/pool_v1/P1/balanced/P1_form_structure_sense.jsonl
+  - data/raw/pool_v1/P1/balanced/P1_inferences.jsonl
+  - data/raw/pool_v1/P1/balanced/P1_rhetorical_synthesis.jsonl
+  - data/raw/pool_v1/P1/balanced/P1_text_structure.jsonl
+  - data/raw/pool_v1/P1/balanced/P1_transitions.jsonl
+  - data/raw/pool_v1/P1/balanced/P1_words_in_context.jsonl
+  - data/raw/pool_v1/P2/balanced/P2_boundaries.jsonl
+  - data/raw/pool_v1/P2/balanced/P2_central_ideas.jsonl
+  - data/raw/pool_v1/P2/balanced/P2_command_of_evidence_textual.jsonl
+  - data/raw/pool_v1/P2/balanced/P2_cross_text_connections.jsonl
+  - data/raw/pool_v1/P2/balanced/P2_form_structure_sense.jsonl
+  - data/raw/pool_v1/P2/balanced/P2_inferences.jsonl
+  - data/raw/pool_v1/P2/balanced/P2_rhetorical_synthesis.jsonl
+  - data/raw/pool_v1/P2/balanced/P2_text_structure.jsonl
+  - data/raw/pool_v1/P2/balanced/P2_transitions.jsonl
+  - data/raw/pool_v1/P2/balanced/P2_words_in_context.jsonl
+  pool_eval_dirs: []
+  drop_key_flagged: true
+  panel_runs:
+  - bank_eval_dirs:
+    - data/raw/pool_v1/gpu_W/eval
+    pool_eval_dirs:
+    - data/raw/pool_v1/P1/eval
+    - data/raw/pool_v1/P2/eval_r1
+  - bank_eval_dirs:
+    - data/raw/pool_v1/repeat_r2/eval
+    pool_eval_dirs:
+    - data/raw/pool_v1/P2/eval_r2
+  - bank_eval_dirs:
+    - data/raw/pool_v1/repeat_r3/eval
+    pool_eval_dirs:
+    - data/raw/pool_v1/P2/eval_r3
+  bank_split: w
+  split_assignment: file
+  split_file: data/splits/pool_v1_dev.json
+  split_fractions:
+    p: 1.0
+  split_quotas:
+    d: 20
+    e1: 60
+    p_plus: 64
+    s: 160
+  split_remainder: p
+  licenses:
+    college_board_practice_test_unverified: development_use_only
+    internal_generated: development_use_only
+  e3_license_decision: REQUIRED
+  dedup:
+    exact: true
+    normalized_text: true
+    embedding_model: REQUIRED
+    embedding_revision: REQUIRED
+    embedding_threshold: REQUIRED
+budget:
+  compute_gpu_hours: 0.0
+  paid_api_usd: 0.0
+development_only:
+- training
+- grpo
+- training.updates
+- training.max_consecutive_no_gradient_updates
+- tracker.process_variance
+- selection.candidate_slate_size
+- selection.pt
+- feedback.sibling_map_version
+- panel.repeat_weighting
+- feedback.sibling_difficulty_tolerance
+- feedback.sibling_check_context
+- feedback.resolve_temperature
+- feedback.dialogue_temperature
+- feedback.f2_token_target
+- tutor
+- judges
+- evaluation
+- panel
+- data.split_assignment
+- data.split_quotas
+- data.licenses
+- budget

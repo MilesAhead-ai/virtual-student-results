@@ -72,6 +72,7 @@ numbers stand but a later experiment answers the question better;
 | **C1** | `olmo3sft_grpo_confirmatory_v1` | 10-28 → 10-29 | **Confirmatory: does PP beat R on held-out E1?** | R, PP × 16 (seeds 100–115); PT × 8 (100–107) | §3 + θ₀ 1.0, E1 primary (E9, E10) | pool-v1-final | invariant | **valid; confirmatory** | **H1 PP − R +0.0191 [+0.0085, +0.0296], p 0.0016; H2 PT − R +0.0319 [+0.020, +0.044]**; twin-free PP − R +0.027 | CONFIRMATORY_V1_RESULTS.md | `fd6aee0` (frozen), `45dd4fd` |
 | F13 | `ministral8b_grpo_lr_check` | 10-30 | Which lr for the second student (Ministral-8B)? | R × lr {1e-4, 2e-4, 4e-4} × 2 | student Ministral-8B (`2f494a1`), `vllm_prompt_format: token_ids`, lr varies | pool-v1-final | invariant | valid (2 seeds) | lr 1e-4 stable: S 0.640 → 0.790, parsed-only +0.054; 2e-4 oscillates; 4e-4 collapses | FINDINGS #13 | this commit |
 | F14 | `ministral8b_grpo_dev_rpp` | 10-30 | Does PP beat R on the second student? | R, PP × 4 | Ministral-8B, lr 1e-4, θ₀ 1.0, token-id prompts | pool-v1-final | invariant | valid (4 seeds); strict metric distorted by a format attractor | PP − R −0.008 [−0.020, +0.003]; PP ahead early (u10–25), both plateau ~0.78 by u40 | FINDINGS #14 | this commit |
+| F15 | `ministral8b_grpo_dev_rpp8` | 10-31 | Second student, 8 seeds, parser v2: does PP beat R? | R, PP × 8 | as F14 + `evaluation.answer_parser: answer-line-v2` | pool-v1-final | invariant | valid (8 seeds) | no PP advantage: AULC −0.001 [−0.010, +0.008], u40 −0.003; targeting itself works | FINDINGS #15 | this commit |
 
 ## 3. Current reference settings
 
@@ -122,7 +123,7 @@ S for pool-v1-final).
 
 <!-- BEGIN GENERATED: scripts/build_registry.py -->
 
-Generated from `results/*/*/` (127 runs). Full per-run data: `results/registry/runs.csv`.
+Generated from `results/*/*/` (143 runs). Full per-run data: `results/registry/runs.csv`.
 Columns marked * need the full artifacts and are cached in the CSV.
 
 ### `m0_dev_satbank`
@@ -147,6 +148,29 @@ Shared: student=Ministral-8B-Instruct-2410@2f494a1, generation=vllm, batch_invar
 | `r-outcome-grpo-s001-d2450e9d` | complete | r | 1 | 0.6400 | 0.7913 | 0.7473 | +0.055 | 13.1%→0.1% | 308 | 0.29 | 0.42 | 50 |
 | `r-outcome-grpo-s002-eb827d64` | complete | r | 2 | 0.6400 | 0.7675 | 0.6864 | +0.041 | 13.1%→1.3% | 193 | 0.28 | 0.73 | 180 |
 | `r-outcome-grpo-s003-1d2143b2` | complete | r | 3 | 0.6400 | 0.7875 | 0.7470 | +0.051 | 13.1%→0.1% | 378 | 0.29 | 0.37 | 134 |
+
+### `ministral8b_grpo_dev_rpp8`
+
+Shared: student=Ministral-8B-Instruct-2410@2f494a1, generation=vllm, batch_invariant=True, method=grpo, lr=1e-04, schedule=constant_with_warmup, warmup=5, updates=40, kl=0.05, group_size=8, rollout_temp=1, max_completion_tokens=512, lora=r16/a32.0, batch_items=32, slate=16, primary_set=s, primary_metric=final_accuracy, items_sha=b4e060d6, split_lock=6147da9a.
+
+| run_id | status | policy | seed | initial | final | AULC | Δparsed* | unparse u0→end* | len end* | max letter* | grad groups* | min* |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `pp-outcome-grpo-s000-86a08bf2` | complete | pp | 0 | 0.6400 | 0.7600 | 0.7321 | +0.024 | 13.1%→0.0% | 297 | 0.27 | 0.74 | 193 |
+| `pp-outcome-grpo-s001-c796526f` | complete | pp | 1 | 0.6400 | 0.7812 | 0.7551 | +0.047 | 13.1%→0.2% | 288 | 0.26 | 0.46 | 159 |
+| `pp-outcome-grpo-s002-aba350fe` | complete | pp | 2 | 0.6400 | 0.7913 | 0.7583 | +0.055 | 13.1%→0.0% | 102 | 0.29 | 0.52 | 155 |
+| `pp-outcome-grpo-s003-1a70c1f8` | complete | pp | 3 | 0.6400 | 0.7694 | 0.7153 | +0.033 | 13.1%→0.0% | 340 | 0.33 | 0.50 | 186 |
+| `pp-outcome-grpo-s004-1e718341` | complete | pp | 4 | 0.6400 | 0.7794 | 0.7544 | +0.043 | 13.1%→0.0% | 459 | 0.27 | 0.57 | 206 |
+| `pp-outcome-grpo-s005-29c39c38` | complete | pp | 5 | 0.6400 | 0.7800 | 0.7491 | +0.046 | 13.1%→0.3% | 472 | 0.30 | 0.55 | 182 |
+| `pp-outcome-grpo-s006-a9d61028` | complete | pp | 6 | 0.6400 | 0.7806 | 0.7564 | +0.044 | 13.1%→0.0% | 337 | 0.28 | 0.61 | 166 |
+| `pp-outcome-grpo-s007-bf6403fc` | complete | pp | 7 | 0.6400 | 0.7913 | 0.7476 | +0.056 | 13.1%→0.1% | 251 | 0.27 | 0.60 | 172 |
+| `r-outcome-grpo-s000-9634ef35` | complete | r | 0 | 0.6400 | 0.7756 | 0.7462 | +0.041 | 13.1%→0.2% | 355 | 0.30 | 0.39 | 138 |
+| `r-outcome-grpo-s001-d27f4707` | complete | r | 1 | 0.6400 | 0.7719 | 0.7471 | +0.037 | 13.1%→0.1% | 269 | 0.29 | 0.44 | 138 |
+| `r-outcome-grpo-s002-957a615a` | complete | r | 2 | 0.6400 | 0.7881 | 0.7541 | +0.052 | 13.1%→0.0% | 416 | 0.28 | 0.50 | 165 |
+| `r-outcome-grpo-s003-f1d7ba5d` | complete | r | 3 | 0.6400 | 0.7819 | 0.7332 | +0.046 | 13.1%→0.1% | 388 | 0.28 | 0.39 | 165 |
+| `r-outcome-grpo-s004-e11c8cec` | complete | r | 4 | 0.6400 | 0.7706 | 0.7498 | +0.036 | 13.1%→0.2% | 348 | 0.29 | 0.39 | 129 |
+| `r-outcome-grpo-s005-1cf8f52b` | complete | r | 5 | 0.6400 | 0.7975 | 0.7489 | +0.061 | 13.1%→0.0% | 196 | 0.28 | 0.39 | 143 |
+| `r-outcome-grpo-s006-f047d0b9` | complete | r | 6 | 0.6400 | 0.7700 | 0.7422 | +0.036 | 13.1%→0.3% | 438 | 0.26 | 0.46 | 154 |
+| `r-outcome-grpo-s007-60c4613d` | complete | r | 7 | 0.6400 | 0.7987 | 0.7540 | +0.063 | 13.1%→0.0% | 227 | 0.27 | 0.34 | 115 |
 
 ### `ministral8b_grpo_lr_check`
 

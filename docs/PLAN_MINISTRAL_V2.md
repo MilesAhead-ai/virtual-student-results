@@ -13,8 +13,8 @@ status column as steps finish; record results in FINDINGS/registry as usual.
 | LR check: lr 1e-4 (half of OLMo's) | done 10-30 | F13, FINDINGS #13 |
 | Dev R vs PP, 4 seeds | done 10-30 | F14, FINDINGS #14 |
 | **Step A: parser v2** | done 10-31 | `evaluation.answer_parser`, commit below |
-| **Step B: dev R vs PP, 8 seeds, parser v2** | running since 10-31 05:17 UTC | `artifacts/ministral8b_grpo_dev_rpp8/` (queue log there) |
-| **Step C: choose the v2 primary metric, pre-register, freeze** | todo (owner sign-off) | — |
+| **Step B: dev R vs PP, 8 seeds, parser v2** | done 10-31: **no PP advantage** (AULC −0.001 [−0.010, +0.008]) | F15, FINDINGS #15 |
+| **Step C: choose the v2 primary metric, pre-register, freeze** | **on hold: owner to decide whether to run v2 at all, given B** | — |
 | **Step D: run and analyse confirmatory v2** | todo | — |
 
 What F14 showed, and why this plan exists:

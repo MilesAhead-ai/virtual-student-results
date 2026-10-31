@@ -1,0 +1,34 @@
+2026-10-31T05:17:22+00:00 START 16 configs on GPUs [3, 4, 5, 6, 7] x2
+2026-10-31T05:17:22+00:00 LAUNCH r_s0.yaml gpu=3 pid=227701 attempt=0
+2026-10-31T05:17:43+00:00 LAUNCH pp_s0.yaml gpu=4 pid=228020 attempt=0
+2026-10-31T05:18:03+00:00 LAUNCH r_s1.yaml gpu=5 pid=228341 attempt=0
+2026-10-31T05:18:23+00:00 LAUNCH pp_s1.yaml gpu=6 pid=228757 attempt=0
+2026-10-31T05:18:44+00:00 LAUNCH r_s2.yaml gpu=7 pid=229386 attempt=0
+2026-10-31T05:19:04+00:00 LAUNCH pp_s2.yaml gpu=3 pid=229797 attempt=0
+2026-10-31T05:19:24+00:00 LAUNCH r_s3.yaml gpu=4 pid=230179 attempt=0
+2026-10-31T05:19:45+00:00 LAUNCH pp_s3.yaml gpu=5 pid=230565 attempt=0
+2026-10-31T05:20:05+00:00 LAUNCH r_s4.yaml gpu=6 pid=230958 attempt=0
+2026-10-31T05:20:25+00:00 LAUNCH pp_s4.yaml gpu=7 pid=231408 attempt=0
+2026-10-31T07:30:45+00:00 DONE r_s4.yaml (1 done, 6 pending, 9 running)
+2026-10-31T07:30:46+00:00 LAUNCH r_s5.yaml gpu=6 pid=238872 attempt=0
+2026-10-31T07:37:06+00:00 DONE r_s0.yaml (2 done, 5 pending, 9 running)
+2026-10-31T07:37:06+00:00 DONE r_s1.yaml (3 done, 5 pending, 8 running)
+2026-10-31T07:37:06+00:00 LAUNCH pp_s5.yaml gpu=3 pid=239569 attempt=0
+2026-10-31T07:37:27+00:00 LAUNCH r_s6.yaml gpu=5 pid=239893 attempt=0
+2026-10-31T07:54:47+00:00 DONE pp_s2.yaml (4 done, 3 pending, 9 running)
+2026-10-31T07:54:48+00:00 LAUNCH pp_s6.yaml gpu=3 pid=241242 attempt=0
+2026-10-31T07:58:08+00:00 DONE pp_s1.yaml (5 done, 2 pending, 9 running)
+2026-10-31T07:58:09+00:00 LAUNCH r_s7.yaml gpu=6 pid=241777 attempt=0
+2026-10-31T08:04:29+00:00 DONE r_s2.yaml (6 done, 1 pending, 9 running)
+2026-10-31T08:04:30+00:00 LAUNCH pp_s7.yaml gpu=7 pid=242490 attempt=0
+2026-10-31T08:05:50+00:00 DONE r_s3.yaml (7 done, 0 pending, 9 running)
+2026-10-31T08:27:50+00:00 DONE pp_s3.yaml (8 done, 0 pending, 8 running)
+2026-10-31T08:31:50+00:00 DONE pp_s0.yaml (9 done, 0 pending, 7 running)
+2026-10-31T08:47:50+00:00 DONE pp_s4.yaml (10 done, 0 pending, 6 running)
+2026-10-31T09:54:50+00:00 DONE r_s5.yaml (11 done, 0 pending, 5 running)
+2026-10-31T09:54:50+00:00 DONE r_s7.yaml (12 done, 0 pending, 4 running)
+2026-10-31T10:12:50+00:00 DONE r_s6.yaml (13 done, 0 pending, 3 running)
+2026-10-31T10:40:50+00:00 DONE pp_s5.yaml (14 done, 0 pending, 2 running)
+2026-10-31T10:42:50+00:00 DONE pp_s6.yaml (15 done, 0 pending, 1 running)
+2026-10-31T10:57:50+00:00 DONE pp_s7.yaml (16 done, 0 pending, 0 running)
+2026-10-31T10:58:50+00:00 END done=16 gave_up=0 []
