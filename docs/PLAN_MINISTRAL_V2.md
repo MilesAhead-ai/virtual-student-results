@@ -12,8 +12,8 @@ status column as steps finish; record results in FINDINGS/registry as usual.
 | Integration: token-id prompts, tokenizer checks, parity | done 10-30 | commit `bd93594`, FINDINGS #13 |
 | LR check: lr 1e-4 (half of OLMo's) | done 10-30 | F13, FINDINGS #13 |
 | Dev R vs PP, 4 seeds | done 10-30 | F14, FINDINGS #14 |
-| **Step A: parser v2** | todo | — |
-| **Step B: dev R vs PP, 8 seeds, parser v2** | todo | — |
+| **Step A: parser v2** | done 10-31 | `evaluation.answer_parser`, commit below |
+| **Step B: dev R vs PP, 8 seeds, parser v2** | running since 10-31 05:17 UTC | `artifacts/ministral8b_grpo_dev_rpp8/` (queue log there) |
 | **Step C: choose the v2 primary metric, pre-register, freeze** | todo (owner sign-off) | — |
 | **Step D: run and analyse confirmatory v2** | todo | — |
 
