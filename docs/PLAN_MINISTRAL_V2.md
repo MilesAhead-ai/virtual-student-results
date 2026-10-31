@@ -1,5 +1,7 @@
 # Plan: replication on a second student (Ministral-8B) → confirmatory v2
 
+**CLOSED 2026-10-31 (E12):** step B found no PP advantage; no v2 on Ministral. Successor: `PLAN_OLMO_LONG.md`.
+
 Written 2026-10-31 so the work can be resumed from this file alone. Update the
 status column as steps finish; record results in FINDINGS/registry as usual.
 
@@ -14,8 +16,8 @@ status column as steps finish; record results in FINDINGS/registry as usual.
 | Dev R vs PP, 4 seeds | done 10-30 | F14, FINDINGS #14 |
 | **Step A: parser v2** | done 10-31 | `evaluation.answer_parser`, commit below |
 | **Step B: dev R vs PP, 8 seeds, parser v2** | done 10-31: **no PP advantage** (AULC −0.001 [−0.010, +0.008]) | F15, FINDINGS #15 |
-| **Step C: choose the v2 primary metric, pre-register, freeze** | **on hold: owner to decide whether to run v2 at all, given B** | — |
-| **Step D: run and analyse confirmatory v2** | todo | — |
+| **Step C: choose the v2 primary metric, pre-register, freeze** | cancelled (E12) | — |
+| **Step D: run and analyse confirmatory v2** | cancelled (E12) | — |
 
 What F14 showed, and why this plan exists:
 - On Ministral, PP leads early (u10–u25, about +1.5 to +3 points on S), but
