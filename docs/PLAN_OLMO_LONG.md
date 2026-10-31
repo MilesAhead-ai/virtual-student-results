@@ -21,8 +21,8 @@ Update the status table as steps finish; record results in FINDINGS/registry.
 
 | step | status | record |
 |---|---|---|
-| 1. Configs, preflight, servers back to OLMo | todo | — |
-| 2. Run: 3 arms × 4 seeds × 100 updates | todo | `artifacts/olmo3sft_grpo_long100/` |
+| 1. Configs, preflight, servers back to OLMo | done 10-31 | 12 configs in `artifacts/olmo3sft_grpo_long100/configs/` |
+| 2. Run: 3 arms × 4 seeds × 100 updates | running since 10-31 ~11:30 UTC (queue log in the experiment dir) | `artifacts/olmo3sft_grpo_long100/` |
 | 3. Analyse and report | todo | — |
 | 4. Owner decides: confirmatory v3 or not | todo | — |
 
