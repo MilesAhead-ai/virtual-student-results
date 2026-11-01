@@ -24,7 +24,7 @@ Update the status table as steps finish; record results in FINDINGS/registry.
 | 1. Configs, preflight, servers back to OLMo | done 10-31 | 12 configs in `artifacts/olmo3sft_grpo_long100/configs/` |
 | 2. Run: 3 arms × 4 seeds × 100 updates | done 11-01 (12/12; queue incident 10-31 23:22, no data lost) | `artifacts/olmo3sft_grpo_long100/` |
 | 3. Analyse and report | done 11-01 | `DEV_RUN9_OLMO_LONG100.md`, FINDINGS #16, F16 |
-| 4. Owner decides: confirmatory v3 or not | **pending** (result: R catches up; pool is the bottleneck) | — |
+| 4. Owner decides: confirmatory v3 or not | done 11-01: option A, a harder pool first → `PLAN_HARD_POOL.md` | — |
 
 ## Design (development; S and D only, E1 untouched)
 
