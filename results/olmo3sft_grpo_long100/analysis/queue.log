@@ -1,0 +1,19 @@
+2026-10-31T17:29:57+00:00 START 12 configs on GPUs [3, 4, 5, 6, 7] x2
+2026-10-31T17:29:58+00:00 LAUNCH pp64_s0.yaml gpu=3 pid=278378 attempt=0
+2026-10-31T17:30:18+00:00 LAUNCH pp16_s0.yaml gpu=4 pid=278634 attempt=0
+2026-10-31T17:30:38+00:00 LAUNCH r_s0.yaml gpu=5 pid=278913 attempt=0
+2026-10-31T17:30:58+00:00 LAUNCH pp64_s1.yaml gpu=6 pid=279302 attempt=0
+2026-10-31T17:31:19+00:00 LAUNCH pp16_s1.yaml gpu=7 pid=279689 attempt=0
+2026-10-31T17:31:39+00:00 LAUNCH r_s1.yaml gpu=3 pid=280113 attempt=0
+2026-10-31T17:31:59+00:00 LAUNCH pp64_s2.yaml gpu=4 pid=280493 attempt=0
+2026-10-31T17:32:20+00:00 LAUNCH pp16_s2.yaml gpu=5 pid=280884 attempt=0
+2026-10-31T17:32:40+00:00 LAUNCH r_s2.yaml gpu=6 pid=281274 attempt=0
+2026-10-31T17:33:00+00:00 LAUNCH pp64_s3.yaml gpu=7 pid=281661 attempt=0
+2026-10-31T22:32:20+00:00 DONE r_s0.yaml (1 done, 2 pending, 9 running)
+2026-10-31T22:32:21+00:00 LAUNCH pp16_s3.yaml gpu=5 pid=297760 attempt=0
+2026-10-31T22:44:41+00:00 DONE r_s2.yaml (2 done, 1 pending, 9 running)
+2026-10-31T22:44:41+00:00 LAUNCH r_s3.yaml gpu=6 pid=298740 attempt=0
+2026-10-31T23:08:01+00:00 DONE pp16_s1.yaml (3 done, 0 pending, 9 running)
+2026-10-31T23:11:01+00:00 DONE r_s1.yaml (4 done, 0 pending, 8 running)
+2026-10-31T23:22:01+00:00 FAILED pp16_s0.yaml rc=0 status=running; moved dir aside; retry 1/2
+2026-10-31T23:22:02+00:00 LAUNCH pp16_s0.yaml gpu=3 pid=300985 attempt=1

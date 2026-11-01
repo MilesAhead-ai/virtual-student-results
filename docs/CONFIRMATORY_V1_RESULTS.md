@@ -82,3 +82,20 @@ student.
 Limits (pre-registration §10): one student model; outcome-only training;
 settings tuned on S; a generated pool with topic reuse and few very hard
 items late in training.
+
+
+## Notes added after the study (not part of the pre-registered analysis)
+
+- **2026-11-01, interpretation (DEV_RUN9, FINDINGS #16).** In development
+  runs extended to 100 updates on S, PP's advantage peaks around u40 (+0.019,
+  matching this result) and shrinks to about +0.005 by u80 as R catches up.
+  PP runs out of items hard enough for the improving student. The confirmed
+  claim is about final accuracy at 40 updates; it is best read as **faster
+  learning**, not a higher plateau.
+- **2026-11-01, correction to the pre-registration's rationale (§6).** §6
+  said a technical failure would be re-run "from scratch with the same seed
+  (deterministic generation)", implying the re-run reproduces the run.
+  Generation and evaluation are deterministic, but **training is not
+  bit-reproducible**: identical inputs give slightly different losses
+  (FINDINGS #16). A same-seed re-run is a valid trajectory, not an exact
+  copy. This study had 0 failures and 0 re-runs, so no result is affected.

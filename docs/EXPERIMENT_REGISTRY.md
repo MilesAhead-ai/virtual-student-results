@@ -73,6 +73,7 @@ numbers stand but a later experiment answers the question better;
 | F13 | `ministral8b_grpo_lr_check` | 10-30 | Which lr for the second student (Ministral-8B)? | R × lr {1e-4, 2e-4, 4e-4} × 2 | student Ministral-8B (`2f494a1`), `vllm_prompt_format: token_ids`, lr varies | pool-v1-final | invariant | valid (2 seeds) | lr 1e-4 stable: S 0.640 → 0.790, parsed-only +0.054; 2e-4 oscillates; 4e-4 collapses | FINDINGS #13 | this commit |
 | F14 | `ministral8b_grpo_dev_rpp` | 10-30 | Does PP beat R on the second student? | R, PP × 4 | Ministral-8B, lr 1e-4, θ₀ 1.0, token-id prompts | pool-v1-final | invariant | valid (4 seeds); strict metric distorted by a format attractor | PP − R −0.008 [−0.020, +0.003]; PP ahead early (u10–25), both plateau ~0.78 by u40 | FINDINGS #14 | this commit |
 | F15 | `ministral8b_grpo_dev_rpp8` | 10-31 | Second student, 8 seeds, parser v2: does PP beat R? | R, PP × 8 | as F14 + `evaluation.answer_parser: answer-line-v2` | pool-v1-final | invariant | valid (8 seeds) | no PP advantage: AULC −0.001 [−0.010, +0.008], u40 −0.003; targeting itself works | FINDINGS #15 | this commit |
+| F16 | `olmo3sft_grpo_long100` | 10-31 → 11-01 | Does PP's advantage grow with longer training? Does slate 64 help? | R, PP16, PP64 × 4 | C1 settings, **100 updates**, slate 16/64 | pool-v1-final | invariant | valid (4 seeds) | PP16 − R +0.019 at u40 → +0.005 at u80; pool depletion; slate 64 no help | DEV_RUN9_OLMO_LONG100.md | this commit |
 
 ## 3. Current reference settings
 
@@ -123,7 +124,7 @@ S for pool-v1-final).
 
 <!-- BEGIN GENERATED: scripts/build_registry.py -->
 
-Generated from `results/*/*/` (143 runs). Full per-run data: `results/registry/runs.csv`.
+Generated from `results/*/*/` (155 runs). Full per-run data: `results/registry/runs.csv`.
 Columns marked * need the full artifacts and are cached in the CSV.
 
 ### `m0_dev_satbank`
@@ -292,6 +293,25 @@ Shared: student=Olmo-3-7B-Instruct-SFT@e1452fc, generation=vllm, batch_invariant
 | `r-outcome-grpo-s004-a39ea510` | complete | r | 4 | 0.2 | 0.6763 | 0.7013 | 0.6952 | +0.012 | 2.8%→0.8% | 520 | 0.27 | 0.62 | 211 |
 | `r-outcome-grpo-s005-1575d4ef` | complete | r | 5 | 0.2 | 0.6763 | 0.6994 | 0.6961 | +0.009 | 2.8%→0.7% | 517 | 0.27 | 0.60 | 216 |
 | `r-outcome-grpo-s006-7bf684e9` | complete | r | 6 | 0.2 | 0.6763 | 0.7081 | 0.6950 | +0.014 | 2.8%→0.2% | 540 | 0.26 | 0.61 | 219 |
+
+### `olmo3sft_grpo_long100`
+
+Shared: student=Olmo-3-7B-Instruct-SFT@e1452fc, generation=vllm, batch_invariant=True, method=grpo, lr=2e-04, schedule=constant_with_warmup, warmup=5, updates=100, kl=0.05, group_size=8, rollout_temp=1, max_completion_tokens=512, lora=r16/a32.0, batch_items=32, primary_set=s, primary_metric=final_accuracy, items_sha=b4e060d6, split_lock=6147da9a.
+
+| run_id | status | policy | seed | slate | initial | final | AULC | Δparsed* | unparse u0→end* | len end* | max letter* | grad groups* | min* |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `pp-outcome-grpo-s000-6ba9f721` | complete | pp | 0 | 16 | 0.6763 | 0.7856 | 0.7437 | +0.091 | 2.8%→0.1% | 433 | 0.25 | 0.50 | 351 |
+| `pp-outcome-grpo-s000-bf8bf9f1` | complete | pp | 0 | 64 | 0.6763 | 0.7731 | 0.7328 | +0.079 | 2.8%→0.1% | 370 | 0.28 | 0.45 | 555 |
+| `pp-outcome-grpo-s001-17076d77` | complete | pp | 1 | 64 | 0.6763 | 0.7625 | 0.7353 | +0.069 | 2.8%→0.2% | 618 | 0.27 | 0.49 | 568 |
+| `pp-outcome-grpo-s001-67afa59e` | complete | pp | 1 | 16 | 0.6763 | 0.7819 | 0.7406 | +0.087 | 2.8%→0.1% | 116 | 0.28 | 0.42 | 335 |
+| `pp-outcome-grpo-s002-6d6e2142` | complete | pp | 2 | 16 | 0.6763 | 0.7850 | 0.7445 | +0.092 | 2.8%→0.2% | 330 | 0.27 | 0.42 | 379 |
+| `pp-outcome-grpo-s002-87dfeeba` | complete | pp | 2 | 64 | 0.6763 | 0.7756 | 0.7443 | +0.081 | 2.8%→0.1% | 343 | 0.27 | 0.49 | 544 |
+| `pp-outcome-grpo-s003-3aa23901` | complete | pp | 3 | 64 | 0.6763 | 0.7800 | 0.7436 | +0.086 | 2.8%→0.1% | 241 | 0.27 | 0.42 | 552 |
+| `pp-outcome-grpo-s003-c0ba13e0` | complete | pp | 3 | 16 | 0.6763 | 0.7644 | 0.7404 | +0.069 | 2.8%→0.0% | 208 | 0.27 | 0.49 | 272 |
+| `r-outcome-grpo-s000-b13d73c3` | complete | r | 0 | 16 | 0.6763 | 0.7725 | 0.7316 | +0.078 | 2.8%→0.1% | 489 | 0.26 | 0.55 | 301 |
+| `r-outcome-grpo-s001-5a9c3476` | complete | r | 1 | 16 | 0.6763 | 0.7350 | 0.7044 | +0.041 | 2.8%→0.2% | 512 | 0.28 | 0.70 | 338 |
+| `r-outcome-grpo-s002-7e5d778a` | complete | r | 2 | 16 | 0.6763 | 0.7625 | 0.7357 | +0.068 | 2.8%→0.1% | 311 | 0.27 | 0.48 | 311 |
+| `r-outcome-grpo-s003-7f982086` | complete | r | 3 | 16 | 0.6763 | 0.7669 | 0.7314 | +0.074 | 2.8%→0.4% | 573 | 0.26 | 0.47 | 293 |
 
 ### `olmo3sft_grpo_lr_sweep`
 

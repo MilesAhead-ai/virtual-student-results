@@ -1,0 +1,58 @@
+R s0: checkpoints u0–u40 identical to F10 R: True
+R s1: checkpoints u0–u40 identical to F10 R: True
+R s2: checkpoints u0–u40 identical to F10 R: True
+R s3: checkpoints u0–u40 identical to F10 R: False
+
+mean S accuracy by checkpoint:
+  u  0: R 0.6763  PP16 0.6763  PP64 0.6763
+  u  5: R 0.6852  PP16 0.6858  PP64 0.6900
+  u 10: R 0.6936  PP16 0.7036  PP64 0.6967
+  u 15: R 0.7047  PP16 0.7086  PP64 0.7077
+  u 20: R 0.7047  PP16 0.7050  PP64 0.7120
+  u 25: R 0.7086  PP16 0.7136  PP64 0.7197
+  u 30: R 0.7153  PP16 0.7259  PP64 0.7252
+  u 35: R 0.7175  PP16 0.7294  PP64 0.7405
+  u 40: R 0.7233  PP16 0.7419  PP64 0.7455
+  u 45: R 0.7306  PP16 0.7516  PP64 0.7384
+  u 50: R 0.7383  PP16 0.7503  PP64 0.7459
+  u 55: R 0.7398  PP16 0.7566  PP64 0.7536
+  u 60: R 0.7466  PP16 0.7575  PP64 0.7608
+  u 65: R 0.7519  PP16 0.7611  PP64 0.7602
+  u 70: R 0.7588  PP16 0.7602  PP64 0.7647
+  u 75: R 0.7609  PP16 0.7664  PP64 0.7577
+  u 80: R 0.7678  PP16 0.7731  PP64 0.7525
+  u 85: R 0.7698  PP16 0.7684  PP64 0.7547
+  u 90: R 0.6275  PP16 0.7797  PP64 0.7644
+  u 95: R 0.7523  PP16 0.7795  PP64 0.7656
+  u100: R 0.7592  PP16 0.7792  PP64 0.7728
+
+contrasts (t-CI over 4 seeds):
+  u 20: PP16−R +0.0003 [-0.0121, +0.0127] pos 2/4 | PP64−R +0.0073 [-0.0092, +0.0239] pos 3/4 | PP64−PP16 +0.0070 [-0.0096, +0.0236] pos 3/4
+  u 40: PP16−R +0.0186 [+0.0036, +0.0336] pos 4/4 | PP64−R +0.0222 [+0.0142, +0.0302] pos 4/4 | PP64−PP16 +0.0036 [-0.0085, +0.0157] pos 2/4
+  u 60: PP16−R +0.0109 [-0.0076, +0.0295] pos 3/4 | PP64−R +0.0142 [-0.0020, +0.0305] pos 4/4 | PP64−PP16 +0.0033 [-0.0162, +0.0228] pos 2/4
+  u 80: PP16−R +0.0053 [-0.0089, +0.0196] pos 3/4 | PP64−R -0.0153 [-0.0481, +0.0175] pos 1/4 | PP64−PP16 -0.0206 [-0.0438, +0.0026] pos 0/4
+  u100: PP16−R +0.0200 [-0.0129, +0.0529] pos 3/4 | PP64−R +0.0136 [-0.0039, +0.0311] pos 4/4 | PP64−PP16 -0.0064 [-0.0307, +0.0179] pos 1/4
+  AULC u0–100: PP16−R +0.0162 [-0.0044, +0.0369] pos 4/4 | PP64−R +0.0130 [-0.0066, +0.0325] pos 4/4
+
+plateau check (mean S gain from u80 to u100 per arm): {'r': -0.0086, 'pp16': 0.0061, 'pp64': 0.0203}
+
+per-seed u100: {'r': [0.7725, 0.735, 0.7625, 0.7669], 'pp16': [0.7856, 0.7819, 0.785, 0.7644], 'pp64': [0.7731, 0.7625, 0.7756, 0.78]}
+
+selection by quarter (u1–25 / 26–50 / 51–75 / 76–100): actual greedy success of chosen items | share with b>0.5 | predicted in band
+  r    : 0.700 0.31 0.23 | 0.732 0.31 0.19 | 0.766 0.31 0.18 | 0.742 0.30 0.18
+  pp16 : 0.576 0.70 0.75 | 0.640 0.71 0.55 | 0.703 0.68 0.40 | 0.749 0.57 0.29
+  pp64 : 0.559 0.71 0.82 | 0.638 0.73 0.55 | 0.705 0.76 0.41 | 0.737 0.62 0.22
+
+per run: worst checkpoint (S strict) after u40, unparseable there, u100 length, last-10 grad groups, u100 acc-if-parsed
+  r     s0: worst u45 0.732 (unparse 0.00) | len u100 489 | gg 0.55 | parsed-acc u100 0.773
+  r     s1: worst u90 0.259 (unparse 0.65) | len u100 513 | gg 0.70 | parsed-acc u100 0.737
+  r     s2: worst u90 0.727 (unparse 0.08) | len u100 311 | gg 0.48 | parsed-acc u100 0.763
+  r     s3: worst u50 0.726 (unparse 0.00) | len u100 573 | gg 0.47 | parsed-acc u100 0.770
+  pp16  s0: worst u45 0.751 (unparse 0.00) | len u100 434 | gg 0.50 | parsed-acc u100 0.787
+  pp16  s1: worst u50 0.745 (unparse 0.00) | len u100 116 | gg 0.42 | parsed-acc u100 0.782
+  pp16  s2: worst u50 0.745 (unparse 0.00) | len u100 331 | gg 0.42 | parsed-acc u100 0.787
+  pp16  s3: worst u55 0.745 (unparse 0.00) | len u100 209 | gg 0.49 | parsed-acc u100 0.764
+  pp64  s0: worst u45 0.731 (unparse 0.00) | len u100 370 | gg 0.45 | parsed-acc u100 0.774
+  pp64  s1: worst u50 0.736 (unparse 0.00) | len u100 618 | gg 0.49 | parsed-acc u100 0.764
+  pp64  s2: worst u45 0.738 (unparse 0.00) | len u100 343 | gg 0.49 | parsed-acc u100 0.776
+  pp64  s3: worst u50 0.741 (unparse 0.00) | len u100 241 | gg 0.42 | parsed-acc u100 0.781

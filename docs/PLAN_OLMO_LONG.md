@@ -22,9 +22,9 @@ Update the status table as steps finish; record results in FINDINGS/registry.
 | step | status | record |
 |---|---|---|
 | 1. Configs, preflight, servers back to OLMo | done 10-31 | 12 configs in `artifacts/olmo3sft_grpo_long100/configs/` |
-| 2. Run: 3 arms × 4 seeds × 100 updates | running since 10-31 ~11:30 UTC. 23:22: queue bug (glob by policy+seed) moved PP16 s0 (complete) and PP64 s0 (running) aside; both restored within ~1 min, no data lost; queue stopped, runs continue unsupervised | `artifacts/olmo3sft_grpo_long100/` |
-| 3. Analyse and report | todo | — |
-| 4. Owner decides: confirmatory v3 or not | todo | — |
+| 2. Run: 3 arms × 4 seeds × 100 updates | done 11-01 (12/12; queue incident 10-31 23:22, no data lost) | `artifacts/olmo3sft_grpo_long100/` |
+| 3. Analyse and report | done 11-01 | `DEV_RUN9_OLMO_LONG100.md`, FINDINGS #16, F16 |
+| 4. Owner decides: confirmatory v3 or not | **pending** (result: R catches up; pool is the bottleneck) | — |
 
 ## Design (development; S and D only, E1 untouched)
 
