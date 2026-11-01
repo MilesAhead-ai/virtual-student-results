@@ -35,8 +35,8 @@ for the improving student. The tracker shows why:
 | step | status | record |
 |---|---|---|
 | 0. Owner decisions (§Decisions) | done 11-01 (E14): extend panel after pilot; fresh held-out set; Opus 5.5 + double check | OPEN_DECISIONS E14 |
-| 1a. Pilot: stronger panel candidates (download, θ on W, throughput) | in progress 11-01: models downloading; W scoring waits for the downloads (a running `ollama pull` broke a server start) | `data/raw/pool_v2/candidates_W/`, `scripts/run_candidate_W.sh` |
-| 1b. Pilot: hard-item generation strategies, yield and key quality | generating since 11-01 06:30 UTC: 6 skills × G1/G2 × 100 (Opus 5.5), then double verification | `data/raw/pool_v2/H1pilot/`, `scripts/run_hard_pilot_stream.sh`; generator flags in sat-reading-platform `70f49a5` |
+| 1a. Pilot: stronger panel candidates (download, θ on W, throughput) | W done 11-01: mean θ qwen3:32b **2.62**, llama3.3:70b 2.13, qwen2.5:72b 1.88 (qwen3:14b 2.35). Open models raise the ceiling only to about 3; the trained student reaches ~4 on central_ideas and rhetorical_synthesis. gpt-oss:120b needs a newer Ollama | `scripts/candidate_theta.py`, `data/raw/pool_v2/candidates_W/` |
+| 1b. Pilot: hard-item generation strategies, yield and key quality | generated + double-verified 11-01 (1,197/1,200 kept); screening with qwen3:14b, deepseek-r1:8b, qwen3:32b, llama3.3:70b, qwen2.5:72b since 19:10 UTC (`scripts/run_pilot_screen.sh`) | `data/raw/pool_v2/H1pilot/`, `scripts/run_hard_pilot_stream.sh`; generator flags in sat-reading-platform `70f49a5` |
 | 2. Full: panel v2 calibration + generation at scale + import (pool v2) | todo | — |
 | 3. Dev: OLMo R vs PP, 100 updates, pool v2 | todo | — |
 | 4. Confirmatory v3 (pre-registered) | todo | — |
