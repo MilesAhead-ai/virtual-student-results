@@ -43,8 +43,8 @@ for the improving student. The tracker shows why:
 
 ## Step 1a — stronger panel members (pilot)
 
-- Candidates (Ollama on GPUs 3–7, no API cost): `qwen3:32b`, `llama3.3:70b`,
-  `qwen2.5:72b` and `gpt-oss:120b` (fits one A100 80 GB). These families are
+- Candidates (local Ollama, no API cost; the GPUs are A100 **40 GB**, so 70B models run on 2 GPUs per server): `qwen3:32b`, `llama3.3:70b`,
+  `qwen2.5:72b` and `gpt-oss:120b` (needs a newer Ollama than 0.18.3; set aside, as upgrading would change the existing panel's runtime). These families are
   already partly in the panel; the student (OLMo) is not.
 - For each: score W (706 bank items) once, estimate θ per skill against the
   frozen item difficulties, and measure speed. Keep members with θ clearly
