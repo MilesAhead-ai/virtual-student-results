@@ -37,7 +37,7 @@ for the improving student. The tracker shows why:
 | 0. Owner decisions (§Decisions) | done 11-01 (E14): extend panel after pilot; fresh held-out set; Opus 5.5 + double check | OPEN_DECISIONS E14 |
 | 1a. Pilot: stronger panel candidates (download, θ on W, throughput) | W done 11-01: mean θ qwen3:32b **2.62**, llama3.3:70b 2.13, qwen2.5:72b 1.88 (qwen3:14b 2.35). Open models raise the ceiling only to about 3; the trained student reaches ~4 on central_ideas and rhetorical_synthesis. gpt-oss:120b needs a newer Ollama | `scripts/candidate_theta.py`, `data/raw/pool_v2/candidates_W/` |
 | 1b. Pilot: hard-item generation strategies, yield and key quality | done 11-02: G1 1% / G2 5% wrong for qwen3:32b; all three strong models wrong 1% / 2%; useful only for inferences and command_of_evidence (FINDINGS #17). 70B screens failed (not fully on GPU) and were not repeated: those models are weaker than qwen3:32b | `results/pool_v2_pilot/` |
-| 2. Full, as narrowed by E15: (2a) API panel candidates on W; (2b) G2 top-up for inferences + command_of_evidence; then panel v2 calibration + import | **in progress 11-02**: 2a done (FINDINGS #18; member choice awaits owner); 2b 8 streams × 500 items running (`data/raw/pool_v2/H2topup/`) | OPEN_DECISIONS E15 |
+| 2. Full, as narrowed by E15: (2a) API panel candidates on W; (2b) G2 top-up for inferences + command_of_evidence; then panel v2 calibration + import | **in progress 11-02**: 2a done (FINDINGS #18), members chosen (E16); API members scoring pool v1 (`data/raw/pool_v2/api_r1/`); Ollama 3 passes on the pilot items (`H1pilot/eval_r{1,2,3}`); 2b 8 streams × 500 items running (`data/raw/pool_v2/H2topup/`) | OPEN_DECISIONS E15 |
 | 3. Dev: OLMo R vs PP, 100 updates, pool v2 | todo | — |
 | 4. Confirmatory v3 (pre-registered) | todo | — |
 
@@ -99,6 +99,14 @@ survived; prefer a mix of vendors.
 - New items enter **only the training pools (P/P+)**. S stays as is. For the
   held-out set, see decision 3.
 - New split file and lock (`pool-v2`), new importer config.
+
+### Step 2 build order (E16)
+
+1. API members, one pass: W (`api_r1/W`, copied from the candidate pass), pool v1 (`api_r1/pool_v1`), pilot (`H1pilot/eval_screen/bedrock_*`), top-up.
+2. Ollama members, 3 fresh passes on the new items (pilot + top-up). The single screen pass of the pilot is not used.
+3. New items enter with `scripts/merge_double_verified.py` (verdict agree only when both verifiers agree); they go to P/P+ only.
+4. Calibrate twice: abilities on W only, and jointly on W + P + P+; compare θ for the strong members and b for hard items; owner chooses.
+5. Fresh topic-disjoint held-out set (E14) is generated after this, deduplicated against everything.
 
 ## Step 3 — dev comparison on pool v2
 
