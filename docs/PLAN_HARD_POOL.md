@@ -37,7 +37,7 @@ for the improving student. The tracker shows why:
 | 0. Owner decisions (§Decisions) | done 11-01 (E14): extend panel after pilot; fresh held-out set; Opus 5.5 + double check | OPEN_DECISIONS E14 |
 | 1a. Pilot: stronger panel candidates (download, θ on W, throughput) | W done 11-01: mean θ qwen3:32b **2.62**, llama3.3:70b 2.13, qwen2.5:72b 1.88 (qwen3:14b 2.35). Open models raise the ceiling only to about 3; the trained student reaches ~4 on central_ideas and rhetorical_synthesis. gpt-oss:120b needs a newer Ollama | `scripts/candidate_theta.py`, `data/raw/pool_v2/candidates_W/` |
 | 1b. Pilot: hard-item generation strategies, yield and key quality | done 11-02: G1 1% / G2 5% wrong for qwen3:32b; all three strong models wrong 1% / 2%; useful only for inferences and command_of_evidence (FINDINGS #17). 70B screens failed (not fully on GPU) and were not repeated: those models are weaker than qwen3:32b | `results/pool_v2_pilot/` |
-| 2. Full: panel v2 calibration + generation at scale + import (pool v2) | **on hold: owner decision after the pilot** | — |
+| 2. Full, as narrowed by E15: (2a) API panel candidates on W; (2b) G2 top-up for inferences + command_of_evidence; then panel v2 calibration + import | **in progress 11-02**: 2a done (FINDINGS #18; member choice awaits owner); 2b 8 streams × 500 items running (`data/raw/pool_v2/H2topup/`) | OPEN_DECISIONS E15 |
 | 3. Dev: OLMo R vs PP, 100 updates, pool v2 | todo | — |
 | 4. Confirmatory v3 (pre-registered) | todo | — |
 
@@ -74,6 +74,22 @@ Six high-θ skills × 2 strategies × 100 items ≈ 1,200 items (about $100):
   the step-1a candidates fail. That is the yield of "very hard".
 
 ## Step 2 — full build (after the pilot)
+
+**Narrowed by E15 (2026-11-02).** Hard items are generated only for
+inferences and command_of_evidence (G2, `run_hard_pilot_stream.sh ... TAG`,
+one stream per subject area), because the pilot found G2 yields almost no
+hard items on the other high-θ skills. Panel candidates now include API
+models through Bedrock Converse (`sat-reading-platform`
+`scripts/calibration/utils/bedrock_client.py`, registry ids `bedrock:*`):
+Claude Haiku 4.5 / 5.5, gpt-oss-120b, DeepSeek-V3.2, Qwen3-32B (a parity
+check against the Ollama qwen3:32b), Qwen3-Next-80B, Mistral Large 3, Llama 4
+Maverick, Nova Pro, Gemma 3 27B. All at temperature 0 without extended
+thinking, except Haiku 5.5: it rejects `temperature` and thinks by default
+(adaptive, medium effort).
+Caveat for choosing members: pool-v2 keys are double-checked by Claude, so a
+Claude member may find surviving items easier for the same reason they
+survived; prefer a mix of vendors.
+
 
 - Panel v2: the current 8 members + the chosen strong members. 3 passes on W,
   the existing pool and the new items; recalibrate abilities on W.
