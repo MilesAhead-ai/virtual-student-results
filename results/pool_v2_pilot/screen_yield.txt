@@ -1,0 +1,25 @@
+pilot items scored by all 3: 1197 of 1197
+
+strategy/skill                            n 14b wrong  r1 wrong 32b wrong all 3 wrong  ≥2 wrong
+g1 ALL                                  600      0.04      0.04      0.01        0.01      0.02
+g2 ALL                                  597      0.09      0.13      0.05        0.02      0.06
+g1 central_ideas                        100      0.05      0.05      0.02        0.01      0.01
+g2 central_ideas                        100      0.06      0.08      0.00        0.00      0.02
+g1 command_of_evidence_textual          100      0.04      0.05      0.01        0.00      0.03
+g2 command_of_evidence_textual          100      0.16      0.22      0.08        0.05      0.12
+g1 cross_text_connections               100      0.02      0.03      0.02        0.01      0.01
+g2 cross_text_connections               100      0.01      0.05      0.02        0.01      0.01
+g1 inferences                           100      0.05      0.08      0.02        0.01      0.03
+g2 inferences                            99      0.20      0.31      0.12        0.07      0.16
+g1 rhetorical_synthesis                 100      0.01      0.02      0.00        0.00      0.00
+g2 rhetorical_synthesis                 100      0.00      0.06      0.01        0.00      0.01
+g1 text_structure                       100      0.04      0.03      0.01        0.00      0.03
+g2 text_structure                        98      0.12      0.07      0.04        0.01      0.06
+
+response keys: ['schema_version', 'item_id', 'panel_model_id', 'panel_model_revision', 'prompt_hash', 'repeat', 'raw_completion', 'parsed_answer_index', 'correct', 'parseable']
+
+baseline: existing training pool, first pass, share answered wrong
+  qwen3:14b       P1-P2              0.08 (n=7261) central_ 0.02 | inferenc 0.04 | command_ 0.04 | rhetoric 0.00
+  qwen3:14b       P3-P5 hard top-up  0.12 (n=4391) central_ 0.06 | inferenc 0.09 | command_ 0.17 | rhetoric 0.03
+  deepseek-r1:8b  P1-P2              0.12 (n=7261) central_ 0.01 | inferenc 0.05 | command_ 0.06 | rhetoric 0.01
+  deepseek-r1:8b  P3-P5 hard top-up  0.18 (n=4391) central_ 0.10 | inferenc 0.14 | command_ 0.28 | rhetoric 0.07

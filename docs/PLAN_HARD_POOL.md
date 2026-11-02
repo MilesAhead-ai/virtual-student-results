@@ -36,8 +36,8 @@ for the improving student. The tracker shows why:
 |---|---|---|
 | 0. Owner decisions (§Decisions) | done 11-01 (E14): extend panel after pilot; fresh held-out set; Opus 5.5 + double check | OPEN_DECISIONS E14 |
 | 1a. Pilot: stronger panel candidates (download, θ on W, throughput) | W done 11-01: mean θ qwen3:32b **2.62**, llama3.3:70b 2.13, qwen2.5:72b 1.88 (qwen3:14b 2.35). Open models raise the ceiling only to about 3; the trained student reaches ~4 on central_ideas and rhetorical_synthesis. gpt-oss:120b needs a newer Ollama | `scripts/candidate_theta.py`, `data/raw/pool_v2/candidates_W/` |
-| 1b. Pilot: hard-item generation strategies, yield and key quality | generated + double-verified 11-01 (1,197/1,200 kept); screening with qwen3:14b, deepseek-r1:8b, qwen3:32b, llama3.3:70b, qwen2.5:72b since 19:10 UTC (`scripts/run_pilot_screen.sh`) | `data/raw/pool_v2/H1pilot/`, `scripts/run_hard_pilot_stream.sh`; generator flags in sat-reading-platform `70f49a5` |
-| 2. Full: panel v2 calibration + generation at scale + import (pool v2) | todo | — |
+| 1b. Pilot: hard-item generation strategies, yield and key quality | done 11-02: G1 1% / G2 5% wrong for qwen3:32b; all three strong models wrong 1% / 2%; useful only for inferences and command_of_evidence (FINDINGS #17). 70B screens failed (not fully on GPU) and were not repeated: those models are weaker than qwen3:32b | `results/pool_v2_pilot/` |
+| 2. Full: panel v2 calibration + generation at scale + import (pool v2) | **on hold: owner decision after the pilot** | — |
 | 3. Dev: OLMo R vs PP, 100 updates, pool v2 | todo | — |
 | 4. Confirmatory v3 (pre-registered) | todo | — |
 
