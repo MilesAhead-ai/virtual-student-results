@@ -1,0 +1,18 @@
+2026-11-04T05:31:23+00:00 START 4 configs on GPUs [2, 3, 4, 5] x1
+2026-11-04T05:31:23+00:00 LAUNCH ppall_s0.yaml gpu=2 pid=664543 attempt=0
+2026-11-04T05:31:43+00:00 LAUNCH ppall_s1.yaml gpu=3 pid=664788 attempt=0
+2026-11-04T05:32:03+00:00 LAUNCH ppall_s2.yaml gpu=4 pid=665072 attempt=0
+2026-11-04T05:32:24+00:00 LAUNCH ppall_s3.yaml gpu=5 pid=665464 attempt=0
+2026-11-04T14:17:44+00:00 FAILED ppall_s2.yaml rc=0 status=None; moved dir aside; retry 1/2
+2026-11-04T14:17:45+00:00 LAUNCH ppall_s2.yaml gpu=4 pid=718207 attempt=1
+2026-11-04T14:26:05+00:00 FAILED ppall_s0.yaml rc=0 status=None; moved dir aside; retry 1/2
+2026-11-04T14:26:05+00:00 FAILED ppall_s3.yaml rc=0 status=None; moved dir aside; retry 1/2
+2026-11-04T14:26:05+00:00 LAUNCH ppall_s3.yaml gpu=2 pid=719038 attempt=1
+2026-11-04T14:26:25+00:00 LAUNCH ppall_s0.yaml gpu=5 pid=719269 attempt=1
+2026-11-04T14:31:45+00:00 FAILED ppall_s1.yaml rc=0 status=None; moved dir aside; retry 1/2
+2026-11-04T14:31:45+00:00 LAUNCH ppall_s1.yaml gpu=3 pid=720101 attempt=1
+2026-11-04T16:44:06+00:00 DONE ppall_s2.yaml (1 done, 0 pending, 3 running)
+2026-11-04T16:47:06+00:00 DONE ppall_s3.yaml (2 done, 0 pending, 2 running)
+2026-11-04T16:48:06+00:00 DONE ppall_s0.yaml (3 done, 0 pending, 1 running)
+2026-11-04T17:29:06+00:00 DONE ppall_s1.yaml (4 done, 0 pending, 0 running)
+2026-11-04T17:30:06+00:00 END done=4 gave_up=0 []

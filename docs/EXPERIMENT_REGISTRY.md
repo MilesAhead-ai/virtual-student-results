@@ -124,7 +124,7 @@ S for pool-v1-final).
 
 <!-- BEGIN GENERATED: scripts/build_registry.py -->
 
-Generated from `results/*/*/` (163 runs). Full per-run data: `results/registry/runs.csv`.
+Generated from `results/*/*/` (167 runs). Full per-run data: `results/registry/runs.csv`.
 Columns marked * need the full artifacts and are cached in the CSV.
 
 ### `m0_dev_satbank`
@@ -340,6 +340,17 @@ Shared: student=Olmo-3-7B-Instruct-SFT@e1452fc, generation=vllm, batch_invariant
 | `r-outcome-grpo-s001-a34a18ef` | complete | r | 1 | 0.6763 | 0.7600 | 0.7362 | +0.065 | 2.8%→0.1% | 367 | 0.28 | 0.48 | 437 |
 | `r-outcome-grpo-s002-995cad70` | complete | r | 2 | 0.6763 | 0.7594 | 0.7240 | +0.064 | 2.8%→0.1% | 377 | 0.25 | 0.41 | 506 |
 | `r-outcome-grpo-s003-234f4493` | complete | r | 3 | 0.6763 | 0.7544 | 0.7375 | +0.059 | 2.8%→0.0% | 472 | 0.27 | 0.51 | 500 |
+
+### `olmo3sft_grpo_pool_v2_ppall`
+
+Shared: student=Olmo-3-7B-Instruct-SFT@e1452fc, generation=vllm, batch_invariant=True, method=grpo, lr=2e-04, schedule=constant_with_warmup, warmup=5, updates=100, kl=0.05, group_size=8, rollout_temp=1, max_completion_tokens=512, lora=r16/a32.0, batch_items=32, slate=4096, primary_set=s, primary_metric=final_accuracy, items_sha=8a38e5a7, split_lock=4f468bd2.
+
+| run_id | status | policy | seed | initial | final | AULC | Δparsed* | unparse u0→end* | len end* | max letter* | grad groups* | min* |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `pp-outcome-grpo-s000-994df89e` | complete | pp | 0 | 0.6763 | 0.7844 | 0.7434 | +0.091 | 2.8%→0.2% | 501 | 0.26 | 0.61 | 533 |
+| `pp-outcome-grpo-s001-52bc6dc3` | complete | pp | 1 | 0.6763 | 0.7919 | 0.7474 | +0.097 | 2.8%→0.1% | 455 | 0.27 | 0.50 | 539 |
+| `pp-outcome-grpo-s002-aa31916b` | complete | pp | 2 | 0.6763 | 0.7619 | 0.7300 | +0.068 | 2.8%→0.2% | 589 | 0.27 | 0.47 | 525 |
+| `pp-outcome-grpo-s003-07ae6730` | complete | pp | 3 | 0.6763 | 0.7837 | 0.7447 | +0.092 | 2.8%→0.5% | 433 | 0.27 | 0.50 | 533 |
 
 ### `olmo3sft_grpo_pt16`
 
