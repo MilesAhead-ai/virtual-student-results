@@ -7,8 +7,8 @@ GRPO barely moves them; their groups are often all-wrong).
 
 | phase | status | record |
 |---|---|---|
-| A. Engineering (§3) | in progress | — |
-| B. Pilot | todo | — |
+| A. Engineering (§3) | mostly done 11-04: spend ledger + hard ceiling (`backends/spend.py`, `budget.api_ledger_file`); `bedrock_runtime` provider (Sonnet 5.5 is not on Mantle); schemas sent without numeric bounds; live test of all 7 schemas; F4 smoke run (1 wrong item: 11 calls, $0.095, ~2 min, 1 leak caught and regenerated, target accepted). Not done: concurrency in the feedback step (measure in B first); prompt fixes (§6) | commits `1ba668b`, `8c4a4f1` |
+| B. Pilot | running since 11-04 06:02 UTC: F1, F2, F4 × PP16 × seed 0 × 5 updates, pool v2 | `artifacts/olmo3sft_feedback_pilot/` |
 | C. Dev comparison | todo | — |
 | D. Confirmatory | todo | — |
 
@@ -97,3 +97,16 @@ Rough per-run arithmetic for F4, to be replaced by the pilot's measurement:
    Sonnet 5.5).
 3. A budget ceiling for phases B–C (`budget.paid_api_usd`).
 4. F5 now (and build the taxonomy) or later.
+
+## 6. Prompt review notes (from the F4 smoke run, 2026-11-04)
+
+- **The student echoes the tutor.** Its first dialogue reply repeated the
+  tutor's message word for word and appended `Answer: B`. Tutor messages
+  reach the student as a bare user turn, with no instruction on how to
+  reply. Proposal: wrap them in a `student_dialogue_reply` template ("Your
+  tutor says: ... Reply in your own words: answer the tutor's question, say
+  whether you keep or change your answer, end with `Answer: <A|B|C|D>`").
+  Changing it after the pilot is fine: no dev result depends on it yet.
+- The tutor handled the echo well (it named it and re-asked), engaged the
+  student's own claim, and kept the answer back in the protected turns
+  (one draft was caught by the leakage judge and rewritten).
