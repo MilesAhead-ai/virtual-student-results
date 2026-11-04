@@ -8,8 +8,8 @@ GRPO barely moves them; their groups are often all-wrong).
 | phase | status | record |
 |---|---|---|
 | A. Engineering (§3) | mostly done 11-04: spend ledger + hard ceiling (`backends/spend.py`, `budget.api_ledger_file`); `bedrock_runtime` provider (Sonnet 5.5 is not on Mantle); schemas sent without numeric bounds; live test of all 7 schemas; F4 smoke run (1 wrong item: 11 calls, $0.095, ~2 min, 1 leak caught and regenerated, target accepted). Not done: concurrency in the feedback step (measure in B first); prompt fixes (§6) | commits `1ba668b`, `8c4a4f1` |
-| B. Pilot | round 1 done 11-04 (FINDINGS #23: 3 problems, fixed in `c814a79`, `00ba0fb`); **round 2 running** (same design, feedback.concurrency 8) | `artifacts/olmo3sft_feedback_pilot{,2}/` |
-| C. Dev comparison | todo | — |
+| B. Pilot | round 1 done 11-04 (FINDINGS #23: 3 problems, fixed in `c814a79`, `00ba0fb`); round 2 done 11-04 (FINDINGS #24): fixes work, ~8 min/update | `artifacts/olmo3sft_feedback_pilot{,2}/` |
+| C. Dev comparison | **design awaiting owner** | — |
 | D. Confirmatory | todo | — |
 
 ## 1. What changes compared with confirmatory v1

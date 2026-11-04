@@ -1,0 +1,34 @@
+### pp-f1-sft-s000-9cafe2eb  condition f1  updates done 5
+  presentations 160; greedy wrong 73 (0.46)
+  wrong items: accepted target 63; failed 0 {}; no target after resolve 10
+  leaks detected 0; regenerations 0; tutor turns mean 0.00; resolve attempts mean 1.56
+  correct items: guess filter accepted 50 of 87
+  sibling correct after feedback: 0.42 (n=71)
+  examples per update: [24, 28, 24, 18, 19]
+  S accuracy: u0 0.6763, u5 0.6719
+  minutes per update (start to start): 0.2
+
+### pp-f2-sft-s000-e869d1ad  condition f2  updates done 5
+  presentations 160; greedy wrong 70 (0.44)
+  wrong items: accepted target 63; failed 0 {}; no target after resolve 7
+  leaks detected 0; regenerations 0; tutor turns mean 1.00; resolve attempts mean 1.57
+  correct items: guess filter accepted 53 of 90
+  sibling correct after feedback: 0.54 (n=69)
+  examples per update: [24, 24, 24, 23, 21]
+  S accuracy: u0 0.6763, u5 0.6594
+  minutes per update (start to start): 6.8
+
+### pp-f4-sft-s000-c737006e  condition f4  updates done 5
+  presentations 160; greedy wrong 77 (0.48)
+  wrong items: accepted target 53; failed 16 {'leak_retries_exhausted': 15, 'tutor_call_failed': 1}; no target after resolve 8
+  leaks detected 38; regenerations 73; tutor turns mean 2.77; resolve attempts mean 1.26
+  correct items: guess filter accepted 51 of 83
+  sibling correct after feedback: 0.39 (n=59)
+  examples per update: [22, 19, 25, 18, 20]
+  S accuracy: u0 0.6763, u5 0.6681
+  minutes per update (start to start): 8.4
+
+
+API spend (ledger by run): f4 620 calls $5.91; f2 140 calls $0.66; f1 cached judges. Ledger total after round 2: $14.00.
+F4 leak events 88 (leakage_judge 71, verbatim_option_text 13, letter_paren 3, tutor flag 1).
+Student replies starting with the tutor's own text: 0 of 152 (round 1: the student echoed the tutor).
