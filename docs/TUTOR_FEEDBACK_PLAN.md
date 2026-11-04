@@ -1,6 +1,16 @@
 # Plan: tutor-feedback arms (F0–F5) — draft, 2026-10-30
 
-Status: proposal for the owner. Nothing has run; no paid API calls have been made.
+Status: **active since 2026-11-04 (E18).** Tutor Claude Opus 5.5; judges and
+validator Claude Sonnet 5.5; API ceiling $1,000 for phases B–C. Why now:
+FINDINGS #21–22 (the skills with headroom have enough items but outcome-only
+GRPO barely moves them; their groups are often all-wrong).
+
+| phase | status | record |
+|---|---|---|
+| A. Engineering (§3) | in progress | — |
+| B. Pilot | todo | — |
+| C. Dev comparison | todo | — |
+| D. Confirmatory | todo | — |
 
 ## 1. What changes compared with confirmatory v1
 
