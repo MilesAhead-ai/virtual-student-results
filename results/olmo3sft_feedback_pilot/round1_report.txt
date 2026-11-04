@@ -1,0 +1,36 @@
+### pp-f1-sft-s000-4e02c402  condition f1  updates done 5
+  presentations 160; greedy wrong 73 (0.46)
+  wrong items: accepted target 63; failed 0 {}; no target after resolve 10
+  leaks detected 0; regenerations 0; tutor turns mean 0.00; resolve attempts mean 1.56
+  correct items: guess filter accepted 50 of 87
+  sibling correct after feedback: 0.42 (n=71)
+  examples per update: [24, 28, 24, 18, 19]
+  S accuracy: u0 0.6763, u5 0.6719
+  minutes per update (start to start): 20.2
+
+### pp-f2-sft-s000-cc0d7950  condition f2  updates done 5
+  presentations 160; greedy wrong 75 (0.47)
+  wrong items: accepted target 63; failed 1 {'tutor_call_failed': 1}; no target after resolve 11
+  leaks detected 0; regenerations 0; tutor turns mean 0.99; resolve attempts mean 1.56
+  correct items: guess filter accepted 57 of 85
+  sibling correct after feedback: 0.44 (n=72)
+  examples per update: [24, 26, 27, 24, 19]
+  S accuracy: u0 0.6763, u5 0.6787
+  minutes per update (start to start): 20.2
+
+### pp-f4-sft-s000-369db942.attempt1  condition f4  updates done 4
+  presentations 142; greedy wrong 68 (0.48)
+  wrong items: accepted target 36; failed 25 {'leak_retries_exhausted': 24, 'tutor_call_failed': 1}; no target after resolve 7
+  leaks detected 51; regenerations 105; tutor turns mean 2.44; resolve attempts mean 0.97
+  correct items: guess filter accepted 48 of 74
+  sibling correct after feedback: 0.55 (n=42)
+  examples per update: [20, 19, 18, 19]
+  S accuracy: u0 0.6763
+  minutes per update (start to start): 30.3
+
+
+API spend by run (ledger, pid → run from the queue log):
+  f1: 140 calls, $0.49 (judges only)     f2: 201 calls, $1.18     f4 (4 updates + 2 cached replays): 576 calls, $5.67
+F4 leak events: 130 (leakage_judge 118, verbatim_option_text 12); by tutor turn: turn 0 20, turn 1 110.
+F4 stopped at update 5: "prompt of 3657 tokens + 512 exceeds context 4096" (a long dialogue); the two retries
+replayed the cache to the same point.

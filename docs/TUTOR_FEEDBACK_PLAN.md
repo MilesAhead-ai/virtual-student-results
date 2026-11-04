@@ -8,7 +8,7 @@ GRPO barely moves them; their groups are often all-wrong).
 | phase | status | record |
 |---|---|---|
 | A. Engineering (§3) | mostly done 11-04: spend ledger + hard ceiling (`backends/spend.py`, `budget.api_ledger_file`); `bedrock_runtime` provider (Sonnet 5.5 is not on Mantle); schemas sent without numeric bounds; live test of all 7 schemas; F4 smoke run (1 wrong item: 11 calls, $0.095, ~2 min, 1 leak caught and regenerated, target accepted). Not done: concurrency in the feedback step (measure in B first); prompt fixes (§6) | commits `1ba668b`, `8c4a4f1` |
-| B. Pilot | running since 11-04 06:02 UTC: F1, F2, F4 × PP16 × seed 0 × 5 updates, pool v2 | `artifacts/olmo3sft_feedback_pilot/` |
+| B. Pilot | round 1 done 11-04 (FINDINGS #23: 3 problems, fixed in `c814a79`, `00ba0fb`); **round 2 running** (same design, feedback.concurrency 8) | `artifacts/olmo3sft_feedback_pilot{,2}/` |
 | C. Dev comparison | todo | — |
 | D. Confirmatory | todo | — |
 
@@ -110,3 +110,12 @@ Rough per-run arithmetic for F4, to be replaced by the pilot's measurement:
 - The tutor handled the echo well (it named it and re-asked), engaged the
   student's own claim, and kept the answer back in the protected turns
   (one draft was caught by the leakage judge and rewritten).
+
+## 7. Fixes after pilot round 1 (2026-11-04)
+
+1. Over-long dialogue → that item's feedback fails (`dialogue_exceeds_context`), the run continues.
+2. Tutor text reaches the student through `prompts/student_dialogue_reply.txt` (reply in your own words).
+3. Leak handling: no leak check once the student has itself chosen the key; F4/F5 tutor rules now state
+   the leakage judge's criteria.
+4. `feedback.concurrency` (8 in round 2) for speed; results identical to sequential (test).
+5. Ledger lines carry the run id.
