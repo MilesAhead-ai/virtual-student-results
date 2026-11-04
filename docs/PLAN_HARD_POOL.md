@@ -38,8 +38,8 @@ for the improving student. The tracker shows why:
 | 1a. Pilot: stronger panel candidates (download, θ on W, throughput) | W done 11-01: mean θ qwen3:32b **2.62**, llama3.3:70b 2.13, qwen2.5:72b 1.88 (qwen3:14b 2.35). Open models raise the ceiling only to about 3; the trained student reaches ~4 on central_ideas and rhetorical_synthesis. gpt-oss:120b needs a newer Ollama | `scripts/candidate_theta.py`, `data/raw/pool_v2/candidates_W/` |
 | 1b. Pilot: hard-item generation strategies, yield and key quality | done 11-02: G1 1% / G2 5% wrong for qwen3:32b; all three strong models wrong 1% / 2%; useful only for inferences and command_of_evidence (FINDINGS #17). 70B screens failed (not fully on GPU) and were not repeated: those models are weaker than qwen3:32b | `results/pool_v2_pilot/` |
 | 2. Full, as narrowed by E15: (2a) API panel candidates on W; (2b) G2 top-up for inferences + command_of_evidence; then panel v2 calibration + import | **calibrated 11-03** (FINDINGS #19): both fits done; joint W+P recommended; owner to choose fit and whether to top up further before step 3 | OPEN_DECISIONS E15/E16, `results/pool_v2/` |
-| 3. Dev: OLMo R vs PP, 100 updates, pool v2 | **running** since 11-03 17:02 UTC (8 runs; vLLM on GPUs 0–1, training on 2–7; lock `4f468bd2…`) | `artifacts/olmo3sft_grpo_pool_v2/`, E17 |
-| 4. Confirmatory v3 (pre-registered) | todo | — |
+| 3. Dev: OLMo R vs PP, 100 updates, pool v2 | done 11-04 (FINDINGS #20): success criterion **not met**; u40 advantage replicates, late advantage does not grow | `DEV_RUN10_POOL_V2.md`, E17 |
+| 4. Confirmatory v3 (pre-registered) | **on hold: owner decision after DEV_RUN10** | — |
 
 ## Step 1a — stronger panel members (pilot)
 
