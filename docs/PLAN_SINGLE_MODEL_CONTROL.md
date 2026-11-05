@@ -9,10 +9,10 @@ judgement and keeps everything else fixed.
 
 | step | status | record |
 |---|---|---|
-| 1. Opus 5.5 rates every item (P, P+, plus W and S for validity checks) | todo | — |
-| 2. Quantile-map ratings to the panel b scale; data root `pool_v2_opus` | todo | — |
-| 3. Offline validity: which difficulty predicts the student's actual greedy outcomes in DEV_RUN10's R runs | todo | — |
-| 4. Train: PP16 on the Opus difficulty (arm "PJ") and L (generator labels), seeds 0–3, 100 updates | todo | — |
+| 1. Opus 5.5 rates every item (P, P+, plus W and S for validity checks) | done 11-05: 18,935 rated, 81 refused (biomedical), $93 | `data/raw/difficulty_ratings/opus55_v1.jsonl` |
+| 2. Quantile-map ratings to the panel b scale; data root `pool_v2_opus` | done (refused items get the skill median rating) | `scripts/build_rating_calibration.py` |
+| 3. Offline validity: which difficulty predicts the student's actual greedy outcomes in DEV_RUN10's R runs | done: AUC panel 0.764, Opus 0.698, label 0.614 (FINDINGS #26) | `scripts/difficulty_validity.py` |
+| 4. Train: PP16 on the Opus difficulty (arm "PJ") and L (generator labels), seeds 0–3, 100 updates | running (L since 11-04, PJ since 11-05) | `artifacts/olmo3sft_grpo_pool_v2_controls/` |
 | 5. Compare with DEV_RUN10 R and PP16 | todo | — |
 
 ## Design
