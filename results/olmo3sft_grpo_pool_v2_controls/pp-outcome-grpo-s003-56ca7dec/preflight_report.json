@@ -1,0 +1,145 @@
+{
+ "checks": [
+  {
+   "check": "config.unresolved_used_fields",
+   "detail": [],
+   "status": "ok"
+  },
+  {
+   "check": "config.null_used_fields",
+   "detail": [],
+   "status": "ok"
+  },
+  {
+   "check": "config.mode",
+   "detail": "development",
+   "status": "ok"
+  },
+  {
+   "check": "evaluation.schedule",
+   "detail": {
+    "dense_checkpoints": 21
+   },
+   "status": "ok"
+  },
+  {
+   "check": "evaluation.split_access",
+   "detail": [
+    "d",
+    "s"
+   ],
+   "status": "ok"
+  },
+  {
+   "check": "data.split_lock",
+   "detail": "4f468bd272ef723cf0b417f3c9dbe785fb5b3983f5da581a82ec79eb1670be7c",
+   "status": "ok"
+  },
+  {
+   "check": "data.table_hashes",
+   "detail": {
+    "item_difficulties.parquet": "e9ccab87e87e3ad0e3f4cf9327f463aec0cb166bc1747ec54bc0d8c2941cd2cb",
+    "items.parquet": "8a38e5a735cd472f4400199f9deff1d4a05e2ee77dddbdc3c50b5ea6d13c89ae",
+    "panel_abilities.parquet": "00acb6be59b10684367bd412bc15f66643b90513f329fdda240df439f13d149f",
+    "panel_responses.parquet": "b4d93f0112796ae438774c74cc3cab98436f823af556a189fca320d8a514be7b",
+    "sibling_map.parquet": "060b6f8f16be39282210cbd326f92005888e545452892d3bcccc5cb752f5f12d"
+   },
+   "status": "ok"
+  },
+  {
+   "check": "prompts.present",
+   "detail": {
+    "adaptation_judge": "f3eb77add5aef5ea231050e5843309aac6245982fe1ccc1a6c0d1b70de751087",
+    "classifier_judge": "acf011db16969543d25a35c9e17c8643c8fda1a2f2566a44d50ed14787500331",
+    "elicit_reasoning": "33599607a0179831dff80a9daeaebcc8e1972a6b6406494e89f66114751fe3d9",
+    "f0_feedback": "82fd7563291b4ca8ca757f857f9e70b1ef90dde12e5b067bd43542d763eaf78a",
+    "f1_feedback": "fe1078e5e8b4e2f5980b14cdf0c6c76c1a3e31715c4ae2638bbf3f1de85efdc9",
+    "f2_generic_explanation": "e8cbc466649d0f2be466c080d7c47092aa6429ec375caf697368b773f31596aa",
+    "f3_script_writer": "2267a396800d3b98bd0a864b35d62d31fbfb757c4c9b9eb41bf34021722a2bd8",
+    "f4_adaptive_tutor": "ed57c4a7f8d80bd0b4da85196f35c239a45b4a9efe40416624030d86d2f285c0",
+    "f5_adaptive_tutor": "67e540120ae28b7ec66ae25a4208bd729c2714e2f168bdd823f4b7936ac24043",
+    "leakage_judge": "d489f99ccc3ec786c2fadfda60f085500d9ec581038c7df436950c33626f724d",
+    "resolve_standalone": "8758e9a9a7dad0534f14f53a6ea36f61527556be11069c765f9b87edb10b59c9",
+    "sibling_question": "ab0a23af395b66315ac439b4d521aea83cf1abbc1afa31930bb6242ccc1178c8",
+    "standalone_judge": "fc1d98b38a59533b97fb3026407555718073033181405e0eef8a963d6ff2b1ce",
+    "student_answer": "e4268cee7362c168306cb8c7217bac5da758c3df0cfd38bbb32dc48569250ead",
+    "student_dialogue_reply": "523f73d0c39dba5564aa75ef967a9b9c707bc3f613e7e4afdb1784a8235e1566",
+    "tutor_base": "1fd6e192e5ceaa8c74c847f7d3abad62b8eff1ee3ddd68bab66cd87ce8a0e866"
+   },
+   "status": "ok"
+  },
+  {
+   "check": "taxonomy.covers_skills",
+   "detail": [],
+   "status": "ok"
+  },
+  {
+   "check": "taxonomy.frozen",
+   "detail": {
+    "status": "development_placeholder",
+    "used": false
+   },
+   "status": "ok"
+  },
+  {
+   "check": "data.license_decisions",
+   "detail": {
+    "undecided_tags": []
+   },
+   "status": "ok"
+  },
+  {
+   "check": "panel.pool_difficulties",
+   "detail": {
+    "missing": 0,
+    "pool": 16710
+   },
+   "status": "ok"
+  },
+  {
+   "check": "data.key_balance",
+   "detail": {},
+   "status": "ok"
+  },
+  {
+   "check": "selection.pool_support",
+   "detail": {
+    "craft_structure.cross_text_connections": 1350,
+    "craft_structure.text_structure": 1842,
+    "craft_structure.words_in_context": 901,
+    "expression_of_ideas.rhetorical_synthesis": 1565,
+    "expression_of_ideas.transitions": 700,
+    "information_ideas.central_ideas": 1476,
+    "information_ideas.command_of_evidence_textual": 3225,
+    "information_ideas.inferences": 3423,
+    "standard_english.boundaries": 936,
+    "standard_english.form_structure_sense": 1292
+   },
+   "status": "ok"
+  },
+  {
+   "check": "selection.slate_size",
+   "detail": {
+    "skills_below": {},
+    "slate": 16
+   },
+   "status": "ok"
+  },
+  {
+   "check": "resources.disk_free_gb",
+   "detail": 555.6,
+   "status": "ok"
+  },
+  {
+   "check": "resources.gpu_memory",
+   "detail": "not estimated: depends on the model; verify with the GPU smoke test",
+   "status": "warn"
+  },
+  {
+   "check": "output.run_id_unused",
+   "detail": "artifacts/olmo3sft_grpo_pool_v2_controls/pp-outcome-grpo-s003-56ca7dec",
+   "status": "ok"
+  }
+ ],
+ "passed": true
+}

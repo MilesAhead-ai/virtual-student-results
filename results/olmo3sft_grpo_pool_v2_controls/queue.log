@@ -1,0 +1,20 @@
+2026-11-04T23:42:35+00:00 START 4 configs on GPUs [2, 3, 4, 5] x1
+2026-11-04T23:42:36+00:00 LAUNCH l_s0.yaml gpu=2 pid=752921 attempt=0
+2026-11-04T23:42:56+00:00 LAUNCH l_s1.yaml gpu=3 pid=753200 attempt=0
+2026-11-04T23:43:16+00:00 LAUNCH l_s2.yaml gpu=4 pid=753530 attempt=0
+2026-11-04T23:43:36+00:00 LAUNCH l_s3.yaml gpu=5 pid=754375 attempt=0
+2026-11-05T10:18:57+00:00 DONE l_s1.yaml (1 done, 0 pending, 3 running)
+2026-11-05T10:39:57+00:00 DONE l_s3.yaml (2 done, 0 pending, 2 running)
+2026-11-05T10:49:57+00:00 DONE l_s2.yaml (3 done, 0 pending, 1 running)
+2026-11-05T11:21:57+00:00 DONE l_s0.yaml (4 done, 0 pending, 0 running)
+2026-11-05T11:22:57+00:00 END done=4 gave_up=0 []
+2026-11-05T00:11:00+00:00 START 4 configs on GPUs [6, 7] x2
+2026-11-05T00:11:09+00:00 LAUNCH pj_s0.yaml gpu=6 pid=758018 attempt=0
+2026-11-05T00:11:36+00:00 LAUNCH pj_s1.yaml gpu=7 pid=758297 attempt=0
+2026-11-05T00:12:03+00:00 LAUNCH pj_s2.yaml gpu=6 pid=758527 attempt=0
+2026-11-05T00:12:30+00:00 LAUNCH pj_s3.yaml gpu=7 pid=758761 attempt=0
+2026-11-05T10:30:51+00:00 DONE pj_s2.yaml (1 done, 0 pending, 3 running)
+2026-11-05T10:40:51+00:00 DONE pj_s0.yaml (2 done, 0 pending, 2 running)
+2026-11-05T11:16:51+00:00 DONE pj_s3.yaml (3 done, 0 pending, 1 running)
+2026-11-05T12:11:51+00:00 DONE pj_s1.yaml (4 done, 0 pending, 0 running)
+2026-11-05T12:12:51+00:00 END done=4 gave_up=0 []

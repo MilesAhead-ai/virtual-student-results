@@ -124,7 +124,7 @@ S for pool-v1-final).
 
 <!-- BEGIN GENERATED: scripts/build_registry.py -->
 
-Generated from `results/*/*/` (167 runs). Full per-run data: `results/registry/runs.csv`.
+Generated from `results/*/*/` (175 runs). Full per-run data: `results/registry/runs.csv`.
 Columns marked * need the full artifacts and are cached in the CSV.
 
 ### `m0_dev_satbank`
@@ -340,6 +340,21 @@ Shared: student=Olmo-3-7B-Instruct-SFT@e1452fc, generation=vllm, batch_invariant
 | `r-outcome-grpo-s001-a34a18ef` | complete | r | 1 | 0.6763 | 0.7600 | 0.7362 | +0.065 | 2.8%→0.1% | 367 | 0.28 | 0.48 | 437 |
 | `r-outcome-grpo-s002-995cad70` | complete | r | 2 | 0.6763 | 0.7594 | 0.7240 | +0.064 | 2.8%→0.1% | 377 | 0.25 | 0.41 | 506 |
 | `r-outcome-grpo-s003-234f4493` | complete | r | 3 | 0.6763 | 0.7544 | 0.7375 | +0.059 | 2.8%→0.0% | 472 | 0.27 | 0.51 | 500 |
+
+### `olmo3sft_grpo_pool_v2_controls`
+
+Shared: student=Olmo-3-7B-Instruct-SFT@e1452fc, generation=vllm, batch_invariant=True, method=grpo, lr=2e-04, schedule=constant_with_warmup, warmup=5, updates=100, kl=0.05, group_size=8, rollout_temp=1, max_completion_tokens=512, lora=r16/a32.0, batch_items=32, slate=16, primary_set=s, primary_metric=final_accuracy, items_sha=8a38e5a7, split_lock=4f468bd2.
+
+| run_id | status | policy | seed | initial | final | AULC | Δparsed* | unparse u0→end* | len end* | max letter* | grad groups* | min* |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `l-outcome-grpo-s000-1f6c00dd` | complete | l | 0 | 0.6763 | 0.7588 | 0.7298 | +0.064 | 2.8%→0.1% | 475 | 0.28 | 0.44 | 698 |
+| `l-outcome-grpo-s001-df22141c` | complete | l | 1 | 0.6763 | 0.7831 | 0.7342 | +0.091 | 2.8%→0.4% | 551 | 0.27 | 0.42 | 635 |
+| `l-outcome-grpo-s002-6d8b1cc6` | complete | l | 2 | 0.6763 | 0.7650 | 0.7373 | +0.072 | 2.8%→0.2% | 540 | 0.26 | 0.44 | 665 |
+| `l-outcome-grpo-s003-0c128f5a` | complete | l | 3 | 0.6763 | 0.7712 | 0.7376 | +0.076 | 2.8%→0.1% | 386 | 0.30 | 0.42 | 655 |
+| `pp-outcome-grpo-s000-b4b417b1` | complete | pp | 0 | 0.6763 | 0.7881 | 0.7408 | +0.094 | 2.8%→0.2% | 369 | 0.29 | 0.33 | 627 |
+| `pp-outcome-grpo-s001-437a939a` | complete | pp | 1 | 0.6763 | 0.7712 | 0.7251 | +0.076 | 2.8%→0.1% | 177 | 0.27 | 0.47 | 717 |
+| `pp-outcome-grpo-s002-0f059a22` | complete | pp | 2 | 0.6763 | 0.7519 | 0.7301 | +0.058 | 2.8%→0.2% | 401 | 0.28 | 0.51 | 617 |
+| `pp-outcome-grpo-s003-56ca7dec` | complete | pp | 3 | 0.6763 | 0.7719 | 0.7430 | +0.079 | 2.8%→0.3% | 625 | 0.28 | 0.46 | 662 |
 
 ### `olmo3sft_grpo_pool_v2_ppall`
 
