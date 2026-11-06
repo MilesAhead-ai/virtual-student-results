@@ -1,8 +1,8 @@
 # Pre-registration: panel-calibrated difficulty vs a single model's rating (confirmatory DC)
 
-**Status: DRAFT 2026-11-06, awaiting owner sign-off.** All values except the code commit and config
-hashes are fixed (§7); those are written to FROZEN.json at freezing. After freezing, changes
-go to §11 only.
+**Status: FROZEN 2026-11-06**, signed off by the owner (24 seeds per arm, as drafted). Frozen configs and
+hashes: `configs/confirmatory/dc/FROZEN.json`; git tag `confirmatory-dc-frozen`. E2 had never been accessed
+before this point (no `data/locks/pool_v2_dc/access_log.jsonl` existed).
 
 ## 1. Question
 

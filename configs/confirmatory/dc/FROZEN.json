@@ -1,0 +1,589 @@
+{
+ "frozen_at": "2026-11-06",
+ "code_commit": "8f5cef26ee4190a4361ead0a468f8bd56a62ffdb",
+ "split_lock_sha256": "d80feded0000a38bc652c6677fac6b3ff69f3a12ebf2dd102d2ded6228edf2ee",
+ "e2_items_sha256": "8e0351f60f1c9c7883545cf488832779e686679c076e43c6a4899b53e08defbe",
+ "ratings_sha256": "d9048de212ff3a3cbfec0586594944bc687f6a6ed16165355d8d36c1feb25b92",
+ "analysis_script_sha256": "43365d484d9672cac771195acede79a6f47151d19403be2848c5a9338857fec0",
+ "preflight_treatment_fields": [
+  "experiment.calibration_id"
+ ],
+ "configs": {
+  "pj_s200.yaml": {
+   "file_sha256": "b6605f6a397b4e6d070e3865e4b40173bbe9cf9475cb3f3d91eedc978d4a2230",
+   "config_hash": "0a6dda877012f6b0290c13a62706ed470a6e3d86a7639b5fbdf9f86754962499",
+   "scientific_hash": "3a3fe830eb8d62d983fd5f09c39629998eb46272fd0eaebe96a95da4119f2e25",
+   "policy": "pp",
+   "calibration_id": "pool-v2-opus55q",
+   "root_seed": 200
+  },
+  "pj_s201.yaml": {
+   "file_sha256": "0724af23bfcc8fe0ad9319632d3a627eab4ae6bf2cf3e5e1a72e90ed58d6237f",
+   "config_hash": "2cfdcf605dae55b33a6b080f17a81659b3a2c23587a737b0b4acac37afa033b2",
+   "scientific_hash": "b8aff0f8cc42a20775d3986c8bfd40621faf58f57ca4dde574523d837e567854",
+   "policy": "pp",
+   "calibration_id": "pool-v2-opus55q",
+   "root_seed": 201
+  },
+  "pj_s202.yaml": {
+   "file_sha256": "23d63ff9a1e1f1ecf7aeb1de905e7163ce98dafe7ad6f53ad66961983000e435",
+   "config_hash": "92f8e8085b2bf6448c1baa3ca603fb01a1d9d483fdafadae46cd5da5fa4f9419",
+   "scientific_hash": "5258727207db9c1dbc429e0c41dba55caf286813ce2be915b5c2b82775c8cc6f",
+   "policy": "pp",
+   "calibration_id": "pool-v2-opus55q",
+   "root_seed": 202
+  },
+  "pj_s203.yaml": {
+   "file_sha256": "7b32729c3e1ea5acf652f7df71ec44e718cc57f745ea7dbbca4481cfefb13367",
+   "config_hash": "c840905fbb150183ef4e5cd5e67155b6b43721552b9d661b18af75a00bd821dc",
+   "scientific_hash": "07b93d86e858519faec6aa3c23f392d7943ecf4ac2e95bc69a083527db13db12",
+   "policy": "pp",
+   "calibration_id": "pool-v2-opus55q",
+   "root_seed": 203
+  },
+  "pj_s204.yaml": {
+   "file_sha256": "bdc28b689b99466feb78d66189105af784150690cf0ecd00a3566a0dd9a0a330",
+   "config_hash": "6ee72e24f8bef1996deee1f358231e35533aa4730bf255878b64a49cdbf64c1a",
+   "scientific_hash": "40defab5c6961ef03f7ad79b17f56d144c2d892c3fa4a7dffc120c27d41fe9a3",
+   "policy": "pp",
+   "calibration_id": "pool-v2-opus55q",
+   "root_seed": 204
+  },
+  "pj_s205.yaml": {
+   "file_sha256": "30bac7cfc7b5a969e9b2155a5465f1920b85e2768a3eb405aced2d5f54ba4e3f",
+   "config_hash": "8cc07fbd48366a75238ad3b99d21ccad77831fdfb4b8ededaf89637f7bf6c104",
+   "scientific_hash": "084d4d381eaaf957c8c652934025fe8f0b17810ec6184faa85a5da2fe9d9e30a",
+   "policy": "pp",
+   "calibration_id": "pool-v2-opus55q",
+   "root_seed": 205
+  },
+  "pj_s206.yaml": {
+   "file_sha256": "924c4e1db0199ab90a173ae78c37f196ebc9fd212e3eb1b15bce17cde04571ef",
+   "config_hash": "7aa63a785d4176e119aa1e795501130da5c62813f489681fbd52250b59fc54e9",
+   "scientific_hash": "8a76b665de880dd87a90321cbd80de08b29065352013e04105e95a1abb23344d",
+   "policy": "pp",
+   "calibration_id": "pool-v2-opus55q",
+   "root_seed": 206
+  },
+  "pj_s207.yaml": {
+   "file_sha256": "a1645ef7a1f43457372e4c5da7473a2148f9bcea437128b44c1e98c0ac6185fe",
+   "config_hash": "68d9dde81f054a085cd853bc15d07097fe4d70c50c9c9d3c13c7a50b8b772497",
+   "scientific_hash": "84be7456493514bb3d6e94081f8bb402a9b9d06d2c0d278d263d7bc27d29dff0",
+   "policy": "pp",
+   "calibration_id": "pool-v2-opus55q",
+   "root_seed": 207
+  },
+  "pj_s208.yaml": {
+   "file_sha256": "f2c6991089e219400e4c8df49c8d417a2e5fc71cc9e58973ac893b9ca784937a",
+   "config_hash": "9c14c3f5feec58a97b0404bd09ab67546157415e55dfd07cb4bd751b86edf21a",
+   "scientific_hash": "aaf0a773781421748a2312cda58a05ad4526445f9ee87513c3c4ade54d0569dc",
+   "policy": "pp",
+   "calibration_id": "pool-v2-opus55q",
+   "root_seed": 208
+  },
+  "pj_s209.yaml": {
+   "file_sha256": "d9695f25aa75dbececb3d0f4ca42f7e680cb16b49eaf5129d06b54c2e8f06b34",
+   "config_hash": "a7668d8664a240c1ae5798a5aea6dbc450b45c16f3dfff5b2f679b5afd073388",
+   "scientific_hash": "4b38a72fa799e92584dad8a9b51aae7ee07c9591d610595fc4b7d70336af9a0a",
+   "policy": "pp",
+   "calibration_id": "pool-v2-opus55q",
+   "root_seed": 209
+  },
+  "pj_s210.yaml": {
+   "file_sha256": "8ad2ae17fcd9bec9a72445ef3d3d4706b8e32cdbf0816bbaa9d1d0a8978a4c25",
+   "config_hash": "f61e0b31da214321e53c1629a15c8c5b7ad8b81c35c97f903c009e128f5da7d9",
+   "scientific_hash": "bacb9154160ae35d58242bb10658555efe4731ab89d21d0f4f65c6c0b14cb7c6",
+   "policy": "pp",
+   "calibration_id": "pool-v2-opus55q",
+   "root_seed": 210
+  },
+  "pj_s211.yaml": {
+   "file_sha256": "04c469970619625b13d04e0b20e3a0f58942e3485cef5f1abfcfa4c209e14fe1",
+   "config_hash": "e0aed96352fb0d61bee5dbd4e7159dd09474096f8041e7d6ef103e8fbd42d2a3",
+   "scientific_hash": "4072d795a59d47070ed41ec991470d5256ee59e995434d61d80c1135f234e208",
+   "policy": "pp",
+   "calibration_id": "pool-v2-opus55q",
+   "root_seed": 211
+  },
+  "pj_s212.yaml": {
+   "file_sha256": "21a8bf8e2cbf04ad91bd5a7e5e8ba844cad01a06c9cb7ac112f01d28a2c9b3de",
+   "config_hash": "74d09f0e53c41a6cf2e0416062f49e4bf85ef3018b1a9b5cffb6e92ac841e942",
+   "scientific_hash": "d2c701ef0705a18093b548623d9e4ee3bb6759d202ae9416ed7f61261d9fed35",
+   "policy": "pp",
+   "calibration_id": "pool-v2-opus55q",
+   "root_seed": 212
+  },
+  "pj_s213.yaml": {
+   "file_sha256": "d94833fb7a14cc2936d96f489dbaadb4618f04280484bb24c7d06925685d6076",
+   "config_hash": "6057715f6df70569c1a6830d7bffc3c87bd7d8f01723037df3c1763bf670cf54",
+   "scientific_hash": "0fbfd5c0d1ee60b940316a818cc0b00aa336cfee87a283d406ca1cf285d55c99",
+   "policy": "pp",
+   "calibration_id": "pool-v2-opus55q",
+   "root_seed": 213
+  },
+  "pj_s214.yaml": {
+   "file_sha256": "d65565a3d2a2d6db4ae09d8747b0c0404ddef8999047c5df5c82aeb11d405df6",
+   "config_hash": "3a4669bc6b48c9c4e40059764009e93f16738e7a7873271ebcebad5ac34c7a47",
+   "scientific_hash": "3fcaf994b3beb5b5ac70c0d92d0d8e81807d718516678cd1d3e554e29088598c",
+   "policy": "pp",
+   "calibration_id": "pool-v2-opus55q",
+   "root_seed": 214
+  },
+  "pj_s215.yaml": {
+   "file_sha256": "30805ae7d731159f7b6a1197f13cf6f8c61cb3e4fbe7d5e8d0b006b1edbae47b",
+   "config_hash": "5f6d41675686e1943d13bd73d9bd9083ce9e110b7beb27be9c6f6d24a0d33b62",
+   "scientific_hash": "873926a494dac97e4299f53632434c661ea6d46379fcb4f1cd609513838255f6",
+   "policy": "pp",
+   "calibration_id": "pool-v2-opus55q",
+   "root_seed": 215
+  },
+  "pj_s216.yaml": {
+   "file_sha256": "5a5754cbd1e2931b23c1a9047399a8c002cf57635ae216eaeb8944a069205c47",
+   "config_hash": "dedfbe9926fb9cfbd5f3b8426fd354c88aae385f63ba38d4f1f276d68156eac8",
+   "scientific_hash": "fab262ad4a77393354c3a93d24d48f62ad31b69e6e4a5e85b95102d0957474c2",
+   "policy": "pp",
+   "calibration_id": "pool-v2-opus55q",
+   "root_seed": 216
+  },
+  "pj_s217.yaml": {
+   "file_sha256": "41c4c02b2c18ef38088e93cefc9c880165b1cb0619f44604c0784ae27d3af975",
+   "config_hash": "cc39124d2f6d70f3a626677991489ae81201354a5e944e0a70de1c6528ad79c5",
+   "scientific_hash": "135a57d5b1984bc30c7bc8bd679048051dee29868265f324866eb469cd6355af",
+   "policy": "pp",
+   "calibration_id": "pool-v2-opus55q",
+   "root_seed": 217
+  },
+  "pj_s218.yaml": {
+   "file_sha256": "0d5508c02b7907ca0e799a3020338b2a3442ff5f24ce837ccf12fb0d6fd966ca",
+   "config_hash": "78b26726eebc441966aa0680fb98a880a9c63bfa6a6198bc0c486cbec36e1327",
+   "scientific_hash": "e9e7ee0293fa346c55dae96b990d6d771a40d31b7c7e474e3ab52f2e88f2c59d",
+   "policy": "pp",
+   "calibration_id": "pool-v2-opus55q",
+   "root_seed": 218
+  },
+  "pj_s219.yaml": {
+   "file_sha256": "bf3c139b08d7ebe385115d117e1132cd9d3f8d6561cca7cdc8e0dfb9a6534bcf",
+   "config_hash": "b293e1b3a4daf9939075571d77a709d165a4dd48c8a4964f34c3e286c00986e4",
+   "scientific_hash": "cabe23f3218e2e40ea4feb3e5a8a7c8fbbeeddad894b42d7c2aea3902e2e29e7",
+   "policy": "pp",
+   "calibration_id": "pool-v2-opus55q",
+   "root_seed": 219
+  },
+  "pj_s220.yaml": {
+   "file_sha256": "4ad95e9ae4eef9a68155c54b94ef323812d45d89d068f732135379e879949148",
+   "config_hash": "e15ef0d3dcfe194f2bb710e22f6d62d5aa9329861ce07aaf98e425f66e40c6d2",
+   "scientific_hash": "70e380a9e833e48c6a3ae13a9b324799ff38deb9ead62a4a446e5c295793d69c",
+   "policy": "pp",
+   "calibration_id": "pool-v2-opus55q",
+   "root_seed": 220
+  },
+  "pj_s221.yaml": {
+   "file_sha256": "fdf4aa7593e12290a856692a1d8dbdcc8e2d9288b0d6a7b6253199aa41223bd8",
+   "config_hash": "41eb7e512418323ecfb5f597ebc0a5373cd4d095691fc63ff0ba2e6b3d1a745c",
+   "scientific_hash": "5927a6bc31b1783a380fe22f2379e5bc1060817acc52984f929e062ded587ef4",
+   "policy": "pp",
+   "calibration_id": "pool-v2-opus55q",
+   "root_seed": 221
+  },
+  "pj_s222.yaml": {
+   "file_sha256": "aaac9ed366b94c63f40b756faad7e222bda959748a7a3737410037c7e528b0ac",
+   "config_hash": "f26bbfd9d25a8f1a3bded9e0019e513897f175cf323c6fd15079009cdc6c71f1",
+   "scientific_hash": "7a1365177683ec90c03e428eb4ac9e634503821344b6e37ac4f5eafed7b2ca8a",
+   "policy": "pp",
+   "calibration_id": "pool-v2-opus55q",
+   "root_seed": 222
+  },
+  "pj_s223.yaml": {
+   "file_sha256": "78d169ff8049fcb17ebbfaf186ab6f7c3baa94027272b225ecaf90927a5f91bc",
+   "config_hash": "0a5e7e537b3c7c5fca7d7c2468f8a5bd811805cab918bc6b701588d3eba9f1b2",
+   "scientific_hash": "a98f1e947aa9c08c0fa0b149a81dfd6ee5931c502ce3df7a378f543b42ad9cef",
+   "policy": "pp",
+   "calibration_id": "pool-v2-opus55q",
+   "root_seed": 223
+  },
+  "pp16_s200.yaml": {
+   "file_sha256": "50fe5f3996c09467fcddda442653d9a2514125ebfe31d97cc92d905a3c5e8b73",
+   "config_hash": "d95b5ca30c9e6110ef265a60fa04667c1580a0af291499a0f9ae04778da596b5",
+   "scientific_hash": "e749ac14967f78313bca97368ef9d816defaf23cd0a6b6f54b71375766850143",
+   "policy": "pp",
+   "calibration_id": "pool-v2-wp",
+   "root_seed": 200
+  },
+  "pp16_s201.yaml": {
+   "file_sha256": "661a88bb473abdbb69a1a28c66a6567e87b8be3c77ab1e67f385d8d5a0bf0ccd",
+   "config_hash": "cef9d908f36a10637c9dbdf527083dd77bee0d4fa6605368a63a79495d473c69",
+   "scientific_hash": "a14c1a1cc1892e1e217ce0984469da4b5d80ffd4feda1d49e0b54e8151a11097",
+   "policy": "pp",
+   "calibration_id": "pool-v2-wp",
+   "root_seed": 201
+  },
+  "pp16_s202.yaml": {
+   "file_sha256": "0ce22037613ea78b0e54e53f75acbd436adc5bc8269d05971fda4247caac9422",
+   "config_hash": "dfe50d4d902d1f24f63d945c961b78717983854f7b1383c5679bdbb2ef79b7c3",
+   "scientific_hash": "767369471606dee3d12cc8f28b1d0e30880208e053c689b837a2b7efb6544a46",
+   "policy": "pp",
+   "calibration_id": "pool-v2-wp",
+   "root_seed": 202
+  },
+  "pp16_s203.yaml": {
+   "file_sha256": "87728bbfc6ff1cc94ca7fbc98ea12f180d1ca19be3065e3f52e13955b8a80464",
+   "config_hash": "b81b29750e4c16dc7219b4f22d7b523d144bc90e734c34db8c9e335822e13f97",
+   "scientific_hash": "e2ab186f28f32e038785a3c47abbbb8f35a82351edeb55d12d0a690c08ff3c19",
+   "policy": "pp",
+   "calibration_id": "pool-v2-wp",
+   "root_seed": 203
+  },
+  "pp16_s204.yaml": {
+   "file_sha256": "3bf25ea06d68c24568445e97c51ef645932d5f961aafa624d92aab4ca8b4274c",
+   "config_hash": "4c7909f5e1daaf8e639963bd8195e3b52910e93576c2bd5befd302ef57c945b2",
+   "scientific_hash": "2458aa8371475e883e3836a10dc3a9e4825767db7e4f412e65d489a7da861022",
+   "policy": "pp",
+   "calibration_id": "pool-v2-wp",
+   "root_seed": 204
+  },
+  "pp16_s205.yaml": {
+   "file_sha256": "5183394047ce7d29a63c4dad996bfaf12a7372d948efcf467bdaa41e6d6ef604",
+   "config_hash": "78f63f263103bd56b5a8f3144c760c8b60cdf5c512e70b3302eb9b3aaeb54e96",
+   "scientific_hash": "65d6bcc2c36bcc5b4cf04e6b34605461ecb1e91e27d5710c51380d24514dbd69",
+   "policy": "pp",
+   "calibration_id": "pool-v2-wp",
+   "root_seed": 205
+  },
+  "pp16_s206.yaml": {
+   "file_sha256": "c30febbacedea7967041cf5587f13e135204665cff3ad22f0446bd856128874c",
+   "config_hash": "904cfdc7c0bd654ea59bc29789dcf9f34bd6b9942c316a00f59667730cf6bdc2",
+   "scientific_hash": "6597a20c47054d22b337cfe11c9b2f6a9bcc2494c4a8436a19a403128a1b9db1",
+   "policy": "pp",
+   "calibration_id": "pool-v2-wp",
+   "root_seed": 206
+  },
+  "pp16_s207.yaml": {
+   "file_sha256": "530b3f1ba92901fd45cc92968787a29a87c15ea65b2167714485a85ffd61aa3e",
+   "config_hash": "208cbc67fbdca500d4ad2a5838b150bbd40259f54f077503865114264933b623",
+   "scientific_hash": "383aac902b6aca69dc5558c9729ea5d6555e2a799cd7d4320870646a89fe50d6",
+   "policy": "pp",
+   "calibration_id": "pool-v2-wp",
+   "root_seed": 207
+  },
+  "pp16_s208.yaml": {
+   "file_sha256": "c16ac4ccb460ee2efbeb1b10a508941320b668f25d72225f19aaa41053ff9451",
+   "config_hash": "17d08b76e2b58f472df7cb8a5ab39d1a750744119cca13fb244b151ae24efd5c",
+   "scientific_hash": "35b03ba30059a3a89d5bb0cb007db4621ba52e36b512abfbd1bf18f643b04545",
+   "policy": "pp",
+   "calibration_id": "pool-v2-wp",
+   "root_seed": 208
+  },
+  "pp16_s209.yaml": {
+   "file_sha256": "2584586d62875aee24b6f221190f2743553e1a44a968ae540908a40aba00ec61",
+   "config_hash": "ab05e9cbe8d274faa0ae9f6c49bb3c311cc36d2f0b392c3fbf332d06c219054a",
+   "scientific_hash": "c60da2ff498538c0dbe35e884989436534e95ba6d45ecd4011414a41d2fc3239",
+   "policy": "pp",
+   "calibration_id": "pool-v2-wp",
+   "root_seed": 209
+  },
+  "pp16_s210.yaml": {
+   "file_sha256": "6b38f940be44041cd1942dd2a34b0574c1afeb6559635c940027f8983593ae97",
+   "config_hash": "295b66f64d12b1fff694a333b7dbba007483dc3a7f3f1b1f2400adc7a43e84fb",
+   "scientific_hash": "98231589d003cf7880e30671f0f00c2b3d2f63c3e84a0f5b1223401ce28b68d4",
+   "policy": "pp",
+   "calibration_id": "pool-v2-wp",
+   "root_seed": 210
+  },
+  "pp16_s211.yaml": {
+   "file_sha256": "dee09d1cdcc53b49ae47db7f7862412e56a471e2f00b013c28430e3d4281c25f",
+   "config_hash": "06922bb972634aa62b69a118221da23e4eab83b5b5bddd371a9addb97cfd01a1",
+   "scientific_hash": "a9b8780fe40b682cf0d0596aaac89d2cdb5b345546a551eb4d769fc5a6ed44b1",
+   "policy": "pp",
+   "calibration_id": "pool-v2-wp",
+   "root_seed": 211
+  },
+  "pp16_s212.yaml": {
+   "file_sha256": "fdd20ef329266b66083e4699fb2444407d519e72f11dc3acd36c4368978922a0",
+   "config_hash": "5e7dfceb363bd71a21c660c1ed8a6ee51b06d0b816e4a70c6529d6920bf059e3",
+   "scientific_hash": "bac17bde45c53917d0874657e39dc8f9ea69b1ed858d6e3b0df208c71c172cd0",
+   "policy": "pp",
+   "calibration_id": "pool-v2-wp",
+   "root_seed": 212
+  },
+  "pp16_s213.yaml": {
+   "file_sha256": "4ab2682a0df42c94b490a06752fb0ecbd6509a94ed69775ffa3bdb5df78f327f",
+   "config_hash": "a5004f7af87f4e29f78ba452085d24a4bd9aa39968c65df01006938ffe55c851",
+   "scientific_hash": "9e6c4f0ec4086e1632ef7943d9df2f71d1aab7858eea5a10a62e079017d02205",
+   "policy": "pp",
+   "calibration_id": "pool-v2-wp",
+   "root_seed": 213
+  },
+  "pp16_s214.yaml": {
+   "file_sha256": "1d181b5d693402abb293df8e50ee70dc7887419de86161948860603c3655bab2",
+   "config_hash": "5e53d71c629085744b77b34381bcc16f6afdb0341e26340df71d71f54092b345",
+   "scientific_hash": "38ef1f71d1817203f216f3ecad1f15cba6aeafe99ead36855ef6286c19ba98e4",
+   "policy": "pp",
+   "calibration_id": "pool-v2-wp",
+   "root_seed": 214
+  },
+  "pp16_s215.yaml": {
+   "file_sha256": "d85f730ee0450689702b1aa1ce9adff0e94f7ea30fca2660be7d80e586dc7c44",
+   "config_hash": "cc2100307a8851be5fe75bec1c1f4124c298c2d929b808ae9dff2bcaf47d5d2f",
+   "scientific_hash": "f4e44ab7f00ea449733f3cd3ee14784651b6244a5694b7ee869915378a83928e",
+   "policy": "pp",
+   "calibration_id": "pool-v2-wp",
+   "root_seed": 215
+  },
+  "pp16_s216.yaml": {
+   "file_sha256": "b958105f8a6c79376beb44305a5b9230d4703203b5191e26016d0448b197cb0d",
+   "config_hash": "b29239c1b3e0da50ed0cf8ace96af0ff49e609f03b37a061af31389dd90225d5",
+   "scientific_hash": "ad05af95652e00428fa17736ab63ebb8fc743f14a98f2ff119e3a4e4a39bed68",
+   "policy": "pp",
+   "calibration_id": "pool-v2-wp",
+   "root_seed": 216
+  },
+  "pp16_s217.yaml": {
+   "file_sha256": "b67b701fac215f785812f784db0b69ee728aca17d21f5a176c14d5eb4ef71056",
+   "config_hash": "4c47662a23534eb6d87344558c720ac7fd4616fc1e672a541a00cf522bb2d5fd",
+   "scientific_hash": "674f70df36721d328ccde4e79212783d22abb8b2a7f13425965d3ae9fc914c81",
+   "policy": "pp",
+   "calibration_id": "pool-v2-wp",
+   "root_seed": 217
+  },
+  "pp16_s218.yaml": {
+   "file_sha256": "86fa6eed9c854b53a49db42f0d76afdcbaf4e3f6e487bc9e23c29dccbf7d91be",
+   "config_hash": "9ad6ef279b4ccc0b405c0f1a564c47cfdf05c5558032ac2a628f352a863c1f7f",
+   "scientific_hash": "da82d8ebaec8820e7fc2c5fc12e461ed5f1de66bce5abdd375d66845de67ffa8",
+   "policy": "pp",
+   "calibration_id": "pool-v2-wp",
+   "root_seed": 218
+  },
+  "pp16_s219.yaml": {
+   "file_sha256": "1ade57bf3dffcc2bfe3a009bdf2b67f387435811d0f79255d6b6058747138c8b",
+   "config_hash": "006ebbebab36f1b49e11eb68d86f11dde9f63ad696bf0ad575103cb4427948b1",
+   "scientific_hash": "63cae958d344e3b5d03c03d3d4c82d998293200f7f82169983b17458887499cd",
+   "policy": "pp",
+   "calibration_id": "pool-v2-wp",
+   "root_seed": 219
+  },
+  "pp16_s220.yaml": {
+   "file_sha256": "40b9c7e4aa9f6f012c5360cf57ec521263093c9d9e3a1d2a283858be1cb16f70",
+   "config_hash": "913bf2129193bcf1109f1d76dbf72c216472d3ac32608b360d455e5da19597fd",
+   "scientific_hash": "8db72ddaf2385f38293ae462e6a984132219cfaf53dd8d956dd8a9ac876c879b",
+   "policy": "pp",
+   "calibration_id": "pool-v2-wp",
+   "root_seed": 220
+  },
+  "pp16_s221.yaml": {
+   "file_sha256": "e4985925b696a325c9b889dc6f1b0c45b12c89941d8fce023b7f73f1a8a0f25e",
+   "config_hash": "aa871202792a924d91c6fee2e0f3156f1c6e8329ac1133eefaf4339991543c8e",
+   "scientific_hash": "701498a60b4514588575ddfc5a24413d516af2e67c4ee89ebf98125bfaeaa5b2",
+   "policy": "pp",
+   "calibration_id": "pool-v2-wp",
+   "root_seed": 221
+  },
+  "pp16_s222.yaml": {
+   "file_sha256": "e065f264f0fdd6653306b4444b46ee98d709e18068c14aab058d888c864b00ee",
+   "config_hash": "31f739abf16ff16da007f4421660199485bc08890747f6c5742d3a63dd853fd8",
+   "scientific_hash": "9dfb6fab599b7db08fb5aed0030c8bc83f7b2d3079b767c712853863ffda3af0",
+   "policy": "pp",
+   "calibration_id": "pool-v2-wp",
+   "root_seed": 222
+  },
+  "pp16_s223.yaml": {
+   "file_sha256": "081853a9c2795bc3a33939aca69f16ea5305ed10f74ca3e9d2e04550c3fe416d",
+   "config_hash": "3ddb284ed5875dae9524e00a9d67521ac6388a17fa97b86d993a6c9214fc73e1",
+   "scientific_hash": "b9430b33dc152a82a63a8ea7380ce97308ecc387e7c1a0972d85d808178cb25f",
+   "policy": "pp",
+   "calibration_id": "pool-v2-wp",
+   "root_seed": 223
+  },
+  "r_s200.yaml": {
+   "file_sha256": "70229fec9da6cf44fca341ba98c277661c1885961d047373c056152c68e386fe",
+   "config_hash": "a5c2f9ea7045eb9cfdd22723e6b08a34a10b37ee0154e2ce25d138a7f1919600",
+   "scientific_hash": "b2e58b708090cebfcfd02a3336e571c995825e0041849423df391d9d59c9e354",
+   "policy": "r",
+   "calibration_id": "pool-v2-wp",
+   "root_seed": 200
+  },
+  "r_s201.yaml": {
+   "file_sha256": "9e32594a4d195b23a0024ca495cba2596a08822e1964285e48d879fd38f64519",
+   "config_hash": "dafd866f714eb46d9d5d19264b8c0358cb9af5c9afa185155b9988cf885b1a1f",
+   "scientific_hash": "ad1c09dd0ec55ca8fb3e04defbbedecbf4d5fb0efee09529b4deac860ec917ff",
+   "policy": "r",
+   "calibration_id": "pool-v2-wp",
+   "root_seed": 201
+  },
+  "r_s202.yaml": {
+   "file_sha256": "28c330d4031a2f5ffbfac40611e8009f047e9d73d6f86df3c7d4c03e086ee016",
+   "config_hash": "f790efacc7289ea59e093200392644c6b8bc6cf86060fd021c69ae25fc72b379",
+   "scientific_hash": "1f4cd875f6e857c98869c19f7e109ae9dfe22535d7f3cf035755a9681d099ce5",
+   "policy": "r",
+   "calibration_id": "pool-v2-wp",
+   "root_seed": 202
+  },
+  "r_s203.yaml": {
+   "file_sha256": "89fb86d2384348bf159ff90c72983a57beb852d75243b8a0108aad26bcc08814",
+   "config_hash": "6a0468bc3dd2b545fa7b043c47ee1ec3944ef4e92b0d74a3cd55a5e9196a7bd3",
+   "scientific_hash": "6309061a4e2828a8d9888b97ff83382e20df82f9edea9b844d429431c548862e",
+   "policy": "r",
+   "calibration_id": "pool-v2-wp",
+   "root_seed": 203
+  },
+  "r_s204.yaml": {
+   "file_sha256": "4a889f3f8e44e8f1e4165d553a5abd47495aa05cc8abe9dd3dde9292a5479976",
+   "config_hash": "f2c2fb198e83f4d7b564fb80463649256f68f85bfd1ccf5d2cd7704bc4bf570d",
+   "scientific_hash": "5c50661e09625a0e970013caba86988d153b8d303c86a70095c9cadceae102a9",
+   "policy": "r",
+   "calibration_id": "pool-v2-wp",
+   "root_seed": 204
+  },
+  "r_s205.yaml": {
+   "file_sha256": "558a21906bed2f224c16323276c384278f08632348bab9fa62762bbc2da9587e",
+   "config_hash": "0134199d94641884d9d05713f7aa4754c2ef542ce1c699664601e67484ac31a0",
+   "scientific_hash": "5e270a06250dae2932894588a773e3096f7668ac51afd945f3743ff074716591",
+   "policy": "r",
+   "calibration_id": "pool-v2-wp",
+   "root_seed": 205
+  },
+  "r_s206.yaml": {
+   "file_sha256": "eab47076ca741d9affcf1372ed8365d436c9027077b55cddd93186e1d34df4d9",
+   "config_hash": "b569989f254beaa8aa4a589eacd3e4ef73b6b98c2b2585f76318be0424e82903",
+   "scientific_hash": "4a647e3e50b9784a9755276804245949758d608df338e332f7a08490ea5202d4",
+   "policy": "r",
+   "calibration_id": "pool-v2-wp",
+   "root_seed": 206
+  },
+  "r_s207.yaml": {
+   "file_sha256": "3e86fa74046ebf34e954b17d4666d54be9617e83e478e43f5dc8aa59de62c8bc",
+   "config_hash": "fb4e7f35643659e3143bc9cca349645ddf3cf1b7556067aaf2e6653876afd6e9",
+   "scientific_hash": "ca95c66776822c936d164c547b158003d7d05c6008876b7b5fa5966c61d9b2ed",
+   "policy": "r",
+   "calibration_id": "pool-v2-wp",
+   "root_seed": 207
+  },
+  "r_s208.yaml": {
+   "file_sha256": "d948ea196b5150311b8cf1ea10e68abbce897a76dfa2213b385190aa0a066717",
+   "config_hash": "d94cfb26e83854571a4bfce310b8c280ed0b8c1493c9d11a0d50a1ede767acca",
+   "scientific_hash": "aec4bf27b4dfbcda790349c6686fc7df63fe0e8f3d6833b221208e104d06d730",
+   "policy": "r",
+   "calibration_id": "pool-v2-wp",
+   "root_seed": 208
+  },
+  "r_s209.yaml": {
+   "file_sha256": "8e577413c1185b3c0ea271bb55192ad42a96e7658184d8f785c981b339783236",
+   "config_hash": "15fe89d80aad053f7cbaac36f8d00db93e22b86380f9ef7c580f4e385c715529",
+   "scientific_hash": "fb37015deafcfaf35b5daa908bdc819ec635da48837793b5e55a8b6210dd3a10",
+   "policy": "r",
+   "calibration_id": "pool-v2-wp",
+   "root_seed": 209
+  },
+  "r_s210.yaml": {
+   "file_sha256": "5620faba52f8a68a64024e0042c986c8c94ff82fc6e3075893c7585e23399474",
+   "config_hash": "6cf33f1ddf6783d1edf7c60badc7c23bda0afc762df2c0081ff5f9b94494de5d",
+   "scientific_hash": "141415be0bff86c5f4bc028c04db8cc59fa82b5e763dc2aa60c7fa64d866d46d",
+   "policy": "r",
+   "calibration_id": "pool-v2-wp",
+   "root_seed": 210
+  },
+  "r_s211.yaml": {
+   "file_sha256": "04f0b2185ed1f5f5ddb66ab652bf3e9d70fb467ab70a68b3bc7e949dbefafcba",
+   "config_hash": "8871e8984b919c2bfd1697e0fc37f89e741e8933f7cd105a723ce383e3ea0718",
+   "scientific_hash": "282992506f19a3c1b557f357eeb555bd69deeaef12af29e6173e6c2f9b14b8b1",
+   "policy": "r",
+   "calibration_id": "pool-v2-wp",
+   "root_seed": 211
+  },
+  "r_s212.yaml": {
+   "file_sha256": "7036520a52daf0867cbb73e2faae018ad80499af343a84431b6c6b9e79199bb7",
+   "config_hash": "4be0f6e7c11f18e92ea8402e93604623659774cdcf0360d877df2cbf6a45dfc8",
+   "scientific_hash": "bd28c7b70b9e77b06e4b63a90b531724b282179236738be9e43355bac54342e9",
+   "policy": "r",
+   "calibration_id": "pool-v2-wp",
+   "root_seed": 212
+  },
+  "r_s213.yaml": {
+   "file_sha256": "dd1685a17d60836fcbf333998c11f3e91d3b31a8976e2b2c549a4642aaa9fda6",
+   "config_hash": "0e0c9e6d6ebc068bcadeef62f150a0d389a3945df02e319158b4f6599e744bc6",
+   "scientific_hash": "0b382a26490e1facea06203e6b6995bb649f5d20e1f834ffa6d953bd5af9242b",
+   "policy": "r",
+   "calibration_id": "pool-v2-wp",
+   "root_seed": 213
+  },
+  "r_s214.yaml": {
+   "file_sha256": "0594f463d4cb1e4d18c81ca45f540de46d28593e15b8bf3ffc30b249dac11af2",
+   "config_hash": "dc70c9140dfe378199cc758a6845b782c3f31db9db5faa44d761f7404d4e854b",
+   "scientific_hash": "8a5ab9c3840c62c7db63eb9dd2a4bb90dd178ea80ee7575715da00eb4f65bf30",
+   "policy": "r",
+   "calibration_id": "pool-v2-wp",
+   "root_seed": 214
+  },
+  "r_s215.yaml": {
+   "file_sha256": "548b49687ac7ed79846c3bb719169f535dde8c59733fb8deae5aeded6f9d28d8",
+   "config_hash": "4ecf6d423b6deb8f134109ba1b612f49c8139df53fd3981c4695c3c61688d416",
+   "scientific_hash": "ad2e91dc8593b5b96ed379a2d58baad07debd96644a840f51b99b2114d024d11",
+   "policy": "r",
+   "calibration_id": "pool-v2-wp",
+   "root_seed": 215
+  },
+  "r_s216.yaml": {
+   "file_sha256": "8bdecf9dda135c96616aaebae7ded3e550ec9a5568e581e19789410ec52598ad",
+   "config_hash": "475c3ed7896102d4892837dc6e2e17f0593e5dea06b01ba00a2f8babcd14a033",
+   "scientific_hash": "01936da84159001d718210d1ccc1621b6bb05b73523a18b25ef505611a21363d",
+   "policy": "r",
+   "calibration_id": "pool-v2-wp",
+   "root_seed": 216
+  },
+  "r_s217.yaml": {
+   "file_sha256": "dda452aa915130808a151e1ad0226b8905017de44da5f205995bfce6866b43ee",
+   "config_hash": "deb528889651c1e4a6565e59e6b095aaca229d295d720d9e4e5934d4424362cb",
+   "scientific_hash": "f645def2e7ca84ecf3e28b54b1b0170a6f0a08e9c95395a8f0c6503d233faab1",
+   "policy": "r",
+   "calibration_id": "pool-v2-wp",
+   "root_seed": 217
+  },
+  "r_s218.yaml": {
+   "file_sha256": "5dfff428254b9d0b8dedc7913ba1f51ecb7b2c375bf3af8e18403743cc69ce7d",
+   "config_hash": "610adfd9f2d9d1ab34ab444cb9da2355cfb958395bd6e280b9683fc813f633d5",
+   "scientific_hash": "75608a24cb01f77735f0acbf9113f0c20aea551baa7ca77df9e5f9e1795cac8d",
+   "policy": "r",
+   "calibration_id": "pool-v2-wp",
+   "root_seed": 218
+  },
+  "r_s219.yaml": {
+   "file_sha256": "7525bbbd74b1fb52c3acf4664131a0453139844032dab6c5cf0661adbcfdd76f",
+   "config_hash": "e59721164a90b02ebc8cbb2623c275816598c3884cb354dd7b43cd5a0561188c",
+   "scientific_hash": "838a7bcfd1302c1792377f29f7c37f8a8ce7b8c0af05939fec0bfe6c960bb1db",
+   "policy": "r",
+   "calibration_id": "pool-v2-wp",
+   "root_seed": 219
+  },
+  "r_s220.yaml": {
+   "file_sha256": "772f2e8a5d6f7ed09b4a281585d3aeab8fece70575c7250a57014c0523a0cfa6",
+   "config_hash": "16df0a986c81eb584ac52a334d57eec16706dd45873329498a0afb3c1dafc931",
+   "scientific_hash": "ef6e77cf1d1326adb29052372ea86e27999f7bda60dc0107a218e48a391507d6",
+   "policy": "r",
+   "calibration_id": "pool-v2-wp",
+   "root_seed": 220
+  },
+  "r_s221.yaml": {
+   "file_sha256": "2884927d71449e0c1e84b32fd8becc90f769ee0fc97ed8b1671fa0d36e7292a3",
+   "config_hash": "93d1c0f934ba47cde302a25b6b24317bacaf2d936cb560ca68503d56754b8024",
+   "scientific_hash": "d68c9b7f48b25c66e88234174547c9bccc052b5a3764271e848dc85d3a36931e",
+   "policy": "r",
+   "calibration_id": "pool-v2-wp",
+   "root_seed": 221
+  },
+  "r_s222.yaml": {
+   "file_sha256": "7b4410b03df4b6761e03ca80cdd507f9f9f39815c944767fe10adcc664a15ba6",
+   "config_hash": "9280501b309ec079cccecadcaaea185095f4a7ab1caeb3efd8b6397704e85dce",
+   "scientific_hash": "cc7a4f023e2c42252dfae563d0a625b8375ae8eb26bf2cf3c8b8afb3ac942c43",
+   "policy": "r",
+   "calibration_id": "pool-v2-wp",
+   "root_seed": 222
+  },
+  "r_s223.yaml": {
+   "file_sha256": "f917ed02b3088aaf4aa124e597071169fe17727983e9a403b7e07e9985312cb5",
+   "config_hash": "8b5920bd06746130a095f01e3682e4eeda2b39a9db49ff4556d150036763fc1d",
+   "scientific_hash": "461592d59cc74c7807feb59d74780684dbd32d4dc91b87fd2556b72b94745c25",
+   "policy": "r",
+   "calibration_id": "pool-v2-wp",
+   "root_seed": 223
+  }
+ }
+}
