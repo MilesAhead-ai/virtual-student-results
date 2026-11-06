@@ -8,7 +8,7 @@ Development evidence: FINDINGS #26 (offline AUC: panel b 0.764, Opus 5.5 rating 
 
 | step | status | record |
 |---|---|---|
-| 1. Generate E2 candidates (Opus 5.5, D1–D5 × 15 per skill, double key check) | running since 11-06 | `data/raw/heldout_e2/`, `scripts/run_heldout_stream.sh` |
+| 1. Generate E2 candidates (Opus 5.5, D1–D5, double key check) | round 1 done (750, $37): only 291 survive the dedup (436 twins of existing items, 18 within E2), short on every skill but words_in_context. **Round 2 running** (E2b: 30 per level for the low-yield skills, 20 for others, 10 for words_in_context; ≈1,100 items, ≈$55) | `data/raw/heldout_e2/`, `scripts/run_heldout_stream.sh` |
 | 2. Select E2: key agreement, topic-twin dedup vs everything, 12 per label per skill | todo | `scripts/select_heldout.py` |
 | 3. Import pool v2 + E2 (data root `pool_v2_dc`), recalibrate, check P/P+ difficulties unchanged, map the Opus rating, lock | todo | — |
 | 4. Pre-registration draft → owner sign-off → freeze (FROZEN.json, tag), analysis script committed before the runs | todo | — |
