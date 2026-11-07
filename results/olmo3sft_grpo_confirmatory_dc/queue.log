@@ -1,0 +1,146 @@
+2026-11-06T05:55:01+00:00 START 72 configs on GPUs [2, 3, 4, 5, 6, 7] x2
+2026-11-06T05:55:01+00:00 LAUNCH pp16_s200.yaml gpu=2 pid=877888 attempt=0
+2026-11-06T05:55:21+00:00 LAUNCH pj_s200.yaml gpu=3 pid=878141 attempt=0
+2026-11-06T05:55:41+00:00 LAUNCH r_s200.yaml gpu=4 pid=878430 attempt=0
+2026-11-06T05:56:01+00:00 LAUNCH pp16_s201.yaml gpu=5 pid=878764 attempt=0
+2026-11-06T05:56:22+00:00 LAUNCH pj_s201.yaml gpu=6 pid=879157 attempt=0
+2026-11-06T05:56:42+00:00 LAUNCH r_s201.yaml gpu=7 pid=879604 attempt=0
+2026-11-06T05:57:07+00:00 LAUNCH pp16_s202.yaml gpu=2 pid=880273 attempt=0
+2026-11-06T05:57:29+00:00 LAUNCH pj_s202.yaml gpu=3 pid=880664 attempt=0
+2026-11-06T05:57:55+00:00 LAUNCH r_s202.yaml gpu=4 pid=881064 attempt=0
+2026-11-06T05:58:22+00:00 LAUNCH pp16_s203.yaml gpu=5 pid=881292 attempt=0
+2026-11-06T05:58:57+00:00 LAUNCH pj_s203.yaml gpu=6 pid=881707 attempt=0
+2026-11-06T05:59:32+00:00 LAUNCH r_s203.yaml gpu=7 pid=882114 attempt=0
+2026-11-06T10:06:53+00:00 DONE pj_s200.yaml (1 done, 60 pending, 11 running)
+2026-11-06T10:06:53+00:00 LAUNCH pp16_s204.yaml gpu=3 pid=902673 attempt=0
+2026-11-06T10:29:13+00:00 DONE r_s200.yaml (2 done, 59 pending, 11 running)
+2026-11-06T10:29:14+00:00 LAUNCH pj_s204.yaml gpu=4 pid=904255 attempt=0
+2026-11-06T10:30:34+00:00 DONE r_s202.yaml (3 done, 58 pending, 11 running)
+2026-11-06T10:30:34+00:00 LAUNCH r_s204.yaml gpu=4 pid=904700 attempt=0
+2026-11-06T10:38:54+00:00 DONE pp16_s202.yaml (4 done, 57 pending, 11 running)
+2026-11-06T10:38:58+00:00 LAUNCH pp16_s205.yaml gpu=2 pid=905546 attempt=0
+2026-11-06T10:43:18+00:00 DONE pp16_s200.yaml (5 done, 56 pending, 11 running)
+2026-11-06T10:43:18+00:00 LAUNCH pj_s205.yaml gpu=2 pid=906177 attempt=0
+2026-11-06T10:55:38+00:00 DONE r_s201.yaml (6 done, 55 pending, 11 running)
+2026-11-06T10:55:41+00:00 LAUNCH r_s205.yaml gpu=7 pid=907226 attempt=0
+2026-11-06T10:57:01+00:00 DONE pj_s202.yaml (7 done, 54 pending, 11 running)
+2026-11-06T10:57:04+00:00 LAUNCH pp16_s206.yaml gpu=3 pid=907512 attempt=0
+2026-11-06T11:00:25+00:00 DONE pj_s201.yaml (8 done, 53 pending, 11 running)
+2026-11-06T11:00:25+00:00 DONE r_s203.yaml (9 done, 53 pending, 10 running)
+2026-11-06T11:00:26+00:00 LAUNCH pj_s206.yaml gpu=6 pid=908236 attempt=0
+2026-11-06T11:00:47+00:00 LAUNCH r_s206.yaml gpu=7 pid=908461 attempt=0
+2026-11-06T11:09:07+00:00 DONE pp16_s201.yaml (10 done, 51 pending, 11 running)
+2026-11-06T11:09:16+00:00 LAUNCH pp16_s207.yaml gpu=5 pid=909473 attempt=0
+2026-11-06T11:18:36+00:00 DONE pj_s203.yaml (11 done, 50 pending, 11 running)
+2026-11-06T11:18:37+00:00 LAUNCH pj_s207.yaml gpu=6 pid=910397 attempt=0
+2026-11-06T11:25:57+00:00 DONE pp16_s203.yaml (12 done, 49 pending, 11 running)
+2026-11-06T11:25:57+00:00 LAUNCH r_s207.yaml gpu=5 pid=911179 attempt=0
+2026-11-06T14:57:18+00:00 DONE pp16_s204.yaml (13 done, 48 pending, 11 running)
+2026-11-06T14:57:23+00:00 LAUNCH pp16_s208.yaml gpu=3 pid=923968 attempt=0
+2026-11-06T15:01:44+00:00 DONE pj_s204.yaml (14 done, 47 pending, 11 running)
+2026-11-06T15:01:45+00:00 LAUNCH pj_s208.yaml gpu=4 pid=924581 attempt=0
+2026-11-06T15:11:05+00:00 DONE r_s204.yaml (15 done, 46 pending, 11 running)
+2026-11-06T15:11:12+00:00 LAUNCH r_s208.yaml gpu=4 pid=925472 attempt=0
+2026-11-06T15:31:32+00:00 DONE r_s206.yaml (16 done, 45 pending, 11 running)
+2026-11-06T15:31:32+00:00 LAUNCH pp16_s209.yaml gpu=7 pid=926944 attempt=0
+2026-11-06T15:47:52+00:00 DONE r_s205.yaml (17 done, 44 pending, 11 running)
+2026-11-06T15:47:54+00:00 LAUNCH pj_s209.yaml gpu=7 pid=928230 attempt=0
+2026-11-06T15:51:14+00:00 DONE pp16_s205.yaml (18 done, 43 pending, 11 running)
+2026-11-06T15:51:16+00:00 LAUNCH r_s209.yaml gpu=2 pid=928778 attempt=0
+2026-11-06T15:52:36+00:00 DONE pp16_s206.yaml (19 done, 42 pending, 11 running)
+2026-11-06T15:52:37+00:00 LAUNCH pp16_s210.yaml gpu=3 pid=929062 attempt=0
+2026-11-06T15:54:57+00:00 DONE pj_s206.yaml (20 done, 41 pending, 11 running)
+2026-11-06T15:54:57+00:00 LAUNCH pj_s210.yaml gpu=6 pid=929735 attempt=0
+2026-11-06T15:59:17+00:00 DONE pj_s205.yaml (21 done, 40 pending, 11 running)
+2026-11-06T15:59:18+00:00 LAUNCH r_s210.yaml gpu=2 pid=930367 attempt=0
+2026-11-06T16:10:38+00:00 DONE r_s207.yaml (22 done, 39 pending, 11 running)
+2026-11-06T16:10:38+00:00 LAUNCH pp16_s211.yaml gpu=5 pid=931357 attempt=0
+2026-11-06T16:25:58+00:00 DONE pp16_s207.yaml (23 done, 38 pending, 11 running)
+2026-11-06T16:25:59+00:00 LAUNCH pj_s211.yaml gpu=5 pid=932571 attempt=0
+2026-11-06T16:27:19+00:00 DONE pj_s207.yaml (24 done, 37 pending, 11 running)
+2026-11-06T16:27:19+00:00 LAUNCH r_s211.yaml gpu=6 pid=933020 attempt=0
+2026-11-06T19:01:39+00:00 DONE pj_s208.yaml (25 done, 36 pending, 11 running)
+2026-11-06T19:01:40+00:00 LAUNCH pp16_s212.yaml gpu=4 pid=942345 attempt=0
+2026-11-06T19:35:00+00:00 DONE r_s208.yaml (26 done, 35 pending, 11 running)
+2026-11-06T19:35:00+00:00 LAUNCH pj_s212.yaml gpu=4 pid=944542 attempt=0
+2026-11-06T19:51:21+00:00 DONE pp16_s208.yaml (27 done, 34 pending, 11 running)
+2026-11-06T19:51:21+00:00 LAUNCH r_s212.yaml gpu=3 pid=945800 attempt=0
+2026-11-06T20:18:41+00:00 DONE r_s210.yaml (28 done, 33 pending, 11 running)
+2026-11-06T20:18:41+00:00 LAUNCH pp16_s213.yaml gpu=2 pid=947666 attempt=0
+2026-11-06T20:24:02+00:00 DONE pp16_s209.yaml (29 done, 32 pending, 11 running)
+2026-11-06T20:24:06+00:00 LAUNCH pj_s213.yaml gpu=7 pid=948333 attempt=0
+2026-11-06T20:25:26+00:00 DONE r_s209.yaml (30 done, 31 pending, 11 running)
+2026-11-06T20:25:26+00:00 LAUNCH r_s213.yaml gpu=2 pid=948619 attempt=0
+2026-11-06T20:40:46+00:00 DONE pp16_s210.yaml (31 done, 30 pending, 11 running)
+2026-11-06T20:40:49+00:00 LAUNCH pp16_s214.yaml gpu=3 pid=950000 attempt=0
+2026-11-06T20:42:09+00:00 DONE pj_s210.yaml (32 done, 29 pending, 11 running)
+2026-11-06T20:42:11+00:00 LAUNCH pj_s214.yaml gpu=6 pid=950454 attempt=0
+2026-11-06T20:43:31+00:00 DONE r_s211.yaml (33 done, 28 pending, 11 running)
+2026-11-06T20:43:33+00:00 LAUNCH r_s214.yaml gpu=6 pid=950902 attempt=0
+2026-11-06T20:59:54+00:00 DONE pj_s209.yaml (34 done, 27 pending, 11 running)
+2026-11-06T20:59:56+00:00 LAUNCH pp16_s215.yaml gpu=7 pid=952197 attempt=0
+2026-11-06T21:26:16+00:00 DONE pj_s211.yaml (35 done, 26 pending, 11 running)
+2026-11-06T21:26:27+00:00 LAUNCH pj_s215.yaml gpu=5 pid=953991 attempt=0
+2026-11-06T21:29:47+00:00 DONE pp16_s211.yaml (36 done, 25 pending, 11 running)
+2026-11-06T21:29:53+00:00 LAUNCH r_s215.yaml gpu=5 pid=954546 attempt=0
+2026-11-06T23:58:13+00:00 DONE pp16_s212.yaml (37 done, 24 pending, 11 running)
+2026-11-06T23:58:13+00:00 LAUNCH pp16_s216.yaml gpu=4 pid=962949 attempt=0
+2026-11-07T00:21:33+00:00 DONE r_s212.yaml (38 done, 23 pending, 11 running)
+2026-11-07T00:21:36+00:00 LAUNCH pj_s216.yaml gpu=3 pid=964677 attempt=0
+2026-11-07T00:25:56+00:00 DONE pj_s212.yaml (39 done, 22 pending, 11 running)
+2026-11-07T00:25:56+00:00 LAUNCH r_s216.yaml gpu=4 pid=965286 attempt=0
+2026-11-07T01:08:16+00:00 DONE r_s214.yaml (40 done, 21 pending, 11 running)
+2026-11-07T01:08:17+00:00 LAUNCH pp16_s217.yaml gpu=6 pid=967991 attempt=0
+2026-11-07T01:12:37+00:00 DONE pj_s213.yaml (41 done, 20 pending, 11 running)
+2026-11-07T01:12:37+00:00 LAUNCH pj_s217.yaml gpu=7 pid=968598 attempt=0
+2026-11-07T01:25:57+00:00 DONE r_s213.yaml (42 done, 19 pending, 11 running)
+2026-11-07T01:25:58+00:00 LAUNCH r_s217.yaml gpu=2 pid=969714 attempt=0
+2026-11-07T01:38:18+00:00 DONE pj_s214.yaml (43 done, 18 pending, 11 running)
+2026-11-07T01:38:18+00:00 LAUNCH pp16_s218.yaml gpu=6 pid=970766 attempt=0
+2026-11-07T01:39:38+00:00 DONE pp16_s214.yaml (44 done, 17 pending, 11 running)
+2026-11-07T01:39:39+00:00 LAUNCH pj_s218.yaml gpu=3 pid=971219 attempt=0
+2026-11-07T01:50:59+00:00 DONE pp16_s213.yaml (45 done, 16 pending, 11 running)
+2026-11-07T01:50:59+00:00 LAUNCH r_s218.yaml gpu=2 pid=972253 attempt=0
+2026-11-07T02:09:19+00:00 DONE r_s215.yaml (46 done, 15 pending, 11 running)
+2026-11-07T02:09:20+00:00 LAUNCH pp16_s219.yaml gpu=5 pid=973617 attempt=0
+2026-11-07T02:23:40+00:00 DONE pp16_s215.yaml (47 done, 14 pending, 11 running)
+2026-11-07T02:23:41+00:00 LAUNCH pj_s219.yaml gpu=7 pid=974798 attempt=0
+2026-11-07T02:25:01+00:00 DONE pj_s215.yaml (48 done, 13 pending, 11 running)
+2026-11-07T02:25:01+00:00 LAUNCH r_s219.yaml gpu=5 pid=975235 attempt=0
+2026-11-07T04:26:22+00:00 DONE pj_s216.yaml (49 done, 12 pending, 11 running)
+2026-11-07T04:26:22+00:00 LAUNCH pp16_s220.yaml gpu=3 pid=982179 attempt=0
+2026-11-07T04:35:42+00:00 DONE pp16_s216.yaml (50 done, 11 pending, 11 running)
+2026-11-07T04:35:42+00:00 LAUNCH pj_s220.yaml gpu=4 pid=983060 attempt=0
+2026-11-07T04:49:03+00:00 DONE r_s216.yaml (51 done, 10 pending, 11 running)
+2026-11-07T04:49:05+00:00 LAUNCH r_s220.yaml gpu=4 pid=984192 attempt=0
+2026-11-07T05:39:25+00:00 DONE r_s217.yaml (52 done, 9 pending, 11 running)
+2026-11-07T05:39:26+00:00 LAUNCH pp16_s221.yaml gpu=2 pid=987916 attempt=0
+2026-11-07T05:51:46+00:00 DONE r_s218.yaml (53 done, 8 pending, 11 running)
+2026-11-07T05:51:48+00:00 LAUNCH pj_s221.yaml gpu=2 pid=988966 attempt=0
+2026-11-07T06:10:08+00:00 DONE pp16_s217.yaml (54 done, 7 pending, 11 running)
+2026-11-07T06:10:09+00:00 LAUNCH r_s221.yaml gpu=6 pid=990335 attempt=0
+2026-11-07T06:32:29+00:00 DONE pp16_s218.yaml (55 done, 6 pending, 11 running)
+2026-11-07T06:32:38+00:00 LAUNCH pp16_s222.yaml gpu=6 pid=991947 attempt=0
+2026-11-07T06:40:58+00:00 DONE pj_s217.yaml (56 done, 5 pending, 11 running)
+2026-11-07T06:40:58+00:00 LAUNCH pj_s222.yaml gpu=7 pid=993351 attempt=0
+2026-11-07T06:47:18+00:00 DONE pj_s218.yaml (57 done, 4 pending, 11 running)
+2026-11-07T06:47:19+00:00 LAUNCH r_s222.yaml gpu=3 pid=994124 attempt=0
+2026-11-07T06:59:39+00:00 DONE r_s219.yaml (58 done, 3 pending, 11 running)
+2026-11-07T06:59:41+00:00 LAUNCH pp16_s223.yaml gpu=5 pid=995181 attempt=0
+2026-11-07T07:18:01+00:00 DONE pp16_s219.yaml (59 done, 2 pending, 11 running)
+2026-11-07T07:18:01+00:00 LAUNCH pj_s223.yaml gpu=5 pid=996552 attempt=0
+2026-11-07T07:35:21+00:00 DONE pj_s219.yaml (60 done, 1 pending, 11 running)
+2026-11-07T07:35:27+00:00 LAUNCH r_s223.yaml gpu=7 pid=997861 attempt=0
+2026-11-07T09:01:47+00:00 DONE r_s220.yaml (61 done, 0 pending, 11 running)
+2026-11-07T09:06:47+00:00 DONE pp16_s220.yaml (62 done, 0 pending, 10 running)
+2026-11-07T09:15:47+00:00 DONE pj_s220.yaml (63 done, 0 pending, 9 running)
+2026-11-07T10:38:47+00:00 DONE pp16_s221.yaml (64 done, 0 pending, 8 running)
+2026-11-07T10:38:47+00:00 DONE r_s222.yaml (65 done, 0 pending, 7 running)
+2026-11-07T10:45:47+00:00 DONE pj_s221.yaml (66 done, 0 pending, 6 running)
+2026-11-07T10:48:48+00:00 DONE r_s221.yaml (67 done, 0 pending, 5 running)
+2026-11-07T11:04:48+00:00 DONE pj_s222.yaml (68 done, 0 pending, 4 running)
+2026-11-07T11:11:48+00:00 DONE pp16_s222.yaml (69 done, 0 pending, 3 running)
+2026-11-07T11:27:48+00:00 DONE r_s223.yaml (70 done, 0 pending, 2 running)
+2026-11-07T11:52:48+00:00 DONE pp16_s223.yaml (71 done, 0 pending, 1 running)
+2026-11-07T12:02:48+00:00 DONE pj_s223.yaml (72 done, 0 pending, 0 running)
+2026-11-07T12:03:48+00:00 END done=72 gave_up=0 []

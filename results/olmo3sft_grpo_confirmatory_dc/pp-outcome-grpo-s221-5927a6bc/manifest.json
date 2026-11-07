@@ -1,0 +1,132 @@
+{
+ "checkpoint_hashes": {
+  "update_000": "9c77bb421e34dff3043329839378ab8fae525c6137e96bfd85b2eb2d773a7a0b",
+  "update_010": "ee7a3d45a88a1da736d99df32f30901df1b279bb1ca406304529797fb35dcb00",
+  "update_020": "8d9586f4ee1d2cbec692534bea9d28fddc53a8ee8680a5a54e9fd2d2e34b2d10",
+  "update_030": "8ab26ca37a940f1892202bf7c4567c4a4d444ccbc03b5de9c04a111774843ab7",
+  "update_040": "2c74ab256543336cff7b3d8349be18b756cfb6150b2a21c6761b83909766d535"
+ },
+ "counters": {
+  "accepted_targets": 0,
+  "consecutive_no_gradient": 0,
+  "external": {},
+  "feedback_failed": 0,
+  "leaks": 0,
+  "no_gradient_updates": 0,
+  "pool_low": 0,
+  "regenerations": 0,
+  "student_backend_calls": 29102,
+  "student_cache": {
+   "hits": 2218,
+   "misses": 29102
+  }
+ },
+ "data_sha256": {
+  "item_difficulties.parquet": "e9ccab87e87e3ad0e3f4cf9327f463aec0cb166bc1747ec54bc0d8c2941cd2cb",
+  "items.parquet": "90b5d4e184eb61b8bb2eaa48f9582103323874bdcefbad44d645c4405827cabe",
+  "panel_abilities.parquet": "00acb6be59b10684367bd412bc15f66643b90513f329fdda240df439f13d149f",
+  "panel_responses.parquet": "ba46b8e8051fb5d97fd14e91ca32cbeb637bd65053e341c77fc31272cd5f87f5"
+ },
+ "ended_at": "2026-11-07T10:45:28.266423+00:00",
+ "environment": {
+  "cuda_available": true,
+  "env": {
+   "CUBLAS_WORKSPACE_CONFIG": null,
+   "CUDA_VISIBLE_DEVICES": "2",
+   "HF_HUB_OFFLINE": null,
+   "OMP_NUM_THREADS": null,
+   "PYTHONHASHSEED": null,
+   "TOKENIZERS_PARALLELISM": null
+  },
+  "gpus": [
+   "NVIDIA A100-SXM4-40GB, 580.126.09, 40960 MiB, 36467 MiB",
+   "NVIDIA A100-SXM4-40GB, 580.126.09, 40960 MiB, 36467 MiB",
+   "NVIDIA A100-SXM4-40GB, 580.126.09, 40960 MiB, 28995 MiB",
+   "NVIDIA A100-SXM4-40GB, 580.126.09, 40960 MiB, 33935 MiB",
+   "NVIDIA A100-SXM4-40GB, 580.126.09, 40960 MiB, 33791 MiB",
+   "NVIDIA A100-SXM4-40GB, 580.126.09, 40960 MiB, 33763 MiB",
+   "NVIDIA A100-SXM4-40GB, 580.126.09, 40960 MiB, 33893 MiB",
+   "NVIDIA A100-SXM4-40GB, 580.126.09, 40960 MiB, 34019 MiB"
+  ],
+  "packages": {
+   "accelerate": "1.15.0",
+   "anthropic": "1.11.0",
+   "datasets": "5.0.1",
+   "numpy": "2.5.3",
+   "pandas": "3.0.6",
+   "peft": "0.21.2",
+   "pyarrow": "25.0.1",
+   "pydantic": "2.13.5",
+   "scipy": "1.18.1",
+   "statsmodels": "0.15.0",
+   "torch": "2.14.1",
+   "transformers": "5.18.0",
+   "trl": "1.14.1",
+   "virtual-student": "0.1.0",
+   "vllm": null
+  },
+  "platform": "Linux-6.14.0-1018-aws-x86_64-with-glibc2.39",
+  "python": "3.12.13 (main, Mar 10 2026, 18:17:25) [Clang 21.1.4 ]",
+  "torch_cuda": "13.0"
+ },
+ "experiment_id": "olmo3sft_grpo_confirmatory_dc",
+ "external_models": {},
+ "parent_run_id": null,
+ "physical_batching": {
+  "gradient_accumulation_steps": 32,
+  "micro_batch_size": 1
+ },
+ "profile_token_count_method": "ceil(chars/4)",
+ "prompt_sha256": {
+  "adaptation_judge": "f3eb77add5aef5ea231050e5843309aac6245982fe1ccc1a6c0d1b70de751087",
+  "classifier_judge": "acf011db16969543d25a35c9e17c8643c8fda1a2f2566a44d50ed14787500331",
+  "elicit_reasoning": "33599607a0179831dff80a9daeaebcc8e1972a6b6406494e89f66114751fe3d9",
+  "f0_feedback": "82fd7563291b4ca8ca757f857f9e70b1ef90dde12e5b067bd43542d763eaf78a",
+  "f1_feedback": "fe1078e5e8b4e2f5980b14cdf0c6c76c1a3e31715c4ae2638bbf3f1de85efdc9",
+  "f2_generic_explanation": "e8cbc466649d0f2be466c080d7c47092aa6429ec375caf697368b773f31596aa",
+  "f3_script_writer": "2267a396800d3b98bd0a864b35d62d31fbfb757c4c9b9eb41bf34021722a2bd8",
+  "f4_adaptive_tutor": "ed57c4a7f8d80bd0b4da85196f35c239a45b4a9efe40416624030d86d2f285c0",
+  "f5_adaptive_tutor": "67e540120ae28b7ec66ae25a4208bd729c2714e2f168bdd823f4b7936ac24043",
+  "leakage_judge": "d489f99ccc3ec786c2fadfda60f085500d9ec581038c7df436950c33626f724d",
+  "resolve_standalone": "8758e9a9a7dad0534f14f53a6ea36f61527556be11069c765f9b87edb10b59c9",
+  "sibling_question": "ab0a23af395b66315ac439b4d521aea83cf1abbc1afa31930bb6242ccc1178c8",
+  "standalone_judge": "fc1d98b38a59533b97fb3026407555718073033181405e0eef8a963d6ff2b1ce",
+  "student_answer": "e4268cee7362c168306cb8c7217bac5da758c3df0cfd38bbb32dc48569250ead",
+  "student_dialogue_reply": "523f73d0c39dba5564aa75ef967a9b9c707bc3f613e7e4afdb1784a8235e1566",
+  "tutor_base": "1fd6e192e5ceaa8c74c847f7d3abad62b8eff1ee3ddd68bab66cd87ce8a0e866"
+ },
+ "resolved_config_sha256": "41eb7e512418323ecfb5f597ebc0a5373cd4d095691fc63ff0ba2e6b3d1a745c",
+ "resumed": false,
+ "root_seed": 221,
+ "run_id": "pp-outcome-grpo-s221-5927a6bc",
+ "scientific_config_sha256": "5927a6bc31b1783a380fe22f2379e5bc1060817acc52984f929e062ded587ef4",
+ "seed_algorithm_version": "sha256-colon-v1",
+ "source": {
+  "commit": "f4ef7e90bee7e036bd8c0b17921dc6d95024b1cf",
+  "dirty_worktree": false,
+  "lockfile_sha256": "f25c50c29c3f57b4aa649d31f7d96f3f5691ecfc93708b788f54aa9c602e154c",
+  "source_tree_sha256": "f84e678cb143f39a648b204f53c657ead2bfe22069e707ea89bebe823cf3a0e7"
+ },
+ "split_lock_sha256": "d80feded0000a38bc652c6677fac6b3ff69f3a12ebf2dd102d2ded6228edf2ee",
+ "started_at": "2026-11-07T05:53:04.233448+00:00",
+ "status": "complete",
+ "student": {
+  "backend": {
+   "backend": "transformers",
+   "chat_template_sha256": "edbb35ef1219ad2273f716feed08f535a868e167be5b5518adc37ab2bcb8afe6",
+   "device": "cuda",
+   "dtype": "bfloat16",
+   "total_params": 7337988096,
+   "trainable_params": 39976960
+  },
+  "model_id": "allenai/Olmo-3-7B-Instruct-SFT",
+  "revision": "e1452fc572d51966ff4aaeb25118b891eb93e549",
+  "tokenizer_id": "allenai/Olmo-3-7B-Instruct-SFT",
+  "tokenizer_revision": "e1452fc572d51966ff4aaeb25118b891eb93e549"
+ },
+ "taxonomy": {
+  "sha256": "33aff649134ef587d2c6ef98993a4805a11a425fc2f52c7b239ba42211dbcb99",
+  "status": "development_placeholder",
+  "version": "placeholder-v1"
+ }
+}

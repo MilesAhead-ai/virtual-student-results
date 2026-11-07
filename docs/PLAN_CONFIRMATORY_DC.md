@@ -12,8 +12,8 @@ Development evidence: FINDINGS #26 (offline AUC: panel b 0.764, Opus 5.5 rating 
 | 2. Select E2 | done: 600 (60 per skill, 12 per label) | `data/raw/heldout_e2/e2_items.report.json` |
 | 3. Import, recalibrate, check, map, lock | done: P/P+ and both difficulty tables identical to development; lock `d80feded…` | `data/processed/pool_v2_dc` |
 | 4. Pre-registration → sign-off → freeze | done 11-06 (E21): FROZEN.json, tag `confirmatory-dc-frozen`, code `8f5cef2` | `PREREGISTRATION_CONFIRMATORY_DC.md` |
-| 5. Runs: R, PP16, PJ × 24 seeds × 40 updates | **running since 11-06 05:55 UTC**; E2 blackout until the queue logs END | `artifacts/olmo3sft_grpo_confirmatory_dc_queue.log` |
-| 6. Analysis, results doc, FINDINGS, publish | todo | — |
+| 5. Runs: R, PP16, PJ × 24 seeds × 40 updates | done 11-07 12:03 UTC: 72/72, 0 failures | `results/olmo3sft_grpo_confirmatory_dc/queue.log` |
+| 6. Analysis, results doc, FINDINGS, publish | done 11-07: H1 not supported; H2, H3 supported (FINDINGS #28) | `CONFIRMATORY_DC_RESULTS.md` |
 
 ## Design (to be fixed in the pre-registration)
 
