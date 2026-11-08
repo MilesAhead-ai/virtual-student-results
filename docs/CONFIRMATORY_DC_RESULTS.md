@@ -53,3 +53,12 @@ What the result does and does not say:
 - The development estimate (+0.0095 on S with 4 seeds) did not replicate; it was within its wide
   interval. The confirmed PP16 − R effect (+0.010) is about half of confirmatory v1's PP − R (+0.019 on
   E1, pool v1); E2 starts easier for the student (0.775 initial accuracy vs 0.69 on E1).
+
+## Notes added after the study (not part of the pre-registered analysis)
+
+- **2026-11-08, exploratory (FINDINGS #29).** Recalibrating pool v2 with only the 8 small local models of
+  panel v1 gives practically the same difficulty as panel v2 (within-skill rank correlation 0.964) and
+  the same offline validity (AUC 0.762–0.763 vs 0.764), better than the Opus 5.5 rating on every skill.
+  So the PP16 arm is, in effect, the small-model panel; the confirmed result reads: a panel of eight free
+  local models is as good for training-item selection as the strongest available model's direct
+  judgement, and a better measure of what the student gets wrong.

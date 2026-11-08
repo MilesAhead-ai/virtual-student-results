@@ -1,0 +1,11 @@
+### olmo3sft_grpo_pool_v2 R runs: weighted AUC for a wrong answer (skill × quarter)
+  panel v2 (15: 8 small + 7 API)   0.764  (presentations 12739)
+  8 small local models only        0.763  (presentations 12739)
+  Opus 5.5 rating                  0.698  (presentations 12739)
+  skills where the 8 small models beat Opus: 10/10
+### olmo3sft_grpo_confirmatory_dc R runs: weighted AUC for a wrong answer (skill × quarter)
+  panel v2 (15: 8 small + 7 API)   0.764  (presentations 30584)
+  8 small local models only        0.762  (presentations 30584)
+  Opus 5.5 rating                  0.706  (presentations 30584)
+  skills where the 8 small models beat Opus: 10/10
+within-skill rank correlation, panel v2 vs small-8: 0.964
