@@ -1,0 +1,139 @@
+{
+ "checkpoint_hashes": {
+  "update_000": "947d8e411fba1d14d13ffbaee9d88cd1fe06caa586786c856692e63980d1e829",
+  "update_010": "3660b39d1652c52b315cd06d97f7c4cd8abf05e6373a100de0c5739b82f319a2",
+  "update_020": "37862a52a94d4737cc2a1f5084c6b27859830be511572a0c67a1570a7061f583",
+  "update_030": "fdfbcdb3e1911cb210c368f9d0ba87d969ac6b271448631c80313375b3333c90",
+  "update_040": "ee835d6caca087e21b284b011d94007b04b7c8496723905008fe18a4bbb7a91c",
+  "update_050": "81d92128a0a0cc5110bd8a0aceca1ce017418e3e758c37fbee76ec3c3128b635",
+  "update_060": "9470888f9e192160188a9edd3e40f56e186e0f1aea83ddf42cf1b2d8f12e4107",
+  "update_070": "2cd05245349e52278226d4a30a7be5b1bb655a100f077140792bdeb76763e056",
+  "update_080": "0ce8848334d589aa83912317ce537e17602a574d7408b4deab07860e43efff7b",
+  "update_090": "a82211e84467346e60bdff2d020b6404d55d9846c9a30914132577f444b2d3d8",
+  "update_100": "096683bb663714849d1bf2e56b52b58c727a4d2971af6d3bd0497379aba709ce"
+ },
+ "counters": {
+  "accepted_targets": 0,
+  "consecutive_no_gradient": 0,
+  "external": {},
+  "feedback_failed": 0,
+  "leaks": 0,
+  "no_gradient_updates": 0,
+  "pool_low": 0,
+  "regenerations": 0,
+  "student_backend_calls": 64584,
+  "student_cache": {
+   "hits": 2016,
+   "misses": 64584
+  }
+ },
+ "data_sha256": {
+  "item_difficulties.parquet": "fc44989588545e4e026e69817c8d80821221e81e930752378004ca32fd8988c8",
+  "items.parquet": "8a38e5a735cd472f4400199f9deff1d4a05e2ee77dddbdc3c50b5ea6d13c89ae",
+  "panel_abilities.parquet": "74db24c3c5bcab16c29c6089513dc6ef231e63225d2b702d67178c7da08d193f",
+  "panel_responses.parquet": "b4d93f0112796ae438774c74cc3cab98436f823af556a189fca320d8a514be7b",
+  "sibling_map.parquet": "060b6f8f16be39282210cbd326f92005888e545452892d3bcccc5cb752f5f12d"
+ },
+ "ended_at": "2026-11-09T06:08:57.095405+00:00",
+ "environment": {
+  "cuda_available": true,
+  "env": {
+   "CUBLAS_WORKSPACE_CONFIG": null,
+   "CUDA_VISIBLE_DEVICES": "2",
+   "HF_HUB_OFFLINE": null,
+   "OMP_NUM_THREADS": null,
+   "PYTHONHASHSEED": null,
+   "TOKENIZERS_PARALLELISM": null
+  },
+  "gpus": [
+   "NVIDIA A100-SXM4-40GB, 580.126.09, 40960 MiB, 36467 MiB",
+   "NVIDIA A100-SXM4-40GB, 580.126.09, 40960 MiB, 36467 MiB",
+   "NVIDIA A100-SXM4-40GB, 580.126.09, 40960 MiB, 14499 MiB",
+   "NVIDIA A100-SXM4-40GB, 580.126.09, 40960 MiB, 14499 MiB",
+   "NVIDIA A100-SXM4-40GB, 580.126.09, 40960 MiB, 14499 MiB",
+   "NVIDIA A100-SXM4-40GB, 580.126.09, 40960 MiB, 0 MiB",
+   "NVIDIA A100-SXM4-40GB, 580.126.09, 40960 MiB, 0 MiB",
+   "NVIDIA A100-SXM4-40GB, 580.126.09, 40960 MiB, 0 MiB"
+  ],
+  "packages": {
+   "accelerate": "1.15.0",
+   "anthropic": "1.11.0",
+   "datasets": "5.0.1",
+   "numpy": "2.5.3",
+   "pandas": "3.0.6",
+   "peft": "0.21.2",
+   "pyarrow": "25.0.1",
+   "pydantic": "2.13.5",
+   "scipy": "1.18.1",
+   "statsmodels": "0.15.0",
+   "torch": "2.14.1",
+   "transformers": "5.18.0",
+   "trl": "1.14.1",
+   "virtual-student": "0.1.0",
+   "vllm": null
+  },
+  "platform": "Linux-6.14.0-1018-aws-x86_64-with-glibc2.39",
+  "python": "3.12.13 (main, Mar 10 2026, 18:17:25) [Clang 21.1.4 ]",
+  "torch_cuda": "13.0"
+ },
+ "experiment_id": "olmo3sft_grpo_pool_v2_controls2",
+ "external_models": {},
+ "parent_run_id": null,
+ "physical_batching": {
+  "gradient_accumulation_steps": 32,
+  "micro_batch_size": 1
+ },
+ "profile_token_count_method": "ceil(chars/4)",
+ "prompt_sha256": {
+  "adaptation_judge": "f3eb77add5aef5ea231050e5843309aac6245982fe1ccc1a6c0d1b70de751087",
+  "classifier_judge": "acf011db16969543d25a35c9e17c8643c8fda1a2f2566a44d50ed14787500331",
+  "elicit_reasoning": "33599607a0179831dff80a9daeaebcc8e1972a6b6406494e89f66114751fe3d9",
+  "f0_feedback": "82fd7563291b4ca8ca757f857f9e70b1ef90dde12e5b067bd43542d763eaf78a",
+  "f1_feedback": "fe1078e5e8b4e2f5980b14cdf0c6c76c1a3e31715c4ae2638bbf3f1de85efdc9",
+  "f2_generic_explanation": "e8cbc466649d0f2be466c080d7c47092aa6429ec375caf697368b773f31596aa",
+  "f3_script_writer": "2267a396800d3b98bd0a864b35d62d31fbfb757c4c9b9eb41bf34021722a2bd8",
+  "f4_adaptive_tutor": "ed57c4a7f8d80bd0b4da85196f35c239a45b4a9efe40416624030d86d2f285c0",
+  "f5_adaptive_tutor": "67e540120ae28b7ec66ae25a4208bd729c2714e2f168bdd823f4b7936ac24043",
+  "leakage_judge": "d489f99ccc3ec786c2fadfda60f085500d9ec581038c7df436950c33626f724d",
+  "resolve_standalone": "8758e9a9a7dad0534f14f53a6ea36f61527556be11069c765f9b87edb10b59c9",
+  "sibling_question": "ab0a23af395b66315ac439b4d521aea83cf1abbc1afa31930bb6242ccc1178c8",
+  "standalone_judge": "fc1d98b38a59533b97fb3026407555718073033181405e0eef8a963d6ff2b1ce",
+  "student_answer": "e4268cee7362c168306cb8c7217bac5da758c3df0cfd38bbb32dc48569250ead",
+  "student_dialogue_reply": "523f73d0c39dba5564aa75ef967a9b9c707bc3f613e7e4afdb1784a8235e1566",
+  "tutor_base": "1fd6e192e5ceaa8c74c847f7d3abad62b8eff1ee3ddd68bab66cd87ce8a0e866"
+ },
+ "resolved_config_sha256": "bca95e63fbcc02571c3fb139285d4473f2c2a02c90e9bc35cea65f2c29113ae9",
+ "resumed": false,
+ "root_seed": 0,
+ "run_id": "pp-outcome-grpo-s000-ba47e55d",
+ "scientific_config_sha256": "ba47e55d6fad9010cbd97fb63c99680d745f521f5ab31d9ff92d01e54804e72c",
+ "seed_algorithm_version": "sha256-colon-v1",
+ "source": {
+  "commit": "1649182a8ebc778c5fbbe60442ba6b116bbda74d",
+  "dirty_worktree": false,
+  "lockfile_sha256": "f25c50c29c3f57b4aa649d31f7d96f3f5691ecfc93708b788f54aa9c602e154c",
+  "source_tree_sha256": "f84e678cb143f39a648b204f53c657ead2bfe22069e707ea89bebe823cf3a0e7"
+ },
+ "split_lock_sha256": "4f468bd272ef723cf0b417f3c9dbe785fb5b3983f5da581a82ec79eb1670be7c",
+ "started_at": "2026-11-08T17:50:23.601051+00:00",
+ "status": "complete",
+ "student": {
+  "backend": {
+   "backend": "transformers",
+   "chat_template_sha256": "edbb35ef1219ad2273f716feed08f535a868e167be5b5518adc37ab2bcb8afe6",
+   "device": "cuda",
+   "dtype": "bfloat16",
+   "total_params": 7337988096,
+   "trainable_params": 39976960
+  },
+  "model_id": "allenai/Olmo-3-7B-Instruct-SFT",
+  "revision": "e1452fc572d51966ff4aaeb25118b891eb93e549",
+  "tokenizer_id": "allenai/Olmo-3-7B-Instruct-SFT",
+  "tokenizer_revision": "e1452fc572d51966ff4aaeb25118b891eb93e549"
+ },
+ "taxonomy": {
+  "sha256": "33aff649134ef587d2c6ef98993a4805a11a425fc2f52c7b239ba42211dbcb99",
+  "status": "development_placeholder",
+  "version": "placeholder-v1"
+ }
+}

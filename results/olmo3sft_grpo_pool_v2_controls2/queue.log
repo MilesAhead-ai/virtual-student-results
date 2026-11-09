@@ -1,0 +1,18 @@
+2026-11-08T17:49:25+00:00 START 8 configs on GPUs [2, 3, 4, 5, 6, 7] x2
+2026-11-08T17:49:25+00:00 LAUNCH ps_s0.yaml gpu=2 pid=1113143 attempt=0
+2026-11-08T17:49:46+00:00 LAUNCH pjraw_s0.yaml gpu=3 pid=1113472 attempt=0
+2026-11-08T17:50:06+00:00 LAUNCH ps_s1.yaml gpu=4 pid=1113726 attempt=0
+2026-11-08T17:50:26+00:00 LAUNCH pjraw_s1.yaml gpu=5 pid=1114109 attempt=0
+2026-11-08T17:50:46+00:00 LAUNCH ps_s2.yaml gpu=6 pid=1114503 attempt=0
+2026-11-08T17:51:07+00:00 LAUNCH pjraw_s2.yaml gpu=7 pid=1114891 attempt=0
+2026-11-08T17:51:27+00:00 LAUNCH ps_s3.yaml gpu=2 pid=1115283 attempt=0
+2026-11-08T17:51:47+00:00 LAUNCH pjraw_s3.yaml gpu=3 pid=1115684 attempt=0
+2026-11-09T04:29:08+00:00 DONE pjraw_s3.yaml (1 done, 0 pending, 7 running)
+2026-11-09T04:38:08+00:00 DONE ps_s2.yaml (2 done, 0 pending, 6 running)
+2026-11-09T04:51:08+00:00 DONE pjraw_s2.yaml (3 done, 0 pending, 5 running)
+2026-11-09T04:56:08+00:00 DONE pjraw_s0.yaml (4 done, 0 pending, 4 running)
+2026-11-09T05:33:08+00:00 DONE ps_s3.yaml (5 done, 0 pending, 3 running)
+2026-11-09T05:41:08+00:00 DONE pjraw_s1.yaml (6 done, 0 pending, 2 running)
+2026-11-09T05:53:08+00:00 DONE ps_s1.yaml (7 done, 0 pending, 1 running)
+2026-11-09T06:09:09+00:00 DONE ps_s0.yaml (8 done, 0 pending, 0 running)
+2026-11-09T06:10:09+00:00 END done=8 gave_up=0 []

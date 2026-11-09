@@ -33,3 +33,26 @@ judgement and keeps everything else fixed.
 
 S accuracy curves and contrasts PJ − R, PP16 − PJ, L − R (paired by seed, t-intervals), plus what each
 arm selected (greedy success and panel b by quarter).
+
+## Phase 2 (2026-11-08, after confirmatory DC and FINDINGS #29): two development arms
+
+Owner: "we need stronger evidence". Written before any run; results are reported whatever they are.
+
+| arm | difficulty | data root / calibration |
+|---|---|---|
+| **PS** | panel of the **8 small local models only** (panel v1 members), joint W+P+P+ fit | `pool_v2_small8` / `pool-v2-small8` |
+| **PJ-raw** | Opus 5.5 rating, **no panel information**: b = ln((100 − p)/p), p clipped to 1–99; refusals get the skill median | `pool_v2_opusraw` / `opus55-logit` |
+
+Both: PP16 rule, pool v2, OLMo-3 outcome GRPO, 100 updates, seeds 0–3, S and D every 5 updates
+(as DEV_RUN10/11), compared with the existing R, PP16 and PJ dev runs at the same seeds.
+
+What would count as evidence (pre-specified reading, development level):
+- **Small panel is enough:** PS − R at u40 similar to PP16 − R (+0.017), and PS − PJ-raw > 0.
+- **The panel supplies the scale:** PJ-raw − R clearly below PJ − R (+0.007), i.e. the single-model rating
+  needs the panel's distribution to work.
+- With 4 seeds these are indications only (DEV_RUN11's +0.0095 did not replicate); anything worth claiming
+  goes to a pre-registered study.
+
+| step | status |
+|---|---|
+| PS and PJ-raw runs (8) | done 11-09 (8/8). Small panel ≈ full panel: supported. Panel supplies the scale: not supported (FINDINGS #30) |
