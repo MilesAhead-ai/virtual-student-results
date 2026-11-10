@@ -2,7 +2,7 @@
 
 Does choosing training items by **PanelProbe** difficulty make an LLM student
 learn faster? PanelProbe calibrates each item's difficulty with an 8-model
-panel. This repository is the public record of the experiments: settings,
+panel of small open models. This repository is the public record of the experiments: settings,
 data versions, validity, results and reports. It is a read-only mirror of
 `docs/`, `results/` and `configs/confirmatory/` from the (private) source repository; the code is not
 included.
@@ -13,21 +13,40 @@ included.
 |---|---|
 | [`docs/EXPERIMENT_REGISTRY.md`](docs/EXPERIMENT_REGISTRY.md) | **Every experiment**: settings, data version, evaluation mode, validity, headline numbers, current reference settings, comparability rules, and generated per-run tables |
 | [`docs/FINDINGS.md`](docs/FINDINGS.md) | What each result means, newest first |
-| [`docs/OPEN_DECISIONS.md`](docs/OPEN_DECISIONS.md) | Decisions that fixed the settings (E1–E10) and open questions |
-| `docs/DEV_RUN*.md`, `docs/STUDENT_SCREEN.md` | Full report for each experiment |
+| [`docs/OPEN_DECISIONS.md`](docs/OPEN_DECISIONS.md) | Owner decisions that fixed the settings and the studies (E1–E21) |
+| `docs/DEV_RUN*.md`, `docs/STUDENT_SCREEN*.md`, `docs/PLAN_*.md` | Full report for each experiment, and the plan each one followed |
 | [`results/registry/runs.csv`](results/registry/runs.csv) | One row per run: all parameters and metrics |
 | `results/<experiment>/` | Per-run config, metrics, manifest and analysis |
 | [`docs/PREREGISTRATION_CONFIRMATORY_V1.md`](docs/PREREGISTRATION_CONFIRMATORY_V1.md) | The confirmatory study, frozen before any held-out data was seen |
 | [`configs/confirmatory/v1/`](configs/confirmatory/v1/) | Its 40 frozen run configs, `FROZEN.json` (hashes) and `topic_twins.json` |
+| [`docs/PREREGISTRATION_CONFIRMATORY_DC.md`](docs/PREREGISTRATION_CONFIRMATORY_DC.md) | The second confirmatory study (panel difficulty vs a single model's rating), frozen before its held-out set E2 was read |
+| [`configs/confirmatory/dc/`](configs/confirmatory/dc/) | Its 72 frozen run configs and `FROZEN.json` |
 
-## Current state
+## Current state (2026-11-10)
 
-**Confirmatory v1 is complete (2026-10-29): both pre-registered hypotheses are
-supported** ([`docs/CONFIRMATORY_V1_RESULTS.md`](docs/CONFIRMATORY_V1_RESULTS.md)).
-On 600 held-out items with 16 fresh seeds, PanelProbe selection beats random
-selection by +1.9 points of final accuracy (95% CI +0.9 to +3.0). An oracle
-that measures the student directly reaches +3.2. See the top rows of
-`docs/FINDINGS.md` for everything else.
+Two pre-registered confirmatory studies are complete.
+
+1. **Confirmatory v1 (2026-10-29): both hypotheses supported**
+   ([`docs/CONFIRMATORY_V1_RESULTS.md`](docs/CONFIRMATORY_V1_RESULTS.md)). With difficulty from a panel of
+   8 small local models, PanelProbe selection beats random selection by +1.9 points of final held-out
+   accuracy after 40 updates (95% CI +0.9 to +3.0; 16 seeds, 600 held-out items). An oracle that measures
+   the student directly reaches +3.2.
+2. **Confirmatory DC (2026-11-07): H1 not supported, H2 and H3 supported**
+   ([`docs/CONFIRMATORY_DC_RESULTS.md`](docs/CONFIRMATORY_DC_RESULTS.md)). On a fresh, topic-disjoint
+   held-out set (600 items, 24 seeds per arm): targeting by the panel's difficulty beats random (+1.0, CI
+   +0.5 to +1.6), and so does targeting by Claude Opus 5.5's direct rating (+0.9, CI +0.4 to +1.4); the
+   panel's difficulty does not beat the rating in training (+0.1, CI −0.5 to +0.7).
+
+What else the records show:
+- **Measurement.** The small-model panel predicts which items the student gets wrong better than the
+  strongest single model's rating on every skill (AUC 0.76 vs 0.70), and the 8 small models alone are as
+  good as the extended 15-member panel (FINDINGS #26, #29).
+- **Training.** All the targeting variants tried (full panel, small panel only, the rating with or without
+  the panel's scale) are within noise of each other in development; the advantage over random is largest
+  around 40 updates and fades later as the student outgrows the item pool (FINDINGS #16, #20, #30).
+- A second student model (Ministral-8B) showed no PanelProbe advantage (FINDINGS #15).
+
+See the top rows of `docs/FINDINGS.md` for the newest results.
 
 ## Notes
 

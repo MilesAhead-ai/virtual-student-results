@@ -62,3 +62,9 @@ What the result does and does not say:
   So the PP16 arm is, in effect, the small-model panel; the confirmed result reads: a panel of eight free
   local models is as good for training-item selection as the strongest available model's direct
   judgement, and a better measure of what the student gets wrong.
+- **2026-11-09, development follow-up (FINDINGS #30; criteria written before the runs).** Two more arms
+  on S, seeds 0–3, 100 updates: PP16 on the 8-small-model panel alone (PS), and on the Opus rating with
+  no panel information at all (PJ-raw, b = ln((100 − p)/p)). vs R at u40: PS +0.020, PP16 +0.017, PJ-raw
+  +0.011, PJ +0.007; AULC +0.004 / +0.006 / +0.005 / +0.001. The small panel alone does as well as the
+  full panel; the panel-free rating is not worse than the mapped one, so the panel's scale is not what
+  makes the rating work. All four targeting arms are within noise of each other.
