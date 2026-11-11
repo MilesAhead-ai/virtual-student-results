@@ -21,10 +21,11 @@ included.
 | [`configs/confirmatory/v1/`](configs/confirmatory/v1/) | Its 40 frozen run configs, `FROZEN.json` (hashes) and `topic_twins.json` |
 | [`docs/PREREGISTRATION_CONFIRMATORY_DC.md`](docs/PREREGISTRATION_CONFIRMATORY_DC.md) | The second confirmatory study (panel difficulty vs a single model's rating), frozen before its held-out set E2 was read |
 | [`configs/confirmatory/dc/`](configs/confirmatory/dc/) | Its 72 frozen run configs and `FROZEN.json` |
+| [`docs/PREREGISTRATION_CONFIRMATORY_MV.md`](docs/PREREGISTRATION_CONFIRMATORY_MV.md) | The third confirmatory study (measurement validity), frozen before its estimates existed; `results/confirmatory_mv/` |
 
-## Current state (2026-11-10)
+## Current state (2026-11-11)
 
-Two pre-registered confirmatory studies are complete.
+Three pre-registered confirmatory studies are complete.
 
 1. **Confirmatory v1 (2026-10-29): both hypotheses supported**
    ([`docs/CONFIRMATORY_V1_RESULTS.md`](docs/CONFIRMATORY_V1_RESULTS.md)). With difficulty from a panel of
@@ -36,11 +37,15 @@ Two pre-registered confirmatory studies are complete.
    held-out set (600 items, 24 seeds per arm): targeting by the panel's difficulty beats random (+1.0, CI
    +0.5 to +1.6), and so does targeting by Claude Opus 5.5's direct rating (+0.9, CI +0.4 to +1.4); the
    panel's difficulty does not beat the rating in training (+0.1, CI −0.5 to +0.7).
+3. **Confirmatory MV (2026-11-11): H1 supported** ([`docs/CONFIRMATORY_MV_RESULTS.md`](docs/CONFIRMATORY_MV_RESULTS.md)).
+   On 1,199 held-out items (E1 + E2), difficulty from the panel of 8 small open models predicts which items
+   trained students get wrong better than Claude Opus 5.5's direct rating: mean within-skill correlation
+   0.44 vs 0.32, difference +0.12 (CI +0.07 to +0.17), on each set separately as well.
 
 What else the records show:
-- **Measurement.** The small-model panel predicts which items the student gets wrong better than the
-  strongest single model's rating on every skill (AUC 0.76 vs 0.70), and the 8 small models alone are as
-  good as the extended 15-member panel (FINDINGS #26, #29).
+- **Measurement.** In development too, the small-model panel predicts the student's wrong answers better
+  than the strongest single model's rating (AUC 0.76 vs 0.70), and the 8 small models alone are as good
+  as the extended 15-member panel (FINDINGS #26, #29).
 - **Training.** All the targeting variants tried (full panel, small panel only, the rating with or without
   the panel's scale) are within noise of each other in development; the advantage over random is largest
   around 40 updates and fades later as the student outgrows the item pool (FINDINGS #16, #20, #30).

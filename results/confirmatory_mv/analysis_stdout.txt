@@ -1,0 +1,164 @@
+{
+ "integrity": {
+  "E1": {
+   "items_used": 599,
+   "items_in_set": 600,
+   "runs": 40,
+   "missing_estimates": {
+    "small": 0,
+    "opus": 1
+   }
+  },
+  "E2": {
+   "items_used": 600,
+   "items_in_set": 600,
+   "runs": 72,
+   "missing_estimates": {
+    "small": 0,
+    "opus": 0
+   }
+  }
+ },
+ "mean_within_skill_spearman": {
+  "small": 0.4424,
+  "opus": 0.3246
+ },
+ "H1_small_minus_opus": {
+  "estimate": 0.1178,
+  "ci95": [
+   0.0687,
+   0.1666
+  ],
+  "share_reps_le_0": 0.0,
+  "cells": 20,
+  "supported": true
+ },
+ "secondary": {
+  "E1_alone_small_minus_opus": {
+   "estimate": 0.1552,
+   "ci95": [
+    0.0878,
+    0.2195
+   ],
+   "share_reps_le_0": 0.0,
+   "cells": 10,
+   "supported": true
+  },
+  "E2_alone_small_minus_opus": {
+   "estimate": 0.0803,
+   "ci95": [
+    0.0082,
+    0.1564
+   ],
+   "share_reps_le_0": 0.0151,
+   "cells": 10,
+   "supported": true
+  },
+  "E2_full_panel_minus_opus": {
+   "estimate": 0.0854,
+   "ci95": [
+    0.0168,
+    0.1579
+   ],
+   "share_reps_le_0": 0.0079,
+   "cells": 10,
+   "supported": true
+  },
+  "presentation_auc": {
+   "small": 0.7623,
+   "opus": 0.6856
+  },
+  "base_model_small_minus_opus": {
+   "estimate": 0.0939,
+   "ci95": [
+    0.0455,
+    0.1508
+   ],
+   "share_reps_le_0": 0.0002,
+   "cells": 20,
+   "supported": true
+  }
+ },
+ "exploratory_per_cell_spearman": {
+  "E1:cross_text_connections": {
+   "small": 0.601,
+   "opus": 0.512
+  },
+  "E1:text_structure": {
+   "small": 0.439,
+   "opus": 0.281
+  },
+  "E1:words_in_context": {
+   "small": 0.789,
+   "opus": 0.588
+  },
+  "E1:rhetorical_synthesis": {
+   "small": 0.417,
+   "opus": 0.193
+  },
+  "E1:transitions": {
+   "small": 0.63,
+   "opus": 0.472
+  },
+  "E1:central_ideas": {
+   "small": 0.448,
+   "opus": 0.345
+  },
+  "E1:command_of_evidence_textual": {
+   "small": 0.744,
+   "opus": 0.588
+  },
+  "E1:inferences": {
+   "small": 0.596,
+   "opus": 0.462
+  },
+  "E1:boundaries": {
+   "small": 0.043,
+   "opus": -0.345
+  },
+  "E1:form_structure_sense": {
+   "small": 0.367,
+   "opus": 0.427
+  },
+  "E2:cross_text_connections": {
+   "small": 0.268,
+   "opus": 0.357
+  },
+  "E2:text_structure": {
+   "small": 0.533,
+   "opus": 0.321
+  },
+  "E2:words_in_context": {
+   "small": 0.365,
+   "opus": 0.306
+  },
+  "E2:rhetorical_synthesis": {
+   "small": 0.301,
+   "opus": 0.278
+  },
+  "E2:transitions": {
+   "small": 0.554,
+   "opus": 0.497
+  },
+  "E2:central_ideas": {
+   "small": 0.224,
+   "opus": 0.273
+  },
+  "E2:command_of_evidence_textual": {
+   "small": 0.501,
+   "opus": 0.521
+  },
+  "E2:inferences": {
+   "small": 0.588,
+   "opus": 0.162
+  },
+  "E2:boundaries": {
+   "small": 0.017,
+   "opus": -0.176
+  },
+  "E2:form_structure_sense": {
+   "small": 0.421,
+   "opus": 0.431
+  }
+ }
+}

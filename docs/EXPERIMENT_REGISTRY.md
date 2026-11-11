@@ -83,7 +83,7 @@ numbers stand but a later experiment answers the question better;
 | F23 | `olmo3sft_grpo_pool_v2_controls` | 11-04 → 11-05 | Panel b vs Opus rating (PJ) vs generator labels (L) | PJ, L × 4 | calibration `pool-v2-opus55q` / policy l | pool v2 | invariant | valid (4 seeds) | Only PP16 clearly beats R at u40 | DEV_RUN11_DIFFICULTY_CONTROLS.md | — |
 | F24 | `olmo3sft_grpo_pool_v2_controls2` | 11-08 → 11-09 | Small panel only (PS), panel-free rating (PJ-raw) | PS, PJ-raw × 4 | calibrations `pool-v2-small8`, `opus55-logit` | pool v2 | invariant | valid (4 seeds; 2 PJ-raw runs lost reasoning) | All targeting arms within noise | FINDINGS #30 | — |
 | C2 | `olmo3sft_grpo_confirmatory_dc` | 11-06 → 11-07 | **Confirmatory:** panel b vs Opus rating vs random | R, PP16, PJ × 24 | 40 updates, E2 primary, seeds 200–223 | pool_v2_dc (lock `d80feded`) + fresh E2 | invariant, confirmatory | valid | H1 PP16 − PJ +0.0014 (not supported); H2 +0.0104, H3 +0.0090 (supported) | CONFIRMATORY_DC_RESULTS.md | freeze `8f5cef2`, tag `confirmatory-dc-frozen` |
-| C3 | confirmatory MV (no training; uses C1 and C2 outcomes) | 11-11 → | **Confirmatory:** does the small panel predict E1/E2 errors better than the Opus rating? | — | — | E1, E2 | — | running | — | PREREGISTRATION_CONFIRMATORY_MV.md | freeze `2bef581`, tag `confirmatory-mv-frozen` |
+| C3 | confirmatory MV (no training; uses C1 and C2 outcomes) | 11-11 → | **Confirmatory:** does the small panel predict E1/E2 errors better than the Opus rating? | — | — | E1, E2 | — | valid | H1 small panel − Opus +0.118 [+0.069, +0.167] (supported) | CONFIRMATORY_MV_RESULTS.md | freeze `2bef581`, tag `confirmatory-mv-frozen` |
 
 ## 3. Current reference settings
 
