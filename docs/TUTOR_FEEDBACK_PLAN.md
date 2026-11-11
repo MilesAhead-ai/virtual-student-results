@@ -9,7 +9,7 @@ GRPO barely moves them; their groups are often all-wrong).
 |---|---|---|
 | A. Engineering (§3) | mostly done 11-04: spend ledger + hard ceiling (`backends/spend.py`, `budget.api_ledger_file`); `bedrock_runtime` provider (Sonnet 5.5 is not on Mantle); schemas sent without numeric bounds; live test of all 7 schemas; F4 smoke run (1 wrong item: 11 calls, $0.095, ~2 min, 1 leak caught and regenerated, target accepted). Not done: concurrency in the feedback step (measure in B first); prompt fixes (§6) | commits `1ba668b`, `8c4a4f1` |
 | B. Pilot | round 1 done 11-04 (FINDINGS #23: 3 problems, fixed in `c814a79`, `00ba0fb`); round 2 done 11-04 (FINDINGS #24): fixes work, ~8 min/update | `artifacts/olmo3sft_feedback_pilot{,2}/` |
-| C0. SFT learning-rate check (F1, 2e-4 / 1e-4 / 5e-5, 20 updates) | running since 11-11 | `artifacts/olmo3sft_feedback_lr/` |
+| C0. SFT learning-rate check (F1, 2e-4 / 1e-4 / 5e-5, 20 updates) | done 11-11: **all rates collapse to bare answers** (FINDINGS #33); fix awaiting owner | `artifacts/olmo3sft_feedback_lr/` |
 | C1. Dev comparison: F0, F1, F2, F4 (SFT) + hybrid GRPO+F4, PP16, 3 seeds × 40 updates (E23) | todo; hybrid code done (`training.method: grpo_feedback`, `training.sft_weight`) | — |
 | D. Confirmatory | todo | — |
 
