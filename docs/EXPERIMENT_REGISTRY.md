@@ -74,13 +74,24 @@ numbers stand but a later experiment answers the question better;
 | F14 | `ministral8b_grpo_dev_rpp` | 10-30 | Does PP beat R on the second student? | R, PP × 4 | Ministral-8B, lr 1e-4, θ₀ 1.0, token-id prompts | pool-v1-final | invariant | valid (4 seeds); strict metric distorted by a format attractor | PP − R −0.008 [−0.020, +0.003]; PP ahead early (u10–25), both plateau ~0.78 by u40 | FINDINGS #14 | this commit |
 | F15 | `ministral8b_grpo_dev_rpp8` | 10-31 | Second student, 8 seeds, parser v2: does PP beat R? | R, PP × 8 | as F14 + `evaluation.answer_parser: answer-line-v2` | pool-v1-final | invariant | valid (8 seeds) | no PP advantage: AULC −0.001 [−0.010, +0.008], u40 −0.003; targeting itself works | FINDINGS #15 | this commit |
 | F16 | `olmo3sft_grpo_long100` | 10-31 → 11-01 | Does PP's advantage grow with longer training? Does slate 64 help? | R, PP16, PP64 × 4 | C1 settings, **100 updates**, slate 16/64 | pool-v1-final | invariant | valid (4 seeds) | PP16 − R +0.019 at u40 → +0.005 at u80; pool depletion; slate 64 no help | DEV_RUN9_OLMO_LONG100.md | this commit |
+| F17 | `pool_v2` pilots (`data/raw/pool_v2/H1pilot`, `candidates_W`) | 11-01 → 11-02 | Can harder items be generated and calibrated? | panel candidates; G1/G2 × 6 skills × 100 | no training | pool-v1-final W | panel only | valid | Open models cap at θ ≈ 2.6; G2 hard only on inferences/CoE | PLAN_HARD_POOL.md, FINDINGS #17 | — |
+| F18 | API panel candidates | 11-02 | Do API models extend the panel upward? | 10 Bedrock models | no training | W + pilot | panel only | valid | Graded ladder above qwen3:14b on hard items | FINDINGS #18 | — |
+| F19 | panel v2 calibration (`data/processed/pool_v2*`) | 11-03 | W-only vs joint W+P fit | — | 15 members | pool v2 | panel only | valid | Joint fit needed; +200/+150 hard items | FINDINGS #19 | — |
+| F20 | `olmo3sft_grpo_pool_v2` | 11-03 → 11-04 | Does pool v2 keep PP ahead late? | R, PP16 × 4 | 100 updates, **pool v2**, parser v2 | pool v2 (`pool-v2-wp`, lock `4f468bd2`) | invariant | valid (4 seeds; S has 2% twin exposure, FINDINGS #31) | u40 +0.017, late advantage does not grow | DEV_RUN10_POOL_V2.md | — |
+| F21 | tutor pilots (`olmo3sft_feedback_pilot{,2}`) | 11-04 | Does the tutor pipeline work live? | F1, F2, F4 × 1, 5 updates | **SFT**, Opus 5.5 tutor | pool v2 | invariant | pilot only | Works after fixes; ~8 min/update; F4 ≈ $1.2/update | FINDINGS #23, #24 | — |
+| F22 | `olmo3sft_grpo_pool_v2_ppall` (+ `_rerun`) | 11-04 | PP from the whole pool instead of a slate of 16 | PP-all × 4 | slate 4096 | pool v2 | invariant | valid (reruns are replays) | AULC +0.0074 [+0.003, +0.012] vs R | FINDINGS #25 | — |
+| F23 | `olmo3sft_grpo_pool_v2_controls` | 11-04 → 11-05 | Panel b vs Opus rating (PJ) vs generator labels (L) | PJ, L × 4 | calibration `pool-v2-opus55q` / policy l | pool v2 | invariant | valid (4 seeds) | Only PP16 clearly beats R at u40 | DEV_RUN11_DIFFICULTY_CONTROLS.md | — |
+| F24 | `olmo3sft_grpo_pool_v2_controls2` | 11-08 → 11-09 | Small panel only (PS), panel-free rating (PJ-raw) | PS, PJ-raw × 4 | calibrations `pool-v2-small8`, `opus55-logit` | pool v2 | invariant | valid (4 seeds; 2 PJ-raw runs lost reasoning) | All targeting arms within noise | FINDINGS #30 | — |
+| C2 | `olmo3sft_grpo_confirmatory_dc` | 11-06 → 11-07 | **Confirmatory:** panel b vs Opus rating vs random | R, PP16, PJ × 24 | 40 updates, E2 primary, seeds 200–223 | pool_v2_dc (lock `d80feded`) + fresh E2 | invariant, confirmatory | valid | H1 PP16 − PJ +0.0014 (not supported); H2 +0.0104, H3 +0.0090 (supported) | CONFIRMATORY_DC_RESULTS.md | freeze `8f5cef2`, tag `confirmatory-dc-frozen` |
+| C3 | confirmatory MV (no training; uses C1 and C2 outcomes) | 11-11 → | **Confirmatory:** does the small panel predict E1/E2 errors better than the Opus rating? | — | — | E1, E2 | — | running | — | PREREGISTRATION_CONFIRMATORY_MV.md | freeze `2bef581`, tag `confirmatory-mv-frozen` |
 
 ## 3. Current reference settings
 
-Use these for new development runs unless the owner decides otherwise. The
-reference config to copy is
-`results/olmo3sft_grpo_kl05_seeds/configs/r_s0.yaml`; change only
-`experiment_id`, `root_seed`, `selection.policy` and `student.vllm_url`.
+Use these for new development runs unless the owner decides otherwise. **Since DEV_RUN10 (2026-11-03) the
+reference config to copy is `results/olmo3sft_grpo_pool_v2/configs/r_s0.yaml`** (pool v2, parser v2,
+θ₀ 1.0); change only `experiment_id`, `root_seed`, `selection.policy` and `student.vllm_url`. The older
+pool-v1 reference (`results/olmo3sft_grpo_kl05_seeds/configs/r_s0.yaml`) is kept for comparisons with
+confirmatory v1.
 
 | setting | value | reason |
 |---|---|---|
@@ -91,7 +102,13 @@ reference config to copy is
 | `selection.candidate_slate_size` | 16 | F5, F10 |
 | `student.generation_backend` / `vllm_batch_invariant` | vllm / true | deterministic evaluation (F8) |
 | `evaluation.primary_set` / `statistics.primary_metric` | s / final_accuracy | E7 |
-| data | pool-v1-final (`b4e060d6`, lock `6147da9a`) | final pool |
+| data | pool v2 (`data/processed/pool_v2_wp`, calibration `pool-v2-wp`, lock `4f468bd2`); pool-v1-final (`b4e060d6`, lock `6147da9a`) for v1 comparisons | FINDINGS #19 |
+| `evaluation.answer_parser` | answer-line-v2 | v1 misses `Answer: <X>` (F16) |
+| `tracker.theta_initial` | 1.0 | E9 |
+
+**Confirmatory v1 commits** (stated together after the 2026-11-11 audit): code frozen at `bded020`, freeze
+commit and tag `confirmatory-v1-frozen` at `fd6aee0`, analysis script `aa9c0d1` added after the freeze
+and before E1 was read.
 
 **Confirmatory study (frozen 2026-10-28):** `PREREGISTRATION_CONFIRMATORY_V1.md`,
 `configs/confirmatory/v1/` (40 configs + `FROZEN.json` + `topic_twins.json`),

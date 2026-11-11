@@ -68,7 +68,9 @@ Six high-θ skills × 2 strategies × 100 items ≈ 1,200 items (about $100):
   (Sonnet 5.5 and Opus 5.5) and drop the rest.
 - **Topic dedup:** drop any new item that twins an E1 or S item (bge-small
   cosine ≥ 0.88) or an existing pool item, to avoid worsening the topic-twin
-  issue.
+  issue. **Not applied** (found by the 2026-11-11 audit, FINDINGS #31): all 5,058
+  new items entered P; 538 twin an S/E1 item. Exposure is about 2% of
+  presentations in every arm.
 - Measure per strategy and skill: cost per item, key-agreement rate, and the
   share of items the strongest current members (qwen3:14b, deepseek-r1) and
   the step-1a candidates fail. That is the yield of "very hard".

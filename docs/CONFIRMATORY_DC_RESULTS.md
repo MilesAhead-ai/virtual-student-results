@@ -59,12 +59,13 @@ What the result does and does not say:
 - **2026-11-08, exploratory (FINDINGS #29).** Recalibrating pool v2 with only the 8 small local models of
   panel v1 gives practically the same difficulty as panel v2 (within-skill rank correlation 0.964) and
   the same offline validity (AUC 0.762–0.763 vs 0.764), better than the Opus 5.5 rating on every skill.
-  So the PP16 arm is, in effect, the small-model panel; the confirmed result reads: a panel of eight free
-  local models is as good for training-item selection as the strongest available model's direct
-  judgement, and a better measure of what the student gets wrong.
+  This suggests, but does not show, that the PP16 arm behaved like a small-model panel: the study tested
+  panel v2, and the small-panel reading rests on an exploratory rank correlation. *(Wording corrected
+  2026-11-11 after the audit, FINDINGS #31.)*
 - **2026-11-09, development follow-up (FINDINGS #30; criteria written before the runs).** Two more arms
   on S, seeds 0–3, 100 updates: PP16 on the 8-small-model panel alone (PS), and on the Opus rating with
   no panel information at all (PJ-raw, b = ln((100 − p)/p)). vs R at u40: PS +0.020, PP16 +0.017, PJ-raw
-  +0.011, PJ +0.007; AULC +0.004 / +0.006 / +0.005 / +0.001. The small panel alone does as well as the
-  full panel; the panel-free rating is not worse than the mapped one, so the panel's scale is not what
-  makes the rating work. All four targeting arms are within noise of each other.
+  +0.011, PJ +0.007; AULC +0.004 / +0.006 / +0.005 / +0.001. The small panel alone does about as well as
+  the full panel; the panel-free rating is not worse than the mapped one, so there is no evidence that the
+  panel's scale is what makes the rating work (a 4-seed null). All four targeting arms are within noise of
+  each other. Two of the four PJ-raw runs stopped writing reasoning (FINDINGS #30, corrected).
