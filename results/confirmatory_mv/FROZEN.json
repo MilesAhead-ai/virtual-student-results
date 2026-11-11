@@ -1,0 +1,18 @@
+{
+ "frozen_at": "2026-11-11",
+ "code_commit": "2bef581795fba43747e0847dbd4be1ba8fa29168",
+ "analysis_script_sha256": "39db42dbaa264bd2ed78447bc230fab36c7cfb3b0e0cb48ca732d226e0de18ec",
+ "e1_items": 600,
+ "e1_item_ids_sha256": "2c7d32a4e7b49589d38235cdd681e45fea65cc3de19ed9d3f89154d9f957711d",
+ "e2_items": 600,
+ "e2_item_ids_sha256": "5488446a7b9951d5252974565641b0a4da3b3a3f48eb064e34d6511ab22d490b",
+ "e1_pool_v1_gpu3_difficulties_sha256": "c44082f25f8c3b2437b6e713ce983b2d5fa3b5a19b8a9d059554c70a22570c39",
+ "e1_difficulties_present": 600,
+ "pool_v2_small8_abilities_sha256": "538fa282bd4c92cae5f2bf31404f6fe630d240b134c7c3d7e6b467c92cbc55c5",
+ "rating_prompt": "difficulty-rating-v1 (scripts/rate_difficulty_llm.py)",
+ "rating_script_sha256": "bab3da23589de2cc48ceea743474c291aa5b8cb2cf779ec196dec2af3081f308",
+ "estimates_existing_at_freeze": {
+  "opus_e1_e2": false,
+  "e2_small_panel_passes": false
+ }
+}

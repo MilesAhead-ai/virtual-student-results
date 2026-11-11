@@ -1,7 +1,7 @@
 # Pre-registration: does the small-model panel measure difficulty better than a single strong model? (confirmatory MV)
 
-**Status: DRAFT 2026-11-11, awaiting owner sign-off.** Nothing in §3.2 exists yet: the estimates are
-produced only after freezing.
+**Status: FROZEN 2026-11-11**, signed off by the owner. Hashes: `results/confirmatory_mv/FROZEN.json`; git
+tag `confirmatory-mv-frozen`. At this point none of the §3.2 estimates for E2 or the Opus ratings of E1/E2 existed.
 
 ## 1. Question
 
@@ -80,8 +80,8 @@ narrower than E1 + E2's will be.) Runtime 46 min.
 
 ## 7. Frozen values
 
-To be filled at freezing: analysis script hash, code commit, E1/E2 item-list hashes, `pool-v1-gpu3` and
-`pool-v2-small8` ability tables (hashes), configs, git tag `confirmatory-mv-frozen`.
+See `results/confirmatory_mv/FROZEN.json`: analysis script hash, code commit, E1/E2 item lists, the
+`pool-v1-gpu3` E1 difficulties and the `pool-v2-small8` abilities, rating prompt version.
 
 ## 8. Known limitations
 
