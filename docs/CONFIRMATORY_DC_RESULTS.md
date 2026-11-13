@@ -1,6 +1,6 @@
 # Confirmatory DC: results (2026-11-07)
 
-Pre-registration: `PREREGISTRATION_CONFIRMATORY_DC.md`, frozen 2026-11-06 (tag `confirmatory-dc-frozen`,
+Pre-registration: [`PREREGISTRATION_CONFIRMATORY_DC.md`](PREREGISTRATION_CONFIRMATORY_DC.md) (hypotheses H1, H2, … defined in its [§2](PREREGISTRATION_CONFIRMATORY_DC.md#2-hypotheses)), frozen 2026-11-06 (tag `confirmatory-dc-frozen`,
 code `8f5cef2`). All 72 runs completed: 0 failures, 0 retries, no server faults (queue log
 `results/olmo3sft_grpo_confirmatory_dc/queue.log`; 05:55 on 11-06 to 12:03 on 11-07 UTC). E2 metrics
 were not read until the queue logged `END done=72`. The analysis is `scripts/confirmatory_dc_analysis.py`

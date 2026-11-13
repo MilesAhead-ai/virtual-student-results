@@ -1,6 +1,6 @@
 # Confirmatory v1: results (2026-10-29)
 
-Pre-registration: `PREREGISTRATION_CONFIRMATORY_V1.md`, frozen 2026-10-28
+Pre-registration: [`PREREGISTRATION_CONFIRMATORY_V1.md`](PREREGISTRATION_CONFIRMATORY_V1.md) (hypotheses H1, H2, … defined in its [§2](PREREGISTRATION_CONFIRMATORY_V1.md#2-hypotheses)), frozen 2026-10-28
 (tag `confirmatory-v1-frozen`). All 40 runs completed: 0 failures, 0
 retries, no server faults (queue log
 `artifacts/olmo3sft_grpo_confirmatory_v1_queue.log`). E1 was not read until

@@ -1,6 +1,6 @@
 # Confirmatory MV: results (2026-11-11)
 
-Pre-registration: `PREREGISTRATION_CONFIRMATORY_MV.md`, frozen 2026-11-11 (tag `confirmatory-mv-frozen`,
+Pre-registration: [`PREREGISTRATION_CONFIRMATORY_MV.md`](PREREGISTRATION_CONFIRMATORY_MV.md) (hypotheses H1, H2, … defined in its [§2](PREREGISTRATION_CONFIRMATORY_MV.md#2-hypotheses)), frozen 2026-11-11 (tag `confirmatory-mv-frozen`,
 code `2bef581`, `results/confirmatory_mv/FROZEN.json`). The estimates were produced after freezing:
 Claude Opus 5.5 rated E1 and E2 (1,199 items; one E1 refusal, excluded as pre-registered; ≈ $5.5); the
 8 small local models scored E2 three times (14,400 answers) and the 7 API members once (4,200). Checks

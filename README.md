@@ -23,24 +23,31 @@ included.
 | [`configs/confirmatory/dc/`](configs/confirmatory/dc/) | Its 72 frozen run configs and `FROZEN.json` |
 | [`docs/PREREGISTRATION_CONFIRMATORY_MV.md`](docs/PREREGISTRATION_CONFIRMATORY_MV.md) | The third confirmatory study (measurement validity), frozen before its estimates existed; `results/confirmatory_mv/` |
 
-## Current state (2026-11-11)
+## Current state (2026-11-13)
 
-Three pre-registered confirmatory studies are complete.
+Three pre-registered confirmatory studies are complete. **Each study numbers its own hypotheses (H1,
+H2, …), so "H1" means something different in each.** The hypotheses are defined in §2 of each
+pre-registration, written and frozen before the held-out data were read; the results docs report them
+in the same order.
 
-1. **Confirmatory v1 (2026-10-29): both hypotheses supported**
-   ([`docs/CONFIRMATORY_V1_RESULTS.md`](docs/CONFIRMATORY_V1_RESULTS.md)). With difficulty from a panel of
-   8 small local models, PanelProbe selection beats random selection by +1.9 points of final held-out
-   accuracy after 40 updates (95% CI +0.9 to +3.0; 16 seeds, 600 held-out items). An oracle that measures
-   the student directly reaches +3.2.
-2. **Confirmatory DC (2026-11-07): H1 not supported, H2 and H3 supported**
-   ([`docs/CONFIRMATORY_DC_RESULTS.md`](docs/CONFIRMATORY_DC_RESULTS.md)). On a fresh, topic-disjoint
-   held-out set (600 items, 24 seeds per arm): targeting by the panel's difficulty beats random (+1.0, CI
-   +0.5 to +1.6), and so does targeting by Claude Opus 5.5's direct rating (+0.9, CI +0.4 to +1.4); the
-   panel's difficulty does not beat the rating in training (+0.1, CI −0.5 to +0.7).
-3. **Confirmatory MV (2026-11-11): H1 supported** ([`docs/CONFIRMATORY_MV_RESULTS.md`](docs/CONFIRMATORY_MV_RESULTS.md)).
-   On 1,199 held-out items (E1 + E2), difficulty from the panel of 8 small open models predicts which items
-   trained students get wrong better than Claude Opus 5.5's direct rating: mean within-skill correlation
-   0.44 vs 0.32, difference +0.12 (CI +0.07 to +0.17), on each set separately as well.
+1. **Confirmatory v1 (2026-10-29)** — pre-registration [§2](docs/PREREGISTRATION_CONFIRMATORY_V1.md#2-hypotheses),
+   results [`CONFIRMATORY_V1_RESULTS.md`](docs/CONFIRMATORY_V1_RESULTS.md). Student OLMo-3-7B, 40 GRPO
+   updates, 600 held-out items (E1), 16 seeds.
+   - **H1** (primary): choosing training items by PanelProbe difficulty (panel of 8 small local models) gives
+     higher final held-out accuracy than random selection. **Supported:** +1.9 points (95% CI +0.9 to +3.0).
+   - **H2**: the oracle (measures the student directly) beats random. **Supported:** +3.2 points.
+2. **Confirmatory DC (2026-11-07)** — pre-registration [§2](docs/PREREGISTRATION_CONFIRMATORY_DC.md#2-hypotheses),
+   results [`CONFIRMATORY_DC_RESULTS.md`](docs/CONFIRMATORY_DC_RESULTS.md). Fresh topic-disjoint held-out
+   set (E2, 600 items), 24 seeds per arm.
+   - **H1** (primary): selection by the panel's calibrated difficulty (PP16) beats selection by Claude
+     Opus 5.5's direct difficulty rating (PJ). **Not supported:** +0.1 point (CI −0.5 to +0.7).
+   - **H2**: panel difficulty beats random. **Supported:** +1.0 (CI +0.5 to +1.6).
+   - **H3**: the Opus rating beats random. **Supported:** +0.9 (CI +0.4 to +1.4).
+3. **Confirmatory MV (2026-11-11)** — pre-registration [§2](docs/PREREGISTRATION_CONFIRMATORY_MV.md#2-hypotheses),
+   results [`CONFIRMATORY_MV_RESULTS.md`](docs/CONFIRMATORY_MV_RESULTS.md). No training; measurement on E1 + E2.
+   - **H1** (primary): the 8-small-model panel's difficulty predicts which held-out items trained students
+     get wrong better than the Opus 5.5 rating. **Supported:** mean within-skill correlation 0.44 vs 0.32,
+     difference +0.12 (CI +0.07 to +0.17).
 
 What else the records show:
 - **Measurement.** In development too, the small-model panel predicts the student's wrong answers better
