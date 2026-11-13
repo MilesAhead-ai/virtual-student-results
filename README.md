@@ -27,8 +27,9 @@ included.
 
 Three pre-registered confirmatory studies are complete. **Each study numbers its own hypotheses (H1,
 H2, …), so "H1" means something different in each.** The hypotheses are defined in §2 of each
-pre-registration, written and frozen before the held-out data were read; the results docs report them
-in the same order.
+pre-registration, frozen before the data they test existed or were read (v1 and DC: the held-out
+outcomes; MV: the difficulty estimates, whose student outcomes came from v1 and DC); the results docs
+report them in the same order.
 
 1. **Confirmatory v1 (2026-10-29)** — pre-registration [§2](docs/PREREGISTRATION_CONFIRMATORY_V1.md#2-hypotheses),
    results [`CONFIRMATORY_V1_RESULTS.md`](docs/CONFIRMATORY_V1_RESULTS.md). Student OLMo-3-7B, 40 GRPO
