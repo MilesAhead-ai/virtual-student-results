@@ -11,7 +11,8 @@ GRPO barely moves them; their groups are often all-wrong).
 | B. Pilot | round 1 done 11-04 (FINDINGS #23: 3 problems, fixed in `c814a79`, `00ba0fb`); round 2 done 11-04 (FINDINGS #24): fixes work, ~8 min/update | `artifacts/olmo3sft_feedback_pilot{,2}/` |
 | C0. SFT learning-rate check (F1, 2e-4 / 1e-4 / 5e-5, 20 updates) | done 11-11: **all rates collapse to bare answers** (FINDINGS #33); fixed with two guards; lr check 2 (30 updates) **degenerates into repetition at every rate** (FINDINGS #34); direction awaiting owner | `artifacts/olmo3sft_feedback_lr{,2}/` |
 | C1. Dev comparison (E24): GRPO + F1 / F2 / F4 hybrids, 3 seeds × 40 updates | done 11-15: **no gain over GRPO** from any condition (FINDINGS #37) | `DEV_RUN12_TUTOR_HYBRID.md` |
-| D. Confirmatory | not warranted by C1; owner decision | — |
+| C2. Hint-guided GRPO (`grpo.hint_max_correct` 1): pilot done 11-15 (FINDINGS #38, promising); dev 4 seeds × 40 updates running | `artifacts/olmo3sft_hint_{pilot,dev}/` |
+| D. Confirmatory | decided after C2 | — |
 
 ## 1. What changes compared with confirmatory v1
 
