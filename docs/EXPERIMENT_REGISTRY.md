@@ -82,6 +82,8 @@ numbers stand but a later experiment answers the question better;
 | F22 | `olmo3sft_grpo_pool_v2_ppall` (+ `_rerun`) | 11-04 | PP from the whole pool instead of a slate of 16 | PP-all × 4 | slate 4096 | pool v2 | invariant | valid (reruns are replays) | AULC +0.0074 [+0.003, +0.012] vs R | FINDINGS #25 | — |
 | F23 | `olmo3sft_grpo_pool_v2_controls` | 11-04 → 11-05 | Panel b vs Opus rating (PJ) vs generator labels (L) | PJ, L × 4 | calibration `pool-v2-opus55q` / policy l | pool v2 | invariant | valid (4 seeds) | Only PP16 clearly beats R at u40 | DEV_RUN11_DIFFICULTY_CONTROLS.md | — |
 | F24 | `olmo3sft_grpo_pool_v2_controls2` | 11-08 → 11-09 | Small panel only (PS), panel-free rating (PJ-raw) | PS, PJ-raw × 4 | calibrations `pool-v2-small8`, `opus55-logit` | pool v2 | invariant | valid (4 seeds; 2 PJ-raw runs lost reasoning) | All targeting arms within noise | FINDINGS #30 | — |
+| F25 | `olmo3sft_feedback_lr`, `_lr2`, `olmo3sft_hybrid_pilot2` | 11-11 → 11-13 | SFT lr checks; hybrid pilots | F1 × 3 lr; hybrid × 2 weights | SFT / grpo_feedback | pool v2 | invariant | pilot only (hybrid pilot 1 invalid, #35) | pure SFT collapses or degenerates; scaled hybrid stable | FINDINGS #33–36 | — |
+| F26 | `olmo3sft_hybrid_dev` | 11-15 | Does a tutor improve GRPO? | GRPO+F1/F2/F4 × 3 | grpo_feedback, sft_weight 0.5 (GRPO scale), 40 updates | pool v2 | invariant | valid (3 seeds) | no gain over GRPO (u40 within ±0.003) | DEV_RUN12_TUTOR_HYBRID.md | — |
 | C2 | `olmo3sft_grpo_confirmatory_dc` | 11-06 → 11-07 | **Confirmatory:** panel b vs Opus rating vs random | R, PP16, PJ × 24 | 40 updates, E2 primary, seeds 200–223 | pool_v2_dc (lock `d80feded`) + fresh E2 | invariant, confirmatory | valid | H1 PP16 − PJ +0.0014 (not supported); H2 +0.0104, H3 +0.0090 (supported) | CONFIRMATORY_DC_RESULTS.md | freeze `8f5cef2`, tag `confirmatory-dc-frozen` |
 | C3 | confirmatory MV (no training; uses C1 and C2 outcomes) | 11-11 → | **Confirmatory:** does the small panel predict E1/E2 errors better than the Opus rating? | — | — | E1, E2 | — | valid | H1 small panel − Opus +0.118 [+0.069, +0.167] (supported) | CONFIRMATORY_MV_RESULTS.md | freeze `2bef581`, tag `confirmatory-mv-frozen` |
 
@@ -141,7 +143,7 @@ S for pool-v1-final).
 
 <!-- BEGIN GENERATED: scripts/build_registry.py -->
 
-Generated from `results/*/*/` (255 runs). Full per-run data: `results/registry/runs.csv`.
+Generated from `results/*/*/` (272 runs). Full per-run data: `results/registry/runs.csv`.
 Columns marked * need the full artifacts and are cached in the CSV.
 
 ### `m0_dev_satbank`
@@ -202,6 +204,26 @@ Shared: student=Ministral-8B-Instruct-2410@2f494a1, generation=vllm, batch_invar
 | `r-outcome-grpo-s001-5fed1a34` | complete | r | 1 | 2e-04 | 0.6400 | 0.7037 | 0.7534 | +0.041 | 13.1%→9.5% | 440 | 0.30 | 0.47 | 155 |
 | `r-outcome-grpo-s000-767309fa` | complete | r | 0 | 4e-04 | 0.6400 | 0.6937 | 0.6799 | -0.037 | 13.1%→0.8% | 666 | 0.30 | 0.53 | 150 |
 | `r-outcome-grpo-s001-6e80af22` | complete | r | 1 | 4e-04 | 0.6400 | 0.6825 | 0.6977 | -0.054 | 13.1%→0.0% | 9 | 0.31 | 0.55 | 156 |
+
+### `olmo3sft_feedback_lr`
+
+Shared: student=Olmo-3-7B-Instruct-SFT@e1452fc, generation=vllm, batch_invariant=True, method=sft, schedule=constant_with_warmup, warmup=5, updates=20, kl=0.05, group_size=8, rollout_temp=1, max_completion_tokens=512, lora=r16/a32.0, batch_items=32, slate=16, primary_set=s, primary_metric=final_accuracy, items_sha=8a38e5a7, split_lock=4f468bd2.
+
+| run_id | status | policy | seed | lr | initial | final | AULC | Δparsed* | unparse u0→end* | len end* | max letter* | grad groups* | min* |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `pp-f1-sft-s000-9bdf31f3` | complete | pp | 0 | 1e-04 | 0.6763 | 0.6919 | 0.6771 | -0.003 | 2.8%→0.0% | 9 | 0.33 | — | 148 |
+| `pp-f1-sft-s000-85708cfc` | complete | pp | 0 | 2e-04 | 0.6763 | 0.7256 | 0.6337 | +0.030 | 2.8%→0.0% | 9 | 0.31 | — | 123 |
+| `pp-f1-sft-s000-4212d7e9` | complete | pp | 0 | 5e-05 | 0.6763 | 0.6831 | 0.6743 | -0.012 | 2.8%→0.0% | 9 | 0.27 | — | 174 |
+
+### `olmo3sft_feedback_lr2`
+
+Shared: student=Olmo-3-7B-Instruct-SFT@e1452fc, generation=vllm, batch_invariant=True, method=sft, schedule=constant_with_warmup, warmup=5, updates=30, kl=0.05, group_size=8, rollout_temp=1, max_completion_tokens=512, lora=r16/a32.0, batch_items=32, slate=16, primary_set=s, primary_metric=final_accuracy, items_sha=8a38e5a7, split_lock=4f468bd2.
+
+| run_id | status | policy | seed | lr | initial | final | AULC | Δparsed* | unparse u0→end* | len end* | max letter* | grad groups* | min* |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `pp-f1-sft-s000-a8fe8b38` | complete | pp | 0 | 1e-04 | 0.6763 | 0.4250 | 0.5613 | -0.026 | 2.8%→36.5% | 1180 | 0.29 | — | 464 |
+| `pp-f1-sft-s000-e2c9bd09` | complete | pp | 0 | 2e-04 | 0.6763 | 0.0000 | 0.4354 | -0.695 | 2.8%→100.0% | 2163 | — | — | 526 |
+| `pp-f1-sft-s000-82e4b0d0` | complete | pp | 0 | 5e-05 | 0.6763 | 0.4556 | 0.6245 | -0.047 | 2.8%→29.7% | 1328 | 0.33 | — | 403 |
 
 ### `olmo3sft_grpo_confirmatory_dc`
 
@@ -559,5 +581,30 @@ Shared: student=Olmo-3-7B-Instruct-SFT@e1452fc, generation=vllm, batch_invariant
 | `pp-outcome-grpo-s001-dacd63a8` | complete | pp | 1 | 0.6763 | 0.7381 | 0.7088 | +0.046 | 2.8%→0.5% | 424 | 0.26 | 0.69 | 217 |
 | `pp-outcome-grpo-s002-5d539ba2` | complete | pp | 2 | 0.6763 | 0.7344 | 0.7121 | +0.039 | 2.8%→0.0% | 431 | 0.29 | 0.66 | 199 |
 | `pp-outcome-grpo-s003-121d99ad` | complete | pp | 3 | 0.6763 | 0.7456 | 0.7102 | +0.054 | 2.8%→0.5% | 300 | 0.29 | 0.71 | 217 |
+
+### `olmo3sft_hybrid_dev`
+
+Shared: student=Olmo-3-7B-Instruct-SFT@e1452fc, generation=vllm, batch_invariant=True, method=grpo_feedback, lr=2e-04, schedule=constant_with_warmup, warmup=5, updates=40, kl=0.05, group_size=8, rollout_temp=1, max_completion_tokens=512, lora=r16/a32.0, batch_items=32, slate=16, primary_set=s, primary_metric=final_accuracy, items_sha=8a38e5a7, split_lock=4f468bd2.
+
+| run_id | status | policy | seed | initial | final | AULC | Δparsed* | unparse u0→end* | len end* | max letter* | grad groups* | min* |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `pp-f1-grpo_feedback-s000-d5d8df47` | complete | pp | 0 | 0.6763 | 0.7362 | 0.7095 | +0.044 | 2.8%→0.4% | 535 | 0.27 | 0.68 | 517 |
+| `pp-f2-grpo_feedback-s000-668fc970` | complete | pp | 0 | 0.6763 | 0.7306 | 0.7115 | +0.036 | 2.8%→0.1% | 575 | 0.27 | 0.70 | 507 |
+| `pp-f4-grpo_feedback-s000-a8aad824` | complete | pp | 0 | 0.6763 | 0.7475 | 0.7084 | +0.054 | 2.8%→0.2% | 585 | 0.27 | 0.69 | 306 |
+| `pp-f1-grpo_feedback-s001-188b74ba` | complete | pp | 1 | 0.6763 | 0.7531 | 0.7136 | +0.062 | 2.8%→0.6% | 661 | 0.27 | 0.66 | 520 |
+| `pp-f2-grpo_feedback-s001-10a1c432` | complete | pp | 1 | 0.6763 | 0.7481 | 0.7093 | +0.055 | 2.8%→0.3% | 592 | 0.26 | 0.70 | 517 |
+| `pp-f4-grpo_feedback-s001-c4736cf2` | complete | pp | 1 | 0.6763 | 0.7338 | 0.7125 | +0.050 | 2.8%→1.6% | 628 | 0.28 | 0.73 | 537 |
+| `pp-f1-grpo_feedback-s002-093bcc0e` | complete | pp | 2 | 0.6763 | 0.7456 | 0.7076 | +0.052 | 2.8%→0.2% | 467 | 0.30 | 0.71 | 499 |
+| `pp-f2-grpo_feedback-s002-43b19249` | complete | pp | 2 | 0.6763 | 0.7400 | 0.7118 | +0.047 | 2.8%→0.3% | 562 | 0.28 | 0.75 | 523 |
+| `pp-f4-grpo_feedback-s002-d03001a6` | complete | pp | 2 | 0.6763 | 0.7438 | 0.7069 | +0.050 | 2.8%→0.2% | 483 | 0.28 | 0.77 | 555 |
+
+### `olmo3sft_hybrid_pilot2`
+
+Shared: student=Olmo-3-7B-Instruct-SFT@e1452fc, generation=vllm, batch_invariant=True, method=grpo_feedback, lr=2e-04, schedule=constant_with_warmup, warmup=5, updates=20, kl=0.05, group_size=8, rollout_temp=1, max_completion_tokens=512, lora=r16/a32.0, batch_items=32, slate=16, primary_set=s, primary_metric=final_accuracy, items_sha=8a38e5a7, split_lock=4f468bd2.
+
+| run_id | status | policy | seed | initial | final | AULC | Δparsed* | unparse u0→end* | len end* | max letter* | grad groups* | min* |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `pp-f4-grpo_feedback-s000-1f3456f8` | complete | pp | 0 | 0.6763 | 0.7144 | 0.6905 | +0.021 | 2.8%→0.2% | 638 | 0.28 | 0.77 | 235 |
+| `pp-f4-grpo_feedback-s000-d8655ff6` | complete | pp | 0 | 0.6763 | 0.6875 | 0.6820 | -0.005 | 2.8%→0.4% | 559 | 0.28 | 0.87 | 252 |
 
 <!-- END GENERATED -->

@@ -1,0 +1,22 @@
+2026-11-15T02:32:08+00:00 START 9 configs on GPUs [2, 3, 4, 5, 6, 7] x2
+2026-11-15T02:32:08+00:00 SERVER_UNHEALTHY [8100, 8101]: launching paused
+2026-11-15T02:38:08+00:00 servers healthy again: launching resumes
+2026-11-15T02:38:08+00:00 LAUNCH f4_s0.yaml gpu=2 pid=2854779 attempt=0
+2026-11-15T02:38:29+00:00 LAUNCH f2_s0.yaml gpu=3 pid=2855011 attempt=0
+2026-11-15T02:38:49+00:00 LAUNCH f1_s0.yaml gpu=4 pid=2855267 attempt=0
+2026-11-15T02:39:09+00:00 LAUNCH f4_s1.yaml gpu=5 pid=2855716 attempt=0
+2026-11-15T02:39:29+00:00 LAUNCH f2_s1.yaml gpu=6 pid=2856406 attempt=0
+2026-11-15T02:39:49+00:00 LAUNCH f1_s1.yaml gpu=7 pid=2856787 attempt=0
+2026-11-15T02:40:10+00:00 LAUNCH f4_s2.yaml gpu=2 pid=2857182 attempt=0
+2026-11-15T02:40:32+00:00 LAUNCH f2_s2.yaml gpu=3 pid=2857584 attempt=0
+2026-11-15T02:40:55+00:00 LAUNCH f1_s2.yaml gpu=4 pid=2857905 attempt=0
+2026-11-15T07:45:16+00:00 DONE f4_s0.yaml (1 done, 0 pending, 8 running)
+2026-11-15T11:03:16+00:00 DONE f1_s2.yaml (2 done, 0 pending, 7 running)
+2026-11-15T11:07:16+00:00 DONE f2_s0.yaml (3 done, 0 pending, 6 running)
+2026-11-15T11:17:16+00:00 DONE f1_s0.yaml (4 done, 0 pending, 5 running)
+2026-11-15T11:18:16+00:00 DONE f2_s1.yaml (5 done, 0 pending, 4 running)
+2026-11-15T11:21:16+00:00 DONE f1_s1.yaml (6 done, 0 pending, 3 running)
+2026-11-15T11:26:17+00:00 DONE f2_s2.yaml (7 done, 0 pending, 2 running)
+2026-11-15T11:37:17+00:00 DONE f4_s1.yaml (8 done, 0 pending, 1 running)
+2026-11-15T11:58:17+00:00 DONE f4_s2.yaml (9 done, 0 pending, 0 running)
+2026-11-15T11:59:17+00:00 END done=9 gave_up=0 []

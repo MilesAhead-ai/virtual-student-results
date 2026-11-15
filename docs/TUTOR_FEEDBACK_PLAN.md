@@ -10,8 +10,8 @@ GRPO barely moves them; their groups are often all-wrong).
 | A. Engineering (§3) | mostly done 11-04: spend ledger + hard ceiling (`backends/spend.py`, `budget.api_ledger_file`); `bedrock_runtime` provider (Sonnet 5.5 is not on Mantle); schemas sent without numeric bounds; live test of all 7 schemas; F4 smoke run (1 wrong item: 11 calls, $0.095, ~2 min, 1 leak caught and regenerated, target accepted). Not done: concurrency in the feedback step (measure in B first); prompt fixes (§6) | commits `1ba668b`, `8c4a4f1` |
 | B. Pilot | round 1 done 11-04 (FINDINGS #23: 3 problems, fixed in `c814a79`, `00ba0fb`); round 2 done 11-04 (FINDINGS #24): fixes work, ~8 min/update | `artifacts/olmo3sft_feedback_pilot{,2}/` |
 | C0. SFT learning-rate check (F1, 2e-4 / 1e-4 / 5e-5, 20 updates) | done 11-11: **all rates collapse to bare answers** (FINDINGS #33); fixed with two guards; lr check 2 (30 updates) **degenerates into repetition at every rate** (FINDINGS #34); direction awaiting owner | `artifacts/olmo3sft_feedback_lr{,2}/` |
-| C1. Dev comparison (E24): GRPO + F1 / F2 / F4 hybrids, 3 seeds × 40 updates | **running since 11-15 02:38 UTC** (pure SFT dropped, #33–34; hybrid fixed, #35–36) | `artifacts/olmo3sft_hybrid_dev/` |
-| D. Confirmatory | todo | — |
+| C1. Dev comparison (E24): GRPO + F1 / F2 / F4 hybrids, 3 seeds × 40 updates | done 11-15: **no gain over GRPO** from any condition (FINDINGS #37) | `DEV_RUN12_TUTOR_HYBRID.md` |
+| D. Confirmatory | not warranted by C1; owner decision | — |
 
 ## 1. What changes compared with confirmatory v1
 
