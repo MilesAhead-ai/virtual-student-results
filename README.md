@@ -50,6 +50,24 @@ report them in the same order.
      get wrong better than the Opus 5.5 rating. **Supported:** mean within-skill correlation 0.44 vs 0.32,
      difference +0.12 (CI +0.07 to +0.17).
 
+### What the three studies say together
+
+| question | study | answer |
+|---|---|---|
+| Does targeting training items by panel-calibrated difficulty beat random selection? | v1 H1, DC H2 | **Yes**, twice (+1.9 and +1.0 points) |
+| Is the small-model panel a better *measure* of which items LLM students get wrong than a single strong model's direct rating? | MV H1 | **Yes** (correlation 0.44 vs 0.32) |
+| Does that better measure make the student *learn more* when used to choose training items? | DC H1 | **No measurable difference** (+0.1 point, CI −0.5 to +0.7); a single-model rating also beats random (DC H3) |
+
+Two qualifications:
+- In DC the panel arm used panel v2 (the 8 small models plus 7 API models). The 8 small models alone
+  were compared in development only: they rank items almost identically to panel v2 (rank correlation
+  0.96) and did as well in training over 4 seeds (FINDINGS #29, #30), but this is not confirmed.
+- **Why a better measure did not give more learning is not tested.** A plausible reading: the targeting
+  rule only needs items roughly near the student's level; both estimates order items well enough for that
+  (they correlate about 0.6 with each other), and learning is not sensitive to the remaining ranking error.
+  In development, every targeting variant tried (full panel, small panel, the rating with or without the
+  panel's scale) was within noise of the others.
+
 What else the records show:
 - **Measurement.** In development too, the small-model panel predicts the student's wrong answers better
   than the strongest single model's rating (AUC 0.76 vs 0.70), and the 8 small models alone are as good
