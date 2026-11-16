@@ -84,6 +84,7 @@ numbers stand but a later experiment answers the question better;
 | F24 | `olmo3sft_grpo_pool_v2_controls2` | 11-08 → 11-09 | Small panel only (PS), panel-free rating (PJ-raw) | PS, PJ-raw × 4 | calibrations `pool-v2-small8`, `opus55-logit` | pool v2 | invariant | valid (4 seeds; 2 PJ-raw runs lost reasoning) | All targeting arms within noise | FINDINGS #30 | — |
 | F25 | `olmo3sft_feedback_lr`, `_lr2`, `olmo3sft_hybrid_pilot2` | 11-11 → 11-13 | SFT lr checks; hybrid pilots | F1 × 3 lr; hybrid × 2 weights | SFT / grpo_feedback | pool v2 | invariant | pilot only (hybrid pilot 1 invalid, #35) | pure SFT collapses or degenerates; scaled hybrid stable | FINDINGS #33–36 | — |
 | F26 | `olmo3sft_hybrid_dev` | 11-15 | Does a tutor improve GRPO? | GRPO+F1/F2/F4 × 3 | grpo_feedback, sft_weight 0.5 (GRPO scale), 40 updates | pool v2 | invariant | valid (3 seeds) | no gain over GRPO (u40 within ±0.003) | DEV_RUN12_TUTOR_HYBRID.md | — |
+| F27 | `olmo3sft_hint_pilot`, `olmo3sft_hint_dev` | 11-15 → 11-16 | Hint-guided GRPO | hints × 1 (20 upd), × 4 (40 upd) | grpo.hint_max_correct 1, Opus 5.5 hints | pool v2 | invariant | valid (4 seeds) | no gain over GRPO (u40 +0.002) | FINDINGS #38, #39 | — |
 | C2 | `olmo3sft_grpo_confirmatory_dc` | 11-06 → 11-07 | **Confirmatory:** panel b vs Opus rating vs random | R, PP16, PJ × 24 | 40 updates, E2 primary, seeds 200–223 | pool_v2_dc (lock `d80feded`) + fresh E2 | invariant, confirmatory | valid | H1 PP16 − PJ +0.0014 (not supported); H2 +0.0104, H3 +0.0090 (supported) | CONFIRMATORY_DC_RESULTS.md | freeze `8f5cef2`, tag `confirmatory-dc-frozen` |
 | C3 | confirmatory MV (no training; uses C1 and C2 outcomes) | 11-11 → | **Confirmatory:** does the small panel predict E1/E2 errors better than the Opus rating? | — | — | E1, E2 | — | valid | H1 small panel − Opus +0.118 [+0.069, +0.167] (supported) | CONFIRMATORY_MV_RESULTS.md | freeze `2bef581`, tag `confirmatory-mv-frozen` |
 
@@ -143,7 +144,7 @@ S for pool-v1-final).
 
 <!-- BEGIN GENERATED: scripts/build_registry.py -->
 
-Generated from `results/*/*/` (272 runs). Full per-run data: `results/registry/runs.csv`.
+Generated from `results/*/*/` (277 runs). Full per-run data: `results/registry/runs.csv`.
 Columns marked * need the full artifacts and are cached in the CSV.
 
 ### `m0_dev_satbank`
@@ -581,6 +582,25 @@ Shared: student=Olmo-3-7B-Instruct-SFT@e1452fc, generation=vllm, batch_invariant
 | `pp-outcome-grpo-s001-dacd63a8` | complete | pp | 1 | 0.6763 | 0.7381 | 0.7088 | +0.046 | 2.8%→0.5% | 424 | 0.26 | 0.69 | 217 |
 | `pp-outcome-grpo-s002-5d539ba2` | complete | pp | 2 | 0.6763 | 0.7344 | 0.7121 | +0.039 | 2.8%→0.0% | 431 | 0.29 | 0.66 | 199 |
 | `pp-outcome-grpo-s003-121d99ad` | complete | pp | 3 | 0.6763 | 0.7456 | 0.7102 | +0.054 | 2.8%→0.5% | 300 | 0.29 | 0.71 | 217 |
+
+### `olmo3sft_hint_dev`
+
+Shared: student=Olmo-3-7B-Instruct-SFT@e1452fc, generation=vllm, batch_invariant=True, method=grpo, lr=2e-04, schedule=constant_with_warmup, warmup=5, updates=40, kl=0.05, group_size=8, rollout_temp=1, max_completion_tokens=512, lora=r16/a32.0, batch_items=32, slate=16, primary_set=s, primary_metric=final_accuracy, items_sha=8a38e5a7, split_lock=4f468bd2.
+
+| run_id | status | policy | seed | initial | final | AULC | Δparsed* | unparse u0→end* | len end* | max letter* | grad groups* | min* |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `pp-outcome-grpo-s000-696e0c23` | complete | pp | 0 | 0.6763 | 0.7506 | 0.7135 | +0.059 | 2.8%→0.5% | 647 | 0.27 | 0.78 | 176 |
+| `pp-outcome-grpo-s001-852daf52` | complete | pp | 1 | 0.6763 | 0.7350 | 0.7069 | +0.042 | 2.8%→0.3% | 503 | 0.29 | 0.66 | 270 |
+| `pp-outcome-grpo-s002-adccf682` | complete | pp | 2 | 0.6763 | 0.7538 | 0.7141 | +0.058 | 2.8%→0.0% | 111 | 0.29 | 0.72 | 258 |
+| `pp-outcome-grpo-s003-c7bcc8ce` | complete | pp | 3 | 0.6763 | 0.7319 | 0.7121 | +0.039 | 2.8%→0.3% | 371 | 0.30 | 0.79 | 277 |
+
+### `olmo3sft_hint_pilot`
+
+Shared: student=Olmo-3-7B-Instruct-SFT@e1452fc, generation=vllm, batch_invariant=True, method=grpo, lr=2e-04, schedule=constant_with_warmup, warmup=5, updates=20, kl=0.05, group_size=8, rollout_temp=1, max_completion_tokens=512, lora=r16/a32.0, batch_items=32, slate=16, primary_set=s, primary_metric=final_accuracy, items_sha=8a38e5a7, split_lock=4f468bd2.
+
+| run_id | status | policy | seed | initial | final | AULC | Δparsed* | unparse u0→end* | len end* | max letter* | grad groups* | min* |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `pp-outcome-grpo-s000-5dd0919c` | complete | pp | 0 | 0.6763 | 0.7250 | 0.6987 | +0.031 | 2.8%→0.2% | 526 | 0.27 | 0.82 | 128 |
 
 ### `olmo3sft_hybrid_dev`
 

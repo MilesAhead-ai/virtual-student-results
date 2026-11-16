@@ -1,0 +1,35 @@
+### mean S accuracy (4 seeds)
+         GRPO GRPO+hints
+u 0     0.6763     0.6763
+u 5     0.6855     0.6869
+u10     0.6964     0.6980
+u15     0.7058     0.7120
+u20     0.7161     0.7159
+u25     0.7214     0.7137
+u30     0.7211     0.7248
+u35     0.7322     0.7323
+u40     0.7409     0.7428
+
+### vs GRPO, paired by seed (mean [95% t-CI], positive seeds)
+  GRPO+hints: u20 -0.0002 [-0.0129, +0.0126] 2/4 | u40 +0.0019 [-0.0102, +0.0139] 2/4 | AULC u0–40 +0.0008 [-0.0073, +0.0089] 3/4
+
+### per skill at u40 (mean over seeds; 160 S items per skill)
+skill                                GRPO GRPO+hints
+boundaries                          0.264      0.286   (SE)
+central_ideas                       0.973      0.977
+command_of_evidence_textual         0.812      0.800
+cross_text_connections              0.884      0.892
+form_structure_sense                0.403      0.397   (SE)
+inferences                          0.878      0.861
+rhetorical_synthesis                0.947      0.955
+text_structure                      0.928      0.947
+transitions                         0.506      0.511   (SE)
+words_in_context                    0.812      0.803
+Standard English skills combined, vs GRPO (paired by seed):
+  GRPO+hints: +0.0068 [-0.0222, +0.0357] 3/4
+
+### stability and tutor yield
+  GRPO     len u40 464 chars, unparseable u40 0.002
+  GRPO+hints len u40 409 chars, unparseable u40 0.003; targets/update 4.5, accepted 716 of 1016 eligible items (hints: hinted groups per update)
+  GRPO+hints API $11.65 for 4 runs
+  ledger total $324.72
