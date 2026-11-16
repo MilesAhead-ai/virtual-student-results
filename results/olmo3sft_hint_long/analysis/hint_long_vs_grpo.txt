@@ -1,0 +1,46 @@
+(no R arm: 'pp16' shown as the reference column 'r')
+### all  (data pool_v2_wp; S re-scored with answer-line-v2; seeds [0, 1, 2, 3])
+mean S accuracy:       r  pp16+hints≤3
+  u  0           0.6763  0.6763
+  u  5           0.6855  0.6869
+  u 10           0.6964  0.6969
+  u 15           0.7058  0.7028
+  u 20           0.7161  0.7133
+  u 25           0.7214  0.7212
+  u 30           0.7211  0.7247
+  u 35           0.7322  0.7302
+  u 40           0.7409  0.7400
+  u 45           0.7480  0.7348
+  u 50           0.7477  0.7433
+  u 55           0.7552  0.7442
+  u 60           0.7570  0.7477
+  u 65           0.7611  0.7547
+  u 70           0.7652  0.7603
+  u 75           0.7683  0.7611
+  u 80           0.7719  0.7611
+  u 85           0.7620  0.7639
+  u 90           0.7403  0.7667
+  u 95           0.7709  0.7683
+  u100           0.7720  0.7808
+contrasts vs R, paired by seed (mean [95% t-CI], positive seeds):
+  pp16+hints≤3−R: u20 -0.0028 [-0.0364, +0.0307] 1/4 | u40 -0.0009 [-0.0168, +0.0149] 1/4 | u60 -0.0094 [-0.0404, +0.0216] 1/4 | u80 -0.0108 [-0.0459, +0.0243] 1/4 | u100 +0.0087 [-0.0184, +0.0359] 2/4 | AULC -0.0020 [-0.0185, +0.0144] 2/4
+selection by quarter (u1–25 / 26–50 / 51–75 / 76–100): greedy success | mean b on the arm's own scale | share b>2 (own scale) | predicted within ±0.1 of target
+  r    : 0.557 +0.72 0.09 0.68 | 0.626 +0.73 0.08 0.50 | 0.677 +0.77 0.11 0.40 | 0.698 +0.76 0.12 0.27
+  pp16+hints≤3: 0.555 +0.71 0.09 0.70 | 0.625 +0.71 0.08 0.52 | 0.653 +0.75 0.09 0.39 | 0.692 +0.69 0.10 0.28
+per run: S at u40 / u100, worst checkpoint after u40 (unparseable there)
+  r     s0: u40 0.7388  u100 0.7538  worst u90 0.7106 (0.00)
+  r     s1: u40 0.7369  u100 0.7788  worst u45 0.7438 (0.00)
+  r     s2: u40 0.7506  u100 0.7775  worst u45 0.7519 (0.00)
+  r     s3: u40 0.7375  u100 0.7781  worst u90 0.7006 (0.12)
+  pp16+hints≤3 s0: u40 0.7375  u100 0.7856  worst u65 0.7412 (0.01)
+  pp16+hints≤3 s1: u40 0.7488  u100 0.7731  worst u50 0.7019 (0.00)
+  pp16+hints≤3 s2: u40 0.7381  u100 0.7887  worst u45 0.7444 (0.00)
+  pp16+hints≤3 s3: u40 0.7356  u100 0.7756  worst u45 0.7419 (0.00)
+
+
+### hint dose and cost
+pp-outcome-grpo-s000-fa3047a4: hinted groups/update 7.9, gradient-bearing 0.90, correct/8 unhinted 1.47 -> hinted 3.07, failed hints 296, grad groups/update 28.5, cost $14.31
+pp-outcome-grpo-s001-3c932f5c: hinted groups/update 7.9, gradient-bearing 0.89, correct/8 unhinted 1.44 -> hinted 3.00, failed hints 288, grad groups/update 29.3, cost $14.20
+pp-outcome-grpo-s002-bbb02b06: hinted groups/update 7.8, gradient-bearing 0.92, correct/8 unhinted 1.44 -> hinted 3.05, failed hints 329, grad groups/update 27.8, cost $14.73
+pp-outcome-grpo-s003-eb686117: hinted groups/update 7.8, gradient-bearing 0.92, correct/8 unhinted 1.41 -> hinted 3.08, failed hints 299, grad groups/update 26.6, cost $13.75
+ledger total $381.72

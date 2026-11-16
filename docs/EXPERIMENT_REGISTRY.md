@@ -85,6 +85,7 @@ numbers stand but a later experiment answers the question better;
 | F25 | `olmo3sft_feedback_lr`, `_lr2`, `olmo3sft_hybrid_pilot2` | 11-11 → 11-13 | SFT lr checks; hybrid pilots | F1 × 3 lr; hybrid × 2 weights | SFT / grpo_feedback | pool v2 | invariant | pilot only (hybrid pilot 1 invalid, #35) | pure SFT collapses or degenerates; scaled hybrid stable | FINDINGS #33–36 | — |
 | F26 | `olmo3sft_hybrid_dev` | 11-15 | Does a tutor improve GRPO? | GRPO+F1/F2/F4 × 3 | grpo_feedback, sft_weight 0.5 (GRPO scale), 40 updates | pool v2 | invariant | valid (3 seeds) | no gain over GRPO (u40 within ±0.003) | DEV_RUN12_TUTOR_HYBRID.md | — |
 | F27 | `olmo3sft_hint_pilot`, `olmo3sft_hint_dev` | 11-15 → 11-16 | Hint-guided GRPO | hints × 1 (20 upd), × 4 (40 upd) | grpo.hint_max_correct 1, Opus 5.5 hints | pool v2 | invariant | valid (4 seeds) | no gain over GRPO (u40 +0.002) | FINDINGS #38, #39 | — |
+| F28 | `olmo3sft_hint_long` | 11-16 | Higher-dose hints over 100 updates | hints≤3 × 4 | grpo.hint_max_correct 3, 100 updates | pool v2 | invariant | valid (4 seeds) | no gain (u100 +0.009, AULC −0.002) | FINDINGS #40 | — |
 | C2 | `olmo3sft_grpo_confirmatory_dc` | 11-06 → 11-07 | **Confirmatory:** panel b vs Opus rating vs random | R, PP16, PJ × 24 | 40 updates, E2 primary, seeds 200–223 | pool_v2_dc (lock `d80feded`) + fresh E2 | invariant, confirmatory | valid | H1 PP16 − PJ +0.0014 (not supported); H2 +0.0104, H3 +0.0090 (supported) | CONFIRMATORY_DC_RESULTS.md | freeze `8f5cef2`, tag `confirmatory-dc-frozen` |
 | C3 | confirmatory MV (no training; uses C1 and C2 outcomes) | 11-11 → | **Confirmatory:** does the small panel predict E1/E2 errors better than the Opus rating? | — | — | E1, E2 | — | valid | H1 small panel − Opus +0.118 [+0.069, +0.167] (supported) | CONFIRMATORY_MV_RESULTS.md | freeze `2bef581`, tag `confirmatory-mv-frozen` |
 
@@ -144,7 +145,7 @@ S for pool-v1-final).
 
 <!-- BEGIN GENERATED: scripts/build_registry.py -->
 
-Generated from `results/*/*/` (277 runs). Full per-run data: `results/registry/runs.csv`.
+Generated from `results/*/*/` (281 runs). Full per-run data: `results/registry/runs.csv`.
 Columns marked * need the full artifacts and are cached in the CSV.
 
 ### `m0_dev_satbank`
@@ -593,6 +594,17 @@ Shared: student=Olmo-3-7B-Instruct-SFT@e1452fc, generation=vllm, batch_invariant
 | `pp-outcome-grpo-s001-852daf52` | complete | pp | 1 | 0.6763 | 0.7350 | 0.7069 | +0.042 | 2.8%→0.3% | 503 | 0.29 | 0.66 | 270 |
 | `pp-outcome-grpo-s002-adccf682` | complete | pp | 2 | 0.6763 | 0.7538 | 0.7141 | +0.058 | 2.8%→0.0% | 111 | 0.29 | 0.72 | 258 |
 | `pp-outcome-grpo-s003-c7bcc8ce` | complete | pp | 3 | 0.6763 | 0.7319 | 0.7121 | +0.039 | 2.8%→0.3% | 371 | 0.30 | 0.79 | 277 |
+
+### `olmo3sft_hint_long`
+
+Shared: student=Olmo-3-7B-Instruct-SFT@e1452fc, generation=vllm, batch_invariant=True, method=grpo, lr=2e-04, schedule=constant_with_warmup, warmup=5, updates=100, kl=0.05, group_size=8, rollout_temp=1, max_completion_tokens=512, lora=r16/a32.0, batch_items=32, slate=16, primary_set=s, primary_metric=final_accuracy, items_sha=8a38e5a7, split_lock=4f468bd2.
+
+| run_id | status | policy | seed | initial | final | AULC | Δparsed* | unparse u0→end* | len end* | max letter* | grad groups* | min* |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `pp-outcome-grpo-s000-fa3047a4` | complete | pp | 0 | 0.6763 | 0.7856 | 0.7369 | +0.090 | 2.8%→0.0% | 208 | 0.28 | 0.54 | 679 |
+| `pp-outcome-grpo-s001-3c932f5c` | complete | pp | 1 | 0.6763 | 0.7731 | 0.7248 | +0.079 | 2.8%→0.1% | 447 | 0.27 | 0.63 | 681 |
+| `pp-outcome-grpo-s002-bbb02b06` | complete | pp | 2 | 0.6763 | 0.7887 | 0.7424 | +0.093 | 2.8%→0.0% | 439 | 0.26 | 0.59 | 657 |
+| `pp-outcome-grpo-s003-eb686117` | complete | pp | 3 | 0.6763 | 0.7756 | 0.7461 | +0.080 | 2.8%→0.0% | 532 | 0.30 | 0.58 | 616 |
 
 ### `olmo3sft_hint_pilot`
 

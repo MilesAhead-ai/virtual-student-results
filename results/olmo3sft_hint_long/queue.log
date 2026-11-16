@@ -1,0 +1,10 @@
+2026-11-16T02:25:37+00:00 START 4 configs on GPUs [2, 3, 4, 5] x1
+2026-11-16T02:25:37+00:00 LAUNCH hint3_s0.yaml gpu=2 pid=2952817 attempt=0
+2026-11-16T02:25:57+00:00 LAUNCH hint3_s1.yaml gpu=3 pid=2953109 attempt=0
+2026-11-16T02:26:17+00:00 LAUNCH hint3_s2.yaml gpu=4 pid=2953391 attempt=0
+2026-11-16T02:26:37+00:00 LAUNCH hint3_s3.yaml gpu=5 pid=2953736 attempt=0
+2026-11-16T12:44:58+00:00 DONE hint3_s3.yaml (1 done, 0 pending, 3 running)
+2026-11-16T13:24:58+00:00 DONE hint3_s2.yaml (2 done, 0 pending, 2 running)
+2026-11-16T13:45:58+00:00 DONE hint3_s0.yaml (3 done, 0 pending, 1 running)
+2026-11-16T13:48:58+00:00 DONE hint3_s1.yaml (4 done, 0 pending, 0 running)
+2026-11-16T13:49:58+00:00 END done=4 gave_up=0 []
