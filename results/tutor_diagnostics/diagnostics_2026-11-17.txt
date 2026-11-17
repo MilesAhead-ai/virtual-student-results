@@ -1,0 +1,27 @@
+### D1: sibling right after the tutoring dialogue vs the same sibling item without dialogue (nearest earlier S checkpoint, same run)
+  f1: n=1542  sibling correct in dialogue 0.466 vs same item, no dialogue 0.474  (diff -0.008; turned wrong->right 0.170, right->wrong 0.178)
+  f2: n=1532  sibling correct in dialogue 0.486 vs same item, no dialogue 0.468  (diff +0.018; turned wrong->right 0.176, right->wrong 0.159)
+  f4: n=1216  sibling correct in dialogue 0.494 vs same item, no dialogue 0.525  (diff -0.030; turned wrong->right 0.155, right->wrong 0.186)
+
+### D1b: does the student solve the tutored item itself after the dialogue? (re-solve accepted / attempted)
+  f1: wrong items 1581, dialogue completed 1581, correct standalone re-solve accepted 0.73
+  f2: wrong items 1573, dialogue completed 1569, correct standalone re-solve accepted 0.86
+  f4: wrong items 1637, dialogue completed 1251, correct standalone re-solve accepted 0.77
+
+### D2: panel accuracy on S items, by skill (first pass)
+model                          boundaries form_structu  transitions words_in_con   inferences central_idea
+llama3.2:3b                          0.28         0.27         0.31         0.58         0.62         0.76
+gemma2:2b                            0.26         0.26         0.32         0.61         0.66         0.71
+phi3:3.8b                            0.23         0.37         0.39         0.60         0.61         0.76
+qwen2:7b                             0.20         0.38         0.41         0.76         0.64         0.86
+llama3.1:8b                          0.34         0.44         0.41         0.82         0.72         0.90
+deepseek-r1:8b                       0.46         0.81         0.68         0.92         0.89         0.96
+qwen3:8b                             0.40         0.81         0.73         0.92         0.92         0.97
+qwen3:14b                            0.56         0.88         0.81         0.94         0.93         0.95
+bedrock:mistral-large-3              0.54         0.82         0.81         0.97         0.96         0.99
+bedrock:llama4-maverick              0.61         0.84         0.74         0.96         0.97         0.99
+bedrock:gpt-oss-120b                 0.76         0.95         0.84         0.95         0.92         0.96
+bedrock:claude-haiku-4-5             0.74         0.93         0.79         0.97         0.96         0.99
+bedrock:qwen3-next-80b               0.76         0.97         0.81         0.99         0.97         0.99
+bedrock:deepseek-v3.2                0.88         0.97         0.88         0.99         0.99         0.99
+bedrock:claude-haiku-5-5             0.93         0.96         0.87         0.98         1.00         1.00
