@@ -1,0 +1,40 @@
+scanned 4000 items; wrong items used 234 ({'cross_text_connections': 14, 'text_structure': 18, 'words_in_context': 30, 'rhetorical_synthesis': 17, 'transitions': 30, 'central_ideas': 5, 'command_of_evidence_textual': 30, 'inferences': 30, 'boundaries': 30, 'form_structure_sense': 30})
+condition f1 done (234 with a sibling answer)
+condition f2 done (233 with a sibling answer)
+condition f4 done (200 with a sibling answer)
+condition rule done (233 with a sibling answer)
+
+### sibling accuracy by condition — sibling_correct
+  fresh      n=234 acc 0.509 | vs ctx -0.021 [-0.077, +0.034]
+  ctx        n=234 acc 0.530 | vs fresh +0.021 [-0.034, +0.077]
+  f1         n=234 acc 0.218 | vs ctx -0.312 [-0.380, -0.244] | vs fresh -0.291 [-0.359, -0.226]
+  f2         n=233 acc 0.562 | vs ctx +0.034 [-0.021, +0.090] | vs fresh +0.052 [-0.004, +0.107]
+  f4         n=200 acc 0.575 | vs ctx +0.035 [-0.025, +0.095] | vs fresh +0.055 [-0.010, +0.120]
+  rule       n=233 acc 0.549 | vs ctx +0.021 [-0.039, +0.082] | vs fresh +0.039 [-0.021, +0.099]
+  rule_given n=233 acc 0.532 | vs ctx +0.004 [-0.052, +0.060] | vs fresh +0.021 [-0.026, +0.073]
+  Standard English skills only:
+  fresh      n= 90 acc 0.333
+  ctx        n= 90 acc 0.367 | vs fresh +0.033 [-0.056, +0.133]
+  f1         n= 90 acc 0.111 | vs fresh -0.222 [-0.311, -0.144]
+  f2         n= 89 acc 0.393 | vs fresh +0.056 [-0.034, +0.146]
+  f4         n= 75 acc 0.427 | vs fresh +0.053 [-0.067, +0.173]
+  rule       n= 89 acc 0.393 | vs fresh +0.056 [-0.045, +0.157]
+  rule_given n= 89 acc 0.348 | vs fresh +0.011 [-0.067, +0.090]
+
+### sibling accuracy by condition — sibling_correct_lenient
+  fresh      n=234 acc 0.581 | vs ctx +0.038 [-0.017, +0.094]
+  ctx        n=234 acc 0.543 | vs fresh -0.038 [-0.094, +0.017]
+  f1         n=234 acc 0.457 | vs ctx -0.085 [-0.141, -0.034] | vs fresh -0.124 [-0.184, -0.064]
+  f2         n=233 acc 0.627 | vs ctx +0.086 [+0.026, +0.146] | vs fresh +0.043 [-0.013, +0.103]
+  f4         n=200 acc 0.605 | vs ctx +0.050 [-0.010, +0.110] | vs fresh +0.010 [-0.060, +0.080]
+  rule       n=233 acc 0.579 | vs ctx +0.039 [-0.017, +0.099] | vs fresh -0.004 [-0.064, +0.056]
+  rule_given n=233 acc 0.562 | vs ctx +0.021 [-0.034, +0.077] | vs fresh -0.021 [-0.069, +0.026]
+  Standard English skills only:
+  fresh      n= 90 acc 0.378
+  ctx        n= 90 acc 0.378 | vs fresh +0.000 [-0.111, +0.100]
+  f1         n= 90 acc 0.300 | vs fresh -0.078 [-0.167, +0.011]
+  f2         n= 89 acc 0.472 | vs fresh +0.090 [-0.022, +0.202]
+  f4         n= 75 acc 0.467 | vs fresh +0.053 [-0.067, +0.173]
+  rule       n= 89 acc 0.427 | vs fresh +0.045 [-0.056, +0.146]
+  rule_given n= 89 acc 0.382 | vs fresh +0.000 [-0.090, +0.090]
+tutor ledger $439.65

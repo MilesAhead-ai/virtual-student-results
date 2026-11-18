@@ -1,0 +1,23 @@
+scanned 4000 items; wrong items used 234 ({'cross_text_connections': 14, 'text_structure': 18, 'words_in_context': 30, 'rhetorical_synthesis': 17, 'transitions': 30, 'central_ideas': 5, 'command_of_evidence_textual': 30, 'inferences': 30, 'boundaries': 30, 'form_structure_sense': 30})
+condition f1 done (234 with a sibling answer)
+condition f2 done (233 with a sibling answer)
+condition f4 done (200 with a sibling answer)
+condition rule done (233 with a sibling answer)
+
+### sibling accuracy by condition (paired with the controls over items both have)
+  fresh      n=234 acc 0.509 | vs ctx -0.021 [-0.077, +0.034]
+  ctx        n=234 acc 0.530 | vs fresh +0.021 [-0.034, +0.077]
+  f1         n=234 acc 0.218 | vs ctx -0.312 [-0.380, -0.244] | vs fresh -0.291 [-0.359, -0.226]
+  f2         n=233 acc 0.562 | vs ctx +0.034 [-0.021, +0.090] | vs fresh +0.052 [-0.004, +0.107]
+  f4         n=200 acc 0.575 | vs ctx +0.035 [-0.025, +0.095] | vs fresh +0.055 [-0.010, +0.120]
+  rule       n=233 acc 0.549 | vs ctx +0.021 [-0.039, +0.082] | vs fresh +0.039 [-0.021, +0.099]
+  rule_given n=233 acc 0.532 | vs ctx +0.004 [-0.052, +0.060] | vs fresh +0.021 [-0.026, +0.073]
+  Standard English skills only:
+  fresh      n= 90 acc 0.333 | vs ctx -0.033 [-0.133, +0.056]
+  ctx        n= 90 acc 0.367
+  f1         n= 90 acc 0.111 | vs ctx -0.256 [-0.356, -0.156]
+  f2         n= 89 acc 0.393 | vs ctx +0.034 [-0.056, +0.124]
+  f4         n= 75 acc 0.427 | vs ctx +0.027 [-0.080, +0.133]
+  rule       n= 89 acc 0.393 | vs ctx +0.034 [-0.067, +0.146]
+  rule_given n= 89 acc 0.348 | vs ctx -0.011 [-0.112, +0.101]
+tutor ledger $439.65
