@@ -1,0 +1,310 @@
+{
+ "craft_structure.cross_text_connections": [
+  {
+   "definition": "Predict how the Text 2 author (or a named figure) would respond to, object to, or explain a specific claim, finding, or conclusion in Text 1, choosing the reply that follows from Text 2's reasoning (e.g., alternative explanation, confound, selection effect).",
+   "id": "predict_response_to_claim"
+  },
+  {
+   "definition": "Determine how one author would characterize or evaluate a particular piece of evidence, result, or argument from the other text, often as genuine but non-probative, incomplete, or explainable another way.",
+   "id": "characterize_evidence_from_other_view"
+  },
+  {
+   "definition": "Identify the unstated premise that Text 1's inference depends on (or Text 2's reinterpretation depends on) and that the other text exposes, denies, or relies upon.",
+   "id": "identify_challenged_assumption"
+  },
+  {
+   "definition": "Pinpoint the specific claim the two authors would disagree about, distinguishing it from shared ground both texts accept, such as data or findings conceded by both.",
+   "id": "locate_point_of_disagreement"
+  },
+  {
+   "definition": "Describe the overall logical relation or structure of Text 2's response to Text 1, e.g., accepting the data but denying what it measures, offering a rival mechanism, granting a finding but denying its probative force, or raising separable objections.",
+   "id": "describe_logical_relationship"
+  },
+  {
+   "definition": "Explain how the two texts differ in construing the same fact, event, or phenomenon, each drawing a different conclusion or explanation from it.",
+   "id": "contrast_interpretations_of_shared_fact"
+  },
+  {
+   "definition": "Determine the role a specific piece of evidence or appeal plays within one text's argument against the other, or what implication of one account makes the other's evidence damaging.",
+   "id": "function_of_element_in_rebuttal"
+  }
+ ],
+ "craft_structure.text_structure": [
+  {
+   "definition": "Describe the order of moves across the whole text (e.g., problem then solution, common view then alternative, hypothesis then complicating evidence) by matching each part to a stage in the answer choice.",
+   "id": "overall_structure_sequence"
+  },
+  {
+   "definition": "Identify the author's overall aim in writing the text (present a finding, explain a phenomenon, argue a position) rather than the role of any single part.",
+   "id": "main_purpose"
+  },
+  {
+   "definition": "Determine whether a sentence states a general claim, supplies an example or evidence that supports or illustrates it, or draws a conclusion from what came before.",
+   "id": "claim_support_relation"
+  },
+  {
+   "definition": "Recognize a sentence that grants a point, credits an opposing view, or rules out one reading (often followed by 'yet' or 'but') so the author can make a different or stronger objection.",
+   "id": "concession_before_counterpoint"
+  },
+  {
+   "definition": "Identify a sentence that overturns, corrects, or relocates a prior claim, explanation, or expectation, for example by shifting the issue from observation to inference or from data to method.",
+   "id": "pivot_challenge_or_reframe"
+  },
+  {
+   "definition": "Recognize a sentence that specifies an evidentiary flaw, ambiguity, or limitation, or that turns a reported result into something still needing explanation rather than settling the question.",
+   "id": "limitation_or_qualification"
+  },
+  {
+   "definition": "Identify a closing or summary sentence that distills the argument into a general principle, draws an inference from it, or points to its broader significance or practical application.",
+   "id": "synthesis_or_implication"
+  },
+  {
+   "definition": "In fiction, poetry, or narrative essays, explain how a detail, remark, or clause works within the text: setting up an expectation, revealing character, creating irony, or being reinterpreted by later lines.",
+   "id": "literary_detail_function"
+  }
+ ],
+ "craft_structure.words_in_context": [
+  {
+   "definition": "An everyday word in a simple, literal context where the answer is its ordinary primary sense (e.g., steer, reveal, slashed, fosters, count on).",
+   "id": "common_word_plain_meaning"
+  },
+  {
+   "definition": "A common word used in a less familiar secondary sense that the context selects over its primary meaning (e.g., register as perceive, composed as arranged, sound as healthy, standing as esteem).",
+   "id": "familiar_word_secondary_sense"
+  },
+  {
+   "definition": "A word in older or literary prose carrying a historical meaning that differs from modern usage (e.g., pretended to as laid claim to, wanted as lacked, indifferent as mediocre).",
+   "id": "archaic_or_literary_sense"
+  },
+  {
+   "definition": "A concrete or commercial term used figuratively in academic argument, requiring the abstract sense (e.g., purchase as grip, underwrites as sustains, weight as compelling force, purchases as achieves).",
+   "id": "abstract_metaphorical_sense"
+  },
+  {
+   "definition": "A verb or phrase describing how claims, evidence, or findings are handled in scholarly argument (e.g., canvassed, marshalled, qualify, accommodate, credit, registers as counts or reflects).",
+   "id": "academic_discourse_verb"
+  },
+  {
+   "definition": "An adjective or adverb expressing degree, judgment, or position whose sense must be fixed by contextual logic rather than connotation (e.g., modest as slight, marginally as just outside, innocent as uncommitted).",
+   "id": "evaluative_or_degree_term"
+  },
+  {
+   "definition": "Choosing among several plausible senses of a polysemous word by matching the precise logical role it plays in the sentence (e.g., defrauded as cheated of what was sought, borne as expressed, compress as lessen, idle as halt).",
+   "id": "near_synonym_discrimination"
+  }
+ ],
+ "expression_of_ideas.rhetorical_synthesis": [
+  {
+   "id": "simple_fact_selection",
+   "definition": "For a straightforward goal (explain a cause, emphasize one outcome), select the choice that combines exactly the notes directly relevant to that goal and omits background or tangential details."
+  },
+  {
+   "id": "contrast_or_comparison",
+   "definition": "Choose the option that explicitly sets two cases, sources, or results side by side and names the specific differing feature the goal asks to highlight."
+  },
+  {
+   "id": "concession_and_qualification",
+   "definition": "When the goal asks to acknowledge a limitation, complication, motive, or opposing point while still maintaining or presenting a claim, pick the choice that includes both halves in the right logical relationship (concede X, yet Y holds)."
+  },
+  {
+   "id": "reconcile_or_locate_disagreement",
+   "definition": "Explain how apparently conflicting findings or positions fit together, or pinpoint precisely what is agreed versus disputed (e.g., purpose vs. content, rejected vs. retained component, qualifying vs. rejecting)."
+  },
+  {
+   "id": "undermine_inference_alternative_explanation",
+   "definition": "Show why evidence does not by itself establish a conclusion by citing the note that supplies a rival mechanism, confound, artifact, or competing account that predicts the same observation."
+  },
+  {
+   "id": "measurement_validity_and_scope",
+   "definition": "Show that a measure, method, or sample does not capture what it purports to (circular checks, missing denominators, scribe formulas, limited population), limiting generalization or corroboration."
+  },
+  {
+   "id": "identify_underlying_assumption",
+   "definition": "Select the choice that states the unstated premise or condition on which an argument, revision, or difficulty depends, typically phrased as 'holds only if' or 'troubling only if one grants.'"
+  },
+  {
+   "id": "explain_stated_reasoning_or_mechanism",
+   "definition": "Accurately reconstruct a specific actor's justification or a causal mechanism from the notes, rejecting choices that substitute different grounds, overstate conclusions, or misattribute reasoning."
+  }
+ ],
+ "expression_of_ideas.transitions": [
+  {
+   "id": "direct_contrast",
+   "definition": "The second statement opposes or differs from the first (different group, outcome, or expectation versus reality), so a contrast word like however or by contrast is needed."
+  },
+  {
+   "id": "concession_counterpoint",
+   "definition": "The sentence qualifies or pushes back on the preceding point, or admits a point before rebutting it, requiring even so, still, nonetheless, then again, granted, admittedly, or to be sure."
+  },
+  {
+   "id": "cause_effect",
+   "definition": "The sentence states a result or logical consequence of the preceding information, including ironic or unexpected consequences, requiring therefore, as a result, consequently, accordingly, or perversely."
+  },
+  {
+   "id": "emphasis_intensification",
+   "definition": "The sentence strengthens, corrects, or gives more emphatic or telling evidence for the prior claim (often overturning a mistaken view), requiring in fact, indeed, or tellingly."
+  },
+  {
+   "id": "restatement_summary",
+   "definition": "The sentence rephrases, distills, or weighs up the preceding points into a conclusion, requiring in other words, in effect, in short, in sum, or on balance."
+  },
+  {
+   "id": "example_or_addition",
+   "definition": "The sentence gives a specific instance of the preceding general claim or adds a further parallel supporting point, requiring for instance or moreover."
+  },
+  {
+   "id": "replacement_alternative",
+   "definition": "The sentence presents what happened or might be true in place of the expected or previously stated action or explanation, requiring instead or alternatively."
+  }
+ ],
+ "information_ideas.central_ideas": [
+  {
+   "id": "literal_detail_retrieval",
+   "definition": "Locate and restate an explicitly stated fact or step from a short, straightforward informational or narrative text (e.g., what happens after a stated event, or a simple process summary)."
+  },
+  {
+   "id": "simple_summary_main_idea",
+   "definition": "Choose the claim that summarizes an accessible text's overall point, such as a process, achievement, or character's preference, while rejecting choices that are too narrow, unsupported, or off-topic."
+  },
+  {
+   "id": "finding_plus_qualification",
+   "definition": "Identify a main idea that pairs a reported finding or benefit with the limitation, complication, or caveat the text attaches to it, avoiding choices that overstate either half."
+  },
+  {
+   "id": "revised_interpretation_of_evidence",
+   "definition": "Recognize that the text replaces or complicates an earlier explanation with a new account, such as a mechanism, cause, or function, and pick the choice stating the new interpretation at the text's own level of certainty."
+  },
+  {
+   "id": "inference_critique_unsupported_not_refuted",
+   "definition": "In dense argumentative texts, identify the central claim that a common inference or measure rests on untested premises, confounds, or a false dichotomy, so that it warrants only a narrower conclusion rather than being simply disproved."
+  },
+  {
+   "id": "methodological_support_for_claim",
+   "definition": "Identify how a study's design or a researcher's argument strengthens, scopes, or limits a claim (e.g., ruling out a confound, showing sufficiency without exclusivity) and state that significance accurately."
+  },
+  {
+   "id": "ironic_gap_between_profession_and_practice",
+   "definition": "In literary character sketches, infer that a character's stated principle, reputation, or self-description is quietly undercut by their actual conduct, and select the choice capturing that ironic contradiction without exaggerating motive."
+  },
+  {
+   "id": "narrator_reflective_realization",
+   "definition": "In first-person or reflective literary passages, identify the narrator's nuanced recognition about a relationship, practice, or form of knowledge, including mixed feelings, without reducing it to simple praise, blame, or regret."
+  }
+ ],
+ "information_ideas.command_of_evidence_textual": [
+  {
+   "id": "support_single_claim_finding",
+   "definition": "Choose the hypothetical finding that most directly supports one stated hypothesis or argument by matching its specific mechanism or scope (e.g., visibility to a peer, sensory function, broader customer base), rather than a related but nonspecific result."
+  },
+  {
+   "id": "discriminate_rival_hypotheses",
+   "definition": "Choose the finding that favors one of two competing accounts by identifying where their predictions diverge, rejecting evidence both accounts predict equally."
+  },
+  {
+   "id": "isolate_confound_or_control",
+   "definition": "Choose the finding that rules out a confound such as selection or a correlated variable, usually a natural experiment, manipulation, or control that holds the rival factor fixed."
+  },
+  {
+   "id": "meet_reframed_standard_of_proof",
+   "definition": "Choose the finding that satisfies the exact evidentiary test or inference a critic or theorist articulates, such as apportioned absorption, proxy sensitivity, or an efflux-versus-influx distinction, rather than evidence for the general conclusion."
+  },
+  {
+   "id": "cite_passage_detail_for_claim",
+   "definition": "Select the detail or quotation from within the passage itself that most directly supports a specified claim, distinguishing it from details that serve the opposing side or are merely background."
+  },
+  {
+   "id": "select_illustrative_primary_quotation",
+   "definition": "Choose the hypothetical primary-source excerpt, such as a document line, amendment, or deposition, that concretely exemplifies the interpretive claim a scholar makes about those sources."
+  }
+ ],
+ "information_ideas.inferences": [
+  {
+   "id": "professed_vs_actual_motive",
+   "definition": "In an ironic or satirical character sketch, infer the real motive or effect hidden behind a character's stated principle, reputation, or carefully worded remark, often revealed by an inconsistency the narrator points out."
+  },
+  {
+   "id": "unspoken_emotion_or_purpose",
+   "definition": "In understated fiction, infer a character's unstated feeling, attitude, or purpose from small gestures, silences, or oblique dialogue instead of from explicit statements."
+  },
+  {
+   "id": "consequence_of_findings",
+   "definition": "From a described observation, experiment, or historical change, infer the most direct cause, function, trade-off, or consequence the evidence supports, often by completing the passage's final sentence."
+  },
+  {
+   "id": "proxy_measure_distortion",
+   "definition": "When a passage shows that a data source or metric is shaped by selection, timing, ratios, or filtering, infer in which direction and in what situations that measure misrepresents the thing it is used to stand for."
+  },
+  {
+   "id": "evidence_scope_limits",
+   "definition": "Judge exactly what a particular result or piece of evidence does and does not establish, such as partial support, inability to tell rival accounts apart, or consistency without proof."
+  },
+  {
+   "id": "hidden_assumption_or_strengthener",
+   "definition": "Identify the unstated premise an argument or objection depends on, or the finding that would rule out a rival explanation and so strengthen a disputed inference."
+  }
+ ],
+ "standard_english.boundaries": [
+  {
+   "id": "independent_clause_joining",
+   "definition": "Joining or separating two independent clauses with a period, semicolon, or comma plus conjunction, avoiding comma splices and run-ons (e.g., 5, 21, 22, 24, 29, 39)."
+  },
+  {
+   "id": "conjunctive_adverb_punctuation",
+   "definition": "Punctuating transitional words like 'however,' 'consequently,' or 'instead' between clauses: semicolon before the adverb and comma after it (e.g., 23, 26, 33, 40)."
+  },
+  {
+   "id": "no_punctuation_needed",
+   "definition": "Leaving out punctuation between closely linked elements such as subject and verb, verb and complement, or a noun and its essential modifier, even when the subject is long (e.g., 1, 9, 17, 20, 27, 30, 31, 37, 38)."
+  },
+  {
+   "id": "nonessential_element_matching",
+   "definition": "Setting off a nonessential appositive, relative clause, or interrupter with matching marks (two commas or two dashes), including closing the pair before the main verb (e.g., 2, 3, 6, 10, 11, 13, 16, 25, 34, 35)."
+  },
+  {
+   "id": "colon_introducing_elaboration",
+   "definition": "Using a colon after a complete independent clause to introduce a list, example, or explanation of what came before (e.g., 7, 28, 32, 36)."
+  },
+  {
+   "id": "introductory_element_comma",
+   "definition": "Placing a comma after an introductory dependent clause or phrase, including after a series of 'although' clauses, before the main clause (e.g., 4, 14, 15, 18)."
+  },
+  {
+   "id": "series_punctuation",
+   "definition": "Separating items in a series with commas, or with semicolons when the items themselves contain internal commas (e.g., 8, 12, 19)."
+  }
+ ],
+ "standard_english.form_structure_sense": [
+  {
+   "id": "subject_verb_agreement_separated",
+   "definition": "Make the main verb agree in number with its true subject (head noun, compound, neither/nor pair, noun clause, or 'each') despite long intervening modifiers, prepositional phrases, or appositives."
+  },
+  {
+   "id": "inverted_subject_verb_agreement",
+   "definition": "In inverted sentences such as 'Among the X ___ Y,' match the verb's number to the postposed subject Y, not to the fronted plural or singular phrase."
+  },
+  {
+   "id": "relative_clause_antecedent_agreement",
+   "definition": "Make the verb in a 'that/who' relative clause agree with its actual antecedent, especially in 'one of the [plural noun] that ___' constructions where the antecedent is the plural noun."
+  },
+  {
+   "id": "verb_tense_sequence",
+   "definition": "Choose the tense or aspect (simple past, past perfect, present perfect) that fits the time frame set by context clues such as dates, 'since,' 'once,' or surrounding past-tense narration."
+  },
+  {
+   "id": "subjunctive_mood",
+   "definition": "After verbs or nouns of demand, insistence, or requirement ('insisted that,' 'requires that'), use the bare base form of the verb (e.g., 'establish,' 'be')."
+  },
+  {
+   "id": "finite_vs_nonfinite_verb",
+   "definition": "Decide whether the slot requires a finite main verb or a nonfinite form (participle or infinitive), e.g., using '-ing' in an absolute or 'with' construction and a finite verb when the clause otherwise lacks one."
+  },
+  {
+   "id": "possessive_noun_form",
+   "definition": "Choose the correct singular or plural possessive form of a noun (bank's vs. banks' vs. banks) based on number and ownership of the following noun."
+  },
+  {
+   "id": "pronoun_number_case_form",
+   "definition": "Select a pronoun or possessive determiner that matches its antecedent in number and the required case or form (its/their/it's/there, who/whom/whose/to whom), including pronoun-verb agreement with 'each' subjects."
+  }
+ ]
+}
