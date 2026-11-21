@@ -1,0 +1,22 @@
+notebook: 72 of 72 notes
+router agreement with the key-aware labels: 0.906
+plain done
+note_routed done
+note_oracle done
+
+### olmo: S accuracy (1,600 items; lenient scoring)
+  plain        all 0.691  SE 0.360
+  note_routed  all 0.732  SE 0.540 | vs plain: all +0.041 [+0.018, +0.064], SE +0.179 [+0.127, +0.231]
+  note_oracle  all 0.739  SE 0.560 | vs plain: all +0.049 [+0.026, +0.072], SE +0.200 [+0.146, +0.252]
+  per skill (plain → routed note):
+    boundaries                     0.244 → 0.456
+    central_ideas                  0.931 → 0.938
+    command_of_evidence_textual    0.731 → 0.700
+    cross_text_connections         0.794 → 0.806
+    form_structure_sense           0.381 → 0.431
+    inferences                     0.819 → 0.725
+    rhetorical_synthesis           0.919 → 0.875
+    text_structure                 0.850 → 0.869
+    transitions                    0.456 → 0.731
+    words_in_context               0.781 → 0.787
+tutor ledger $451.53
