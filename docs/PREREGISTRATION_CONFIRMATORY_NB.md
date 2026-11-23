@@ -1,7 +1,8 @@
 # Pre-registration: a test-time sub-type notebook for trained students (confirmatory NB)
 
-**Status: DRAFT 2026-11-23, awaiting the owner's sign-off.** Not frozen. No checkpoint has answered E2
-with a note.
+**Status: FROZEN 2026-11-23**, signed off by the owner. Hashes (notes, E2 routes, scripts, prompt, the 72
+adapters): `configs/confirmatory/nb/FROZEN.json`; git tag `confirmatory-nb-frozen`. At freezing no
+checkpoint had answered E2 with a note.
 
 ## 1. Question
 
