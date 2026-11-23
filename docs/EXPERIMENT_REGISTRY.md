@@ -88,6 +88,7 @@ numbers stand but a later experiment answers the question better;
 | F28 | `olmo3sft_hint_long` | 11-16 | Higher-dose hints over 100 updates | hints≤3 × 4 | grpo.hint_max_correct 3, 100 updates | pool v2 | invariant | valid (4 seeds) | no gain (u100 +0.009, AULC −0.002) | FINDINGS #40 | — |
 | C2 | `olmo3sft_grpo_confirmatory_dc` | 11-06 → 11-07 | **Confirmatory:** panel b vs Opus rating vs random | R, PP16, PJ × 24 | 40 updates, E2 primary, seeds 200–223 | pool_v2_dc (lock `d80feded`) + fresh E2 | invariant, confirmatory | valid | H1 PP16 − PJ +0.0014 (not supported); H2 +0.0104, H3 +0.0090 (supported) | CONFIRMATORY_DC_RESULTS.md | freeze `8f5cef2`, tag `confirmatory-dc-frozen` |
 | C3 | confirmatory MV (no training; uses C1 and C2 outcomes) | 11-11 → | **Confirmatory:** does the small panel predict E1/E2 errors better than the Opus rating? | — | — | E1, E2 | — | valid | H1 small panel − Opus +0.118 [+0.069, +0.167] (supported) | CONFIRMATORY_MV_RESULTS.md | freeze `2bef581`, tag `confirmatory-mv-frozen` |
+| C4 | confirmatory NB (no training; DC checkpoints at u40) | 11-23 | **Confirmatory:** does a test-time sub-type note raise trained students' E2 accuracy? | R, PP16, PJ × 24, plain vs note | notes `artifacts/notebook/notebook.jsonl`, Sonnet 5.5 router without the key | E2 (pool_v2_dc) | invariant | valid | H1 PP16 note − plain +0.037 [+0.031, +0.043], H2 R +0.043, H3 PP16 note − R plain +0.047 (all supported) | CONFIRMATORY_NB_RESULTS.md | tag `confirmatory-nb-frozen` |
 
 ## 3. Current reference settings
 

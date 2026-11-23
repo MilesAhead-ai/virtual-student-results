@@ -22,13 +22,15 @@ included.
 | [`docs/PREREGISTRATION_CONFIRMATORY_DC.md`](docs/PREREGISTRATION_CONFIRMATORY_DC.md) | The second confirmatory study (panel difficulty vs a single model's rating), frozen before its held-out set E2 was read |
 | [`configs/confirmatory/dc/`](configs/confirmatory/dc/) | Its 72 frozen run configs and `FROZEN.json` |
 | [`docs/PREREGISTRATION_CONFIRMATORY_MV.md`](docs/PREREGISTRATION_CONFIRMATORY_MV.md) | The third confirmatory study (measurement validity), frozen before its estimates existed; `results/confirmatory_mv/` |
+| [`docs/PREREGISTRATION_CONFIRMATORY_NB.md`](docs/PREREGISTRATION_CONFIRMATORY_NB.md) | The fourth confirmatory study (a test-time notebook for trained students), frozen before any answer with a note existed; [`configs/confirmatory/nb/`](configs/confirmatory/nb/), `results/confirmatory_nb/` |
 
-## Current state (2026-11-13)
+## Current state (2026-11-23)
 
-Three pre-registered confirmatory studies are complete. **Each study numbers its own hypotheses (H1,
+Four pre-registered confirmatory studies are complete. **Each study numbers its own hypotheses (H1,
 H2, …), so "H1" means something different in each.** The hypotheses are defined in §2 of each
 pre-registration, frozen before the data they test existed or were read (v1 and DC: the held-out
-outcomes; MV: the difficulty estimates, whose student outcomes came from v1 and DC); the results docs
+outcomes; MV: the difficulty estimates, whose student outcomes came from v1 and DC; NB: any answer with a
+note, on E2, whose plain results DC had already read); the results docs
 report them in the same order.
 
 1. **Confirmatory v1 (2026-10-29)** — pre-registration [§2](docs/PREREGISTRATION_CONFIRMATORY_V1.md#2-hypotheses),
@@ -49,14 +51,23 @@ report them in the same order.
    - **H1** (primary): the 8-small-model panel's difficulty predicts which held-out items trained students
      get wrong better than the Opus 5.5 rating. **Supported:** mean within-skill correlation 0.44 vs 0.32,
      difference +0.12 (CI +0.07 to +0.17).
+4. **Confirmatory NB (2026-11-23)** — pre-registration [§2](docs/PREREGISTRATION_CONFIRMATORY_NB.md#2-hypotheses),
+   results [`CONFIRMATORY_NB_RESULTS.md`](docs/CONFIRMATORY_NB_RESULTS.md). No training. DC's 72 checkpoints
+   at update 40 answer E2 plain and with a short note for the question's sub-type (written by Claude Opus 5.5
+   from training items; sub-type chosen by Claude Sonnet 5.5 without the key).
+   - **H1** (primary): the note raises PP16-trained students' E2 accuracy. **Supported:** +3.7 points (CI +3.1
+     to +4.3), 24/24 seeds; item bootstrap +2.1 to +5.3.
+   - **H2**: the same for R-trained students. **Supported:** +4.3.
+   - **H3**: PP16 with notes beats R without. **Supported:** +4.7 (CI +4.3 to +5.1).
 
-### What the three studies say together
+### What the studies say together
 
 | question | study | answer |
 |---|---|---|
 | Does targeting training items by panel-calibrated difficulty beat random selection? | v1 H1, DC H2 | **Yes**, twice (+1.9 and +1.0 points) |
 | Is the small-model panel a better *measure* of which items LLM students get wrong than a single strong model's direct rating? | MV H1 | **Yes** (correlation 0.44 vs 0.32) |
 | Does that better measure make the student *learn more* when used to choose training items? | DC H1 | **No measurable difference** (+0.1 point, CI −0.5 to +0.7); a single-model rating also beats random (DC H3) |
+| Does a test-time note for the question's sub-type add to PanelProbe training? | NB H1, H3 | **Yes**, +3.7 points on top of PP16 training, almost all on two Standard English skills; it is help at test time, not learning, and with notes PP16's lead over random shrinks to +0.4 (exploratory) |
 
 Two qualifications:
 - In DC the panel arm used panel v2 (the 8 small models plus 7 API models). The 8 small models alone
