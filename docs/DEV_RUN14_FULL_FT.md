@@ -1,6 +1,6 @@
 # DEV_RUN14: full fine-tuning (development)
 
-**Status: learning-rate pilot running since 2026-11-24 18:20 UTC.** Owner's request after FINDINGS #48:
+**Status: lr pilot done (lr 1e-5 chosen); stage 2 running since 2026-11-24 21:15 UTC.** Owner's request after FINDINGS #48:
 try full fine-tuning (all weights trainable) before switching the student to Qwen.
 
 ## Why
@@ -49,8 +49,41 @@ Criteria, fixed before the results:
   - the other eight skills not more than 3 points below the base.
 - Prefer an lr whose focus-skill accuracy at u20 is at least LoRA's (0.375; base 0.334).
 
-## Stage 2 (planned)
+### Pilot results (S, seed 0, 20 updates; base: focus 0.325, other skills 0.757, 563 characters)
 
-DEV_RUN13's comparison with full fine-tuning at the chosen lr: grpo vs note (every item gets a note
-group, distilled into the plain question), seeds 0–3, 40 updates; S without notes, boundaries +
-transitions. About 8–10 h per run.
+| lr | focus u5 / u10 / u15 / u20 | other skills u20 | unparseable u20 | length u20 |
+|---|---|---|---|---|
+| 3e-6 | 0.350 / 0.384 / 0.438 / 0.412 | 0.774 | 0.5% | 569 |
+| **1e-5** | 0.400 / 0.388 / 0.409 / **0.422** | **0.787** | 0.9% | 811 |
+| 3e-5 | 0.428 / 0.409 / 0.378 / 0.403 | **0.691** (−6.6, fails) | 1.6% | 761 (340 at u10) |
+
+**1e-5 is chosen.** It is the largest lr meeting the stability criteria, and its focus accuracy at u20
+(0.422) exceeds LoRA's (0.375). Its answers lengthen (811 characters at u20), which needs watching over
+40 updates. Single seed: the lr arms are not compared with each other beyond this choice.
+
+**Parity** (`scripts/check_full_parity.py`, 40 D items, greedy, 64 tokens): vLLM serving the run's final
+weights against Transformers on the saved weights gives 23/40 identical completions and 39/40 with the
+same first 40 characters. The base model gives 23/40 and 36/40. The difference is ordinary vLLM-vs-HF
+numerics, so the weight sync is correct.
+
+## Stage 2 (running)
+
+DEV_RUN13's comparison with full fine-tuning at lr 1e-5: grpo vs note (every item gets a note
+group, distilled into the plain question), seeds 0–3, 40 updates. Configs:
+`artifacts/olmo3sft_full_focus/configs/` (`make_full_ft_configs.py focus`); preflight passed.
+
+Four slots run one seed each, grpo then note:
+- GPU 1 + server 8110 (GPU 0);
+- GPU 3 + server 8114 (GPU 4);
+- GPU 5 + server 8116 (GPU 6);
+- GPU 2 + server 8117 (GPU 7).
+
+The LoRA servers on GPU 0/1 and the Qwen3-8B bench server were stopped to free the GPUs.
+
+Analysis, as DEV_RUN13 (`scripts/analyze_note_focus.py --exp artifacts/olmo3sft_full_focus`):
+- **Primary:** S boundaries + transitions at u40 without notes, note − grpo paired by seed.
+- **Secondary:** the other eight skills, answer length, and the note groups' correct rollouts.
+
+Reading, fixed now: a clearly positive note − grpo would mean the adapter's capacity was what blocked
+internalisation (DEV_RUN13: −0.005 with LoRA). If it is null again, capacity is ruled out as the
+explanation for this student.
