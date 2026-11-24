@@ -13,6 +13,8 @@ GRPO barely moves them; their groups are often all-wrong).
 | C1. Dev comparison (E24): GRPO + F1 / F2 / F4 hybrids, 3 seeds × 40 updates | done 11-15: **no gain over GRPO** from any condition (FINDINGS #37) | `DEV_RUN12_TUTOR_HYBRID.md` |
 | C2. Hint-guided GRPO (`grpo.hint_max_correct` 1) | pilot promising (#38); dev 4 seeds × 40 updates: **no gain** (#39) | `results/olmo3sft_hint_{pilot,dev}/` |
 | C3. Hint-guided GRPO, higher dose (≤ 3/8 correct) × 100 updates, seeds 0–3 (E25) | done 11-16: **no gain** early or late (FINDINGS #40) | `results/olmo3sft_hint_long/` |
+| C4. Notebook (#44–#48): test-time notes, distillation broad and focused | test-time notes work (**CONFIRMATORY_NB**: +3.7 on E2); distillation does not internalise (#45, #48) | `CONFIRMATORY_NB_RESULTS.md`, `DEV_RUN13_NOTE_FOCUS.md` |
+| C5. Full fine-tuning (DEV_RUN14) | engineering done 11-24; lr pilot running | `DEV_RUN14_FULL_FT.md` |
 | D. Confirmatory | not warranted: no design beat GRPO in development (#33–#40) | — |
 
 ## 1. What changes compared with confirmatory v1
