@@ -1,0 +1,16 @@
+### qwen3_8b_nothink: S accuracy (1,600 items; lenient scoring)
+  plain        all 0.794  SE 0.527
+  note_routed  all 0.822  SE 0.708 | vs plain: all +0.028 [+0.007, +0.048], SE +0.181 [+0.135, +0.229]
+  note_oracle  all 0.821  SE 0.717 | vs plain: all +0.026 [+0.006, +0.046], SE +0.190 [+0.144, +0.237]
+  per skill (plain → routed note):
+    boundaries                     0.306 → 0.581
+    central_ideas                  0.894 → 0.900
+    command_of_evidence_textual    0.831 → 0.725
+    cross_text_connections         0.956 → 0.856
+    form_structure_sense           0.656 → 0.762
+    inferences                     0.844 → 0.806
+    rhetorical_synthesis           0.975 → 0.956
+    text_structure                 0.969 → 0.956
+    transitions                    0.619 → 0.781
+    words_in_context               0.894 → 0.894
+tutor ledger $500.99
