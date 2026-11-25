@@ -1,0 +1,13 @@
+S accuracy without notes, seeds [0, 1, 2, 3]
+base (u0) focus skills 0.325; boundaries 0.244, transitions 0.406
+u10: focus grpo 0.417  note 0.383  note−grpo -0.0344 [-0.1234, +0.0547] per seed [-0.112, 0.016, -0.006, -0.034]
+u20: focus grpo 0.433  note 0.412  note−grpo -0.0211 [-0.0622, +0.0200] per seed [-0.034, -0.047, 0.013, -0.016]
+u30: focus grpo 0.373  note 0.425  note−grpo +0.0523 [-0.0862, +0.1909] per seed [-0.041, 0.128, -0.003, 0.125]
+u40: focus grpo 0.466  note 0.441  note−grpo -0.0258 [-0.0610, +0.0095] per seed [-0.009, -0.028, -0.056, -0.009]
+u40 item bootstrap (320 items): [-0.0586, +0.0078]
+u40 transitions: grpo 0.608  note 0.594
+u40 boundaries: grpo 0.325  note 0.288
+u40 other 8 skills (untrained): u0 0.757  grpo 0.732  note 0.768
+u40 mean answer length grpo: 498 chars
+u40 mean answer length note: 718 chars
+note groups 5120: correct per 8 plain 3.11 -> with note 4.43
